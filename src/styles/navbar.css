@@ -1,0 +1,61 @@
+.header-top, .header-lower {
+    font-family: var(--family-two) !important;
+}
+.header-top p {
+    color: white;
+    font-size: 0.938rem;
+    line-height: 1.563rem;
+    font-weight: 400;
+    margin: 0px;
+}
+.header-top .get_a_quote {
+    color: white;
+    font-size: 0.938rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+    margin-bottom: 0.125rem;
+    border-radius: 0.313rem;
+    background-color: var(--primary-color-one);
+    padding: 0.125rem 1rem;
+}
+.header-top .get_a_quote:dir(rtl) {
+    margin-left: 0.938rem; 
+}
+.header-top .get_a_quote:dir(ltr) {
+    margin-right: 0.938rem; 
+}
+.header-top ul li {
+    color: white !important;
+    font-size: 0.938rem !important;
+    line-height: 1.563rem;
+    font-weight: 400;
+    margin: 0px;
+}
+.header-top ul li a {
+    color: white !important;
+}
+.header-lower ul li {
+    margin: 0px;
+}
+.header-lower ul li a, 
+.header-lower ul li .dropdown button {
+    font-size: 0.938rem !important;
+    line-height: 1.625rem;
+    font-weight: 600;
+    color: var(--text-color-dark-one);
+    font-family: var(--family-one);
+    transition: 0.5s ease-in-out;
+}
+.header-lower ul li .dropdown button a {
+    font-family: var(--family-one) !important;
+    font-weight: normal;
+}
+.header-lower ul li:hover .header-lower ul li a,
+.header-lower ul li .dropdown span,
+.header-lower ul li .dropdown button svg {
+    transition: all 0.3s;
+}
+.header-lower .logo {
+   width: 10.625rem;
+   height: auto;
+}
