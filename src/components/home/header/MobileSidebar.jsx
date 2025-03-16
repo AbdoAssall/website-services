@@ -3,9 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { List, ListItem, Accordion, AccordionHeader, AccordionBody, Drawer, Card } from "@material-tailwind/react";
-import { GoSearch } from "react-icons/go";
-import { IoIosArrowDown } from "react-icons/io";
-import { IoCloseOutline } from "react-icons/io5";
+import { ChevronDown, Search, X } from "lucide-react";
 import TextInput from "../../UI/TextInput";
 
 export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {
@@ -19,7 +17,7 @@ export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {
 
     return (
         <>
-            <div className={`${openNav ? 'absolute inset-0 w-full h-full bg-primary-two/80 transition-all duration-300' : ''}`} />
+            <div className={`${openNav ? 'absolute inset-0 w-full h-full bg-primary-two/80 transition-all duration-300 z-[9999]' : ''}`} />
             <Drawer
                 open={openNav}
                 onClose={closeDrawer}
@@ -27,14 +25,14 @@ export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {
             >
                 <Card
                     shadow={false}
-                    className="fixed top-0 left-0 h-full w-full sm:w-[18rem] p-3 bg-white text-dark-one rounded-none overflow-y-auto"
+                    className="fixed top-0 left-0 z-99 h-full w-full sm:w-[18rem] p-3 bg-white text-dark-one rounded-none overflow-y-auto"
                 >
                     <div className="mb-2 flex items-center">
                         <button
                             type="button"
                             className="ml-auto h-10 w-10 py-1 rounded-full border border-border-dark-one text-center"
                             onClick={closeDrawer}>
-                            <IoCloseOutline className="h-8 w-8 mx-auto text-gray-600" />
+                            <X className="h-7 w-7 mx-auto text-gray-600" />
                         </button>
                     </div>
                     <div className="p-2 relative text-center">
@@ -44,7 +42,7 @@ export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {
                             placeholder="البحث"
                         />
                         <span className="inline-block bg-primary-one p-2 rounded-md cursor-pointer rtl:absolute rtl:left-5 top-4.5">
-                            <GoSearch className="h-5 w-5 text-white" />
+                            <Search className="h-5 w-5 text-white" />
                         </span>
                     </div>
                     <List className="text-dark-one font-medium">
@@ -58,7 +56,7 @@ export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {
                             open={open === 1}
                             icon={
                                 <div className="p-2 mb-2 border border-gray-200 shadow-sm rounded-sm">
-                                    <IoIosArrowDown
+                                    <ChevronDown
                                         className={`mx-auto h-4 w-4 text-black transition-transform ${open === 1 ? "rotate-180" : ""
                                             }`}
                                     />

@@ -1,6 +1,6 @@
 /*------===============-main-style-sheet-==============------*/
 :root {
-    --family-one: "League Spartan", sans-serif !important;
+    --family-one: "League Spartan", sans-serif;
     --family-two: "Inter", sans-serif !important;
     --primary-color-one: #078586;
     --primary-color-two: #282f3b;

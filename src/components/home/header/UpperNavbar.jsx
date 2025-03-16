@@ -1,21 +1,20 @@
 // @ts-nocheck
 import { Navbar } from "@material-tailwind/react";
-import { FiPhone } from "react-icons/fi";
-import { IoMailOpenOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { Mail, Phone } from "lucide-react";
 
 export function UpperNavbar() {
 
     const navList = (
         <ul className="flex flex-col-reverse md:mb-0 md:mt-0 md:flex-row items-center md:gap-6 rtl:!p-0">
             <li className="flex items-center gap-x-2 p-1 rtl:flex-row-reverse">
-                <FiPhone className="font-normal w-4 h-4 text-white md:text-primary-one" />
+                <Phone className="font-normal w-4 h-4 text-white md:text-primary-one" />
                 <a href="#" className="flex items-center">
                     +98 060 712 34
                 </a>
             </li>
             <li className="flex items-center gap-x-2 p-1 rtl:flex-row-reverse">
-                <IoMailOpenOutline className="font-normal w-4 h-4 text-white md:text-primary-one" />
+                <Mail className="font-normal w-4 h-4 text-white md:text-primary-one" />
                 <a href="#" className="flex items-center">
                     sendmail@creote.com
                 </a>
