@@ -55,7 +55,15 @@
 .header-lower ul li .dropdown button svg {
     transition: all 0.3s;
 }
-.header-lower .logo {
-   width: 10.625rem;
-   height: auto;
+@media (min-width: 768px) {
+    .header-lower .logo {
+       width: 10.625rem;
+       height: auto;
+    }
+}
+@media (max-width: 767px) {
+    .header-lower .logo {
+       width: 9.375rem;
+       height: 3.125rem;
+    }
 }

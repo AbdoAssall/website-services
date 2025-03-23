@@ -14,7 +14,7 @@ const HeroSlider = () => {
     const slides = [
         {
             id: 1,
-            bgImage: "../../../../public/assets/images/projects/project-1.jpg",
+            bgImage: "assets/images/slider/slider-1.jpg",
             subTitle: "Strategy & Planning",
             title: "The Fastest Way to Achive Success",
             description: "We provide innovative solutions for your company",
@@ -23,7 +23,7 @@ const HeroSlider = () => {
         },
         {
             id: 2,
-            bgImage: "../../../../public/assets/images/projects/project-2.jpg",
+            bgImage: "assets/images/slider/slider-2.jpg",
             subTitle: "Best Agency",
             title: "Digital Marketing",
             description: "Transform your online presence with our expertise",
@@ -32,7 +32,7 @@ const HeroSlider = () => {
         },
         {
             id: 3,
-            bgImage: "../../../../public/assets/images/projects/project-3.jpg",
+            bgImage: "assets/images/slider/slider-3.jpg",
             subTitle: "Expert Team",
             title: "Strategic Planning",
             description: "Custom strategies to achieve your business goals",
@@ -106,12 +106,12 @@ const HeroSlider = () => {
                         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                         style={{ backgroundImage: `url(${slide.bgImage})` }}
                     >
-                        <div className="absolute inset-0 bg-gradient-to-b from-primary-two/50 to-primary-one/80"></div>
+                        {/* <div className="absolute inset-0 bg-gradient-to-b from-primary-two/50 to-primary-one/80"></div> */}
                     </div>
 
                     {/* Slide Content */}
                     {index === currentSlide && (
-                        <div className={`px-4 sm:px-9 pb-16 relative z-8 flex h-full ${index === 1 ? 'justify-center text-center sm:justify-start sm:rtl:text-right sm:ltr:text-left' : 'justify-center  text-center'} items-center px-4 text-white`}>
+                        <div className={`!px-2 sm:!px-9 pb-16 relative z-8 flex h-full ${index === 1 ? 'justify-center text-center sm:justify-start sm:rtl:text-right sm:ltr:text-left' : 'justify-center  text-center'} items-center text-white`}>
                             <div className="max-w-4xl">
                                 <AnimatePresence mode="wait">
                                     <motion.h5
@@ -132,7 +132,7 @@ const HeroSlider = () => {
                                         exit="exit"
                                         variants={textVariants}
                                         transition={{ duration: 0.8, delay: 0.6 }}
-                                        className="!mb-6 text-5xl font-extrabold md:text-[6.875rem] md:!leading-[90px] !text-white tracking-tight"
+                                        className="!mb-4 sm:!mb-6 text-5xl font-extrabold md:text-[6.875rem] md:!leading-[90px] !text-white tracking-tight"
                                         style={{ textShadow: '3px 1px 3px #078586' }}
                                     >
                                         {slide.title}
@@ -145,13 +145,13 @@ const HeroSlider = () => {
                                         exit="exit"
                                         variants={textVariants}
                                         transition={{ duration: 0.8, delay: 0.9 }}
-                                        className="!text-lg md:!text-xl"
+                                        className="!text-md md:!text-xl"
                                     >
                                         {slide.description}
                                     </motion.p>
                                     <motion.div
                                         key={`buttons-${slide.id}`}
-                                        className={`!mt-16 relativ flex flex-col items-center ${index === 1 ? 'justify-start' : 'justify-center'} space-y-7 sm:flex-row gap-4 sm:space-y-0`}
+                                        className={`!mt-12 sm:!mt-16 relativ flex flex-col items-center ${index === 1 ? 'justify-start' : 'justify-center'} space-y-7 sm:flex-row gap-4 sm:space-y-0`}
                                     >
                                         <motion.div
                                             variants={fadeIn("down", 0.3)}
@@ -214,7 +214,7 @@ const HeroSlider = () => {
             </button>
 
             {/* Dots Navigation */}
-            <div className="absolute bottom-17 left-0 z-30 flex w-full justify-center gap-2">
+            <div className="absolute bottom-24 sm:bottom-17 left-0 z-30 flex w-full justify-center gap-2">
                 {slides.map((_, index) => (
                     <button
                         key={index}
