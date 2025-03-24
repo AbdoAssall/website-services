@@ -1,0 +1,9 @@
+.section-title {
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 500 !important;
+    letter-spacing: normal;
+    font-family: var(--family-two) !important;
+    color: var(--primary-color-one) !important;
+    text-transform: uppercase;
+}

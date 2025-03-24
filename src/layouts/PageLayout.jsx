@@ -12,4 +12,4 @@ export function PageLayout({children}) {
 
 PageLayout.propTypes = {
     children: PropTypes.node.isRequired
-  }
+}

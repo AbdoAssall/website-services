@@ -93,7 +93,7 @@ const HeroSlider = () => {
     //   const handleMouseLeave = () => setIsAutoPlaying(true);
 
     return (
-        <div className="relative h-screen w-full overflow-hidden">
+        <section className="mb-6 relative h-screen w-full overflow-hidden">
             {/* Slides */}
             {slides.map((slide, index) => (
                 <div
@@ -125,7 +125,7 @@ const HeroSlider = () => {
                                     >
                                         {slide.subTitle}
                                     </motion.h5>
-                                    <motion.h2
+                                    <motion.h1
                                         key={`title-${slide.id}`}
                                         initial="hiddenLeft"
                                         animate="visible"
@@ -136,7 +136,7 @@ const HeroSlider = () => {
                                         style={{ textShadow: '3px 1px 3px #078586' }}
                                     >
                                         {slide.title}
-                                    </motion.h2>
+                                    </motion.h1>
 
                                     <motion.p
                                         key={`desc-${slide.id}`}
@@ -243,7 +243,7 @@ const HeroSlider = () => {
                     />
                 </svg>
             </div>
-        </div>
+        </section>
     )
 }
 export default HeroSlider;

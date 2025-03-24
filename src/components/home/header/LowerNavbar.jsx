@@ -10,7 +10,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { fadeIn } from "/src/utils/variants";
 import { ContuctForm } from "./ContactForm";
 
-
 export function LowerNavbar() {
     const [openNav, setOpenNav] = useState(false);
     const [openSearch, setOpenSearch] = useState(false);
@@ -92,8 +91,8 @@ export function LowerNavbar() {
                     }}
                     className="w-full z-98"
                 >
-                    <Navbar dir="ltr" className={`header-lower px-4 py-2 lg:px-4 lg:py-4 ${isScroll ? 'fixed top-0 left-0 z-98 w-full shadow-md' : ''} h-max lg:h-[5.5rem] max-w-full rounded-none border-0 bg-white bg-opacity-100 transition-all duration-300`}>
-                        <div className="flex items-center justify-between text-dark-one h-full px-2 md:px-8 lg:px-0 transition-all">
+                    <Navbar dir="ltr" className={`header-lower px-4 py-2 lg:px-4 lg:py-4 ${isScroll ? 'fixed top-0 left-0 z-98 w-full shadow-md' : ''} h-max lg:h-[5.5rem] max-w-full rounded-none border-0 bg-white bg-opacity-100 transition-all duration300`}>
+                        <div className="flex items-center justify-between text-dark-one h-full px-2 md:px-8 lg:px-0">
                             <Link to="/" className="py-1 md:py-1.5">
                                 <img src="assets/images/logo-default.png" className="logo" alt="logo" loading="lazy" />
                             </Link>
@@ -121,11 +120,9 @@ export function LowerNavbar() {
                                     </div>
                                 </div>
                                 <button
-                                    // variant="text"
                                     type="button"
                                     title="menu"
                                     className="ml-auto pl insety-2 h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-                                    // ripple={false}
                                     onClick={() => setOpenNav(!openNav)}
                                 >
                                     <svg
