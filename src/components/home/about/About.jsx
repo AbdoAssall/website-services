@@ -1,4 +1,3 @@
-// @ts-nocheck
 import Section from "../../UI/Section";
 import { Briefcase, Play } from "lucide-react";
 import PrimaryLink from "../../UI/PrimaryLink";
@@ -38,7 +37,7 @@ const About = () => {
                 </div>
                 <div className="divider md:divider-horizontal"></div>
                 <div className="grid md:w-1/2 grow mt-21 md:mt-0 ltr:text-start rtl:text-right">
-                    <div className="flex gap-2 justify-start rtl:justify-end">
+                    <div className="flex gap-3 justify-start rtl:justify-end">
                         <Briefcase className="text-primary-one w-5 h-5" />
                         <h5 className="section-title">معلومات عنا</h5>
                     </div>

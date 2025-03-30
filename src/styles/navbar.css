@@ -57,7 +57,8 @@
 }
 @media (min-width: 768px) {
     .header-lower .logo {
-       width: 10.625rem;
+       width: 9.375rem;
+       /* width: 10.625rem; */
        height: auto;
     }
 }

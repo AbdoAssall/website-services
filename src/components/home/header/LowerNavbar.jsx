@@ -31,7 +31,7 @@ export function LowerNavbar() {
     }, []);
 
     const handleScroll = () => {
-        window.scrollY > 10 ? setIsScroll(true) : setIsScroll(false);
+        window.scrollY > 30 ? setIsScroll(true) : setIsScroll(false);
     }
 
     const menuServices = [
@@ -87,7 +87,7 @@ export function LowerNavbar() {
                         type: "spring",
                         stiffness: 260,
                         damping: 60,
-                        duration: 0.5
+                        duration: 0.3
                     }}
                     className="w-full z-98"
                 >

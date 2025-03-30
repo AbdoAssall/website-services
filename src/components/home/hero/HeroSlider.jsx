@@ -1,16 +1,12 @@
-/* eslint-disable no-unused-vars */
-import { useState, useEffect, useRef } from 'react';
+// @ts-nocheck
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import SecondaryLink from '../../UI/SecondaryLink';
 import { motion, AnimatePresence } from 'framer-motion'
 import { fadeIn } from '../../../utils/variants';
-
+import SectionShape from "../../UI/SectionShape";
+import useSwipeNavigation from '../../../hooks/useSwipeNavigation';
 
 const HeroSlider = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-    const autoPlayRef = useRef(null);
-
     const slides = [
         {
             id: 1,
@@ -41,6 +37,22 @@ const HeroSlider = () => {
         }
     ];
 
+    const {
+        currentIndex: currentSlide,
+        goToNext: goToNextSlide,
+        goToPrev: goToPrevSlide,
+        goToIndex: goToSlide,
+        handleMouseEnter,
+        handleMouseLeave
+    } = useSwipeNavigation({
+        itemCount: slides.length,
+        initialIndex: 0,
+        swipeThreshold: 50,
+        enableAutoplay: true,
+        autoplayInterval: 7000,
+        pauseOnHover: false,
+    });
+
     // Animation variants
     const textVariants = {
         hiddenTop: { y: -50, opacity: 0 },
@@ -56,44 +68,12 @@ const HeroSlider = () => {
         exit: { opacity: 0, transition: { duration: 0.5 } }
     };
 
-    // handl autoplay
-    useEffect(() => {
-        if (isAutoPlaying) {
-            autoPlayRef.current = setInterval(() => {
-                setCurrentSlide(prev => (prev + 1) % slides.length);
-            }, 7000)
-        }
-        return () => {
-            if (autoPlayRef.current) clearInterval(autoPlayRef.current)
-        }
-    }, [isAutoPlaying, slides.length]);
-
-    // Navigation functions
-    const goToSlide = (index) => {
-        setCurrentSlide(index);
-        // Reset autoplay timer on manual navigation
-        if (autoPlayRef.current) {
-            clearInterval(autoPlayRef.current);
-            autoPlayRef.current = setInterval(() => {
-                setCurrentSlide(prev => (prev + 1) % slides.length);
-            }, 7000)
-        }
-    };
-
-    const goToPrevSlide = () => {
-        setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
-    };
-
-    const goToNextSlide = () => {
-        setCurrentSlide(prev => (prev + 1) % slides.length);
-    }
-
-    // Pause autoplay on hover
-    //   const handleMouseEnter = () => setIsAutoPlaying(false);
-    //   const handleMouseLeave = () => setIsAutoPlaying(true);
-
     return (
-        <section className="mb-6 relative h-screen w-full overflow-hidden">
+        <section
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className="mb-6 relative h-screen w-full overflow-hidden"
+        >
             {/* Slides */}
             {slides.map((slide, index) => (
                 <div
@@ -106,6 +86,7 @@ const HeroSlider = () => {
                         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                         style={{ backgroundImage: `url(${slide.bgImage})` }}
                     >
+                        <SectionShape />
                         {/* <div className="absolute inset-0 bg-gradient-to-b from-primary-two/50 to-primary-one/80"></div> */}
                     </div>
 
@@ -175,7 +156,7 @@ const HeroSlider = () => {
                                             whileInView={"show"}
                                             animate="visible"
                                             exit="exit"
-                                            // viewport={{ once: false, amount: 0.8 }}
+                                        // viewport={{ once: false, amount: 0.8 }}
                                         >
                                             <SecondaryLink
                                                 to="#services"
@@ -229,7 +210,7 @@ const HeroSlider = () => {
             </div>
 
             {/* Wave SVG */}
-            <div className="absolute bottom-0 left-0 right-0 z-20 w-full overflow-hidden">
+            {/* <div className="absolute bottom-0 left-0 right-0 z-20 w-full overflow-hidden">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 100"
@@ -242,7 +223,7 @@ const HeroSlider = () => {
                         fillOpacity="1"
                     />
                 </svg>
-            </div>
+            </div> */}
         </section>
     )
 }
