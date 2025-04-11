@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Briefcase } from "lucide-react";
 import '/src/styles/section.css'
+import PrimaryLink from "./PrimaryLink";
 
 export default function Section({
     children,
@@ -9,30 +10,38 @@ export default function Section({
     contentStyle,
     titleStyle,
     descriptionStyle,
+    innerContentStyle,
     subTitle,
     sectionTitle,
-    description
+    description,
+    button,
+    buttonLink = '#',
 }) {
     return (
         <section className={`relative py-12 ${className}`} style={style}>
-            <div className="fle flex-col justify-center items-center mx-auto px-2 lg:px-0 max-w-[73.125rem]">
-                <div className={`flex flex-col justify-center items-center text-center ${contentStyle}`}>
+            <div className="flex flex-col mx-auto !px-4 xl:!px-0 max-w-[72.125rem]">
+                <div className={`flex flex-col ${contentStyle}`}>
                     {subTitle && (
-                        <div className="flex gap-3 justify-start rtl:justify-end">
+                        <div className="flex gap-3 justify-start rtl-justify-end">
                             <Briefcase className="text-primary-one w-5 h-5" />
                             <h5 className="section-title">{subTitle}</h5>
                         </div>
                     )}
-                    <div className="mt-4.5">
+                    <div className={`mt-4.5 flex flex-col text-center w-full ${innerContentStyle}`}>
                         {sectionTitle && (
                             <h2 className={`text-3xl md:text-[3.13rem] font-bold leading-13.5 text-primary-two capitalize ${titleStyle}`}>
                                 {sectionTitle}
                             </h2>
                         )}
                         {description && (
-                            <p className={`w-2xl mt-4 text-dark-one ${descriptionStyle}`}>
+                            <p className={`w-full mdw-2xl mt-4 text-dark-one ${descriptionStyle}`}>
                                 {description}
                             </p>
+                        )}
+                        {button && (
+                            <div className="">
+                                <PrimaryLink to={buttonLink} ariaLabel={button}>{button}</PrimaryLink>
+                            </div>
                         )}
                     </div>
                 </div>
@@ -51,19 +60,24 @@ Section.propTypes = {
     contentStyle: PropTypes.string,
     titleStyle: PropTypes.string,
     descriptionStyle: PropTypes.string,
+    innerContentStyle: PropTypes.string,
     subTitle: PropTypes.string,
     sectionTitle: PropTypes.string,
-    description: PropTypes.string
+    description: PropTypes.string,
+    button: PropTypes.string,
+    buttonLink: PropTypes.string,
 };
 
 Section.defaultProps = {
     children: null,
     className: '',
     style: {},
-    contentStyle: '',
+    contentStyle: 'justify-center items-center text-center',
     titleStyle: '',
     descriptionStyle: '',
+    innerContentStyle: '',
     subTitle: '',
     sectionTitle: '',
-    description: ''
+    description: '',
+    button: ''
 };

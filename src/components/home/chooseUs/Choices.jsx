@@ -1,5 +1,4 @@
 import Section from "../../UI/Section";
-import SectionShape from "../../UI/SectionShape";
 
 const Choices = () => {
     const Choices = [
@@ -32,7 +31,7 @@ const Choices = () => {
             sectionTitle="لماذا يختارنا الناس"
             description="سأشرح لك كيف نشأت كل هذه الفكرة الخاطئة المتمثلة في إدانة المتعة والإشادة بالألم، وسأقدم لك وصفًا كاملاً للنظام."
         >
-            <div className="flex justify-between items-center mt-18 md:flex-wrap flex-col md:flex-row gap-y-24">
+            <div className="flex justify-center items-center mt-18 md:flex-wrap flex-col md:flex-row gap-x-6 gap-y-24">
                 {Choices.map((choice, index) => (
                     <div key={index} className="relative group">
                         <div className="card bg-white w-full md:w-65.5 h69 shadow-md md:shadow-lg hover:bg-primary-one hover:rounded-tr-none overflow-hidden border border-gray-100 transition-all duration-300">
@@ -54,7 +53,6 @@ const Choices = () => {
                     </div>
                 ))}
             </div>
-            <SectionShape />
         </Section>
     );
 }

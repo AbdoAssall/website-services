@@ -6,7 +6,7 @@ import '../../../styles/services.css'
 import { ArrowRight } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 const Services = () => {
     const servicesData = [
@@ -46,11 +46,12 @@ const Services = () => {
         dots: true,
         infinite: true,
         centerMode: false,
-        lazyLoad: true,
+        // lazyLoad: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         swipeToSlide: false,
         arrows: false,
+        initialSlide: 0,
         autoplay: true,
         speed: 600,
         autoplaySpeed: 6000,
@@ -74,7 +75,7 @@ const Services = () => {
                 infinite: true,
               }
             },
-          ]
+        ]
     };
 
     return (
@@ -87,7 +88,7 @@ const Services = () => {
             sectionTitle="نحن نقدم خدمات مختلفة"
             description="هناك العديد من الاختلافات في مقاطع لوريم إيبسوم المتاحة، ولكن الأغلبية تعرضت للتغيير في شكل ما يمكن تصديقه"
         >
-            <div className="w-full relative space-y-6">
+            <div className="w-full relative">
                 <Slider {...settings}>
                     {servicesData.map((service, index) => (
                         <div

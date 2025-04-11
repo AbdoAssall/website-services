@@ -4,6 +4,7 @@ import { Brands } from "../components/home/services/Brands";
 import Services from "../components/home/services/Services";
 import Choices from "../components/home/chooseUs/Choices";
 import { PageLayout } from "../layouts/PageLayout";
+import Projects from "../components/home/projects/Projects";
 
 const Index = () => {
     return (
@@ -13,6 +14,7 @@ const Index = () => {
             <Brands />
             <Services />
             <Choices />
+            <Projects />
         </PageLayout>
     );
 };

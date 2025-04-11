@@ -7,12 +7,20 @@
     color: var(--primary-color-one) !important;
     text-transform: uppercase;
 }
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1rem;
+    }
+}
 .section-shape[data-negative="false"].section-shape-bottom, 
 .section-shape[data-negative="true"].section-shape-top {
     transform: rotate(180deg);
 }
 .section-shape-bottom {
     bottom: -1px;
+}
+.section-shape-top {
+    top: -1px;
 }
 .section-shape {
     overflow: hidden;
@@ -26,6 +34,10 @@ section .section-shape-bottom svg {
     width: calc(100% + 1.3px);
     height: 62px;
     transform: translate(-50%) rotateY(180deg);
+}
+section .section-shape-top svg {
+    width: calc(100% + 1.3px);
+    height: 67px;
 }
 .section-shape-bottom:not([data-negative="true"]) svg {
     z-index: -1;

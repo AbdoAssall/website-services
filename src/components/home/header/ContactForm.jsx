@@ -1,4 +1,5 @@
 // @ts-nocheck
+import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import InputLabel from "../../UI/InputLabel";
 import TextInput from "../../UI/TextInput";
@@ -6,14 +7,25 @@ import Textarea from "../../UI/Textarea";
 import PrimaryButton from "../../UI/PrimaryButton";
 
 export const ContuctForm = () => {
-    const lastProjects = [
-        { id: 1, name: "project", url: "#", img: "assets/images/projects/project-1.jpg" },
-        { id: 2, name: "project", url: "#", img: "assets/images/projects/project-2.jpg" },
-        { id: 3, name: "project", url: "#", img: "assets/images/projects/project-3.jpg" },
-        { id: 4, name: "project", url: "#", img: "assets/images/projects/project-4.jpg" },
-        { id: 5, name: "project", url: "#", img: "assets/images/projects/project-5.jpg" },
-    ]
-    
+    const [lastProjects, setLastProjects] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+                const response = await fetch('/src/api/projects.json');
+                const data = await response.json();
+                setLastProjects(data);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching projects:', error);
+            }
+        };
+        fetchProjects();
+    }, [])
+
+    const filterProjects = lastProjects.slice(lastProjects.length - 6, lastProjects.length - 1);
+
     return (
         <dialog id="my_modal_2" className="modal">
             <div dir="rtl" className="modal-box max-w-17/20 max-h-22/25 p-0 ltr:text-left rtl:text-right bg-white">
@@ -35,15 +47,19 @@ export const ContuctForm = () => {
                         <hr className="text-dark-one/15" />
                         <div className="my-3">
                             <h3 className="text-xl">احدث المشاريع</h3>
-                            <div className="flex items-center flex-wrap gap-3 ltr:justify-end">
-                                {lastProjects.map((project) => (
-                                    <Link key={project.id} to={project.url} arial-label="Projec" >
-                                        <figure className="w-26 h-26">
-                                            <img src={project.img} alt={project.name} className="w-full h-full rounded-lg object-cover" loading="lazy" />
-                                        </figure>
-                                    </Link>
-                                ))}
-                            </div>
+                            {loading ? (
+                                <span className="loading loading-spinner text-primary-one inline-block mt-4"></span>
+                            ) : (
+                                <div className="flex items-center flex-wrap gap-3 ltr:justify-end">
+                                    {filterProjects.map((project) => (
+                                        <Link key={project.id} to={project.url} arial-label="Projec" >
+                                            <figure className="w-26 h-26">
+                                                <img src={project.img} alt={project.name} className="w-full h-full rounded-lg object-cover" loading="lazy" />
+                                            </figure>
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                         <hr className="text-dark-one/15" />
                         <div className="mt-6 mb-3">

@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "name": "إدارة الموارد البشرية بالوقت المشترك",
+        "category": "الموارد البشرية",
+        "url": "#",
+        "img": "assets/images/projects/project-1.jpg",
+        "images": [
+            {
+                "url": "assets/images/projects/project-1.jpg",
+                "caption": "Detail View 1"
+            },
+            {
+                "url": "assets/images/projects/project-5.jpg",
+                "caption": "Detail View 2"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "ست خطوات أساسية لكتابة وظيفة ناجحة",
+        "category": "التدريب",
+        "url": "#",
+        "img": "assets/images/projects/project-2.jpg",
+        "images": [
+            {
+                "url": "assets/images/projects/project-2.jpg",
+                "caption": "Detail View 1"
+            },
+            {
+                "url": "assets/images/projects/project-3.jpg",
+                "caption": "Detail View 2"
+            },
+            {
+                "url": "assets/images/projects/project-1.jpg",
+                "caption": "Detail View 2"
+            },
+            {
+                "url": "assets/images/projects/project-4.jpg",
+                "caption": "Detail View 2"
+            },
+            {
+                "url": "assets/images/projects/project-5.jpg",
+                "caption": "Detail View 2"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "تايم إتش آر تستعد لعقد تصنيع البلاستيك",
+        "category": "القيادة",
+        "url": "#",
+        "img": "assets/images/projects/project-3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "الخطوات الأساسية لكتابة وصف الوظيفة",
+        "category": "الموارد البشرية",
+        "url": "#",
+        "img": "assets/images/projects/project-4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "الفصل المعقد لشركة صغيرة",
+        "category": "التدريب",
+        "url": "#",
+        "img": "assets/images/projects/project-5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "قيم الشركة والعلاقة",
+        "category": "القيادة",
+        "url": "#",
+        "img": "assets/images/projects/project-6.jpg"
+    }
+]
