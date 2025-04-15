@@ -108,11 +108,11 @@ const Testimonial = () => {
                 <Slider {...settings}>
                     {testimonials.map((client, index) => (
                         <div key={index} className="testimonial-inner w-140 p-7.5 bg-gray-50/35 rounded-md mb-2.5">
-                            <p className="description">
+                            <p className="description rtl:text-right">
                                 {client.description}
                             </p>
-                            <div className="lower-content flex items-center justify-between">
-                                <div className="flex items-center relative">
+                            <div className="lower-content flex items-center justify-between rtl:flex-row-reverse">
+                                <div className="flex items-center relative rtl:flex-row-reverse">
                                     <div className="relative">
                                         <img
                                             className="object-cover object-center rounded-full w-20 !h-20 shadow-sm"
@@ -121,7 +121,7 @@ const Testimonial = () => {
                                             loading="lazy"
                                         />
                                     </div>
-                                    <div className="auhour-name mx-6 relative flex flex-col">
+                                    <div className="auhour-name mx-6 relative flex flex-col rtl:text-right">
                                         <h3>{client.name}</h3>
                                         <span>{client.position}</span>
                                         <div className="rating rating-xs gap-2">
