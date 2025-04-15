@@ -94,7 +94,7 @@ const HeroSlider = () => {
                     {index === currentSlide && (
                         <div className={`!px-2 sm:!px-9 pb-16 relative z-8 flex h-full ${index === 1 ? 'justify-center text-center sm:justify-start sm:rtl:text-right sm:ltr:text-left' : 'justify-center  text-center'} items-center text-white`}>
                             <div className="max-w-4xl">
-                                <AnimatePresence mode="wait">
+                                <AnimatePresence>
                                     <motion.h5
                                         key={`subtitle-${slide.id}`}
                                         initial="hiddenTop"

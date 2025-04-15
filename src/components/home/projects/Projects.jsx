@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import Section from "../../UI/Section";
 import SectionShape from "../../UI/SectionShape";
-import "../../../styles/projects.css"
+import "../../../styles/scss/projects.scss";
 import { ArrowRight, CircleFadingPlus } from 'lucide-react';
 import { useState, useEffect } from "react";
 import { Fancybox } from "@fancyapps/ui";
@@ -81,7 +81,7 @@ const Projects = () => {
         >
             <div className="mt-9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
                 {loading ? (
-                    <span className="loading loading-spinner text-success"></span>
+                    <span className="loading loading-spinner text-success inline-block mx-auto"></span>
                 ) : (
                     projects.map((project) => (
                         <div key={project.id} className="project-box card bg-white">

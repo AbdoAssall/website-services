@@ -46,7 +46,6 @@ const Services = () => {
         dots: true,
         infinite: true,
         centerMode: false,
-        // lazyLoad: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         swipeToSlide: false,

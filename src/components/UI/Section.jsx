@@ -4,17 +4,17 @@ import '/src/styles/section.css'
 import PrimaryLink from "./PrimaryLink";
 
 export default function Section({
-    children,
-    className,
-    style,
-    contentStyle,
-    titleStyle,
-    descriptionStyle,
-    innerContentStyle,
-    subTitle,
-    sectionTitle,
-    description,
-    button,
+    children = null,
+    className = '',
+    style = {},
+    contentStyle = 'justify-center items-center text-center',
+    titleStyle = '',
+    descriptionStyle = '',
+    innerContentStyle = '',
+    subTitle = '',
+    sectionTitle = '',
+    description = '',
+    button = '',
     buttonLink = '#',
 }) {
     return (
@@ -66,18 +66,4 @@ Section.propTypes = {
     description: PropTypes.string,
     button: PropTypes.string,
     buttonLink: PropTypes.string,
-};
-
-Section.defaultProps = {
-    children: null,
-    className: '',
-    style: {},
-    contentStyle: 'justify-center items-center text-center',
-    titleStyle: '',
-    descriptionStyle: '',
-    innerContentStyle: '',
-    subTitle: '',
-    sectionTitle: '',
-    description: '',
-    button: ''
 };
