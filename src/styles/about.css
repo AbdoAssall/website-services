@@ -1,5 +1,5 @@
 .scale-in-center {
-    -webkit-animation: scale-in-center 2s ease-in-out infinite both;
+    -webkit-animation: scale-in-center 2s ease-in-out infinite alternate both;
     animation: scale-in-center 2s ease-in-out infinite both;
     background-color: rgba(255, 255, 255, 0.25);
     display: inline-block;

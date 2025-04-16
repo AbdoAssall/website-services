@@ -74,26 +74,26 @@ const Testimonial = () => {
         {
             name: "ميا براون",
             position: "مدير تسويق في Stech",
-            description: "لقد جلبت قيمة هائلة للشركة. لقد أنشأنا المزيد من العملاء المحتملين في آخر 45 يومًا أكثر من آخر يومين ...",
-            image: "https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            description: "لقد جلبت قيمة هائلة للشركة. لقد أنشأنا المزيد من العملاء المحتملين في آخر 45 يومًا أكثر من آخر يومين",
+            image: "assets/images/clients/testi-1.png"
         },
         {
             name: "ميا براون",
             position: "مدير تسويق في Stech",
-            description: "لقد جلبت قيمة هائلة للشركة. لقد أنشأنا المزيد من العملاء المحتملين في آخر 45 يومًا أكثر من آخر يومين ...",
-            image: "https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            description: "لقد جلبت قيمة هائلة للشركة. لقد أنشأنا المزيد من العملاء المحتملين في آخر 45 يومًا أكثر من آخر يومين",
+            image: "assets/images/clients/testi-2.png"
         },
         {
             name: "ميا براون",
             position: "مدير تسويق في Stech",
-            description: "لقد جلبت قيمة هائلة للشركة. لقد أنشأنا المزيد من العملاء المحتملين في آخر 45 يومًا أكثر من آخر يومين ...",
-            image: "https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            description: "لقد جلبت قيمة هائلة للشركة. لقد أنشأنا المزيد من العملاء المحتملين في آخر 45 يومًا أكثر من آخر يومين",
+            image: "assets/images/clients/testi-3.png"
         },
         {
             name: "ميا براون",
             position: "مدير تسويق في Stech",
-            description: "لقد جلبت قيمة هائلة للشركة. لقد أنشأنا المزيد من العملاء المحتملين في آخر 45 يومًا أكثر من آخر يومين ...",
-            image: "https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            description: "لقد جلبت قيمة هائلة للشركة. لقد أنشأنا المزيد من العملاء المحتملين في آخر 45 يومًا أكثر من آخر يومين",
+            image: "assets/images/clients/testi-2.png"
         },
     ]
 

@@ -7,6 +7,7 @@ import Choices from "../components/home/chooseUs/Choices";
 import { PageLayout } from "../layouts/PageLayout";
 import Projects from "../components/home/projects/Projects";
 import Testimonial from "../components/home/testimonial/Testimonial";
+import Contact from "../components/home/contactUs/Contact";
 
 const SliderLazy = React.lazy(() => import("../components/home/hero/HeroSlider"));
 
@@ -24,6 +25,7 @@ const Index = () => {
             <Choices />
             <Projects />
             <Testimonial />
+            <Contact />
         </PageLayout>
     );
 };

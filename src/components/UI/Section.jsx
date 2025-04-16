@@ -22,7 +22,7 @@ export default function Section({
             <div className="flex flex-col mx-auto !px-4 xl:!px-0 max-w-[72.125rem]">
                 <div className={`flex flex-col ${contentStyle}`}>
                     {subTitle && (
-                        <div className="flex gap-3 justify-start rtl-justify-end">
+                        <div className="flex gap-3 justify-start">
                             <Briefcase className="text-primary-one w-5 h-5" />
                             <h5 className="section-title">{subTitle}</h5>
                         </div>
