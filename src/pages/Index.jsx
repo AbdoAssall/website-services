@@ -8,6 +8,8 @@ import { PageLayout } from "../layouts/PageLayout";
 import Projects from "../components/home/projects/Projects";
 import Testimonial from "../components/home/testimonial/Testimonial";
 import Contact from "../components/home/contactUs/Contact";
+import Plans from "../components/home/plans/Plans";
+import Questions from "../components/home/faq/Questions";
 
 const SliderLazy = React.lazy(() => import("../components/home/hero/HeroSlider"));
 
@@ -26,6 +28,8 @@ const Index = () => {
             <Projects />
             <Testimonial />
             <Contact />
+            <Plans />
+            <Questions />
         </PageLayout>
     );
 };

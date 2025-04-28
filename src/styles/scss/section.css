@@ -1,0 +1,70 @@
+.section-title {
+  font-size: 1.07rem;
+  line-height: 24px;
+  font-weight: 500 !important;
+  letter-spacing: normal;
+  font-family: var(--family-two) !important;
+  color: var(--primary-color-one) !important;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1rem;
+  }
+}
+/* Section Shape */
+.section-shape[data-negative=false].section-shape-bottom,
+.section-shape[data-negative=true].section-shape-top {
+  transform: rotate(180deg);
+}
+
+.section-shape {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  direction: ltr;
+}
+.section-shape.section-shape-bottom {
+  bottom: -1px;
+}
+.section-shape.section-shape-bottom svg {
+  width: calc(100% + 1.3px);
+  height: 62px;
+  transform: translate(-50%) rotateY(180deg);
+}
+.section-shape.section-shape-bottom:not([data-negative=true]) svg {
+  z-index: -1;
+}
+.section-shape.section-shape-top {
+  top: -1px;
+}
+.section-shape.section-shape-top svg {
+  width: calc(100% + 1.3px);
+  height: 67px;
+}
+.section-shape svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section-shape .section-shape-fill {
+  fill: rgb(255, 255, 255);
+  transform-origin: center;
+  transform: rotateY(0deg);
+}
+
+/* Sction Shape 2 */
+.section-shape2.section-shape-bottom svg {
+  height: 55px;
+}
+.section-shape2.section-shape-top svg {
+  height: 47px;
+}
+.section-shape2 .section-shape-fill {
+  fill: #F0F3F9;
+}/*# sourceMappingURL=section.css.map */

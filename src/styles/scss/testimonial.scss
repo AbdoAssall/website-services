@@ -15,7 +15,7 @@
         width: 0;
         height: 100%;
         top: 0;
-        right: -30px;
+        // right: -30px;
         background: var(--primary-color-two);
         z-index: -1;
         transition: all 0.6s ease;
@@ -77,12 +77,36 @@
     &:hover {
         &::before {
             width: calc(100% + 60px);
-            left: -30px;
+            // left: -30px;
         }
         p.description, .lower-content .auhour-name h3, 
         .lower-content .auhour-name span {
             color: white !important;
         }
     }
+    // LTR specific styles
+    [dir="ltr"] & {
+        &::before {
+          right: -30px;
+          left: auto;
+        }
+        &:hover {
+          &::before {
+            left: -30px;
+          }
+        }
+      }
+      // RTL specific styles
+      [dir="rtl"] & {
+        &::before {
+          left: -30px;
+          right: auto;
+        }
+        &:hover {
+          &::before {
+            right: -30px;
+          }
+        }
+      }
   }
 }

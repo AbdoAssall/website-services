@@ -9,12 +9,13 @@ import { Menu, Search, X } from "lucide-react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { fadeIn } from "/src/utils/variants";
 import { ContuctForm } from "./ContactForm";
+import { useDirection } from '../../../contexts/DirectionContext';
 
 export function LowerNavbar() {
     const [openNav, setOpenNav] = useState(false);
     const [openSearch, setOpenSearch] = useState(false);
     const [isScroll, setIsScroll] = useState(false);
-    // const [direction, setDirection] = useState('rtl');
+    const { direction, changeDirection } = useDirection();
 
     useEffect(() => {
         window.addEventListener(
@@ -104,6 +105,43 @@ export function LowerNavbar() {
                                         <button onClick={openSearchBar} type="button" aria-label="Search" title="Search" className="hidden lg:inline-block border-0 text-[1.375rem] font-normal text-dark-one cursor-pointer transition-all duration-300 ease-in-out">
                                             <Search strokeWidth={1.5} className="mx-auto w-7 h-7 text-dark-one leading-10" />
                                         </button>
+                                    </div>
+                                    {/* Select Language */}
+                                    <div className="dropdown">
+                                        <div tabIndex={0} role="button" className="btn bg-primary-one border-primary-one m-1">
+                                            {direction === 'rtl' ? 'العربية' : 'English'}
+                                            <svg
+                                                width="12px"
+                                                height="12px"
+                                                className="inline-block h-2 w-2 fill-current opacity-60"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 2048 2048">
+                                                <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+                                            </svg>
+                                        </div>
+                                        <ul tabIndex={0} className="dropdown-content bg-white rounded-box z-1 w-52 p-2 shadow-2xl">
+                                            <li>
+                                                <input
+                                                    type="radio"
+                                                    name="theme-dropdown"
+                                                    className="btn btn-sm btn-block bg-transparent border-0 hover:!text-primary-one justify-start"
+                                                    aria-label='العربية'
+                                                    value='العربية'
+                                                    onClick={() => changeDirection('rtl')}
+                                                />
+                                            </li>
+                                            <li>
+                                                <input
+                                                    type="radio"
+                                                    name="theme-dropdown"
+                                                    className="btn btn-sm btn-block bg-transparent border-0 hover:!text-primary-one justify-start"
+                                                    aria-label="English"
+                                                    value="English"
+                                                    onClick={() => changeDirection('ltr')}
+                                                />
+
+                                            </li>
+                                        </ul>
                                     </div>
                                     {/* Contuct btn */}
                                     <div>

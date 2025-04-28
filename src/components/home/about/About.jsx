@@ -41,8 +41,8 @@ const About = () => {
                         <Briefcase className="text-primary-one w-5 h-5" />
                         <h5 className="section-title">معلومات عنا</h5>
                     </div>
-                    <div className="mt-4.5">
-                        <h2 className="text-3xl md:text-[2.75rem] font-bold leading-12 text-primary-two capitalize">خذ عملك إلى المستوى التالي</h2>
+                    <div className="mt-1 md:mt-4.5">
+                        <h2 className="text-3xl md:text-[2.75rem] font-bold ltr:!leading-12.5 md:rtl:!leading-15 text-primary-two capitalize">خذ عملك إلى المستوى التالي</h2>
                         <p className="mt-4 text-dark-one">
                             بخبرة تزيد عن 20 عامًا، نضمن لكم دائمًا الحصول على الأفضل.
                             نخدم عملائنا على جميع مستويات مؤسساتهم، ونقدم لهم أقصى استفادة،

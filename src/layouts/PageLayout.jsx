@@ -1,9 +1,12 @@
 import { Navbar } from "../components/home/header/Navbar";
 import PropTypes from "prop-types";
+import { useDirection } from "../contexts/DirectionContext"
 
 export function PageLayout({children}) {
+    const { direction } = useDirection();
+
     return (
-        <div dir="rtl" className="relative flex min-h-screen flex-col bg-white">
+        <div dir={direction} className="relative flex min-h-screen flex-col bg-white">
             <Navbar />
             <main className="max-w-full">{children}</main> {/* px-2 md:px-4 */}
         </div>

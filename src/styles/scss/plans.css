@@ -1,0 +1,177 @@
+.pricing-plan.type-one {
+  position: relative;
+  transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+.pricing-plan.type-one .tag {
+  width: calc(100% - 3.75rem);
+  background-color: var(--color-primary-one);
+  color: white;
+}
+.pricing-plan.type-one .pricing-plan-inner {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  background-color: white;
+}
+.pricing-plan.type-one .pricing-plan-inner::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 100%;
+  top: 0;
+  background: var(--heading-dark);
+  border-radius: 0.375rem;
+  opacity: 1;
+  z-index: -1;
+  transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+[dir=ltr] .pricing-plan.type-one .pricing-plan-inner::before {
+  right: -30px;
+  left: auto;
+}
+[dir=ltr] .pricing-plan.type-one .pricing-plan-inner:hover::before {
+  width: calc(100% + 3.75rem);
+  left: -30px;
+}
+[dir=rtl] .pricing-plan.type-one .pricing-plan-inner::before {
+  left: -30px;
+  right: auto;
+}
+[dir=rtl] .pricing-plan.type-one .pricing-plan-inner:hover::before {
+  width: calc(100% + 3.75rem);
+  right: -30px;
+}
+.pricing-plan.type-one .pricing-plan-inner .upper-plan {
+  position: relative;
+  text-align: center;
+  border-bottom: 1px dashed rgba(34, 34, 34, 0.1);
+  transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+.pricing-plan.type-one .pricing-plan-inner .upper-plan h2 {
+  display: block;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--heading-dark);
+  transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+.pricing-plan.type-one .pricing-plan-inner .upper-plan .price {
+  margin-top: 0.938rem;
+  position: relative;
+}
+.pricing-plan.type-one .pricing-plan-inner .upper-plan .price h6 {
+  font-size: 1rem !important;
+  line-height: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--heading-dark);
+  transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+.pricing-plan.type-one .pricing-plan-inner .upper-plan .price h6 small {
+  font-size: 2rem;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--primary-color-one);
+}
+.pricing-plan.type-one .pricing-plan-inner .lower-plan {
+  position: relative;
+  margin-bottom: 1.563rem;
+  transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+.pricing-plan.type-one .pricing-plan-inner .lower-plan ul li {
+  position: relative;
+  margin-bottom: 0.625rem;
+  line-height: 28px;
+  font-size: 1rem;
+  color: var(--text-color-dark-one);
+}
+.pricing-plan.type-one .pricing-plan-inner:hover .upper-plan {
+  border-color: var(--text-color-dark-one);
+}
+.pricing-plan.type-one .pricing-plan-inner:hover .upper-plan h2 {
+  color: white !important;
+}
+.pricing-plan.type-one .pricing-plan-inner:hover .upper-plan .price h6 {
+  color: var(--border-color-dark) !important;
+}
+.pricing-plan.type-one .pricing-plan-inner:hover .upper-plan p {
+  color: var(--border-color-dark);
+}
+.pricing-plan.type-one .pricing-plan-inner:hover .lower-plan ul li {
+  color: var(--border-color-dark);
+  transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+.pricing-plan.type-two .tag {
+  background-color: white;
+  color: var(--color-primary-one) !important;
+}
+.pricing-plan.type-two .pricing-plan-inner {
+  background-color: var(--color-primary-two) !important;
+}
+.pricing-plan.type-two .pricing-plan-inner::before {
+  background-color: var(--color-primary-one) !important;
+  border-color: var(--color-primary-one) !important;
+}
+.pricing-plan.type-two .pricing-plan-inner .upper-plan {
+  border-color: rgba(255, 255, 255, 0.2117647059) !important;
+}
+.pricing-plan.type-two .pricing-plan-inner .upper-plan h2 {
+  color: white !important;
+}
+.pricing-plan.type-two .pricing-plan-inner .upper-plan .price h6 {
+  color: white !important;
+}
+.pricing-plan.type-two .pricing-plan-inner .upper-plan .price h6 small {
+  color: var(--color-primary-one) !important;
+}
+.pricing-plan.type-two .pricing-plan-inner .upper-plan p {
+  color: white !important;
+}
+.pricing-plan.type-two .pricing-plan-inner .lower-plan ul li {
+  color: white;
+}
+.pricing-plan.type-two .pricing-plan-inner .lower-plan ul li svg {
+  color: rgba(255, 255, 255, 0.2901960784) !important;
+}
+.pricing-plan.type-two .pricing-plan-inner:hover .upper-plan {
+  border-color: rgba(255, 255, 255, 0.2117647059) !important;
+}
+.pricing-plan.type-two .pricing-plan-inner:hover .upper-plan .price h6 {
+  color: white !important;
+}
+.pricing-plan.type-two .pricing-plan-inner:hover .upper-plan .price h6 small {
+  color: white !important;
+}
+.pricing-plan.type-two .pricing-plan-inner:hover .lower-plan ul li {
+  color: white;
+}
+.pricing-plan.type-two .pricing-plan-inner:hover .lower-plan ul li svg {
+  color: rgba(255, 255, 255, 0.2901960784) !important;
+}/*# sourceMappingURL=plans.css.map */

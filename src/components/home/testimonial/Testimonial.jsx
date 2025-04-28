@@ -7,8 +7,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Quote } from 'lucide-react';
+import { useDirection } from '../../../contexts/DirectionContext';
+
 
 const Testimonial = () => {
+    const { direction } = useDirection();
     const NextArrow = (props) => {
         const { onClick } = props;
         return (
@@ -90,8 +93,8 @@ const Testimonial = () => {
             image: "assets/images/clients/testi-3.png"
         },
         {
-            name: "ميا براون",
-            position: "مدير تسويق في Stech",
+            name: "Mia Bron",
+            position: "Maneger in Stech",
             description: "لقد جلبت قيمة هائلة للشركة. لقد أنشأنا المزيد من العملاء المحتملين في آخر 45 يومًا أكثر من آخر يومين",
             image: "assets/images/clients/testi-2.png"
         },
@@ -107,12 +110,12 @@ const Testimonial = () => {
             <div className="testimonial w-full relative mt-4">
                 <Slider {...settings}>
                     {testimonials.map((client, index) => (
-                        <div key={index} className="testimonial-inner w-140 p-7.5 bg-gray-50/35 rounded-md mb-2.5">
+                        <div dir={direction} key={index} className="testimonial-inner w-140 p-7.5 bg-gray-50/35 rounded-md mb-2.5 border border-gray-50">
                             <p className="description rtl:text-right">
                                 {client.description}
                             </p>
-                            <div className="lower-content flex items-center justify-between rtl:flex-row-reverse">
-                                <div className="flex items-center relative rtl:flex-row-reverse">
+                            <div className={`lower-content flex items-center justify-between`}>
+                                <div className={`flex items-center relative`}>
                                     <div className="relative">
                                         <img
                                             className="object-cover object-center rounded-full w-20 !h-20 shadow-sm"
@@ -137,7 +140,6 @@ const Testimonial = () => {
                                     <Quote className="text-primary-one mx-auto" size={26} strokeWidth={1.5} />
                                 </div>
                             </div>
-
                         </div>
                     ))}
                 </Slider>

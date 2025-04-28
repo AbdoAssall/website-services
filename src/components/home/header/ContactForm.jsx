@@ -5,10 +5,12 @@ import InputLabel from "../../UI/InputLabel";
 import TextInput from "../../UI/TextInput";
 import Textarea from "../../UI/Textarea";
 import PrimaryButton from "../../UI/PrimaryButton";
+import { useDirection } from '../../../contexts/DirectionContext';
 
 export const ContuctForm = () => {
     const [lastProjects, setLastProjects] = useState([]);
     const [loading, setLoading] = useState(true);
+    const { isRTL } = useDirection();
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -30,8 +32,8 @@ export const ContuctForm = () => {
         <dialog id="my_modal_2" className="modal">
             <div dir="rtl" className="modal-box max-w-17/20 max-h-22/25 p-0 ltr:text-left rtl:text-right bg-white">
                 <div className="card lg:card-side flex-col-reverse bg-primary-three shadow-sm">
-                    <div className="card-body p-10 ltr:text-left">
-                        <div className="w-full flex ltr:justify-end">
+                    <div className={`card-body p-10 ${isRTL ? 'text-right' : 'text-left'}`}>
+                        <div className={`w-full flex ${isRTL ? 'justify-start' : 'justify-end'}`}>
                             <figure className="logo w-36 h-auto">
                                 <img
                                     src="/assets/images/logo-default.png"
@@ -50,7 +52,7 @@ export const ContuctForm = () => {
                             {loading ? (
                                 <span className="loading loading-spinner text-primary-one inline-block mt-4"></span>
                             ) : (
-                                <div className="flex items-center flex-wrap gap-3 ltr:justify-end">
+                                <div className={`flex items-center flex-wrap gap-3 ${isRTL ? 'justify-start' : 'justify-end'}`}>
                                     {filterProjects.map((project) => (
                                         <Link key={project.id} to={project.url} arial-label="Projec" >
                                             <figure className="w-26 h-26">
@@ -66,35 +68,35 @@ export const ContuctForm = () => {
                             © 2023 كريوت. جميع الحقوق محفوظة.
                         </div>
                     </div>
-                    <div className="card-body p-10 lg:w-3/5 drop-shadow-lg rounded-r-xl bg-white ltr:text-left">
+                    <div className={`card-body p-10 lg:w-3/5 drop-shadow-lg rounded-r-xl bg-white ${isRTL ? 'text-right' : 'text-left'}`}>
                         <form>
                             <div>
-                                <InputLabel htmlFor="name" className="uppercase rtl:!text-base" value="اسمك" />
+                                <InputLabel htmlFor="name" className={`uppercase ${isRTL ? '!text-base' : ''}`} value="اسمك" />
                                 <TextInput
                                     id="name"
                                     name="name"
-                                    className="block w-full !mt-1"
+                                    className={`block w-full !mt-1 ${isRTL ? 'text-right' : 'text-left'}`}
                                 />
                             </div>
                             <div className="mt-3">
-                                <InputLabel htmlFor="email" className="uppercase rtl:!text-base" value="اميلك" />
+                                <InputLabel htmlFor="email" className={`uppercase ${isRTL ? '!text-base' : ''}`} value="اميلك" />
                                 <TextInput
                                     type="email"
                                     id="email"
                                     name="email"
-                                    className="block w-full !mt-1"
+                                    className={`block w-full !mt-1 ${isRTL ? 'text-right' : 'text-left'}`}
                                 />
                             </div>
                             <div className="mt-3">
-                                <InputLabel htmlFor="address" className="uppercase rtl:!text-base" value="العنوان" />
+                                <InputLabel htmlFor="address" className={`uppercase ${isRTL ? '!text-base' : ''}`} value="العنوان" />
                                 <TextInput
                                     id="address"
                                     name="address"
-                                    className="block w-full !mt-1"
+                                    className={`block w-full !mt-1 ${isRTL ? 'text-right' : 'text-left'}`}
                                 />
                             </div>
                             <div className="mt-3">
-                                <InputLabel htmlFor="message" className="uppercase rtl:!text-base" value="رسالتك (اختياري)" />
+                                <InputLabel htmlFor="message" className={`uppercase ${isRTL ? '!text-base' : ''}`} value="رسالتك (اختياري)" />
                                 <Textarea
                                     id="message"
                                     name="message"

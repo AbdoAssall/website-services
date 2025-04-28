@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Briefcase } from "lucide-react";
-import '/src/styles/section.css'
+import '/src/styles/scss/section.css'
 import PrimaryLink from "./PrimaryLink";
 
 export default function Section({
@@ -20,31 +20,33 @@ export default function Section({
     return (
         <section className={`relative py-12 ${className}`} style={style}>
             <div className="flex flex-col mx-auto !px-4 xl:!px-0 max-w-[72.125rem]">
-                <div className={`flex flex-col ${contentStyle}`}>
-                    {subTitle && (
-                        <div className="flex gap-3 justify-start">
-                            <Briefcase className="text-primary-one w-5 h-5" />
-                            <h5 className="section-title">{subTitle}</h5>
-                        </div>
-                    )}
-                    <div className={`mt-4.5 flex flex-col text-center w-full ${innerContentStyle}`}>
-                        {sectionTitle && (
-                            <h2 className={`text-3xl md:text-[3.13rem] font-bold leading-13.5 text-primary-two capitalize ${titleStyle}`}>
-                                {sectionTitle}
-                            </h2>
-                        )}
-                        {description && (
-                            <p className={`w-full mdw-2xl mt-4 text-dark-one ${descriptionStyle}`}>
-                                {description}
-                            </p>
-                        )}
-                        {button && (
-                            <div className="">
-                                <PrimaryLink to={buttonLink} ariaLabel={button}>{button}</PrimaryLink>
+                {contentStyle && (
+                    <div className={`flex flex-col ${contentStyle}`}>
+                        {subTitle && (
+                            <div className="flex gap-3 justify-start">
+                                <Briefcase className="text-primary-one w-5 h-5" />
+                                <h5 className="section-title">{subTitle}</h5>
                             </div>
                         )}
+                        <div className={`mt-1 md:mt-4.5 flex flex-col text-center w-full ${innerContentStyle}`}>
+                            {sectionTitle && (
+                                <h2 className={`text-3xl md:text-[3.13rem] font-bold ltr:!leading-12.5 md:rtl:!leading-15 text-primary-two capitalize ${titleStyle}`}>
+                                    {sectionTitle}
+                                </h2>
+                            )}
+                            {description && (
+                                <p className={`w-full mdw-2xl mt-4 text-dark-one ${descriptionStyle}`}>
+                                    {description}
+                                </p>
+                            )}
+                            {button && (
+                                <div className="">
+                                    <PrimaryLink to={buttonLink} ariaLabel={button}>{button}</PrimaryLink>
+                                </div>
+                            )}
+                        </div>
                     </div>
-                </div>
+                )}
                 <div className="mt-3">
                     {children}
                 </div>

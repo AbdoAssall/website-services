@@ -15,7 +15,6 @@
   width: 0;
   height: 100%;
   top: 0;
-  right: -30px;
   background: var(--primary-color-two);
   z-index: -1;
   transition: all 0.6s ease;
@@ -70,9 +69,22 @@
 }
 .testimonial .testimonial-inner:hover::before {
   width: calc(100% + 60px);
-  left: -30px;
 }
 .testimonial .testimonial-inner:hover p.description, .testimonial .testimonial-inner:hover .lower-content .auhour-name h3,
 .testimonial .testimonial-inner:hover .lower-content .auhour-name span {
   color: white !important;
+}
+[dir=ltr] .testimonial .testimonial-inner::before {
+  right: -30px;
+  left: auto;
+}
+[dir=ltr] .testimonial .testimonial-inner:hover::before {
+  left: -30px;
+}
+[dir=rtl] .testimonial .testimonial-inner::before {
+  left: -30px;
+  right: auto;
+}
+[dir=rtl] .testimonial .testimonial-inner:hover::before {
+  right: -30px;
 }/*# sourceMappingURL=testimonial.css.map */

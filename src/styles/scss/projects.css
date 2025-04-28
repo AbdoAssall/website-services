@@ -28,7 +28,6 @@
   width: 100%;
   height: 100%;
   inset: 0;
-  direction: ltr;
 }
 .project-box .image-box .overlay::before {
   content: "";
@@ -36,7 +35,6 @@
   width: 0;
   height: 100%;
   border-radius: 6px;
-  right: -30px;
   top: 0;
   background: var(--primary-color-two);
   transition: all 0.6s ease;
@@ -44,6 +42,14 @@
   -webkit-transition: all 0.6s ease;
   -ms-transition: all 0.6s ease;
   -o-transition: all 0.6s ease;
+}
+[dir=ltr] .project-box .image-box .overlay::before {
+  right: -30px;
+  left: auto;
+}
+[dir=rtl] .project-box .image-box .overlay::before {
+  left: -30px;
+  right: auto;
 }
 .project-box .image-box .overlay .zm-btn {
   position: absolute;
@@ -144,7 +150,12 @@
 .project-box:hover .image-box .overlay::before {
   opacity: 0.9;
   width: calc(100% + 60px);
-  left: -1.875rem;
+}
+[dir=ltr] .project-box:hover .image-box .overlay::before {
+  left: -30px;
+}
+[dir=rtl] .project-box:hover .image-box .overlay::before {
+  right: -30px;
 }
 .project-box:hover .image-box .overlay a.zm-btn {
   opacity: 1;
