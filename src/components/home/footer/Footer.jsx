@@ -236,7 +236,8 @@ const Footer = () => {
 
             {/* Bottom bar */}
             <div className="py-5 mt-8 md:mt-0 bg-primary-one text-white text-center text-sm">
-                Copyright © 2025 ScopHub. All Rights Reserved.
+                Copyright © 2025 ScopHub. All Rights Reserved - Powered By 
+                <a className="!text-white font-bold hover:!text-gray-300" href="https://abdoassal-portfolio.netlify.app/" target="_blank"> AbdoAssal</a>.
             </div>
         </footer>
     );
