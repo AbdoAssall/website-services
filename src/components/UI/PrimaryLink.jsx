@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-export default function PrimaryButton({
+export default function PrimaryLink({
     className = '',
-    ariaLabel,
-    children,
+    ariaLabel = '',
+    children = null,
     to = "#",
     ...props
 }) {
@@ -19,4 +20,11 @@ export default function PrimaryButton({
             {children}
         </Link>
     );
+}
+
+PrimaryLink.propTypes = {
+    className: PropTypes.string.isRequired,
+    ariaLabel: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired
 }

@@ -49,9 +49,9 @@ img {
     height: auto;
 }
 
-ul {
+/* ul {
     padding-left: 17px;
-}
+} */
 
 .page_wapper {
     position: relative;
@@ -259,4 +259,7 @@ a:hover {
 ul li,
 ol li {
     margin-bottom: 5px;
+}
+.tooltip {
+    --tt-bg: white;
 }

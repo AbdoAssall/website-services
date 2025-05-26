@@ -10,6 +10,7 @@ import Testimonial from "../components/home/testimonial/Testimonial";
 import Contact from "../components/home/contactUs/Contact";
 import Plans from "../components/home/plans/Plans";
 import Questions from "../components/home/faq/Questions";
+import Footer from "../components/home/footer/Footer";
 
 const SliderLazy = React.lazy(() => import("../components/home/hero/HeroSlider"));
 
@@ -30,6 +31,7 @@ const Index = () => {
             <Contact />
             <Plans />
             <Questions />
+            <Footer />
         </PageLayout>
     );
 };
