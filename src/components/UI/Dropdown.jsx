@@ -1,7 +1,8 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+// import { NavLink } from "react-router-dom";
 
-const Dropdown = ({ title, children }) => {
+const Dropdown = ({ title, children, }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     let timeout;
@@ -21,11 +22,10 @@ const Dropdown = ({ title, children }) => {
             <div
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className="dropdown inline-block">
-                <button
-                    className="relative z-20 flex items-center gap-x-1 focus:outline-none"
-                >
-                    <span className="group-hover:text-primary-one">{title}</span>
+                className="dropdown inline-block cursor-pointer"
+            >
+                <div className="relative z-20 flex items-center gap-x-1 focus:outline-none">
+                    <span className="group-hover:text-primary-one text-dark-one font-semibold">{title}</span>
                     <svg
                         className="w-5 h-5 text-light-gray group-hover:text-primary-one"
                         xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const Dropdown = ({ title, children }) => {
                             clipRule="evenodd"
                         />
                     </svg>
-                </button>
+                </div>
 
                 {isOpen && (
                     <div className="absolute left-0 right-0 lg:top-14 z-10 w-48 pt-2 mt-2 bg-white rounded-md shadow-md">
@@ -53,5 +53,6 @@ export default Dropdown;
 
 Dropdown.propTypes = {
     title: PropTypes.string.isRequired,
+    // to: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired
 }

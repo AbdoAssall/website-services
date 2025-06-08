@@ -57,6 +57,7 @@ const Plans = () => {
 
     return (
         <Section
+            id="plans"
             className="py-20 bg-primary-three"
             contentStyle="justify-start rtl:justify-end "
             innerContentStyle="md:flex-row justify-between itetms-start md:itetms-center rtl:text-right"

@@ -6,6 +6,7 @@ import PrimaryLink from "./PrimaryLink";
 export default function Section({
     children = null,
     className = '',
+    id = '',
     style = {},
     contentStyle = 'justify-center items-center text-center',
     titleStyle = '',
@@ -18,7 +19,7 @@ export default function Section({
     buttonLink = '#',
 }) {
     return (
-        <section className={`relative py-12 ${className}`} style={style}>
+        <section id={id} className={`relative py-12 ${className}`} style={style}>
             <div className="flex flex-col mx-auto !px-4 xl:!px-0 max-w-[72.125rem]">
                 {contentStyle && (
                     <div className={`flex flex-col ${contentStyle}`}>
@@ -58,6 +59,7 @@ export default function Section({
 Section.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    id: PropTypes.string,
     style: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     contentStyle: PropTypes.string,
     titleStyle: PropTypes.string,
