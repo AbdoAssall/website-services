@@ -5,12 +5,12 @@ import { MoveRight, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import PrimaryLink from '../../UI/PrimaryLink';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { useDirection } from '../../../contexts/DirectionContext';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 const Footer = () => {
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true);
-    const { isRTL } = useDirection();
+    const { isRTL } = useLanguage();
 
     const socialLinks = [
         { name: 'facebook', icon: faFacebookF, url: '#' },
@@ -236,7 +236,7 @@ const Footer = () => {
 
             {/* Bottom bar */}
             <div className="py-5 mt-8 md:mt-0 bg-primary-one text-white text-center text-sm">
-                Copyright © 2025 ScopHub. All Rights Reserved - Powered By 
+                Copyright © 2025 ScopHub. All Rights Reserved - Powered By
                 <a className="!text-white font-bold hover:!text-gray-300" href="https://abdoassal-portfolio.netlify.app/" target="_blank"> AbdoAssal</a>.
             </div>
         </footer>

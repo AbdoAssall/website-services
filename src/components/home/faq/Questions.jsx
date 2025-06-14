@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { ArrowRight, ArrowUp, ArrowLeft, Briefcase } from 'lucide-react';
 import SectionShape2 from "../../UI/SectionShape2";
-import { useDirection } from '../../../contexts/DirectionContext';
+import { useLanguage } from '../../../contexts/LanguageContext';
 import "/src/styles/scss/questions.css"
 
 const Questions = () => {
-    const { direction, isRTL } = useDirection();
+    const { direction, isRTL } = useLanguage();
     const [activeQuestion, setActiveQuestion] = useState(1);
 
     const toggleQuestion = (index) => {

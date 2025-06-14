@@ -2,13 +2,15 @@
 import { Link } from "react-router-dom";
 import Section from "../../UI/Section";
 import SectionShape from "../../UI/SectionShape";
-import '../../../styles/services.css'
+import '../../../styles/services.css';
 import { ArrowRight } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import { useTranslation } from 'react-i18next';
 // import "slick-carousel/slick/slick-theme.css";
 
 const Services = () => {
+    const { t } = useTranslation();
     const servicesData = [
         {
             title: "إدارة المخاطر",

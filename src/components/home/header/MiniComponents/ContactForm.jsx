@@ -1,16 +1,16 @@
 // @ts-nocheck
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import InputLabel from "../../UI/InputLabel";
-import TextInput from "../../UI/TextInput";
-import Textarea from "../../UI/Textarea";
-import PrimaryButton from "../../UI/PrimaryButton";
-import { useDirection } from '../../../contexts/DirectionContext';
+import InputLabel from "../../../UI/InputLabel";
+import TextInput from "../../../UI/TextInput";
+import Textarea from "../../../UI/Textarea";
+import PrimaryButton from "../../../UI/PrimaryButton";
+import { useLanguage } from '../../../../contexts/LanguageContext';
 
 export const ContuctForm = () => {
     const [lastProjects, setLastProjects] = useState([]);
     const [loading, setLoading] = useState(true);
-    const { isRTL } = useDirection();
+    const { isRTL, t } = useLanguage();
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -38,23 +38,29 @@ export const ContuctForm = () => {
                                 <img
                                     src="/assets/images/logo-default.png"
                                     className="w-full h-full object-cover"
-                                    alt="logo"
+                                    alt={t('contact.form.logoAlt')}
                                     loading="lazy" />
                             </figure>
                         </div>
                         <div className="my-4">
-                            <p className="!mb-5">التنقيب مع السخط الصالحين والكراهية الرجال الذين يعانون من إعجابهم وإحباطهم من قبل لحظة متعة السحر حتى يرغبون في أن لا يستطيعوا التنبؤ بالألم والمشاكل.</p>
-                            <Link to="#" arial-label="Read more" className="!text-dark-one font-bold font-spartan text-base uppercase">اقرأ المزيد</Link>
+                            <p className="!mb-5">{t('contact.form.description')}</p>
+                            <Link
+                                to="#"
+                                aria-label={t('contact.form.readMore')}
+                                className="!text-dark-one font-bold font-spartan text-base uppercase"
+                            >
+                                {t('contact.form.readMore')}
+                            </Link>
                         </div>
                         <hr className="text-dark-one/15" />
                         <div className="my-3">
-                            <h3 className="text-xl">احدث المشاريع</h3>
+                            <h3 className="text-xl">{t('contact.form.latestProjects')}</h3>
                             {loading ? (
                                 <span className="loading loading-spinner text-primary-one inline-block mt-4"></span>
                             ) : (
                                 <div className={`flex items-center flex-wrap gap-3 ${isRTL ? 'justify-start' : 'justify-end'}`}>
                                     {filterProjects.map((project) => (
-                                        <Link key={project.id} to={project.url} arial-label="Projec" >
+                                        <Link key={project.id} to={project.url} arial-label={project.name} >
                                             <figure className="w-26 h-26">
                                                 <img src={project.img} alt={project.name} className="w-full h-full rounded-lg object-cover" loading="lazy" />
                                             </figure>
@@ -65,13 +71,13 @@ export const ContuctForm = () => {
                         </div>
                         <hr className="text-dark-one/15" />
                         <div className="mt-6 mb-3">
-                            © 2023 كريوت. جميع الحقوق محفوظة.
+                            {t('contact.form.copyright')}
                         </div>
                     </div>
                     <div className={`card-body p-10 lg:w-3/5 drop-shadow-lg rounded-r-xl bg-white ${isRTL ? 'text-right' : 'text-left'}`}>
                         <form>
                             <div>
-                                <InputLabel htmlFor="name" className={`uppercase ${isRTL ? '!text-base' : ''}`} value="اسمك" />
+                                <InputLabel htmlFor="name" className={`uppercase ${isRTL ? '!text-base' : ''}`} value={t('contact.form.name')} />
                                 <TextInput
                                     id="name"
                                     name="name"
@@ -79,7 +85,7 @@ export const ContuctForm = () => {
                                 />
                             </div>
                             <div className="mt-3">
-                                <InputLabel htmlFor="email" className={`uppercase ${isRTL ? '!text-base' : ''}`} value="اميلك" />
+                                <InputLabel htmlFor="email" className={`uppercase ${isRTL ? '!text-base' : ''}`} value={t('contact.form.email')} />
                                 <TextInput
                                     type="email"
                                     id="email"
@@ -88,7 +94,7 @@ export const ContuctForm = () => {
                                 />
                             </div>
                             <div className="mt-3">
-                                <InputLabel htmlFor="address" className={`uppercase ${isRTL ? '!text-base' : ''}`} value="العنوان" />
+                                <InputLabel htmlFor="address" className={`uppercase ${isRTL ? '!text-base' : ''}`} value={t('contact.form.address')} />
                                 <TextInput
                                     id="address"
                                     name="address"
@@ -96,7 +102,7 @@ export const ContuctForm = () => {
                                 />
                             </div>
                             <div className="mt-3">
-                                <InputLabel htmlFor="message" className={`uppercase ${isRTL ? '!text-base' : ''}`} value="رسالتك (اختياري)" />
+                                <InputLabel htmlFor="message" className={`uppercase ${isRTL ? '!text-base' : ''}`} value={t('contact.form.message')} />
                                 <Textarea
                                     id="message"
                                     name="message"
@@ -106,15 +112,22 @@ export const ContuctForm = () => {
                             </div>
                         </form>
                         <div className="grid">
-                            <PrimaryButton type="submit" disabled={false} className="hover:!bg-primary-one/95 hover:!text-white ltr:!uppercase">ارسال</PrimaryButton>
+                            <PrimaryButton type="submit" disabled={false} className="hover:!bg-primary-one/95 hover:!text-white ltr:!uppercase">
+                                {t('contact.form.submit')}
+                            </PrimaryButton>
                         </div>
                     </div>
                 </div>
                 <form method="dialog">
-                    <button aria-label="close" className="btn btn-sm btn-circle btn-ghost bg-primary-one text-white p-4 absolute right-2 top-2">✕</button>
+                    <button
+                        aria-label={t('contact.form.close')}
+                        className="btn btn-sm btn-circle btn-ghost bg-primary-one text-white p-4 absolute right-2 top-2"
+                    >
+                        ✕
+                    </button>
                 </form>
             </div>
-            <form method="dialog" className="modal-backdrop"><button></button></form>
+            <form method="dialog" className="modal-backdrop"><button aria-label={t('contact.form.close')} ></button></form>
         </dialog>
     );
 }

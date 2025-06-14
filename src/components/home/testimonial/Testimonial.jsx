@@ -7,11 +7,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Quote } from 'lucide-react';
-import { useDirection } from '../../../contexts/DirectionContext';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 
 const Testimonial = () => {
-    const { direction } = useDirection();
+    const { direction } = useLanguage();
     const NextArrow = (props) => {
         const { onClick } = props;
         return (

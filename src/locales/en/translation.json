@@ -1,0 +1,195 @@
+{
+  "navbar": {
+    "home": "Home",
+    "articles": "Articles",
+    "projects": "Projects",
+    "prices": "Prices",
+    "contactUs": "Contact Us",
+    "services": "Services",
+    "service1": "Service 1",
+    "service2": "Service 2",
+    "service3": "Service 3",
+    "service4": "Service 4",
+    "search": "Search..."
+  },
+  "language": {
+    "arabic": "Arabic",
+    "english": "English"
+  },
+  "contact": {
+    "phone": "+98 060 712 34",
+    "email": "sendmail@creote.com",
+    "address": "United States 866 Wilshire, 2nd Street Los Angeles 90024.",
+    "form": {
+      "title": "Contact Form",
+      "name": "Your Name",
+      "email": "Your Email",
+      "address": "Address",
+      "message": "Your Message (Optional)",
+      "submit": "Send",
+      "close": "Close",
+      "description": "We help you see the world differently, discover opportunities you may never have imagined and overcome challenges that seem impossible.",
+      "readMore": "Read More",
+      "latestProjects": "Latest Projects",
+      "copyright": "© 2023 Creote. All Rights Reserved.",
+      "logoAlt": "Scopehub"
+    }
+  },
+  "upper": {
+    "qoute": "Get a quote",
+    "welcome": "Welcome to our consulting company."
+  },
+  "hero": {
+    "slides": [
+      {
+        "subTitle": "Strategy & Planning",
+        "title": "The Fastest Way to Achive Success",
+        "description": "We provide innovative solutions for your company",
+        "buttonServ": "Our Service",
+        "buttonPro": "Projects"
+      },
+      {
+        "subTitle": "Best Agency",
+        "title": "Digital Marketing",
+        "description": "Transform your online presence with our expertise",
+        "buttonServ": "Our Service",
+        "buttonPro": "Projects"
+      },
+      {
+        "subTitle": "Expert Team",
+        "title": "Strategic Planning",
+        "description": "Custom strategies to achieve your business goals",
+        "buttonServ": "Our Service",
+        "buttonPro": "Projects"
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "mainTitle": "Take Your Business To The Next Level",
+    "description": "With over 20 years of experience, we guarantee you'll always get the best guidance. We serve our clients at all levels of their organizations, giving them the maximum benefit, whether as trusted advisors or as members of our senior management.",
+    "experience": "More Than 10 Years Of Experience",
+    "creativeWork": {
+      "title": "Creative Work",
+      "description": "Creative work is a manifestation of creative effort including fine artwork"
+    },
+    "bestSolution": {
+      "title": "Best Solution",
+      "description": "Consulting solutions is a dynamic, versatile, elegant and modern business"
+    },
+    "readMore": "Read More"
+  },
+  "services": {
+    "title": "Our Services",
+    "mainTitle": "We Provide Different Services",
+    "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form believable",
+    "items": [
+      {
+        "title": "Risk Management",
+        "description": "Mitigating workplace issues before they escalate, sharing human time."
+      },
+      {
+        "title": "HR Consulting",
+        "description": "Professional HR solutions for your business growth and employee satisfaction."
+      },
+      {
+        "title": "Training Programs",
+        "description": "Comprehensive training solutions to develop your workforce capabilities."
+      }
+    ],
+    "readMore": "Read More"
+  },
+  "chooseUs": {
+    "title": "Choices & Events",
+    "mainTitle": "Why People Choose Us",
+    "description": "I will explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
+    "items": [
+      {
+        "title": "Smart Solutions",
+        "description": "The card component has a figure and body part, and inside the body there are title and actions parts"
+      },
+      {
+        "title": "Expert Team",
+        "description": "The card component has a figure and body part, and inside the body there are title and actions parts"
+      },
+      {
+        "title": "Quick Response",
+        "description": "The card component has a figure and body part, and inside the body there are title and actions parts"
+      },
+      {
+        "title": "24/7 Support",
+        "description": "The card component has a figure and body part, and inside the body there are title and actions parts"
+      }
+    ]
+  },
+  "faq": {
+    "title": "General FAQs",
+    "mainTitle": "Do You Have Any Questions?",
+    "items": [
+      {
+        "question": "How can content marketing increase efficiency?",
+        "answer": "As with the saying through shrinking from toil and pain these cases are perfectly simple and easy to distinguish."
+      },
+      {
+        "question": "How can content marketing help purchase journey?",
+        "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      },
+      {
+        "question": "How do we measure content's on sales and revenue?",
+        "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      },
+      {
+        "question": "Pain these cases are perfectly simple and easy to distinguish.",
+        "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      }
+    ]
+  },
+  "contactUs": {
+    "title": "Consultations Anytime Anywhere",
+    "mainTitle": "Get Free Consultation Now Here",
+    "description": "We help you see the world differently, discover opportunities you may never have imagined.",
+    "phone": "Phone",
+    "contactUs": "Contact Us"
+  },
+  "footer": {
+    "description": "With over 20 years of experience, we guarantee you'll always get the best guidance. We serve our clients at all levels of their organizations...",
+    "readMore": "Read More",
+    "essentials": "Essentials",
+    "projects": "Projects",
+    "contactUs": "Contact Us",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "copyright": "Copyright © 2025 ScopHub. All Rights Reserved - Powered By"
+  },
+  "essentialLinks": [
+    {
+      "title": "Infrastructure",
+      "path": "#"
+    },
+    {
+      "title": "Client Support",
+      "path": "#"
+    },
+    {
+      "title": "Privacy Policy",
+      "path": "#"
+    },
+    {
+      "title": "Terms of Use",
+      "path": "#"
+    },
+    {
+      "title": "Professionals",
+      "path": "#"
+    },
+    {
+      "title": "Careers",
+      "path": "#"
+    },
+    {
+      "title": "Sitemap",
+      "path": "#"
+    }
+  ]
+}

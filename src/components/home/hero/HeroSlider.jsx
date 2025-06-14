@@ -5,37 +5,35 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { fadeIn } from '../../../utils/variants';
 import SectionShape from "../../UI/SectionShape";
 import useSwipeNavigation from '../../../hooks/useSwipeNavigation';
+import { useTranslation } from 'react-i18next';
 
 const HeroSlider = () => {
-    const slides = [
+    const { t } = useTranslation();
+    
+    const slidesData = [
         {
             id: 1,
             bgImage: "assets/images/slider/slider-1.jpg",
-            subTitle: "Strategy & Planning",
-            title: "The Fastest Way to Achive Success",
-            description: "We provide innovative solutions for your company",
-            buttonServ: "Our Service",
-            buttonPro: "Projects",
         },
         {
             id: 2,
             bgImage: "assets/images/slider/slider-2.jpg",
-            subTitle: "Best Agency",
-            title: "Digital Marketing",
-            description: "Transform your online presence with our expertise",
-            buttonServ: "Our Service",
-            buttonPro: "Projects",
         },
         {
             id: 3,
             bgImage: "assets/images/slider/slider-3.jpg",
-            subTitle: "Expert Team",
-            title: "Strategic Planning",
-            description: "Custom strategies to achieve your business goals",
-            buttonServ: "Our Service",
-            buttonPro: "Projects",
         }
     ];
+    
+    // Combine static data with translations
+    const slides = slidesData.map((slide, index) => ({
+        ...slide,
+        subTitle: t(`hero.slides.${index}.subTitle`),
+        title: t(`hero.slides.${index}.title`),
+        description: t(`hero.slides.${index}.description`),
+        buttonServ: t(`hero.slides.${index}.buttonServ`),
+        buttonPro: t(`hero.slides.${index}.buttonPro`),
+    }));
 
     const {
         currentIndex: currentSlide,
@@ -144,7 +142,7 @@ const HeroSlider = () => {
                                         >
                                             <SecondaryLink
                                                 to="#projects"
-                                                aria-label="Projects"
+                                                aria-label={t('hero.ariaLabels.projects')}
                                                 className={`!bg-white hover:!bg-primary-one !text-primary-two hover:!text-white`}
                                             >
                                                 {slide.buttonPro}
@@ -160,7 +158,7 @@ const HeroSlider = () => {
                                         >
                                             <SecondaryLink
                                                 to="#services"
-                                                aria-label="Our service"
+                                                aria-label={t('hero.ariaLabels.services')}
                                                 className={`${index === 1 ? '!bg-primary-one !text-white' : '!bg-primary-two !text-white'} hover:!bg-white`}
                                             >
                                                 {slide.buttonServ}
@@ -178,7 +176,7 @@ const HeroSlider = () => {
             {/* Navigation Arrows */}
             <button
                 type='button'
-                aria-label="Left"
+                aria-label={t('hero.navigation.left')}
                 onClick={goToPrevSlide}
                 className="absolute left-4 top-1/2 z-30 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-colors hover:bg-white/30"
             >
@@ -187,7 +185,7 @@ const HeroSlider = () => {
 
             <button
                 type='button'
-                aria-label="Right"
+                aria-label={t('hero.navigation.right')}
                 onClick={goToNextSlide}
                 className="absolute right-4 top-1/2 z-30 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-colors hover:bg-white/30"
             >
@@ -204,7 +202,7 @@ const HeroSlider = () => {
                             ? "bg-white w-8"
                             : "bg-white/50 hover:bg-white/70"
                             }`}
-                        aria-label={`Go to slide ${index + 1}`}
+                        aria-label={t('hero.navigation.goToSlide', { number: index + 1 })}
                     />
                 ))}
             </div>

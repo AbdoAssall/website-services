@@ -1,10 +1,10 @@
 import { Navbar } from "../components/home/header/Navbar";
 import PropTypes from "prop-types";
-import { useDirection } from "../contexts/DirectionContext";
+import { useLanguage } from "../contexts/LanguageContext";
 import ScrollProgressCircle from "../components/common/ScrollProgressCircle";
 
 export function PageLayout({children}) {
-    const { direction } = useDirection();
+    const { direction } = useLanguage();
 
     return (
         <div dir={direction} className="relative flex min-h-screen flex-col bg-white">

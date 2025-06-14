@@ -3,10 +3,10 @@ import { useState } from 'react';
 import Section from "../../UI/Section";
 import { CircleCheck, ArrowRight, CircleX } from 'lucide-react';
 import "/src/styles/scss/plans.css"
-import { useDirection } from '../../../contexts/DirectionContext';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 const Plans = () => {
-    const { direction, isLTR } = useDirection();
+    const { direction, isLTR } = useLanguage();
     const [plans] = useState([
         {
             title: 'Recommended',
