@@ -62,7 +62,12 @@
         "buttonServ": "Our Service",
         "buttonPro": "Projects"
       }
-    ]
+    ],
+    "navigation": {
+      "left": "Left",
+      "right": "Right",
+      "goToSlide": "Click to scroll"
+    }
   },
   "about": {
     "title": "About Us",
@@ -83,6 +88,7 @@
     "title": "Our Services",
     "mainTitle": "We Provide Different Services",
     "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form believable",
+    "readMore": "Read More",
     "items": [
       {
         "title": "Risk Management",
@@ -95,9 +101,20 @@
       {
         "title": "Training Programs",
         "description": "Comprehensive training solutions to develop your workforce capabilities."
+      },
+      {
+        "title": "Strategic Planning",
+        "description": "Custom strategic plans to achieve your company goals and ensure sustainable growth."
+      },
+      {
+        "title": "Financial Consulting",
+        "description": "Advanced financial advisory services to improve financial performance and manage risks."
+      },
+      {
+        "title": "Business Development",
+        "description": "Innovative growth strategies to expand your business scope and enter new markets."
       }
-    ],
-    "readMore": "Read More"
+    ]
   },
   "chooseUs": {
     "title": "Choices & Events",

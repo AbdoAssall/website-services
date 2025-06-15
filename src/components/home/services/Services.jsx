@@ -3,46 +3,93 @@ import { Link } from "react-router-dom";
 import Section from "../../UI/Section";
 import SectionShape from "../../UI/SectionShape";
 import '../../../styles/services.css';
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import { useTranslation } from 'react-i18next';
+import { useLanguage } from "../../../contexts/LanguageContext";
 // import "slick-carousel/slick/slick-theme.css";
 
 const Services = () => {
-    const { t } = useTranslation();
-    const servicesData = [
+    const { t, direction } = useLanguage();
+
+    const servicesStaticData = [
         {
-            title: "إدارة المخاطر",
-            description: "تخفيف مشاكل مكان العمل قبل تفاقمها، مشاركة الوقت البشري.",
-            url: "#",
+            id: 1,
+            url: "/services/risk-management",
             image: "assets/images/services/service-image-4.jpg",
+            icon: "assets/images/icons/risk-management.png"
         },
         {
-            title: "استشارات الموارد البشرية",
-            description: "حلول الموارد البشرية المهنية لنمو أعمالك ورضا الموظفين.",
-            url: "#",
+            id: 2,
+            url: "/services/hr-consulting",
             image: "assets/images/services/service-image-5.jpg",
+            icon: "assets/images/icons/hr-consulting.png"
         },
         {
-            title: "برامج التدريب",
-            description: "حلول تدريبية شاملة لتطوير قدرات القوى العاملة لديك.",
-            url: "#",
+            id: 3,
+            url: "/services/training-programs",
             image: "assets/images/services/service-image-6.jpg",
+            icon: "assets/images/icons/training.png"
         },
         {
-            title: "Training Programs",
-            description: "Comprehensive training solutions to develop your workforce capabilities.",
-            url: "#",
-            image: "assets/images/services/service-image-6.jpg",
+            id: 4,
+            url: "/services/strategic-planning",
+            image: "assets/images/services/service-image-4.jpg",
+            icon: "assets/images/icons/strategy.png"
         },
         {
-            title: "Training Programs",
-            description: "Comprehensive training solutions to develop your workforce capabilities.",
-            url: "#",
-            image: "assets/images/services/service-image-6.jpg",
+            id: 5,
+            url: "/services/financial-consulting",
+            image: "assets/images/services/service-image-5.jpg",
+            icon: "assets/images/icons/finance.png"
         },
+        {
+            id: 6,
+            url: "/services/business-development",
+            image: "assets/images/services/service-image-6.jpg",
+            icon: "assets/images/icons/business-dev.png"
+        }
     ];
+
+    // Combine static data with translations
+    const servicesData = servicesStaticData.map((service, index) => ({
+        ...service,
+        title: t(`services.items.${index}.title`),
+        description: t(`services.items.${index}.description`),
+    }));
+
+    // const servicesData = [
+    //     {
+    //         title: "إدارة المخاطر",
+    //         description: "تخفيف مشاكل مكان العمل قبل تفاقمها، مشاركة الوقت البشري.",
+    //         url: "#",
+    //         image: "assets/images/services/service-image-4.jpg",
+    //     },
+    //     {
+    //         title: "استشارات الموارد البشرية",
+    //         description: "حلول الموارد البشرية المهنية لنمو أعمالك ورضا الموظفين.",
+    //         url: "#",
+    //         image: "assets/images/services/service-image-5.jpg",
+    //     },
+    //     {
+    //         title: "برامج التدريب",
+    //         description: "حلول تدريبية شاملة لتطوير قدرات القوى العاملة لديك.",
+    //         url: "#",
+    //         image: "assets/images/services/service-image-6.jpg",
+    //     },
+    //     {
+    //         title: "Training Programs",
+    //         description: "Comprehensive training solutions to develop your workforce capabilities.",
+    //         url: "#",
+    //         image: "assets/images/services/service-image-6.jpg",
+    //     },
+    //     {
+    //         title: "Training Programs",
+    //         description: "Comprehensive training solutions to develop your workforce capabilities.",
+    //         url: "#",
+    //         image: "assets/images/services/service-image-6.jpg",
+    //     },
+    // ];
 
     const settings = {
         dots: true,
@@ -57,24 +104,26 @@ const Services = () => {
         speed: 600,
         autoplaySpeed: 6000,
         cssEase: "linear",
+        rtl: direction === 'rtl',
+        ltr: direction === 'ltr',
         responsive: [
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
-              }
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 1,
-                infinite: true,
-              }
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1,
+                    infinite: true,
+                }
             },
         ]
     };
@@ -86,10 +135,10 @@ const Services = () => {
             style={{ backgroundImage: 'url("assets/images/service-home-bg.jpg")' }}
             titleStyle="!text-white"
             descriptionStyle="!text-white"
-            subTitle="خدماتنا"
-            sectionTitle="نحن نقدم خدمات مختلفة"
-            description="هناك العديد من الاختلافات في مقاطع لوريم إيبسوم المتاحة، ولكن الأغلبية تعرضت للتغيير في شكل ما يمكن تصديقه"
-        >
+            subTitle={t('services.title')}
+            sectionTitle={t('services.mainTitle')}
+            description={t('services.description')}
+           >
             <div className="w-full relative">
                 <Slider {...settings}>
                     {servicesData.map((service, index) => (
@@ -99,7 +148,7 @@ const Services = () => {
                         >
                             <div className="card-body pb-1 px-2.5 items-center text-center">
                                 <Link
-                                    to={service.url}
+                                    to={service.url || '#'}
                                     aria-label={service.title}
                                     className="card-title pb-6 !text-2xl !font-bold !font-spartan !text-white leading-7.5"
                                 >
@@ -125,12 +174,16 @@ const Services = () => {
                                 </figure>
                             </div>
                             <Link
-                                to={service.url}
+                                to={service.url || '#'}
                                 aria-label={service.title}
-                                className="pt-7 flex items-center justify-center gap-1 rtl:flex-row-reverse capitalize !text-white text-center"
+                                className={`pt-7 flex items-center justify-center gap-1 ${direction === 'rtl' ? 'flex-row-reverse' : 'flex-row-reverse'} capitalize !text-white text-center`}
                             >
-                                اقرأ المزيد
-                                <ArrowRight size={20} strokeWidth={2} />
+                                {t('services.readMore')}
+                                {direction === 'rtl' ? (
+                                    <ArrowLeft size={18} strokeWidth={2} />
+                                ) : (
+                                    <ArrowRight size={18} strokeWidth={2} />
+                                )}
                             </Link>
                         </div>
                     ))}

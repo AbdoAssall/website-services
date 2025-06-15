@@ -2,14 +2,14 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import SecondaryLink from '../../UI/SecondaryLink';
 import { motion, AnimatePresence } from 'framer-motion'
-import { fadeIn } from '../../../utils/variants';
+// import { fadeIn } from '../../../utils/variants';
 import SectionShape from "../../UI/SectionShape";
 import useSwipeNavigation from '../../../hooks/useSwipeNavigation';
 import { useTranslation } from 'react-i18next';
 
 const HeroSlider = () => {
     const { t } = useTranslation();
-    
+
     const slidesData = [
         {
             id: 1,
@@ -24,7 +24,7 @@ const HeroSlider = () => {
             bgImage: "assets/images/slider/slider-3.jpg",
         }
     ];
-    
+
     // Combine static data with translations
     const slides = slidesData.map((slide, index) => ({
         ...slide,
@@ -53,17 +53,45 @@ const HeroSlider = () => {
 
     // Animation variants
     const textVariants = {
-        hiddenTop: { y: -50, opacity: 0 },
-        hiddenLeft: { x: -50, opacity: 0 },
-        hiddenRight: { x: 50, opacity: 0 },
-        hiddenBottom: { y: 50, opacity: 0 },
-        visible: {
-            x: 0,
+        hidden: { y: -50, opacity: 0 },
+        show: {
             y: 0,
             opacity: 1,
             transition: { duration: 0.8 }
         },
-        exit: { opacity: 0, transition: { duration: 0.5 } }
+        exit: {
+            y: -50,
+            opacity: 0,
+            transition: { duration: 0.5 }
+        }
+    };
+
+    const textVariantsLeft = {
+        hidden: { x: -50, opacity: 0 },
+        show: {
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.8 }
+        },
+        exit: {
+            x: -50,
+            opacity: 0,
+            transition: { duration: 0.5 }
+        }
+    };
+
+    const textVariantsRight = {
+        hidden: { x: 50, opacity: 0 },
+        show: {
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.8 }
+        },
+        exit: {
+            x: 50,
+            opacity: 0,
+            transition: { duration: 0.5 }
+        }
     };
 
     return (
@@ -92,79 +120,76 @@ const HeroSlider = () => {
                     {index === currentSlide && (
                         <div className={`!px-2 sm:!px-9 pb-16 relative z-8 flex h-full ${index === 1 ? 'justify-center text-center sm:justify-start sm:rtl:text-right sm:ltr:text-left' : 'justify-center  text-center'} items-center text-white`}>
                             <div className="max-w-4xl">
-                                <AnimatePresence>
-                                    <motion.h5
-                                        key={`subtitle-${slide.id}`}
-                                        initial="hiddenTop"
-                                        animate="visible"
-                                        exit="exit"
-                                        variants={textVariants}
-                                        transition={{ duration: 0.8, delay: 0.3 }}
-                                        className="!mb-4 md:!mb-10 text-xl sm:text-3xl font-bold tracking-wider !text-white"
-                                    >
-                                        {slide.subTitle}
-                                    </motion.h5>
-                                    <motion.h1
-                                        key={`title-${slide.id}`}
-                                        initial="hiddenLeft"
-                                        animate="visible"
-                                        exit="exit"
-                                        variants={textVariants}
-                                        transition={{ duration: 0.8, delay: 0.6 }}
-                                        className="!mb-4 sm:!mb-6 text-5xl font-extrabold md:text-[6.875rem] md:!leading-[90px] !text-white tracking-tight"
-                                        style={{ textShadow: '3px 1px 3px #078586' }}
-                                    >
-                                        {slide.title}
-                                    </motion.h1>
-
-                                    <motion.p
-                                        key={`desc-${slide.id}`}
-                                        initial="hiddenRight"
-                                        animate="visible"
-                                        exit="exit"
-                                        variants={textVariants}
-                                        transition={{ duration: 0.8, delay: 0.9 }}
-                                        className="!text-md md:!text-xl"
-                                    >
-                                        {slide.description}
-                                    </motion.p>
+                                <AnimatePresence mode='wait'>
                                     <motion.div
-                                        key={`buttons-${slide.id}`}
-                                        className={`!mt-12 sm:!mt-16 relativ flex flex-col items-center ${index === 1 ? 'justify-start' : 'justify-center'} space-y-7 sm:flex-row gap-4 sm:space-y-0`}
+                                        key={`content-${slide.id}`}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.5 }}
                                     >
-                                        <motion.div
-                                            variants={fadeIn("down", 0.3)}
+                                        <motion.h5
+                                            variants={textVariants}
                                             initial="hidden"
-                                            whileInView={"show"}
-                                            // viewport={{ once: false, amount: 0.8 }}
-                                            animate="visible"
-                                            exit="exit"
+                                            animate="show"
+                                            transition={{ duration: 0.8, delay: 0.3 }}
+                                            className="!mb-4 md:!mb-10 text-xl sm:text-2xl md:text-3xl font-bold tracking-wider !text-white"
                                         >
-                                            <SecondaryLink
-                                                to="#projects"
-                                                aria-label={t('hero.ariaLabels.projects')}
-                                                className={`!bg-white hover:!bg-primary-one !text-primary-two hover:!text-white`}
-                                            >
-                                                {slide.buttonPro}
-                                            </SecondaryLink>
-                                        </motion.div>
-                                        <motion.div
-                                            variants={fadeIn("up", 0.5)}
+                                            {slide.subTitle}
+                                        </motion.h5>
+                                        <motion.h1
+                                            variants={textVariantsLeft}
                                             initial="hidden"
-                                            whileInView={"show"}
-                                            animate="visible"
-                                            exit="exit"
-                                        // viewport={{ once: false, amount: 0.8 }}
+                                            animate="show"
+                                            transition={{ duration: 0.8, delay: 0.6 }}
+                                            className="!mb-4 sm:!mb-6 text-5xl font-extrabold md:text-[6.875rem] md:!leading-[90px] !text-white tracking-tight"
+                                            style={{ textShadow: '3px 1px 3px #078586' }}
                                         >
-                                            <SecondaryLink
-                                                to="#services"
-                                                aria-label={t('hero.ariaLabels.services')}
-                                                className={`${index === 1 ? '!bg-primary-one !text-white' : '!bg-primary-two !text-white'} hover:!bg-white`}
-                                            >
-                                                {slide.buttonServ}
-                                            </SecondaryLink>
-                                        </motion.div>
+                                            {slide.title}
+                                        </motion.h1>
 
+                                        <motion.p
+                                            variants={textVariantsRight}
+                                            initial="hidden"
+                                            animate="show"
+                                            transition={{ duration: 0.8, delay: 0.9 }}
+                                            className="!text-md md:!text-xl"
+                                        >
+                                            {slide.description}
+                                        </motion.p>
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 50 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 0.8, delay: 1.2 }}
+                                            className={`!mt-12 sm:!mt-16 relativ flex flex-col items-center ${index === 1 ? 'justify-start' : 'justify-center'} space-y-7 sm:flex-row gap-4 sm:space-y-0`}
+                                        >
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 50 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.6, delay: 1 }}
+                                            >
+                                                <SecondaryLink
+                                                    to="#projects"
+                                                    aria-label={slide.buttonPro}
+                                                    className={`!bg-white hover:!bg-primary-one !text-primary-two hover:!text-white`}
+                                                >
+                                                    {slide.buttonPro}
+                                                </SecondaryLink>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 60 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.6, delay: 1.7 }}
+                                            >
+                                                <SecondaryLink
+                                                    to="#services"
+                                                    aria-label={slide.buttonServ}
+                                                    className={`${index === 1 ? '!bg-primary-one !text-white' : '!bg-primary-two !text-white'} hover:!bg-white`}
+                                                >
+                                                    {slide.buttonServ}
+                                                </SecondaryLink>
+                                            </motion.div>
+                                        </motion.div>
                                     </motion.div>
                                 </AnimatePresence>
                             </div>

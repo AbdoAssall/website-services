@@ -23,8 +23,8 @@ export default function PrimaryLink({
 }
 
 PrimaryLink.propTypes = {
-    className: PropTypes.string.isRequired,
-    ariaLabel: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    ariaLabel: PropTypes.string,
+    to: PropTypes.string,
     children: PropTypes.node.isRequired
 }

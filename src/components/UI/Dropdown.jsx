@@ -52,7 +52,7 @@ const Dropdown = ({ title, children, }) => {
 export default Dropdown;
 
 Dropdown.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     // to: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired
 }
