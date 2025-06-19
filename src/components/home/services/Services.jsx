@@ -58,39 +58,6 @@ const Services = () => {
         description: t(`services.items.${index}.description`),
     }));
 
-    // const servicesData = [
-    //     {
-    //         title: "إدارة المخاطر",
-    //         description: "تخفيف مشاكل مكان العمل قبل تفاقمها، مشاركة الوقت البشري.",
-    //         url: "#",
-    //         image: "assets/images/services/service-image-4.jpg",
-    //     },
-    //     {
-    //         title: "استشارات الموارد البشرية",
-    //         description: "حلول الموارد البشرية المهنية لنمو أعمالك ورضا الموظفين.",
-    //         url: "#",
-    //         image: "assets/images/services/service-image-5.jpg",
-    //     },
-    //     {
-    //         title: "برامج التدريب",
-    //         description: "حلول تدريبية شاملة لتطوير قدرات القوى العاملة لديك.",
-    //         url: "#",
-    //         image: "assets/images/services/service-image-6.jpg",
-    //     },
-    //     {
-    //         title: "Training Programs",
-    //         description: "Comprehensive training solutions to develop your workforce capabilities.",
-    //         url: "#",
-    //         image: "assets/images/services/service-image-6.jpg",
-    //     },
-    //     {
-    //         title: "Training Programs",
-    //         description: "Comprehensive training solutions to develop your workforce capabilities.",
-    //         url: "#",
-    //         image: "assets/images/services/service-image-6.jpg",
-    //     },
-    // ];
-
     const settings = {
         dots: true,
         infinite: true,
@@ -135,6 +102,7 @@ const Services = () => {
             style={{ backgroundImage: 'url("assets/images/service-home-bg.jpg")' }}
             titleStyle="!text-white"
             descriptionStyle="!text-white"
+            innerContentStyle="md:w-2xl"
             subTitle={t('services.title')}
             sectionTitle={t('services.mainTitle')}
             description={t('services.description')}

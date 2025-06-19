@@ -1,35 +1,28 @@
-// @ts-nocheck
-/* eslint-disable react/prop-types */
-import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
+import PropTypes from "prop-types";
+// import { forwardRef } from 'react';
 
-export default forwardRef(function TextInput(
-    { type = 'text', placeholder = '', className = '', id = '', name = '', isFocused = false, ...props },
-    ref,
+export default function TextInput({
+    type = 'text', placeholder = '', className = '', id = '', name = '', ...props },
 ) {
-    const localRef = useRef(null);
-
-    useImperativeHandle(ref, () => ({
-        focus: () => localRef.current?.focus(),
-    }));
-
-    useEffect(() => {
-        if (isFocused) {
-            localRef.current?.focus();
-        }
-    }, [isFocused]);
-
     return (
         <input
             {...props}
             type={type}
-            id = {id}
-            name= {name}
+            id={id}
+            name={name}
             className={
                 'rounded-md border-gray-300 shadow-sm focus:border-primary-one focus:ring-primary-one ' +
                 className
             }
-            ref={localRef}
             placeholder={placeholder}
         />
     );
-});
+};
+
+TextInput.propTypes = {
+    className: PropTypes.string,
+    id: PropTypes.string,
+    type: PropTypes.string,
+    name: PropTypes.string,
+    placeholder: PropTypes.string,
+}

@@ -4,14 +4,14 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Navbar } from "@material-tailwind/react";
 import Dropdown from "../../UI/Dropdown";
 import { MobileSidebar } from "./MobileSidebar";
-import TextInput from "../../UI/TextInput";
-import { Menu, Search, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { fadeIn } from "/src/utils/variants";
+import { Menu, Search } from "lucide-react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import { fadeIn } from "/src/utils/variants";
 import { ContuctForm } from "./MiniComponents/ContactForm";
 import { LanguageDropdown } from "./MiniComponents/LanguageDropdown";
 import { useLanguage } from "../../../contexts/LanguageContext";
 import { Link as ScrollLink } from "react-scroll";
+import { SearchBar } from "./MiniComponents/SearchBar";
 
 export function LowerNavbar() {
   const { direction, t } = useLanguage();
@@ -215,7 +215,7 @@ export function LowerNavbar() {
               ? `translateY(${isScroll ? '0%' : '-100%'})`
               : 'translateY(0%)',
             transition: "all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-            // opacity: isScroll ? 1 : isNavVisible ? 0 : 1,
+            // opacity: isScroll ? 1 : 0 ,
             // visibility: isScroll ? "visible" : "hidden",
           }}
         >
@@ -296,61 +296,7 @@ export function LowerNavbar() {
       </div>
 
       {openSearch && (
-        <AnimatePresence mode="wait">
-          <motion.div
-            key="search-window"
-            variants={fadeIn("down", 0)}
-            initial={{ y: -100 }}
-            animate="show"
-            exit="exit"
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 55,
-              duration: 0.3,
-            }}
-            className="bg-primary-one w-full h-34 fixed top-0 left-0 z-99"
-          >
-            <motion.div
-              key="search-bar"
-              variants={fadeIn("up", 0.5)}
-              initial={{ y: 100, opacity: 0 }}
-              animate="show"
-              exit="exit"
-              transition={{
-                type: "spring",
-                stiffness: 260,
-                damping: 55,
-                duration: 0.5,
-              }}
-              className="relative flex items-center justify-center mx-auto w-4xl h-full"
-            >
-              <TextInput
-                name="search"
-                type="search"
-                className="inline-block !px-5 w-full !m-0 bg-white !text-dark-one"
-                placeholder={t('navbar.search')}
-                dir={direction}
-              />
-              <button
-                type="button"
-                aria-label="find"
-                className={`inline-block bg-primary-two p-3 rounded-md absolute ${direction === 'ltr' ? 'right-4' : 'left-4 top-1/2 -translate-y-1/2'}`}
-              >
-                <Search strokeWidth={1.5} className="h-5 w-5 text-white" />
-              </button>
-            </motion.div>
-            <button
-              onClick={openSearchBar}
-              aria-label="close"
-              className="btn btn-ghost w-10 h-10 rounded-full bg-primary-one text-white absolute right-2 top-2"
-            >
-              <span>
-                <X className="w-7 h-7 !text-white" />
-              </span>
-            </button>
-          </motion.div>
-        </AnimatePresence>
+        <SearchBar openSearchBar={openSearchBar} />
       )}
 
       {/* For mobile */}

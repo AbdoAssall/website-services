@@ -20,7 +20,7 @@ export default function Section({
 }) {
     return (
         <section id={id} className={`relative py-12 ${className}`} style={style}>
-            <div className="flex flex-col mx-auto !px-4 xl:!px-0 max-w-[72.125rem]">
+            <div className="flex flex-col mx-auto !px-4 xl:!px-0 max-w-6xl">
                 {contentStyle && (
                     <div className={`flex flex-col ${contentStyle}`}>
                         {subTitle && (
