@@ -1,25 +1,21 @@
 // @ts-nocheck
 import { useState, useEffect, useRef, useCallback } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Navbar } from "@material-tailwind/react";
-import Dropdown from "../../UI/Dropdown";
 import { MobileSidebar } from "./MobileSidebar";
 import { Menu, Search } from "lucide-react";
 // import { motion, AnimatePresence } from "framer-motion";
-// import { fadeIn } from "/src/utils/variants";
 import { ContuctForm } from "./MiniComponents/ContactForm";
 import { LanguageDropdown } from "./MiniComponents/LanguageDropdown";
 import { useLanguage } from "../../../contexts/LanguageContext";
-import { Link as ScrollLink } from "react-scroll";
 import { SearchBar } from "./MiniComponents/SearchBar";
+import { NavList } from "./MiniComponents/NavList";
 
 export function LowerNavbar() {
-  const { direction, t } = useLanguage();
+  const { t } = useLanguage();
   const [openNav, setOpenNav] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
   const isMountedRef = useRef(true);
   const lastScrollY = useRef(0);
 
@@ -102,85 +98,21 @@ export function LowerNavbar() {
     };
   }, [handleScroll]);
 
-  // Update navItems to use translations
+  // Navigation items
   const navItems = [
-    { id: 1, title: t("navbar.articles"), to: "/#" },
-    { id: 2, title: t("navbar.projects"), to: "/#" },
-    { id: 3, title: t("navbar.prices"), to: "plans", isScrollLink: true },
-    { id: 4, title: t("navbar.contactUs"), to: "/#" },
+    { id: 1, title: t("navbar.articles"), to: "/#", isScrollLink: false },
+    { id: 2, title: t("navbar.projects"), to: "/#", isScrollLink: false },
+    { id: 3, title: t("navbar.prices"), to: "/#plans", isScrollLink: true },
+    { id: 4, title: t("navbar.contactUs"), to: "/#", isScrollLink: false },
   ];
 
-  // Update menuServices to use translations
+  // Menu services
   const menuServices = [
     { id: 1, title: t("navbar.service1"), to: "#" },
     { id: 2, title: t("navbar.service2"), to: "#" },
     { id: 3, title: t("navbar.service3"), to: "#" },
     { id: 4, title: t("navbar.service4"), to: "#" },
   ];
-
-  const navList = (
-    <ul dir={direction} className="relative mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <li className="p-1 font-normal">
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            `flex items-center ${isActive && isHomePage ? "!text-primary-one" : ""
-            }`
-          }
-        >
-          {t("navbar.home")}
-        </NavLink>
-      </li>
-
-      {isHomePage ? (
-        <li className="p-1 font-normal">
-          <Dropdown title={t("navbar.services")}>
-            {menuServices.map((item) => (
-              <NavLink
-                key={item.id}
-                to={item.to}
-                className="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100"
-              >
-                {item.title}
-              </NavLink>
-            ))}
-          </Dropdown>
-        </li>
-      ) : (
-        <Dropdown title={t("navbar.services")}>
-          {menuServices.map((item) => (
-            <NavLink
-              key={item.id}
-              to={item.to}
-              className="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100"
-            >
-              {item.title}
-            </NavLink>
-          ))}
-        </Dropdown>
-      )}
-
-      {navItems.map((item) => (
-        <li key={item.id} className="p-1 font-normal">
-          {item.isScrollLink && isHomePage ? (
-            <ScrollLink
-              to={item.to}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              className="flex items-center cursor-pointer"
-            >
-              {item.title}
-            </ScrollLink>
-          ) : (
-            <NavLink to={item.to} className="flex items-center">
-              {item.title}
-            </NavLink>
-          )}
-        </li>
-      ))}
-    </ul>
-  );
 
   const openSearchBar = useCallback(() => {
     setOpenSearch((prev) => !prev);
@@ -225,13 +157,13 @@ export function LowerNavbar() {
               <img
                 src="assets/images/logo-default.png"
                 className="logo"
-                alt="logo"
+                alt={t('navbar.logoAlt')}
                 loading="lazy"
               />
             </Link>
             <div className="flex items-center gap-2 lg:gap-4">
               <div dir="rtl" className="mr-4 hidden lg:block">
-                {navList}
+                <NavList navItems={navItems} menuServices={menuServices} />
               </div>
 
               {/* Searsh bar */}

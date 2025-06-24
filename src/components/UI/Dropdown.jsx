@@ -18,7 +18,7 @@ const Dropdown = ({ title, children, }) => {
     };
 
     return (
-        <li className="group font-normal">
+        <div className="group font-normal">
             <div
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -46,7 +46,7 @@ const Dropdown = ({ title, children, }) => {
                     </div>
                 )}
             </div>
-        </li>
+        </div>
     );
 };
 export default Dropdown;

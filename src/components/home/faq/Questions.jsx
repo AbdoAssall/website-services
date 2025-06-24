@@ -5,35 +5,25 @@ import { useLanguage } from '../../../contexts/LanguageContext';
 import "/src/styles/scss/questions.css"
 
 const Questions = () => {
-    const { direction, isRTL } = useLanguage();
+    const { t, direction, isRTL } = useLanguage();
     const [activeQuestion, setActiveQuestion] = useState(1);
 
     const toggleQuestion = (index) => {
         setActiveQuestion(activeQuestion === index ? null : index);
     };
 
-    const questions = [
-        {
-            id: 1,
-            question: "كيف يمكن استخدام التسويق بالمحتوى لزيادة الكفاءة؟",
-            answer: "كما هو الحال مع القول من خلال الانكماش من التعب والألم فإن هذه الحالات بسيطة تمامًا ويسهل التمييز بينها."
-        },
-        {
-            id: 2,
-            question: "How can content marketing help purchase journey?",
-            answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-            id: 3,
-            question: "How do we measure content's on sales and revenue?",
-            answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-            id: 4,
-            question: "Pain these cases are perfectly simple and easy to distinguish.",
-            answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        }
+    const questionsData = [
+        { id: 1 },
+        { id: 2 },
+        { id: 3 },
+        { id: 4 }
     ];
+
+    const questions = questionsData.map((question, index) => ({
+        ...question,
+        question: t(`faq.items.${index}.question`),
+        answer: t(`faq.items.${index}.answer`)
+    }));
 
     return (
         <section
@@ -47,11 +37,11 @@ const Questions = () => {
                         <div className="mb-5 w-full">
                             <div className="flex gap-3 items-center justify-start">
                                 <Briefcase className="text-primary-one w-5 h-5" />
-                                <h5 className="section-title">الأسئلة الشائعة العامة</h5>
+                                <h5 className="section-title">{t('faq.title')}</h5>
                             </div>
                             <div className="mt-1 md:mt-4">
-                                <h2 className={`text-3xl md:text-[2.75rem] font-bold ${isRTL ? '!leading-12.5' : '!leading-15 capitalize'} !text-white`}>
-                                    هل لديك أي أسئلة؟
+                                <h2 className={`text-3xl md:text-[2.75rem] font-bold ${isRTL ? '!leading-12.5' : '!leading-13 capitalize'} !text-white`}>
+                                    {t('faq.mainTitle')}
                                 </h2>
                             </div>
                         </div>
@@ -98,8 +88,7 @@ const Questions = () => {
                 </div>
                 {/* Left side with image */}
                 <div className="md:w-1/2">
-                    <div className="faq-image relative z-1 w-full h-full flex flex-wrap content-start">
-                    </div>
+                    <div className="faq-image relative z-1 w-full h-full flex flex-wrap content-start"></div>
                 </div>
             </div>
             <SectionShape2 direction="top" />

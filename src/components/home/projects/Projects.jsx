@@ -71,10 +71,10 @@ const Projects = () => {
     }, [])
 
     // Helper function to get translated project data
-    const translatedProjects = projects.map((project) => ({
+    const translatedProjects = projects?.map((project) => ({
         ...project,
-        name: t(`projects.items.${project.id}.name`) || project.name,
-        category: t(`projects.items.${project.id}.category`) || project.category,
+        name: t(`projects.items.${project?.id}.name`),
+        category: t(`projects.items.${project?.id}.category`),
     }));
 
     return (

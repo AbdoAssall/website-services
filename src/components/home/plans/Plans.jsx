@@ -59,9 +59,9 @@ const Plans = () => {
         <Section
             id="plans"
             className="py-20 bg-primary-three"
-            contentStyle="justify-start rtl:justify-end "
-            innerContentStyle="md:flex-row justify-between itetms-start md:itetms-center rtl:text-right"
-            descriptionStyle="md:w-xl ltr:text-start rtl:text-right"
+            contentStyle={`${isLTR ? 'justify-start' : 'justify-end'} `}
+            innerContentStyle={`md:flex-row justify-between itetms-start md:itetms-center ${isLTR ? '' : 'text-right'}`}
+            descriptionStyle={`md:w-xl ${isLTR ? 'text-start' : 'text-right'}`}
             subTitle="اختر خطتك"
             sectionTitle="التسعير القابل للتكيف"
             description="وهذا يشبه قول 'الانكماش من التعب والألم'. هذه الحالات بسيطة للغاية ويسهل تمييزها. نحن نساعدك على رؤية العالم بشكل مختلف"

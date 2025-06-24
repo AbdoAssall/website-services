@@ -10,7 +10,7 @@ import { useLanguage } from '../../../../contexts/LanguageContext';
 export const ContuctForm = () => {
     const [lastProjects, setLastProjects] = useState([]);
     const [loading, setLoading] = useState(true);
-    const { isRTL, t } = useLanguage();
+    const { isRTL, t, direction } = useLanguage();
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -30,7 +30,7 @@ export const ContuctForm = () => {
 
     return (
         <dialog id="my_modal_2" className="modal">
-            <div dir="rtl" className="modal-box max-w-17/20 max-h-22/25 p-0 ltr:text-left rtl:text-right bg-white">
+            <div dir="rtl" className={`modal-box max-w-17/20 max-h-22/25 p-0 ${isRTL ? 'text-right' : 'text-left'} bg-white`}>
                 <div className="card lg:card-side flex-col-reverse bg-primary-three shadow-sm">
                     <div className={`card-body p-10 ${isRTL ? 'text-right' : 'text-left'}`}>
                         <div className={`w-full flex ${isRTL ? 'justify-start' : 'justify-end'}`}>
@@ -38,11 +38,12 @@ export const ContuctForm = () => {
                                 <img
                                     src="/assets/images/logo-default.png"
                                     className="w-full h-full object-cover"
-                                    alt={t('contact.form.logoAlt')}
-                                    loading="lazy" />
+                                    alt={t('navbar.logoAlt')}
+                                    loading="lazy"
+                                />
                             </figure>
                         </div>
-                        <div className="my-4">
+                        <div dir={direction} className="my-4">
                             <p className="!mb-5">{t('contact.form.description')}</p>
                             <Link
                                 to="#"
@@ -58,19 +59,20 @@ export const ContuctForm = () => {
                             {loading ? (
                                 <span className="loading loading-spinner text-primary-one inline-block mt-4"></span>
                             ) : (
-                                <div className={`flex items-center flex-wrap gap-3 ${isRTL ? 'justify-start' : 'justify-end'}`}>
+                                <div className={`mt-3 flex items-center flex-wrap gap-3 ${isRTL ? 'justify-start' : 'justify-end'}`}>
                                     {filterProjects.map((project) => (
-                                        <Link key={project.id} to={project.url} arial-label={project.name} >
-                                            <figure className="w-26 h-26">
-                                                <img src={project.img} alt={project.name} className="w-full h-full rounded-lg object-cover" loading="lazy" />
-                                            </figure>
-                                        </Link>
+                                        <div key={project.id} className='relative overflow-hidden'>
+                                            <Link to={project.url} arial-label={project.name} >
+                                                <div className="absolute inset-0 bg-primary-one opacity-0 hover:opacity-70 transition-all duration-500 z-2 rounded-lg"></div>
+                                                <img src={project.img} alt={project.name} className="w-26 h-26 rounded-lg object-cover" loading="lazy" />
+                                            </Link>
+                                        </div>
                                     ))}
                                 </div>
                             )}
                         </div>
                         <hr className="text-dark-one/15" />
-                        <div className="mt-6 mb-3">
+                        <div dir={direction} className="mt-6 mb-3">
                             {t('contact.form.copyright')}
                         </div>
                     </div>

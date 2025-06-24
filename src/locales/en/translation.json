@@ -10,7 +10,8 @@
     "service2": "Service 2",
     "service3": "Service 3",
     "service4": "Service 4",
-    "search": "Search..."
+    "search": "Search...",
+    "logoAlt": "Scopehub"
   },
   "language": {
     "arabic": "Arabic",
@@ -31,8 +32,7 @@
       "description": "We help you see the world differently, discover opportunities you may never have imagined and overcome challenges that seem impossible.",
       "readMore": "Read More",
       "latestProjects": "Latest Projects",
-      "copyright": "© 2023 Creote. All Rights Reserved.",
-      "logoAlt": "Scopehub"
+      "copyright": "© 2023 Creote. All Rights Reserved."
     }
   },
   "upper": {
@@ -183,6 +183,41 @@
       }
     }
   },
+  "testimonials": {
+    "sectionTitle": "Words from Our Clients",
+    "subTitle": "Our Clients",
+    "description": "This is similar to saying that shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.",
+    "navigation": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "rating": {
+      "alt": "{stars} star rating",
+      "star": "star"
+    },
+    "clients": [
+      {
+        "name": "Sarah Johnson",
+        "position": "Marketing Manager at TechSolutions",
+        "description": "They brought tremendous value to our company. We've generated more leads in the last 45 days than the previous 6 months combined."
+      },
+      {
+        "name": "Michael Chen",
+        "position": "CEO at DigitalPro",
+        "description": "Professional and outstanding team. They understood our needs and delivered innovative solutions that exceeded our expectations."
+      },
+      {
+        "name": "Emily Rodriguez",
+        "position": "Developer at Innovation Hub",
+        "description": "Amazing experience from start to finish. The team is very collaborative and the results speak for themselves."
+      },
+      {
+        "name": "David Wilson",
+        "position": "Sales Manager at Creative Studio",
+        "description": "Truly successful partnership. They helped us achieve and exceed our goals in record time."
+      }
+    ]
+  },
   "faq": {
     "title": "General FAQs",
     "mainTitle": "Do You Have Any Questions?",
@@ -210,7 +245,9 @@
     "mainTitle": "Get Free Consultation Now Here",
     "description": "We help you see the world differently, discover opportunities you may never have imagined.",
     "phone": "Phone",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "label": "Phone number",
+    "alt": "Contact image"
   },
   "footer": {
     "description": "With over 20 years of experience, we guarantee you'll always get the best guidance. We serve our clients at all levels of their organizations...",
@@ -221,36 +258,37 @@
     "address": "Address",
     "phone": "Phone",
     "email": "Email",
-    "copyright": "Copyright © 2025 ScopHub. All Rights Reserved - Powered By"
-  },
-  "essentialLinks": [
-    {
-      "title": "Infrastructure",
-      "path": "#"
-    },
-    {
-      "title": "Client Support",
-      "path": "#"
-    },
-    {
-      "title": "Privacy Policy",
-      "path": "#"
-    },
-    {
-      "title": "Terms of Use",
-      "path": "#"
-    },
-    {
-      "title": "Professionals",
-      "path": "#"
-    },
-    {
-      "title": "Careers",
-      "path": "#"
-    },
-    {
-      "title": "Sitemap",
-      "path": "#"
-    }
-  ]
+    "copyright": "Copyright © 2025 ScopHub. All Rights Reserved - Powered By",
+    "available": "No projects available",
+    "essentialLinks": [
+      {
+        "title": "Infrastructure",
+        "path": "#"
+      },
+      {
+        "title": "Client Support",
+        "path": "#"
+      },
+      {
+        "title": "Privacy Policy",
+        "path": "#"
+      },
+      {
+        "title": "Terms of Use",
+        "path": "#"
+      },
+      {
+        "title": "Professionals",
+        "path": "#"
+      },
+      {
+        "title": "Careers",
+        "path": "#"
+      },
+      {
+        "title": "Sitemap",
+        "path": "#"
+      }
+    ]
+  }
 }

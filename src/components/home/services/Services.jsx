@@ -69,10 +69,11 @@ const Services = () => {
         initialSlide: 0,
         autoplay: true,
         speed: 600,
-        autoplaySpeed: 6000,
+        autoplaySpeed: 5000,
         cssEase: "linear",
         rtl: direction === 'rtl',
         ltr: direction === 'ltr',
+        accessibility: true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -106,7 +107,7 @@ const Services = () => {
             subTitle={t('services.title')}
             sectionTitle={t('services.mainTitle')}
             description={t('services.description')}
-           >
+        >
             <div className="w-full relative">
                 <Slider {...settings}>
                     {servicesData.map((service, index) => (

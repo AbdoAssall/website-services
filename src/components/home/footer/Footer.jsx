@@ -10,7 +10,7 @@ import { useLanguage } from '../../../contexts/LanguageContext';
 const Footer = () => {
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true);
-    const { isRTL } = useLanguage();
+    const { t, isRTL, direction } = useLanguage();
 
     const socialLinks = [
         { name: 'facebook', icon: faFacebookF, url: '#' },
@@ -20,16 +20,20 @@ const Footer = () => {
     ];
 
     // Essentials section links array
-    const essentialLinks = [
-        { title: "Infrastructure", path: "#" },
-        { title: "Client Support", path: "#" },
-        { title: "Privacy Policy", path: "#" },
-        { title: "Terms of Use", path: "#" },
-        { title: "Professionals", path: "#" },
-        { title: "Careers", path: "#" },
-        { title: "Sitemap", path: "#" },
-    ];
+    const essentialLinks = Array.from({ length: 7 }, (_, i) => ({
+        title: t(`footer.essentialLinks.${i}.title`),
+        path: t(`footer.essentialLinks.${i}.path`),
+    }));
 
+    // const essentialLinks1 = [
+    //     // { title: "Infrastructure", path: "#" },
+    //     // { title: "Client Support", path: "#" },
+    //     // { title: "Privacy Policy", path: "#" },
+    //     // { title: "Terms of Use", path: "#" },
+    //     // { title: "Professionals", path: "#" },
+    //     // { title: "Careers", path: "#" },
+    //     // { title: "Sitemap", path: "#" },
+    // ];
 
     const PostItem = ({ date, title, imagePath }) => {
         return (
@@ -52,7 +56,7 @@ const Footer = () => {
                         {date}
                     </div>
                     <h2 className="!leading-6.5 !font-semibold">
-                        <Link to="#" className="text-sm !text-white hover:!text-primary-one transition-colors">
+                        <Link to="#" aria-label={title} className="text-sm !text-white hover:!text-primary-one transition-colors">
                             {title}
                         </Link>
                     </h2>
@@ -75,35 +79,42 @@ const Footer = () => {
         fetchProjects();
     }, []);
 
+    // Helper function to get translated project data
+    const translatedProjects = projects?.map((project) => ({
+        ...project,
+        name: t(`projects.items.${project?.id}.name`),
+        category: t(`projects.items.${project?.id}.category`),
+    }));
+
     return (
-        <footer className="mt-16 pt-16 pb8 relative bg-cover bg-no-repeat bg-center w-full h-full bg-primary-two"
+        <footer dir={direction} className="mt-16 pt-16 pb8 relative bg-cover bg-no-repeat bg-center w-full h-full bg-primary-two"
             style={{ backgroundImage: 'url("assets/images/footer-bg.jpg")' }}>
             <div className="mx-auto px-4 xl:px-0 max-w-6xl flex flex-col md:flex-row gap-12 md:gap-0">
                 {/* Left Section */}
                 <div className="md:w-[28.244%] flex">
                     <div className="md:mb-7.5 md:p-2.5 flex flex-wrap flex-col content-start w-full relative">
                         <div className="mb-5 w-full">
-                            <Link to="#" className="pb-[15px] text-start m-0">
+                            <Link to="/" className="pb-[15px] text-start m-0" aria-label={t('navbar.logoAlt')}>
                                 <img
-                                    alt="scopehub"
+                                    alt={t('navbar.logoAlt')}
                                     className="w-42.5 h-auto border-0"
                                     src="assets/images/logo-white.png"
+                                    loading='lazy'
                                 />
                             </Link>
                         </div>
                         <div className="mb-5 w-full">
                             <p className="pb-2.5 !m-0 !text-base text-white text-start">
-                                بخبرة تزيد عن 20 عامًا، نضمن لك الحصول دائمًا على أفضل توجيه. نخدم عملائنا على جميع مستويات مؤسساتهم...
+                                {t('footer.description')}
                             </p>
                         </div>
                         <div className="pb-3">
                             <PrimaryLink
                                 className="!inline-block !min-w-40 !bg-transparent !border-[#FFFFFF0F] hover:!bg-white"
-                                ariaLabel="Read more"
+                                ariaLabel={t('footer.readMore')}
                                 type="button"
                             >
-                                {/* Read More */}
-                                اقرأ المزيد
+                                {t('footer.readMore')}
                             </PrimaryLink>
                         </div>
                         <div className="flex gap-4 mt-4 w-full">
@@ -133,17 +144,17 @@ const Footer = () => {
                         <div className="pb-4.5 mb-6">
                             <div className="relative before:absolute before:w-14 before:h-0.5 before:bg-primary-one before:inset-x-0 before:-bottom-3">
                                 <h3 className="!text-white font-bold text-xl">
-                                    الأساسيات
-                                    {/* Essentials */}
+                                    {t('footer.essentials')}
                                 </h3>
                             </div>
                         </div>
                         <ul>
-                            {essentialLinks.map((link, index) => (
+                            {essentialLinks?.map((link, index) => (
                                 <li key={index} className="flex items-center gap-2 pb-3">
                                     <MoveRight size={18} className={`text-[#FFFFFF4A] ${isRTL ? 'rotate-180' : ''}`} />
                                     <Link
                                         to={link.path}
+                                        arial-label={link.title}
                                         className="!text-white hover:!text-white/80 transition-colors"
                                     >
                                         {link.title}
@@ -160,7 +171,7 @@ const Footer = () => {
                         <div className="pb-4.5 mb-6">
                             <div className="relative before:absolute before:w-14 before:h-0.5 before:bg-primary-one before:inset-x-0 before:-bottom-3">
                                 <h3 className="!text-white font-bold text-xl">
-                                    المشاريع
+                                    {t('footer.projects')}
                                 </h3>
                             </div>
                         </div>
@@ -168,7 +179,7 @@ const Footer = () => {
                             {loading ? (
                                 <span className="loading loading-spinner text-success inline-block mx-auto"></span>
                             ) : (
-                                projects.slice(0, 3).map((project, index) => (
+                                translatedProjects.slice(0, 3).map((project, index) => (
                                     <li key={index} className="!mb-[1.563rem] group">
                                         <PostItem
                                             date="October 8, 2021"
@@ -179,7 +190,7 @@ const Footer = () => {
                                 ))
                             )}
                             {!loading && projects.length === 0 && (
-                                <li className="text-gray-400">No projects available</li>
+                                <li className="text-gray-400">{t('footer.available')}</li>
                             )}
                         </ul>
                     </div>
@@ -191,7 +202,7 @@ const Footer = () => {
                         <div className="pb-4.5 mb-6">
                             <div className="relative before:absolute before:w-14 before:h-0.5 before:bg-primary-one before:inset-x-0 before:-bottom-3">
                                 <h3 className="!text-white font-bold text-xl">
-                                    تواصل معنا
+                                    {t('footer.contactUs')}
                                 </h3>
                             </div>
                         </div>
@@ -199,19 +210,19 @@ const Footer = () => {
                             <li className="flex gap-3">
                                 <MapPin size={20} className="text-primary-one mt-1 flex-shrink-0" />
                                 <div>
-                                    <span className="font-semibold text-white">
-                                        Address
+                                    <span className="font-semibold text-white capitalize">
+                                        {t('footer.address')}
                                     </span>
                                     <p className="max-w-xs mt-2 !text-sm !font-semibold text-[#FFFFFFD4] leading-relaxed">
-                                        United States 866 Wilshire, 2nd Street Los Angeles 90024.
+                                        {t('contact.address')}
                                     </p>
                                 </div>
                             </li>
                             <li className="flex gap-3">
                                 <Phone size={20} className="text-primary-one mt-1 flex-shrink-0" />
                                 <div>
-                                    <span className="font-semibold text-white">
-                                        Phone
+                                    <span className="font-semibold text-white capitalize">
+                                        {t('footer.phone')}
                                     </span>
                                     <p className="max-w-xs mt-2 !text-sm !font-semibold text-[#FFFFFFD4] leading-relaxed">
                                         +555 5678 12340
@@ -221,8 +232,8 @@ const Footer = () => {
                             <li className="flex gap-3">
                                 <Mail size={20} className="text-primary-one mt-1 flex-shrink-0" />
                                 <div>
-                                    <span className="font-semibold text-white select-none">
-                                        Email
+                                    <span className="font-semibold text-white select-none capitalize">
+                                        {t('footer.email')}
                                     </span>
                                     <p className="max-w-xs mt-2 !text-sm !font-semibold text-[#FFFFFFD4] leading-relaxed">
                                         support@creote.com
@@ -236,8 +247,14 @@ const Footer = () => {
 
             {/* Bottom bar */}
             <div className="py-5 mt-8 md:mt-0 bg-primary-one text-white text-center text-sm">
-                Copyright © 2025 ScopHub. All Rights Reserved - Powered By
-                <a className="!text-white font-bold hover:!text-gray-300" href="https://abdoassal-portfolio.netlify.app/" target="_blank"> AbdoAssal</a>.
+                {t('footer.copyright')}
+                <a
+                    className="!text-white font-bold hover:!text-gray-300"
+                    href="https://abdoassal-portfolio.netlify.app/"
+                    target="_blank"
+                >
+                    AbdoAssal
+                </a>.
             </div>
         </footer>
     );
