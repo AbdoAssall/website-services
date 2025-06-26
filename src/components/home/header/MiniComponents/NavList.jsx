@@ -20,8 +20,7 @@ export function NavList({ navItems, menuServices }) {
                 <NavLink
                     to="/"
                     className={({ isActive }) =>
-                        `flex items-center ${isActive && isHomePage ? "!text-primary-one" : ""
-                        }`
+                        `flex items-center ${isActive && isHomePage ? "!text-primary-one" : ""}`
                     }
                 >
                     {t("navbar.home")}

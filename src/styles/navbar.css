@@ -1,4 +1,5 @@
-.header-top, .header-lower {
+.header-top,
+.header-lower {
     font-family: var(--family-two) !important;
 }
 .header-top p {
@@ -19,10 +20,10 @@
     padding: 0.125rem 1rem;
 }
 .header-top .get_a_quote:dir(rtl) {
-    margin-left: 0.938rem; 
+    margin-left: 0.938rem;
 }
 .header-top .get_a_quote:dir(ltr) {
-    margin-right: 0.938rem; 
+    margin-right: 0.938rem;
 }
 .header-top ul li {
     color: white !important;
@@ -37,18 +38,32 @@
 .header-lower ul li {
     margin: 0px;
 }
-.header-lower ul li a, 
-.header-lower ul li .dropdown button {
-    font-size: 0.938rem !important;
+.header-lower ul li a,
+.header-lower ul li .dropdown a span {
     line-height: 1.625rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-color-dark-one);
     font-family: var(--family-one);
     transition: 0.5s ease-in-out;
 }
-.header-lower ul li .dropdown button a {
-    font-family: var(--family-one) !important;
+[dir="ltr"] {
+    .header-lower ul li a,
+    .header-lower ul li .dropdown a span {
+        font-weight: 500;
+        font-size: 1.063rem !important;
+    }
+}
+[dir="rtl"] {
+    .header-lower ul li a,
+    .header-lower ul li .dropdown a span {
+        font-weight: 500;
+        font-size: 0.938rem !important;
+    }
+}
+.header-lower ul li .dropdown .list a {
+    font-family: var(--family-two) !important;
     font-weight: normal;
+    font-size: 0.938rem !important;
 }
 .header-lower ul li:hover .header-lower ul li a,
 .header-lower ul li .dropdown span,
@@ -57,14 +72,40 @@
 }
 @media (min-width: 768px) {
     .header-lower .logo {
-       width: 9.375rem;
-       /* width: 10.625rem; */
-       height: auto;
+        width: 9.375rem;
+        /* width: 10.625rem; */
+        height: auto;
     }
 }
 @media (max-width: 767px) {
     .header-lower .logo {
-       width: 9.375rem;
-       height: 3.125rem;
+        width: 9.375rem;
+        height: 3.125rem;
     }
+}
+@media (max-width: 960px) {
+   .mobile a {
+    line-height: 1.625rem;
+    font-weight: 500;
+    color: var(--text-color-dark-one);
+    font-family: var(--family-one);
+    transition: 0.5s ease-in-out;
+}
+[dir="ltr"] {
+    .mobile a {
+        font-weight: 600;
+        font-size: 1rem !important;
+    }
+}
+[dir="rtl"] {
+    .mobile a {
+        font-weight: 500;
+        font-size: 0.938rem !important;
+    }
+}
+.mobile .menu a {
+    font-family: var(--family-two) !important;
+    font-weight: normal;
+    font-size: 0.938rem !important;
+}
 }

@@ -119,11 +119,11 @@ const Services = () => {
                                 <Link
                                     to={service.url || '#'}
                                     aria-label={service.title}
-                                    className="card-title pb-6 !text-2xl !font-bold !font-spartan !text-white leading-7.5"
+                                    className={`card-title pb-6 ${direction === 'rtl' ? 'text-xl' : '!text-2xl'} !font-bold !font-spartan !text-white leading-7.5`}
                                 >
                                     {service.title}
                                 </Link>
-                                <p className="text-white">{service.description}</p>
+                                <p dir={direction} className="text-white">{service.description}</p>
                             </div>
                             <div className="icon-serv">
                                 <img src="assets/images/icons/thumbs-up.png" alt="service icon" className="icon-thumbs" />

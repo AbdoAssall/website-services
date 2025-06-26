@@ -6,9 +6,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import SectionShape from "../../UI/SectionShape";
 import useSwipeNavigation from '../../../hooks/useSwipeNavigation';
 import { useTranslation } from 'react-i18next';
+import { useLanguage } from '/src/contexts/LanguageContext';
 
 const HeroSlider = () => {
     const { t } = useTranslation();
+    const { direction } = useLanguage();
 
     const slidesData = [
         {
@@ -133,7 +135,7 @@ const HeroSlider = () => {
                                             initial="hidden"
                                             animate="show"
                                             transition={{ duration: 0.8, delay: 0.3 }}
-                                            className="!mb-4 md:!mb-10 text-xl sm:text-2xl md:text-3xl font-bold tracking-wider !text-white"
+                                            className="!mb-4 md:!mb-9 text-xl sm:text-2xl md:text-3xl font-bold tracking-wider !text-white"
                                         >
                                             {slide.subTitle}
                                         </motion.h5>
@@ -142,7 +144,7 @@ const HeroSlider = () => {
                                             initial="hidden"
                                             animate="show"
                                             transition={{ duration: 0.8, delay: 0.6 }}
-                                            className="!mb-4 sm:!mb-6 text-5xl font-extrabold md:text-[6.875rem] md:!leading-[90px] !text-white tracking-tight"
+                                            className={`!mb-4 sm:!mb-6 text-5xl font-extrabold md:text-[5.625rem] ${direction === 'rtl' ? 'md:!leading-25' : 'md:!leading-[5.625rem]'} !text-white tracking-tight`}
                                             style={{ textShadow: '3px 1px 3px #078586' }}
                                         >
                                             {slide.title}
