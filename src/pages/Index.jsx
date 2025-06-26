@@ -1,5 +1,4 @@
-import React from "react";
-// import HeroSlider from "../components/home/hero/HeroSlider";
+import HeroSlider from "../components/home/hero/HeroSlider";
 import About from "../components/home/about/About";
 import { Brands } from "../components/home/services/Brands";
 import Services from "../components/home/services/Services";
@@ -12,16 +11,10 @@ import Plans from "../components/home/plans/Plans";
 import Questions from "../components/home/faq/Questions";
 import Footer from "../components/home/footer/Footer";
 
-const SliderLazy = React.lazy(() => import("../components/home/hero/HeroSlider"));
-
 const Index = () => {
     return (
         <PageLayout>
-            <React.Suspense fallback={(<div className="bg-gray-100 shadow-lg w-9 h-9 text-center flex items-center">
-                <span className="loading loading-spinner text-success inline-block mx-auto"></span>
-            </div>)}>
-                <SliderLazy />
-            </React.Suspense>
+            <HeroSlider />
             <About />
             <Brands />
             <Services />
