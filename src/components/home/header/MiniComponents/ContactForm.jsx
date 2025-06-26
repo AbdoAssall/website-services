@@ -28,6 +28,8 @@ export const ContuctForm = () => {
 
     const filterProjects = lastProjects.slice(lastProjects.length - 6, lastProjects.length - 1);
 
+    const date = new Date().getFullYear();
+
     return (
         <dialog id="my_modal_2" className="modal">
             <div dir="rtl" className={`modal-box max-w-17/20 max-h-22/25 p-0 ${isRTL ? 'text-right' : 'text-left'} bg-white`}>
@@ -73,7 +75,7 @@ export const ContuctForm = () => {
                         </div>
                         <hr className="text-dark-one/15" />
                         <div dir={direction} className="mt-6 mb-3">
-                            {t('contact.form.copyright')}
+                            @ {date} {t('contact.form.copyright')}
                         </div>
                     </div>
                     <div className={`card-body p-10 lg:w-3/5 drop-shadow-lg rounded-r-xl bg-white ${isRTL ? 'text-right' : 'text-left'}`}>
@@ -108,7 +110,7 @@ export const ContuctForm = () => {
                                 <Textarea
                                     id="message"
                                     name="message"
-                                    className="block w-full !mt-2"
+                                    className={`block w-full !mt-2 ${isRTL ? 'text-right' : 'text-left'}`}
                                 >
                                 </Textarea>
                             </div>

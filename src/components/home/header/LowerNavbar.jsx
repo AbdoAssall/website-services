@@ -158,6 +158,8 @@ export function LowerNavbar() {
                 src="assets/images/logo-default.png"
                 className="logo"
                 alt={t('navbar.logoAlt')}
+                width="150"
+                height="50"
                 loading="lazy"
               />
             </Link>

@@ -1,59 +1,38 @@
 import { Link } from "react-router-dom";
-import { useState } from 'react';
+import { useMemo } from 'react';
 import Section from "../../UI/Section";
 import { CircleCheck, ArrowRight, CircleX } from 'lucide-react';
 import "/src/styles/scss/plans.css"
 import { useLanguage } from '../../../contexts/LanguageContext';
 
 const Plans = () => {
-    const { direction, isLTR } = useLanguage();
-    const [plans] = useState([
-        {
-            title: 'Recommended',
-            name: 'Basic Pack',
-            price: 22,
-            description: 'Power of choice is untrammeled and do what we like best.',
-            features: [
-                '4-5 Weeks from finish',
-                'Organisational Strategy',
-                '20 Days of support',
-                'Data sprint Results revision',
-                'Data sprint Results revision',
-            ],
-            recommended: false,
-            check: 2,
-        },
-        {
-            title: 'Most Recommended',
-            name: 'Standard Pack',
-            price: 59,
-            description: 'Matters to principle of selection our pleasures to secure.',
-            features: [
-                '4-5 Weeks from finish',
-                'Organisational Strategy',
-                '20 Days of support',
-                'Data sprint Results revision',
-                'Data sprint Results revision',
-            ],
-            recommended: true,
-            check: 4,
-        },
-        {
-            title: 'Popular Pack',
-            name: 'Advanced Pack',
-            price: 99,
-            description: 'These cases are perfectly simple & easy to distinguish.',
-            features: [
-                '4-5 Weeks from finish',
-                'Organisational Strategy',
-                '20 Days of support',
-                'Data sprint Results revision',
-                'Data sprint Results revision',
-            ],
-            recommended: false,
-            check: 5,
-        }
-    ]);
+    const { direction, isLTR, t } = useLanguage();
+
+
+    // Use useMemo to make it reactive to language changes
+    const plans = useMemo(() => {
+        const plansData = [
+            { currency: '$', price: 22 },
+            { currency: '$', price: 59 },
+            { currency: '$', price: 99 },
+        ];
+
+        return plansData.map((plan, index) => {
+            const features = Array.from({ length: 5 }, (_, i) => (
+                t(`plans.items.${index}.features.${i}`)
+            ));
+
+            return {
+                ...plan,
+                tag: t(`plans.items.${index}.tag`),
+                name: t(`plans.items.${index}.name`),
+                description: t(`plans.items.${index}.description`),
+                features: features || [],
+                recommended: index === 1, // Standard Pack is most recommended
+                check: index === 0 ? 2 : index === 1 ? 4 : 5, // Basic: 2, Standard: 4, Advanced: 5
+            };
+        });
+    }, [t]); // Re-compute when 't' function changes (i.e., when language changes)
 
     return (
         <Section
@@ -62,55 +41,123 @@ const Plans = () => {
             contentStyle={`${isLTR ? 'justify-start' : 'justify-end'} `}
             innerContentStyle={`md:flex-row justify-between itetms-start md:itetms-center ${isLTR ? '' : 'text-right'}`}
             descriptionStyle={`md:w-xl ${isLTR ? 'text-start' : 'text-right'}`}
-            subTitle="اختر خطتك"
-            sectionTitle="التسعير القابل للتكيف"
-            description="وهذا يشبه قول 'الانكماش من التعب والألم'. هذه الحالات بسيطة للغاية ويسهل تمييزها. نحن نساعدك على رؤية العالم بشكل مختلف"
+            subTitle={t('plans.subtitle')}
+            sectionTitle={t('plans.title')}
+            description={t('plans.description')}
         >
             <div className="mt-7.5 flex flex-col md:flex-row gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-12 justify-center items-center flex-wrap">
-                {plans.map((plan) => (
-                    <div key={plan.name} className={`pricing-plan type-one ${plan.recommended ? 'type-two' : ''} max-w-85`}>
-                        <div className="tag absolute -top-5 inset-x-0 z-1 mx-auto text-center text-base font-normal font-inter leading-10 rounded-md h-10 shadow-md">
-                            {plan.title}
+                {plans.map((plan, planIndex) => (
+                    <article
+                        key={`${plan.name}-${planIndex}`}
+                        className={`pricing-plan type-one ${plan.recommended ? 'type-two' : ''} max-w-85`}
+                        role="region"
+                        aria-labelledby={`plan-${planIndex}-title`}
+                        aria-describedby={`plan-${planIndex}-description`}
+                    >
+                        {/* SEO-optimized structured data would be added via JSON-LD script tag */}
+                        <div
+                            className="tag absolute -top-5 inset-x-0 z-1 mx-auto text-center text-base font-normal font-inter leading-10 rounded-md h-10 shadow-md"
+                            role="banner"
+                            aria-label={plan.recommended ? t('plans.accessibility.recommendedBadge') : plan.tag}
+                        >
+                            {plan.tag}
                         </div>
                         <div className={`pricing-plan-inner backdrop-blur-sm rounded-md shadow-lg border border-gray-200/60 flex flex-col items-center pt-12.5 pb-10 px-7.5 w-full max-w-85`}>
-                            <div className="upper-plan mb-4.5 pb-3">
-                                <h2 className="text-2xl mb-1.5">{plan.name}</h2>
-                                <div className="price">
+                            <header className="upper-plan mb-4.5 pb-3">
+                                <h2
+                                    id={`plan-${planIndex}-title`}
+                                    className="text-2xl mb-1.5"
+                                >
+                                    {plan.name}
+                                </h2>
+                                <div
+                                    className="price"
+                                    role="text"
+                                    aria-label={`${t('plans.accessibility.price')} ${plan.price} ${plan.currency} ${t('plans.accessibility.per')} ${t('plans.period')}`}
+                                >
                                     <h6 className="block mb-1.5">
-                                        <small>{plan.price}$</small>
-                                        {" /"}
-                                        <span className="text-[17px]">Year</span>
+                                        <small aria-hidden="true">
+                                            {plan.price}{plan.currency}
+                                        </small>
+                                        <span aria-hidden="true">
+                                            {" /"}
+                                        </span>
+                                        <span className="text-[17px]" aria-hidden="true">
+                                            {t('plans.period')}
+                                        </span>
                                     </h6>
                                 </div>
-                                <p className="text-dark-one">
+                                <p
+                                    id={`plan-${planIndex}-description`}
+                                    className="text-dark-one"
+                                >
                                     {plan.description}
                                 </p>
-                            </div>
-                            <div dir={direction} className="lower-plan">
-                                <ul className={`!m-0 ${isLTR ? '!pr-8 !pl-0' : '!pl-8'} w-full`}>
-                                    {plan.features.map((feature, index) => (
-                                        <li key={index} className="flex items-center gap-3">
-                                            {index < plan.check
-                                                ? (
-                                                    <CircleCheck className="text-primary-one" size={20} />
-                                                )
-                                                : (
-                                                    <CircleX className="text-primary-one" size={20} />
-                                                )}
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            <Link
-                                to="#"
-                                className={`w-full !text-primary-two !bg-white shadow-lg border border-gray-50 rounded-full py-3 font-semibold text-[0.938rem] hover:bg-gray-50 focus:shadow transition-all flex justify-center items-center gap-1 ${isLTR ? 'flex-row-reverse' : ''}`}
+                            </header>
+
+                            <section
+                                dir={direction}
+                                className="lower-plan"
+                                aria-labelledby={`plan-${planIndex}-features`}
                             >
-                                <ArrowRight size={16} />
-                                Get Started
-                            </Link>
+                                <h3
+                                    id={`plan-${planIndex}-features`}
+                                    className="sr-only"
+                                >
+                                    {t('plans.accessibility.features')}
+                                </h3>
+                                <ul
+                                    className={`!m-0 ${isLTR ? '!pr-8 !pl-0' : '!pl-8'} w-full`}
+                                    role="list"
+                                >
+                                    {plan.features.map((feature, index) => {
+                                        const isIncluded = index < plan.check;
+                                        return (
+                                            <li
+                                                key={index}
+                                                className="flex items-center gap-3"
+                                                role="listitem"
+                                            >
+                                                {isIncluded ? (
+                                                    <CircleCheck
+                                                        className="text-primary-one"
+                                                        size={20}
+                                                        aria-label={t('plans.accessibility.featureIncluded')}
+                                                        role="img"
+                                                    />
+                                                ) : (
+                                                    <CircleX
+                                                        className="text-primary-one"
+                                                        size={20}
+                                                        aria-label={t('plans.accessibility.featureNotIncluded')}
+                                                        role="img"
+                                                    />
+                                                )}
+                                                <span className={!isIncluded ? 'line-through opacity-90' : ''}>
+                                                    {feature}
+                                                </span>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            </section>
+
+                            <footer className="w-full mt-auto">
+                                <Link
+                                    to="#"
+                                    className={`w-full !text-primary-two !bg-white shadow-lg border border-gray-50 rounded-full py-3 font-semibold text-[0.938rem] hover:bg-gray-50 focus:shadow transition-all flex justify-center items-center gap-1 ${isLTR ? 'flex-row-reverse' : ''}`}
+                                    aria-label={`${t('plans.accessibility.selectPlan')} ${plan.name}`}
+                                    role="button"
+                                >
+                                    <ArrowRight
+                                        size={16}
+                                        aria-hidden="true"
+                                    />
+                                    {t('plans.getStarted')}
+                                </Link>
+                            </footer>
                         </div>
-                    </div>
+                    </article>
                 ))}
 
             </div>

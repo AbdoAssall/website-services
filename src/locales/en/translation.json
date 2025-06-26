@@ -32,7 +32,7 @@
       "description": "We help you see the world differently, discover opportunities you may never have imagined and overcome challenges that seem impossible.",
       "readMore": "Read More",
       "latestProjects": "Latest Projects",
-      "copyright": "© 2023 Creote. All Rights Reserved."
+      "copyright": " ScopHub. All Rights Reserved."
     }
   },
   "upper": {
@@ -248,6 +248,61 @@
     "contactUs": "Contact Us",
     "label": "Phone number",
     "alt": "Contact image"
+  },
+  "plans": {
+    "subtitle": "Choose Your Plan",
+    "title": "Flexible Pricing",
+    "description": "This is like saying 'shrinking from toil and pain'. These cases are perfectly simple and easy to distinguish. We help you see the world differently",
+    "period": "Year",
+    "getStarted": "Get Started",
+    "items": [
+      {
+        "tag": "Recommended",
+        "name": "Basic Pack",
+        "description": "Power of choice is untrammeled and do what we like best.",
+        "features": [
+          "4-5 Weeks from finish",
+          "Organisational Strategy",
+          "20 Days of support",
+          "Data sprint Results revision",
+          "Premium customer support"
+        ]
+      },
+      {
+        "tag": "Most Recommended",
+        "name": "Standard Pack",
+        "description": "Matters to principle of selection our pleasures to secure.",
+        "features": [
+          "4-5 Weeks from finish",
+          "Organisational Strategy",
+          "20 Days of support",
+          "Data sprint Results revision",
+          "Premium customer support"
+        ]
+      },
+      {
+        "tag": "Popular Pack",
+        "name": "Advanced Pack",
+        "description": "These cases are perfectly simple & easy to distinguish.",
+        "features": [
+          "4-5 Weeks from finish",
+          "Organisational Strategy",
+          "20 Days of support",
+          "Data sprint Results revision",
+          "Premium customer support"
+        ]
+      }
+    ],
+    "accessibility": {
+      "planCard": "Pricing plan for",
+      "recommendedBadge": "Recommended plan",
+      "price": "Price:",
+      "per": "per",
+      "features": "Features included:",
+      "featureIncluded": "Feature included",
+      "featureNotIncluded": "Feature not included",
+      "selectPlan": "Select this plan"
+    }
   },
   "footer": {
     "description": "With over 20 years of experience, we guarantee you'll always get the best guidance. We serve our clients at all levels of their organizations...",

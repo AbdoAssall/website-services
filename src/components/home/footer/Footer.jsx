@@ -86,6 +86,8 @@ const Footer = () => {
         category: t(`projects.items.${project?.id}.category`),
     }));
 
+    const date = new Date().getFullYear();
+
     return (
         <footer dir={direction} className="mt-16 pt-16 pb8 relative bg-cover bg-no-repeat bg-center w-full h-full bg-primary-two"
             style={{ backgroundImage: 'url("assets/images/footer-bg.jpg")' }}>
@@ -247,13 +249,16 @@ const Footer = () => {
 
             {/* Bottom bar */}
             <div className="py-5 mt-8 md:mt-0 bg-primary-one text-white text-center text-sm">
-                {t('footer.copyright')}
+                {direction === 'ltr'
+                    ? `Copyright © ${date} ScopHub. All Rights Reserved - Powered By`
+                    : `© ${date} ScopHub. جميع الحقوق محفوظة - تطوير ودعم تقني بواسطة`
+                }
                 <a
                     className="!text-white font-bold hover:!text-gray-300"
                     href="https://abdoassal-portfolio.netlify.app/"
                     target="_blank"
                 >
-                    AbdoAssal
+                    {" "} AbdoAssal
                 </a>.
             </div>
         </footer>
