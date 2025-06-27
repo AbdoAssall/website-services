@@ -162,7 +162,7 @@ const Testimonial = () => {
                                     {client.description}
                                 </blockquote>
                                 <div className={`lower-content flex items-center justify-between`}>
-                                    <div className={`flex items-center relative`}>
+                                    <div className={`w-full flex items-center relative`}>
                                         <div className="relative">
                                             <img
                                                 className="object-cover object-center rounded-full w-18 h-18 sm:w-20 sm:h-20 shadow-sm"
@@ -177,8 +177,8 @@ const Testimonial = () => {
                                             />
                                         </div>
                                         <div className={`auhour-name mx-6 relative flex flex-col ${direction === 'rtl' ? 'text-right' : 'text-left'}`}>
-                                            <h3>{client.name}</h3>
-                                            <span className={`text-[0.938rem] sm:text-base leading-6`}>{client.position}</span>
+                                            <h3 className="text-lg sm:text-xl">{client.name}</h3>
+                                            <span className={`text-sm sm:text-base leading-6`}>{client.position}</span>
                                             <StarRating rating={client.rating} t={t} clientName={client.name} />
                                             {/* <div className="rating rating-xs gap-2">
                                             <div className="mask mask-star bg-primary-one" aria-label="1 star"></div>

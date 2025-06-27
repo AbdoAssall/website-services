@@ -37,16 +37,16 @@ const Choices = () => {
             <div className="flex justify-center items-center mt-18 md:flex-wrap flex-col md:flex-row gap-x-6 gap-y-24">
                 {choices.map((choice, index) => (
                     <div key={index} className="relative group">
-                        <div className="card bg-white w-full md:w-65.5 h69 shadow-md md:shadow-lg hover:bg-primary-one hover:rounded-tr-none overflow-hidden border border-gray-100 transition-all duration-300">
+                        <div className="card bg-white w-full md:w-65.5 h69 shadow-md md:shadow-lg hover:bg-primary-one hover:rounded-tr-none focus:bg-primary-one focus:rounded-tr-none overflow-hidden border border-gray-100 transition-all duration-300">
                             <div className="card-bod px-7.5 pb-3 pt-19 justify-end">
-                                <h2 className="card-title text-2xl !text-primary-two font-bold font-spartan group-hover:!text-white transition-colors duration-300">
+                                <h2 className="card-title text-2xl !text-primary-two font-bold font-spartan group-hover:!text-white group-focus:!text-white transition-colors duration-300">
                                     {choice.title}
                                 </h2>
-                                <p className="text-dark-one grow-0 group-hover:text-white transition-colors !duration-300">
+                                <p className="text-dark-one grow-0 group-hover:text-white group-focus:text-white transition-colors !duration-300">
                                     {choice.description}
                                 </p>
                             </div>
-                            <div className="absolute -top-2 -right-2 z-2 w-[3.063rem] h-12 bg-primary-one rounded-full text-center leading-12 shadow-lg group-hover:bg-white text-white group-hover:text-dark-one font-medium transition-colors duration-300">
+                            <div className="absolute -top-2 -right-2 z-2 w-[3.063rem] h-12 bg-primary-one rounded-full text-center leading-12 shadow-lg group-hover:bg-white group-focus:bg-white text-white group-hover:text-dark-one group-focus:text-dark-one font-medium transition-colors duration-300">
                                 <span>0{index + 1}</span>
                             </div>
                         </div>
