@@ -17,7 +17,7 @@ const Projects = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await fetch('/src/api/projects.json');
+                const response = await fetch('api/projects.json');
                 const data = await response.json();
                 setProjects(data);
                 setLoading(false);
@@ -80,8 +80,9 @@ const Projects = () => {
     return (
         <Section
             className="py-30 bg-sky"
-            contentStyle={`${direction === 'rtl' ? 'justify-end text-right' : 'justify-start text-start'}`}
-            innerContentStyle="flex-row justify-between itetms-center"
+            contentStyle={`${direction === 'rtl' ? 'items-center sm:items-start sm:justify-end text-right' : 'items-center sm:items-start sm:justify-start text-start'}`}
+            innerContentStyle="sm:flex-row sm:justify-between itetms-center gap-5 sm:gap-0"
+            btnStyle="w-auto mx-auto sm:mx-0"
             subTitle={t("projects.title")}
             sectionTitle={t("projects.mainTitle")}
             button={t("projects.moreProjects")}

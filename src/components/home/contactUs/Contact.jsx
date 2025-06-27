@@ -37,7 +37,7 @@ const Contact = () => {
                         <h5 className="section-title">{t('contactUs.title')}</h5>
                     </div>
                     <div className="mt-1 md:mt-3">
-                        <h2 className={`text-3xl md:text-[2.75rem] font-bold text-primary-two capitalize ${isRTL ? '!leading-15' : '!leading-12.5'}`}>
+                        <h2 className={`text-3xl md:text-[2.75rem] font-bold text-primary-two capitalize ${isRTL ? '!leading-13' : '!leading-10'}`}>
                             {t('contactUs.mainTitle')}
                         </h2>
                         <p className="mt-3 !mb-6 md:!mb-0 text-dark-one">

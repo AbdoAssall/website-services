@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { Briefcase } from "lucide-react";
 import '/src/styles/scss/section.css'
 import PrimaryLink from "./PrimaryLink";
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function Section({
     children = null,
@@ -17,7 +18,10 @@ export default function Section({
     description = '',
     button = '',
     buttonLink = '#',
+    btnStyle = ''
 }) {
+    const { isRTL } = useLanguage();
+
     return (
         <section id={id} className={`relative py-12 ${className}`} style={style}>
             <div className="flex flex-col mx-auto !px-4 xl:!px-0 max-w-6xl">
@@ -26,12 +30,12 @@ export default function Section({
                         {subTitle && (
                             <div className="flex gap-3 justify-start">
                                 <Briefcase className="text-primary-one w-5 h-5" />
-                                <h5 className="section-title">{subTitle}</h5>
+                                <h5 className={`section-title`}>{subTitle}</h5>
                             </div>
                         )}
                         <div className={`mt-1 md:mt-4.5 flex flex-col text-center w-full ${innerContentStyle}`}>
                             {sectionTitle && (
-                                <h2 className={`text-3xl md:text-[3.13rem] font-bold ltr:!leading-12.5 md:rtl:!leading-15 text-primary-two capitalize ${titleStyle}`}>
+                                <h2 className={`text-3xl md:text-[3.13rem] font-bold ${isRTL ? 'md:!leading-13' : '!leading-10'} text-primary-two capitalize ${titleStyle}`}>
                                     {sectionTitle}
                                 </h2>
                             )}
@@ -41,7 +45,7 @@ export default function Section({
                                 </p>
                             )}
                             {button && (
-                                <div className="">
+                                <div className={btnStyle}>
                                     <PrimaryLink to={buttonLink} ariaLabel={button}>{button}</PrimaryLink>
                                 </div>
                             )}
@@ -70,4 +74,5 @@ Section.propTypes = {
     description: PropTypes.string,
     button: PropTypes.string,
     buttonLink: PropTypes.string,
+    btnStyle: PropTypes.string,
 };

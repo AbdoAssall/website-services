@@ -38,9 +38,9 @@ const Plans = () => {
         <Section
             id="plans"
             className="py-20 bg-primary-three"
-            contentStyle={`${isLTR ? 'justify-start' : 'justify-end'} `}
-            innerContentStyle={`md:flex-row justify-between itetms-start md:itetms-center ${isLTR ? '' : 'text-right'}`}
-            descriptionStyle={`md:w-xl ${isLTR ? 'text-start' : 'text-right'}`}
+            contentStyle={`${isLTR ? 'items-center md:items-start md:justify-start' : 'items-center md:items-start md:justify-end'} `}
+            innerContentStyle={`mt-0.5 md:!mt-0 md:flex-row md:justify-between items-center ${isLTR ? '' : 'md:text-right'}`}
+            descriptionStyle={`md:w-xl ${isLTR ? 'md:text-start' : 'md:text-right'}`}
             subTitle={t('plans.subtitle')}
             sectionTitle={t('plans.title')}
             description={t('plans.description')}

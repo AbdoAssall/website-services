@@ -173,7 +173,7 @@ const HeroSlider = () => {
                                                 <SecondaryLink
                                                     to="#projects"
                                                     aria-label={slide.buttonPro}
-                                                    className={`!bg-white hover:!bg-primary-one !text-primary-two hover:!text-white`}
+                                                    className={`!bg-white hover:!bg-primary-one active:!bg-primary-one !text-primary-two hover:!text-white active:!text-white`}
                                                 >
                                                     {slide.buttonPro}
                                                 </SecondaryLink>
@@ -186,7 +186,7 @@ const HeroSlider = () => {
                                                 <SecondaryLink
                                                     to="#services"
                                                     aria-label={slide.buttonServ}
-                                                    className={`${index === 1 ? '!bg-primary-one !text-white' : '!bg-primary-two !text-white'} hover:!bg-white`}
+                                                    className={`${index === 1 ? '!bg-primary-one !text-white' : '!bg-primary-two !text-white'} hover:!bg-white active:!bg-white`}
                                                 >
                                                     {slide.buttonServ}
                                                 </SecondaryLink>
@@ -205,7 +205,7 @@ const HeroSlider = () => {
                 type='button'
                 aria-label={t('hero.navigation.left')}
                 onClick={goToPrevSlide}
-                className="absolute left-4 top-1/2 z-30 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-colors hover:bg-white/30"
+                className="absolute left-4 top-1/2 z-30 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-colors hoverbg-white/30 active:bg-white/30"
             >
                 <ChevronLeft className="h-6 w-6" />
             </button>
@@ -214,7 +214,7 @@ const HeroSlider = () => {
                 type='button'
                 aria-label={t('hero.navigation.right')}
                 onClick={goToNextSlide}
-                className="absolute right-4 top-1/2 z-30 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-colors hover:bg-white/30"
+                className="absolute right-4 top-1/2 z-30 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-colors hoverbg-white/30 active:bg-white/30"
             >
                 <ChevronRight className="h-6 w-6" />
             </button>

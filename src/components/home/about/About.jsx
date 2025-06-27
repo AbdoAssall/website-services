@@ -46,7 +46,7 @@ const About = () => {
                         <h5 className="section-title">{t('about.title')}</h5>
                     </div>
                     <div className="mt-1 md:mt-4.5">
-                        <h2 className={`"text-3xl md:text-[2.75rem] font-bold ${direction === 'rtl' ? 'md:!leading-15' : '!leading-12.5 '} text-primary-two capitalize"`}>
+                        <h2 className={`text-3xl md:text-[2.75rem] font-bold ${direction === 'rtl' ? 'md:!leading-13' : '!leading-10 '} text-primary-two capitalize`}>
                             {t('about.mainTitle')}
                         </h2>
                         <p className="mt-4 text-dark-one">

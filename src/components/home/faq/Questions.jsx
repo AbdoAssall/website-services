@@ -33,14 +33,14 @@ const Questions = () => {
             <div dir={direction} id="faq" className="flex flex-col md:flex-row mx-auto relative">
                 {/* Right side with content */}
                 <div className="md:w-1/2">
-                    <div className={`py-27 px-25 relative w-full flex flex-col content-start text-start`}>
+                    <div className={`py-27 px-4 sm:px-25 relative w-full flex flex-col content-start text-start`}>
                         <div className="mb-5 w-full">
                             <div className="flex gap-3 items-center justify-start">
                                 <Briefcase className="text-primary-one w-5 h-5" />
                                 <h5 className="section-title">{t('faq.title')}</h5>
                             </div>
                             <div className="mt-1 md:mt-4">
-                                <h2 className={`text-3xl md:text-[2.75rem] font-bold ${isRTL ? '!leading-12.5' : '!leading-13 capitalize'} !text-white`}>
+                                <h2 className={`text-3xl md:text-[2.75rem] font-bold ${isRTL ? '!leading-12.5' : '!leading-10 capitalize'} !text-white`}>
                                     {t('faq.mainTitle')}
                                 </h2>
                             </div>

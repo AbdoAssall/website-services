@@ -68,7 +68,7 @@ const Footer = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await fetch('/src/api/projects.json');
+                const response = await fetch('api/projects.json');
                 const data = await response.json();
                 setProjects(data);
                 setLoading(false);

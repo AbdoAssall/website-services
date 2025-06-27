@@ -32,11 +32,11 @@ export const LanguageDropdown = () => {
         tabIndex={0}
         className="dropdown-content bg-white rounded-box z-10 w-32 p-2 shadow-2xl absolute left-0 right-0 top-17 lg:top-19"
       >
-        <li className="p-2 hover:bg-gray-100 rounded-md cursor-pointer flex items-center gap-2" onClick={() => changeDirection("rtl")}>
+        <li className="p-2 hover:bg-gray-100 active:bg-gray-100 rounded-md cursor-pointer flex items-center gap-2" onClick={() => changeDirection("rtl")}>
           <img src="/assets/images/flags/ar.png" alt="Arabic" className="w-5 h-5 rounded-full object-cover" />
           <span>{t("language.arabic")}</span>
         </li>
-        <li className="p-2 hover:bg-gray-100 rounded-md cursor-pointer flex items-center gap-2" onClick={() => changeDirection("ltr")}>
+        <li className="p-2 hover:bg-gray-100 active:bg-gray-100 rounded-md cursor-pointer flex items-center gap-2" onClick={() => changeDirection("ltr")}>
           <img src="/assets/images/flags/en.png" alt="English" className="w-5 h-5 rounded-full object-cover" />
           <span>{t("language.english")}</span>
         </li>

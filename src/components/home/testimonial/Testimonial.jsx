@@ -158,14 +158,14 @@ const Testimonial = () => {
                     <Slider {...settings} role="region" aria-label={t('testimonials.sectionTitle')} aria-hidden="false">
                         {testimonials.map((client) => (
                             <div dir={direction} key={client.id} className="testimonial-inner w-140 p-7.5 bg-gray-50/35 rounded-md mb-2.5 border border-gray-50">
-                                <blockquote className={`description ${direction === 'rtl' ? 'text-right' : 'text-left'}`} cite="">
+                                <blockquote className={`description leading-6 ${direction === 'rtl' ? 'text-right' : 'text-left'}`} cite="">
                                     {client.description}
                                 </blockquote>
                                 <div className={`lower-content flex items-center justify-between`}>
                                     <div className={`flex items-center relative`}>
                                         <div className="relative">
                                             <img
-                                                className="object-cover object-center rounded-full w-20 !h-20 shadow-sm"
+                                                className="object-cover object-center rounded-full w-18 h-18 sm:w-20 sm:h-20 shadow-sm"
                                                 src={client.image}
                                                 alt={`${client.name} - ${client.position}`}
                                                 loading="lazy"
@@ -178,7 +178,7 @@ const Testimonial = () => {
                                         </div>
                                         <div className={`auhour-name mx-6 relative flex flex-col ${direction === 'rtl' ? 'text-right' : 'text-left'}`}>
                                             <h3>{client.name}</h3>
-                                            <span>{client.position}</span>
+                                            <span className={`text-[0.938rem] sm:text-base leading-6`}>{client.position}</span>
                                             <StarRating rating={client.rating} t={t} clientName={client.name} />
                                             {/* <div className="rating rating-xs gap-2">
                                             <div className="mask mask-star bg-primary-one" aria-label="1 star"></div>
@@ -189,8 +189,8 @@ const Testimonial = () => {
                                         </div> */}
                                         </div>
                                     </div>
-                                    <div aria-hidden="true" className="icon-quote w-15 h-15 content-center rounded-full text-2xl bg-white shadow-md">
-                                        <Quote className="text-primary-one mx-auto" size={26} strokeWidth={1.5} />
+                                    <div aria-hidden="true" className="icon-quote w-13 h-13 sm:w-15 sm:h-15 content-center rounded-full text-2xl bg-white shadow-md">
+                                        <Quote className="text-primary-one mx-auto w-7 h-7"  strokeWidth={1.5} />
                                     </div>
                                 </div>
                             </div>

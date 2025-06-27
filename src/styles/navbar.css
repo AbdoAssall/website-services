@@ -94,13 +94,13 @@
 [dir="ltr"] {
     .mobile a {
         font-weight: 600;
-        font-size: 1rem !important;
+        font-size: 1.063rem !important;
     }
 }
 [dir="rtl"] {
     .mobile a {
         font-weight: 500;
-        font-size: 0.938rem !important;
+        font-size: 1rem !important;
     }
 }
 .mobile .menu a {
