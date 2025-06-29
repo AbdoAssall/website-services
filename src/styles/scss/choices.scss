@@ -1,7 +1,7 @@
 // Choices.scss
 .choices-container {
   .choice-card {
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     border-radius: 1px;
 
     // Hover, focus, and active states
@@ -37,7 +37,7 @@
     .choice-title,
     .choice-description,
     .choice-badge {
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
     }
   }
 
@@ -57,6 +57,7 @@
       &:hover {
         transform: translateY(-2px);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        background-color: var(--color-primary-one);
       }
     }
   }
