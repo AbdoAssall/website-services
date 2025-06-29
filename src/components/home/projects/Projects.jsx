@@ -82,7 +82,7 @@ const Projects = () => {
         <Section
             className="py-30 bg-sky"
             contentStyle={`${direction === 'rtl' ? 'items-center sm:items-start sm:justify-end text-right' : 'items-center sm:items-start sm:justify-start text-start'}`}
-            innerContentStyle="sm:flex-row sm:justify-between itetms-center gap-5 sm:gap-0"
+            innerContentStyle="sm:flex-row sm:justify-between items-center gap-5 sm:gap-0"
             btnStyle="w-auto mx-auto sm:mx-0"
             subTitle={t("projects.title")}
             sectionTitle={t("projects.mainTitle")}

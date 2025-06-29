@@ -65,7 +65,7 @@ export const ContuctForm = () => {
                                 <div className={`mt-3 flex items-center flex-wrap gap-3 ${isRTL ? 'justify-start' : 'justify-end'}`}>
                                     {filterProjects.map((project) => (
                                         <div key={project.id} className='relative overflow-hidden'>
-                                            <Link to={project.url} arial-label={project.name} >
+                                            <Link to={project.url} aria-label={project.name} >
                                                 <div className="absolute inset-0 bg-primary-one opacity-0 hover:opacity-70 transition-all duration-500 z-2 rounded-lg"></div>
                                                 <img src={project.img} alt={project.name} className="w-26 h-26 rounded-lg object-cover" loading="lazy" />
                                             </Link>
