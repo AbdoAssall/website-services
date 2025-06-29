@@ -5,11 +5,14 @@ import './styles/style.css'
 import App from './App.jsx'
 import './i18n'
 import { LanguageProvider } from './contexts/LanguageContext';
+import { HelmetProvider } from 'react-helmet-async'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <LanguageProvider>
-      <App />
-    </LanguageProvider>
+    <HelmetProvider>
+      <LanguageProvider>
+        <App />
+      </LanguageProvider>
+    </HelmetProvider>
   </StrictMode>,
 )

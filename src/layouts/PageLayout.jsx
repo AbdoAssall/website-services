@@ -1,7 +1,7 @@
 import { Navbar } from "../components/home/header/Navbar";
 import PropTypes from "prop-types";
 import { useLanguage } from "../contexts/LanguageContext";
-import ScrollProgressCircle from "../components/common/ScrollProgressCircle";
+import ScrollProgressCircle from "../components/elements/ScrollProgressCircle";
 
 export function PageLayout({children}) {
     const { direction } = useLanguage();

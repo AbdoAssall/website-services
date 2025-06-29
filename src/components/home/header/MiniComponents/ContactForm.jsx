@@ -5,6 +5,7 @@ import InputLabel from "../../../UI/InputLabel";
 import TextInput from "../../../UI/TextInput";
 import Textarea from "../../../UI/Textarea";
 import PrimaryButton from "../../../UI/PrimaryButton";
+import { Loading2 as Spinner } from '../../../elements/Loading2';
 import { useLanguage } from '../../../../contexts/LanguageContext';
 
 export const ContuctForm = () => {
@@ -59,7 +60,7 @@ export const ContuctForm = () => {
                         <div className="my-3">
                             <h3 className="text-xl">{t('contact.form.latestProjects')}</h3>
                             {loading ? (
-                                <span className="loading loading-spinner text-primary-one inline-block mt-4"></span>
+                                <Spinner />
                             ) : (
                                 <div className={`mt-3 flex items-center flex-wrap gap-3 ${isRTL ? 'justify-start' : 'justify-end'}`}>
                                     {filterProjects.map((project) => (

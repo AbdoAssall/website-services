@@ -6,6 +6,7 @@ import PrimaryLink from '../../UI/PrimaryLink';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { useLanguage } from '../../../contexts/LanguageContext';
+import { Loading2 as Spinner } from '../../elements/Loading2';
 
 const Footer = () => {
     const [projects, setProjects] = useState([]);
@@ -179,7 +180,7 @@ const Footer = () => {
                         </div>
                         <ul className="md:mb-7.5">
                             {loading ? (
-                                <span className="loading loading-spinner text-success inline-block mx-auto"></span>
+                                <Spinner />
                             ) : (
                                 translatedProjects.slice(0, 3).map((project, index) => (
                                     <li key={index} className="!mb-[1.563rem] group">

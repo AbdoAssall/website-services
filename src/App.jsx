@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Index from "./pages/Index";
+import { Loading } from "./components/elements/Loading";
 const Home = React.lazy(() => import("./pages/Index"));
 
 function App() {
@@ -8,12 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={
-          <React.Suspense fallback={(
-            <div className="bg-gray-100 shadow-lg w-full h-screen flex items-center justify-center">
-              <div className="bg-gray-100 shadow-lg w-10 h-10 text-center flex items-center">
-                <span className="loading loading-spinner loading-xl text-success inline-block mx-auto"></span>
-              </div>
-            </div>)}>
+          <React.Suspense fallback={(<Loading />)}>
             <Home />
           </React.Suspense>
         } />

@@ -10,10 +10,15 @@ import Contact from "../components/home/contactUs/Contact";
 import Plans from "../components/home/plans/Plans";
 import Questions from "../components/home/faq/Questions";
 import Footer from "../components/home/footer/Footer";
+import MetaTags from "../components/MetaTags";
 
 const Index = () => {
     return (
         <PageLayout>
+            <MetaTags
+                titleKey="head.home.title"
+                descriptionKey="head.home.meta.description"
+            />
             <HeroSlider />
             <About />
             <Brands />

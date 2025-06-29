@@ -1,0 +1,63 @@
+// Choices.scss
+.choices-container {
+  .choice-card {
+    transition: all 0.3s ease;
+    border-radius: 1px;
+
+    // Hover, focus, and active states
+    &:hover,
+    &:focus,
+    &:active {
+      .choice-title {
+        color: white !important;
+      }
+
+      .choice-description {
+        color: white !important;
+      }
+
+      .choice-badge {
+        background-color: white !important;
+        color: #333 !important;
+      }
+    }
+
+    // Focus styles for accessibility
+    &:focus {
+      outline: none;
+    }
+
+    // Focus visible for keyboard navigation
+    &:focus-visible {
+      outline: 2px solid #4A90E2;
+      outline-offset: 2px;
+    }
+
+    // Ensure smooth transitions for all child elements
+    .choice-title,
+    .choice-description,
+    .choice-badge {
+      transition: all 0.3s ease;
+    }
+  }
+
+  // Mobile touch improvements
+  @media (max-width: 767px) {
+    .choice-card {
+      // Improve touch targets
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+
+  // Desktop hover enhancements
+  @media (min-width: 768px) {
+    .choice-card {
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}

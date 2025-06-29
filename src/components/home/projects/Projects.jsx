@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { useLanguage } from "../../../contexts/LanguageContext";
+import { Loading2 as Spinner } from '../../elements/Loading2';
 
 const Projects = () => {
     const { t, direction } = useLanguage();
@@ -90,7 +91,7 @@ const Projects = () => {
         >
             <div className="mt-9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
                 {loading ? (
-                    <span className="loading loading-spinner text-success inline-block mx-auto"></span>
+                    <Spinner />
                 ) : (
                     translatedProjects.map((project) => {
                         return (

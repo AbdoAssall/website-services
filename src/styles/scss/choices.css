@@ -1,0 +1,37 @@
+.choices-container .choice-card {
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+.choices-container .choice-card:hover .choice-title, .choices-container .choice-card:focus .choice-title, .choices-container .choice-card:active .choice-title {
+  color: white !important;
+}
+.choices-container .choice-card:hover .choice-description, .choices-container .choice-card:focus .choice-description, .choices-container .choice-card:active .choice-description {
+  color: white !important;
+}
+.choices-container .choice-card:hover .choice-badge, .choices-container .choice-card:focus .choice-badge, .choices-container .choice-card:active .choice-badge {
+  background-color: white !important;
+  color: #333 !important;
+}
+.choices-container .choice-card:focus {
+  outline: none;
+}
+.choices-container .choice-card:focus-visible {
+  outline: 2px solid #4A90E2;
+  outline-offset: 2px;
+}
+.choices-container .choice-card .choice-title,
+.choices-container .choice-card .choice-description,
+.choices-container .choice-card .choice-badge {
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .choices-container .choice-card:active {
+    transform: scale(0.98);
+  }
+}
+@media (min-width: 768px) {
+  .choices-container .choice-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+}/*# sourceMappingURL=Choices.css.map */
