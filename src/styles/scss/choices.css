@@ -2,6 +2,9 @@
   transition: all 0.5s ease;
   border-radius: 1px;
 }
+.choices-container .choice-card:hover, .choices-container .choice-card:focus, .choices-container .choice-card:active {
+  background-color: var(--color-primary-one);
+}
 .choices-container .choice-card:hover .choice-title, .choices-container .choice-card:focus .choice-title, .choices-container .choice-card:active .choice-title {
   color: white !important;
 }
@@ -33,6 +36,5 @@
   .choices-container .choice-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    background-color: var(--color-primary-one);
   }
 }/*# sourceMappingURL=choices.css.map */

@@ -46,7 +46,7 @@ const ScrollProgressCircle = () => {
 
   return (
     <div 
-      className={`fixed bottom-14 right-6 z-50 cursor-pointer transition-opacity duration-300 ${
+      className={`fixed bottom-18 sm:bottom-14 right-6 z-50 cursor-pointer transition-opacity duration-300 ${
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
       onClick={scrollToTop}

@@ -53,14 +53,14 @@ const Choices = () => {
                             }}
                         >
                             <div className="card-bod px-7.5 pb-3 pt-19 justify-end">
-                                <h2 className="choice-title card-title text-2xl text-primary-two font-bold font-spartan group-hover:!text-white transition-colors duration-300">
+                                <h2 className="choice-title card-title text-2xl text-primary-two font-bold font-spartan group-hover:!text-white transition-colors duration-500">
                                     {choice.title}
                                 </h2>
-                                <p className="choice-description text-dark-one grow-0 group-hover:text-white transition-colors !duration-300">
+                                <p className="choice-description text-dark-one grow-0 group-hover:text-white transition-colors !duration-500">
                                     {choice.description}
                                 </p>
                             </div>
-                            <div className="choice-badge absolute -top-2 -right-2 z-2 w-[3.063rem] h-12 bg-primary-one rounded-full text-center leading-12 shadow-lg group-hover:bg-white text-white group-hover:text-dark-one font-medium transition-colors duration-300">
+                            <div className="choice-badge absolute -top-2 -right-2 z-2 w-[3.063rem] h-12 bg-primary-one rounded-full text-center leading-12 shadow-lg group-hover:bg-white text-white group-hover:text-dark-one font-medium transition-colors duration-500">
                                 <span>0{index + 1}</span>
                             </div>
                         </div>

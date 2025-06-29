@@ -8,6 +8,7 @@
     &:hover,
     &:focus,
     &:active {
+      background-color: var(--color-primary-one);
       .choice-title {
         color: white !important;
       }
@@ -57,7 +58,6 @@
       &:hover {
         transform: translateY(-2px);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        background-color: var(--color-primary-one);
       }
     }
   }
