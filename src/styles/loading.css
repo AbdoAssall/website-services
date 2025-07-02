@@ -8,6 +8,7 @@
     text-align: center;
     background-color: var(--color-primary-one);
     z-index: 10;
+    overflow: hidden;
 }
 .spinner {
     width: 40px;

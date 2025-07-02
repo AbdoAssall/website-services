@@ -9,9 +9,9 @@ import { useLanguage } from '../../../contexts/LanguageContext';
 import { Loading2 as Spinner } from '../../elements/Loading2';
 
 const Footer = () => {
-    const [projects, setProjects] = useState([]);
+    const [projectsData, setProjectsData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const { t, isRTL, direction } = useLanguage();
+    const { t, isRTL, direction, language } = useLanguage();
 
     const socialLinks = [
         { name: 'facebook', icon: faFacebookF, url: '#' },
@@ -71,22 +71,28 @@ const Footer = () => {
             try {
                 const response = await fetch('api/projects.json');
                 const data = await response.json();
-                setProjects(data);
+                setProjectsData(data);
                 setLoading(false);
             } catch (error) {
                 console.error('Error fetching projects:', error);
+                setLoading(false);
             }
         };
         fetchProjects();
     }, []);
 
-    // Helper function to get translated project data
-    const translatedProjects = projects?.map((project) => ({
-        ...project,
-        name: t(`projects.items.${project?.id}.name`),
-        category: t(`projects.items.${project?.id}.category`),
-    }));
+    // Get translated projects based on current language
+    const translatedProjects  = () => {
+        if (!projectsData?.projects) return [];
 
+        return projectsData.projects.map(project => ({
+            ...project,
+            name: project[language]?.name || project.ar.name,
+            category: project[language]?.category || project.ar.category,
+        }));
+    };
+
+    const projects = translatedProjects();
     const date = new Date().getFullYear();
 
     return (
@@ -182,8 +188,8 @@ const Footer = () => {
                             {loading ? (
                                 <Spinner />
                             ) : (
-                                translatedProjects.slice(0, 3).map((project, index) => (
-                                    <li key={index} className="!mb-[1.563rem] group">
+                                projects.slice(0, 3).map((project) => (
+                                    <li key={project.id} className="!mb-[1.563rem] group">
                                         <PostItem
                                             date="October 8, 2021"
                                             title={project.name}
@@ -250,7 +256,7 @@ const Footer = () => {
 
             {/* Bottom bar */}
             <div className="py-5 mt-8 md:mt-0 bg-primary-one text-white text-center text-sm">
-                {direction === 'ltr'
+                {language === 'en'
                     ? `Copyright © ${date} ScopHub. All Rights Reserved - Powered By`
                     : `© ${date} ScopHub. جميع الحقوق محفوظة - تطوير ودعم تقني بواسطة`
                 }

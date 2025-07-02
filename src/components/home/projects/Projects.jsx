@@ -11,8 +11,8 @@ import { useLanguage } from "../../../contexts/LanguageContext";
 import { Loading2 as Spinner } from '../../elements/Loading2';
 
 const Projects = () => {
-    const { t, direction } = useLanguage();
-    const [projects, setProjects] = useState([]);
+    const { t, direction, language } = useLanguage();
+    const [projectsData, setProjectsData] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -20,11 +20,11 @@ const Projects = () => {
             try {
                 const response = await fetch('api/projects.json');
                 const data = await response.json();
-                setProjects(data);
+                setProjectsData(data);
                 setLoading(false);
-
             } catch (error) {
                 console.error('Error fetching projects:', error);
+                setLoading(false);
             }
         };
         fetchProjects();
@@ -71,12 +71,17 @@ const Projects = () => {
         };
     }, [])
 
-    // Helper function to get translated project data
-    const translatedProjects = projects?.map((project) => ({
-        ...project,
-        name: t(`projects.items.${project?.id}.name`),
-        category: t(`projects.items.${project?.id}.category`),
-    }));
+    // Get translated projects based on current language
+    const translatedProjects  = () => {
+        if (!projectsData?.projects) return [];
+        
+        return projectsData.projects.map(project => ({
+            ...project,
+            name: project[language]?.name || project.ar.name,
+            category: project[language]?.category || project.ar.category,
+        }));
+    };
+    const projects = translatedProjects();
 
     return (
         <Section
@@ -87,13 +92,13 @@ const Projects = () => {
             subTitle={t("projects.title")}
             sectionTitle={t("projects.mainTitle")}
             button={t("projects.moreProjects")}
-            buttonLink="#"
+            buttonLink="/projects"
         >
             <div className="mt-9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
                 {loading ? (
                     <Spinner />
                 ) : (
-                    translatedProjects.map((project) => {
+                    projects?.map((project) => {
                         return (
                             <div key={project.id} className="project-box card bg-white">
                                 <article>

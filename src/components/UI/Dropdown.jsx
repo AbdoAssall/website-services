@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
-const Dropdown = ({ title, children, to='#' }) => {
+const Dropdown = ({ title, children, to = '#', ...props }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     let timeout;
@@ -24,7 +24,7 @@ const Dropdown = ({ title, children, to='#' }) => {
                 onMouseLeave={handleMouseLeave}
                 className="dropdown inline-block cursor-pointer"
             >
-                <NavLink to={to} className="relative z-20 flex items-center gap-x-1 focus:outline-none">
+                <NavLink {...props} to={to} className="relative z-20 flex items-center gap-x-1 focus:outline-none">
                     <span className="group-hover:text-primary-one text-dark-one font-semibold">{title}</span>
                     <svg
                         className="w-5 h-5 text-light-gray group-hover:text-primary-one"

@@ -11,7 +11,7 @@ import { useLanguage } from '../../../../contexts/LanguageContext';
 export const ContuctForm = () => {
     const [lastProjects, setLastProjects] = useState([]);
     const [loading, setLoading] = useState(true);
-    const { isRTL, t, direction } = useLanguage();
+    const { isRTL, t, direction, language } = useLanguage();
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -27,8 +27,21 @@ export const ContuctForm = () => {
         fetchProjects();
     }, [])
 
-    const filterProjects = lastProjects.slice(lastProjects.length - 6, lastProjects.length - 1);
+    // Get translated projects based on current language
+    const getTranslatedProjects = () => {
+        if (!lastProjects?.projects || lastProjects.projects.length === 0) return [];
 
+        // Get last 5 projects (excluding the last one)
+        const projects = lastProjects.projects.slice(Math.max(0, lastProjects.projects.length - 6), lastProjects.projects.length - 1);
+
+        // Apply language translation to each project
+        return projects.map(project => ({
+            ...project,
+            name: project[language]?.name || project.ar.name,
+        }));
+    };
+
+    const filterProjects = getTranslatedProjects();
     const date = new Date().getFullYear();
 
     return (
@@ -63,7 +76,7 @@ export const ContuctForm = () => {
                                 <Spinner />
                             ) : (
                                 <div className={`mt-3 flex items-center flex-wrap gap-3 ${isRTL ? 'justify-start' : 'justify-end'}`}>
-                                    {filterProjects.map((project) => (
+                                    {filterProjects?.map((project) => (
                                         <div key={project.id} className='relative overflow-hidden'>
                                             <Link to={project.url} aria-label={project.name} >
                                                 <div className="absolute inset-0 bg-primary-one opacity-0 hover:opacity-70 transition-all duration-500 z-2 rounded-lg"></div>

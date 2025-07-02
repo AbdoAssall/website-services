@@ -1,76 +1,142 @@
-[
-    {
-        "id": 1,
-        "name": "إدارة الموارد البشرية بالوقت المشترك",
-        "category": "الموارد البشرية",
-        "url": "#",
-        "img": "assets/images/projects/project-1.jpg",
-        "images": [
-            {
-                "url": "assets/images/projects/project-1.jpg",
-                "caption": "Detail View 1"
+{
+    "categories": [
+        {
+            "en": [
+                "Human Resources",
+                "Training",
+                "Leadership"
+            ]
+        },
+        {
+            "ar": [
+                "الموارد البشرية",
+                "التدريب",
+                "القيادة"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "url": "#",
+            "img": "assets/images/projects/project-1.jpg",
+            "images": [
+                {
+                    "url": "assets/images/projects/project-1.jpg",
+                    "caption": "Detail View 1"
+                },
+                {
+                    "url": "assets/images/projects/project-5.jpg",
+                    "caption": "Detail View 2"
+                }
+            ],
+            "ar": {
+                "name": "إدارة الموارد البشرية بالوقت المشترك",
+                "category": "الموارد البشرية",
+                "description": "نظام متكامل لإدارة الموارد البشرية يتيح تتبع الحضور والانصراف بطريقة فعالة ومشتركة."
             },
-            {
-                "url": "assets/images/projects/project-5.jpg",
-                "caption": "Detail View 2"
+            "en": {
+                "name": "Shared Time Human Resources Management",
+                "category": "Human Resources",
+                "description": "An integrated HR management system that enables effective and shared tracking of attendance and departure."
             }
-        ]
-    },
-    {
-        "id": 2,
-        "name": "ست خطوات أساسية لكتابة وظيفة ناجحة",
-        "category": "التدريب",
-        "url": "#",
-        "img": "assets/images/projects/project-2.jpg",
-        "images": [
-            {
-                "url": "assets/images/projects/project-2.jpg",
-                "caption": "Detail View 1"
+        },
+        {
+            "id": 2,
+            "url": "#",
+            "img": "assets/images/projects/project-2.jpg",
+            "images": [
+                {
+                    "url": "assets/images/projects/project-2.jpg",
+                    "caption": "Detail View 1"
+                },
+                {
+                    "url": "assets/images/projects/project-3.jpg",
+                    "caption": "Detail View 2"
+                },
+                {
+                    "url": "assets/images/projects/project-1.jpg",
+                    "caption": "Detail View 3"
+                },
+                {
+                    "url": "assets/images/projects/project-4.jpg",
+                    "caption": "Detail View 4"
+                },
+                {
+                    "url": "assets/images/projects/project-5.jpg",
+                    "caption": "Detail View 5"
+                }
+            ],
+            "ar": {
+                "name": "ست خطوات أساسية لكتابة وظيفة ناجحة",
+                "category": "التدريب",
+                "description": "دليل شامل يوضح الخطوات الأساسية لكتابة وصف وظيفي فعال وجذاب للمرشحين المناسبين."
             },
-            {
-                "url": "assets/images/projects/project-3.jpg",
-                "caption": "Detail View 2"
-            },
-            {
-                "url": "assets/images/projects/project-1.jpg",
-                "caption": "Detail View 2"
-            },
-            {
-                "url": "assets/images/projects/project-4.jpg",
-                "caption": "Detail View 2"
-            },
-            {
-                "url": "assets/images/projects/project-5.jpg",
-                "caption": "Detail View 2"
+            "en": {
+                "name": "Six Essential Steps to Writing a Successful Job",
+                "category": "Training",
+                "description": "A comprehensive guide that outlines the essential steps to writing an effective and attractive job description for suitable candidates."
             }
-        ]
-    },
-    {
-        "id": 3,
-        "name": "تايم إتش آر تستعد لعقد تصنيع البلاستيك",
-        "category": "القيادة",
-        "url": "#",
-        "img": "assets/images/projects/project-3.jpg"
-    },
-    {
-        "id": 4,
-        "name": "الخطوات الأساسية لكتابة وصف الوظيفة",
-        "category": "الموارد البشرية",
-        "url": "#",
-        "img": "assets/images/projects/project-4.jpg"
-    },
-    {
-        "id": 5,
-        "name": "الفصل المعقد لشركة صغيرة",
-        "category": "التدريب",
-        "url": "#",
-        "img": "assets/images/projects/project-5.jpg"
-    },
-    {
-        "id": 6,
-        "name": "قيم الشركة والعلاقة",
-        "category": "القيادة",
-        "url": "#",
-        "img": "assets/images/projects/project-6.jpg"
-    }
-]
+        },
+        {
+            "id": 3,
+            "url": "#",
+            "img": "assets/images/projects/project-3.jpg",
+            "ar": {
+                "name": "تايم إتش آر تستعد لعقد تصنيع البلاستيك",
+                "category": "القيادة",
+                "description": "مشروع استراتيجي لتطوير وتحسين عمليات تصنيع البلاستيك باستخدام أحدث التقنيات."
+            },
+            "en": {
+                "name": "Time HR Prepares for Plastic Manufacturing Contract",
+                "category": "Leadership",
+                "description": "A strategic project to develop and improve plastic manufacturing processes using the latest technologies."
+            }
+        },
+        {
+            "id": 4,
+            "url": "#",
+            "img": "assets/images/projects/project-4.jpg",
+            "ar": {
+                "name": "الخطوات الأساسية لكتابة وصف الوظيفة",
+                "category": "الموارد البشرية",
+                "description": "منهجية علمية لصياغة أوصاف وظيفية دقيقة تساعد في جذب المواهب المناسبة."
+            },
+            "en": {
+                "name": "Essential Steps for Writing Job Description",
+                "category": "Human Resources",
+                "description": "A scientific methodology for drafting accurate job descriptions that help attract suitable talent."
+            }
+        },
+        {
+            "id": 5,
+            "url": "#",
+            "img": "assets/images/projects/project-5.jpg",
+            "ar": {
+                "name": "الفصل المعقد لشركة صغيرة",
+                "category": "التدريب",
+                "description": "برنامج تدريبي متخصص يساعد الشركات الصغيرة على إدارة عمليات الفصل المعقدة بطريقة مهنية."
+            },
+            "en": {
+                "name": "Complex Dismissal for Small Company",
+                "category": "Training",
+                "description": "A specialized training program that helps small companies manage complex dismissal processes professionally."
+            }
+        },
+        {
+            "id": 6,
+            "url": "#",
+            "img": "assets/images/projects/project-6.jpg",
+            "ar": {
+                "name": "قيم الشركة والعلاقة",
+                "category": "القيادة",
+                "description": "دراسة شاملة حول كيفية بناء قيم الشركة وتعزيز العلاقات الداخلية والخارجية."
+            },
+            "en": {
+                "name": "Company Values and Relations",
+                "category": "Leadership",
+                "description": "A comprehensive study on how to build company values and strengthen internal and external relationships."
+            }
+        }
+    ]
+}

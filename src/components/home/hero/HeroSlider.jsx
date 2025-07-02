@@ -171,7 +171,7 @@ const HeroSlider = () => {
                                                 transition={{ duration: 0.6, delay: 1 }}
                                             >
                                                 <SecondaryLink
-                                                    to="#projects"
+                                                    to="/projects"
                                                     aria-label={slide.buttonPro}
                                                     className={`!bg-white hover:!bg-primary-one active:!bg-primary-one !text-primary-two hover:!text-white active:!text-white`}
                                                 >
@@ -184,6 +184,7 @@ const HeroSlider = () => {
                                                 transition={{ duration: 0.6, delay: 1.7 }}
                                             >
                                                 <SecondaryLink
+                                                    onClick={(e) => e.scrollIntoView({ behavior: 'smooth', block: 'start' })}
                                                     to="#services"
                                                     aria-label={slide.buttonServ}
                                                     className={`${index === 1 ? '!bg-primary-one !text-white' : '!bg-primary-two !text-white'} hover:!bg-white active:!bg-white`}
