@@ -1,32 +1,44 @@
 // @ts-nocheck
-import { useState } from "react";
-import { Link, useLocation, NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import {
   List,
   ListItem,
-  Accordion,
-  AccordionHeader,
-  AccordionBody,
   Drawer,
   Card,
 } from "@material-tailwind/react";
-import { ChevronDown, Search, X } from "lucide-react";
+import { Search, X } from "lucide-react";
 import TextInput from "../../UI/TextInput";
-// import { Link as ScrollLink } from "react-scroll";
 import { useLanguage } from "../../../contexts/LanguageContext";
+import { useNavigation } from "../../../hooks/useNavigation";
+import { MobileAccordion } from "./MiniComponents/MobileAccordion";
 
 export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {
   const { direction, t } = useLanguage();
   const [open, setOpen] = useState(0);
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
+  const {
+    isNavItemActive,
+    handleNavClick,
+    handlePageLoadScroll,
+    isHomePage,
+    location
+  } = useNavigation();
+
+  // Handle scroll on page load if state contains scrollTo
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      handlePageLoadScroll(location.state.scrollTo);
+    }
+  }, [location.state?.scrollTo, handlePageLoadScroll]);
 
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
   };
 
   const closeDrawer = () => setOpenNav(false);
+
+  // const regularNavItems = navItems.filter(item => !item.hasSubmenu);
 
   return (
     <>
@@ -65,63 +77,44 @@ export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {
                 {t('navbar.home')}
               </ListItem>
             </NavLink>
-            <hr className="mb-2 border-gray-200" />
-
-            {/* -- Services -- */}
-            <Accordion
-              open={open === 1}
-              icon={
-                <div onClick={() => handleOpen(1)} className="p-2 mb2 border border-gray-200 shadow-sm rounded-sm">
-                  <ChevronDown
-                    className={`mx-auto h-4 w-4 text-black transition-transform ${open === 1 ? "rotate-180" : ""
-                      }`}
-                  />
-                </div>
-              }
-            >
-              <ListItem className="px-0 !pt-0 pb-1" selected={open === 1}>
-                <AccordionHeader
-                  // onClick={() => handleOpen(1)}
-                  className={`items-center border-b-0 ${direction === 'rtl' ? 'pr-3 justify-normal' : ' pl-3 justify-start'} content-center py-0`}
-                >
-                  <NavLink to="#" className={`${direction === 'rtl' ? 'ml-auto' : 'mr-auto'} !text-dark-one !font-medium`}>
-                    {t('navbar.services')}
-                  </NavLink>
-                </AccordionHeader>
-              </ListItem>
-              <AccordionBody className="menu py-2">
-                <List className="p-0">
-                  {menuServices.map((item) => (
-                    <Link
-                      key={item.id}
-                      to={item.to}
-                      className="!text-dark-one !font-normal hover:!text-primary-one"
-                    >
-                      <ListItem>{item.title}</ListItem>
-                    </Link>
-                  ))}
-                </List>
-              </AccordionBody>
-            </Accordion>
+            {/* <hr className="mb-2 border-gray-200" /> */}
 
             {/* -- NavItems -- */}
             {navItems.map((item) => (
               <div key={item.id}>
                 <hr className="mb-2 border-gray-200" />
-                {item.isScrollLink && isHomePage ? (
-                  <a
-                    href={item.to}
-                    className="cursor-pointer"
-                    onClick={closeDrawer}
-                  >
-                    <ListItem className="!text-dark-one font-medium hover:!text-primary-one">
-                      {item.title}
-                    </ListItem>
-                  </a>
+                {item.isScrollLink ? (
+                  item.hasSubmenu ? (
+                    <MobileAccordion
+                      accordionId={item.id}
+                      isOpen={open === item.id}
+                      onToggle={handleOpen}
+                      title={item.title}
+                      item={item}
+                      onNavClick={handleNavClick}
+                      onCloseDrawer={closeDrawer}
+                      items={menuServices}
+                    />
+                  ) : (
+                    <a
+                      href={item.to}
+                      className="cursor-pointer"
+                      onClick={(e) => {
+                        handleNavClick(item, e)
+                        closeDrawer()
+                      }}
+                    >
+                      <ListItem className="!text-dark-one !font-medium hover:!text-primary-one">
+                        {item.title}
+                      </ListItem>
+                    </a>
+                  )
                 ) : (
                   <NavLink
                     to={item.to}
-                    className="!text-dark-one font-medium hover:!text-primary-one"
+                    className={({ isActive }) =>
+                      `!text-dark-one font-medium ${isActive && isNavItemActive(item) ? "!text-primary-one" : "hover:!text-primary-one"}`
+                    }
                   >
                     <ListItem>{item.title}</ListItem>
                   </NavLink>

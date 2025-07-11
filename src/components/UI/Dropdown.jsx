@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Dropdown = ({ title, children, to = '#', ...props }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +24,7 @@ const Dropdown = ({ title, children, to = '#', ...props }) => {
                 onMouseLeave={handleMouseLeave}
                 className="dropdown inline-block cursor-pointer"
             >
-                <NavLink {...props} to={to} className="relative z-20 flex items-center gap-x-1 focus:outline-none">
+                <a {...props} href={to} className="relative z-20 flex items-center gap-x-1 focus:outline-none">
                     <span className="group-hover:text-primary-one text-dark-one font-semibold">{title}</span>
                     <svg
                         className="w-5 h-5 text-light-gray group-hover:text-primary-one"
@@ -38,7 +38,7 @@ const Dropdown = ({ title, children, to = '#', ...props }) => {
                             clipRule="evenodd"
                         />
                     </svg>
-                </NavLink>
+                </a>
 
                 {isOpen && (
                     <div className="list absolute left-0 right-0 lg:top-14 z-10 w-48 pt-2 mt-2 bg-white rounded-md shadow-md">
