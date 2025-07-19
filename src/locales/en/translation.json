@@ -158,7 +158,13 @@
     "mainTitle": "A Look at Our Work",
     "moreProjects": "More Projects",
     "viewProject": "View Project",
-    "category": "Category"
+    "category": "Category",
+    "projects": "Projects",
+    "noProjects": "No projects found in this category.",
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "date": "Date",
+    "client": "Client"
   },
   "testimonials": {
     "sectionTitle": "Words from Our Clients",

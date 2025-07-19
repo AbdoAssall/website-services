@@ -158,7 +158,13 @@
     "mainTitle": "لمحة عن أعمالنا",
     "moreProjects": "المزيد من المشاريع",
     "viewProject": "عرض المشروع",
-    "category": "الفئة"
+    "category": "الفئة",
+    "projects": "المشاريع",
+    "noProjects": "لا توجد مشاريع في هذه الفئة.",
+    "viewAll": "عرض الكل",
+    "readMore": "اقرأ المزيد",
+    "date": "التاريخ",
+    "client": "اسم العميل"
   },
   "testimonials": {
     "sectionTitle": "كلمات من عملائنا",

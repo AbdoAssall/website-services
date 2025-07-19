@@ -5,7 +5,7 @@ import PrimaryLink from "./PrimaryLink";
 import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function Section({
-    children = null,
+    children = {},
     className = '',
     id = '',
     style = {},

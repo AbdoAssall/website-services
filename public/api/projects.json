@@ -20,6 +20,7 @@
             "id": 1,
             "url": "#",
             "img": "assets/images/projects/project-1.jpg",
+            "date": "March 08, 2021",
             "images": [
                 {
                     "url": "assets/images/projects/project-1.jpg",
@@ -33,18 +34,21 @@
             "ar": {
                 "name": "إدارة الموارد البشرية بالوقت المشترك",
                 "category": "الموارد البشرية",
-                "description": "نظام متكامل لإدارة الموارد البشرية يتيح تتبع الحضور والانصراف بطريقة فعالة ومشتركة."
+                "description": "نظام متكامل لإدارة الموارد البشرية يتيح تتبع الحضور والانصراف بطريقة فعالة ومشتركة.",
+                "client": "حلول المعلومات التقنية"
             },
             "en": {
                 "name": "Shared Time Human Resources Management",
                 "category": "Human Resources",
-                "description": "An integrated HR management system that enables effective and shared tracking of attendance and departure."
+                "description": "An integrated HR management system that enables effective and shared tracking of attendance and departure.",
+                "client": "The Infotech Solutions"
             }
         },
         {
             "id": 2,
             "url": "#",
             "img": "assets/images/projects/project-2.jpg",
+            "date": "February 15, 2021",
             "images": [
                 {
                     "url": "assets/images/projects/project-2.jpg",
@@ -70,72 +74,86 @@
             "ar": {
                 "name": "ست خطوات أساسية لكتابة وظيفة ناجحة",
                 "category": "التدريب",
-                "description": "دليل شامل يوضح الخطوات الأساسية لكتابة وصف وظيفي فعال وجذاب للمرشحين المناسبين."
+                "description": "دليل شامل يوضح الخطوات الأساسية لكتابة وصف وظيفي فعال وجذاب للمرشحين المناسبين.",
+                "client": "تقنيات الابتكار التقني"
             },
             "en": {
                 "name": "Six Essential Steps to Writing a Successful Job",
                 "category": "Training",
-                "description": "A comprehensive guide that outlines the essential steps to writing an effective and attractive job description for suitable candidates."
+                "description": "A comprehensive guide that outlines the essential steps to writing an effective and attractive job description for suitable candidates.",
+                "client": "Tech Innovators Inc"
             }
         },
         {
             "id": 3,
             "url": "#",
             "img": "assets/images/projects/project-3.jpg",
+            "date": "February 05, 2021",
             "ar": {
                 "name": "تايم إتش آر تستعد لعقد تصنيع البلاستيك",
                 "category": "القيادة",
-                "description": "مشروع استراتيجي لتطوير وتحسين عمليات تصنيع البلاستيك باستخدام أحدث التقنيات."
+                "description": "مشروع استراتيجي لتطوير وتحسين عمليات تصنيع البلاستيك باستخدام أحدث التقنيات.",
+                "client": "مجموعة جالكان الأخوات"
             },
             "en": {
                 "name": "Time HR Prepares for Plastic Manufacturing Contract",
                 "category": "Leadership",
-                "description": "A strategic project to develop and improve plastic manufacturing processes using the latest technologies."
+                "description": "A strategic project to develop and improve plastic manufacturing processes using the latest technologies.",
+                "client": "Jalkan Sisters Group"
             }
         },
         {
             "id": 4,
             "url": "#",
             "img": "assets/images/projects/project-4.jpg",
+            "date": "April 14, 2021",
             "ar": {
                 "name": "الخطوات الأساسية لكتابة وصف الوظيفة",
                 "category": "الموارد البشرية",
-                "description": "منهجية علمية لصياغة أوصاف وظيفية دقيقة تساعد في جذب المواهب المناسبة."
+                "description": "منهجية علمية لصياغة أوصاف وظيفية دقيقة تساعد في جذب المواهب المناسبة.",
+                "client": "مجموعة الأمهات الستة"
             },
             "en": {
                 "name": "Essential Steps for Writing Job Description",
                 "category": "Human Resources",
-                "description": "A scientific methodology for drafting accurate job descriptions that help attract suitable talent."
+                "description": "A scientific methodology for drafting accurate job descriptions that help attract suitable talent.",
+                "client": "The Sixmothers Group"
             }
         },
         {
             "id": 5,
             "url": "#",
             "img": "assets/images/projects/project-5.jpg",
+            "date": "January 22, 2021",
             "ar": {
                 "name": "الفصل المعقد لشركة صغيرة",
                 "category": "التدريب",
-                "description": "برنامج تدريبي متخصص يساعد الشركات الصغيرة على إدارة عمليات الفصل المعقدة بطريقة مهنية."
+                "description": "برنامج تدريبي متخصص يساعد الشركات الصغيرة على إدارة عمليات الفصل المعقدة بطريقة مهنية.",
+                "client": "مجموعة الأمهات الستة"
             },
             "en": {
                 "name": "Complex Dismissal for Small Company",
                 "category": "Training",
-                "description": "A specialized training program that helps small companies manage complex dismissal processes professionally."
+                "description": "A specialized training program that helps small companies manage complex dismissal processes professionally.",
+                "client": "The Sixmothers Group"
             }
         },
         {
             "id": 6,
             "url": "#",
             "img": "assets/images/projects/project-6.jpg",
+            "date": "December 08, 2020",
             "ar": {
                 "name": "قيم الشركة والعلاقة",
                 "category": "القيادة",
-                "description": "دراسة شاملة حول كيفية بناء قيم الشركة وتعزيز العلاقات الداخلية والخارجية."
+                "description": "دراسة شاملة حول كيفية بناء قيم الشركة وتعزيز العلاقات الداخلية والخارجية.",
+                "client": "استوديو جيمس"
             },
             "en": {
                 "name": "Company Values and Relations",
                 "category": "Leadership",
-                "description": "A comprehensive study on how to build company values and strengthen internal and external relationships."
+                "description": "A comprehensive study on how to build company values and strengthen internal and external relationships.",
+                "client": "James Studio"
             }
         }
     ]

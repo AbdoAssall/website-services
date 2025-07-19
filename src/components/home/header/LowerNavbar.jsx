@@ -38,7 +38,7 @@ export function LowerNavbar() {
     // if (!isMountedRef.current) return;
 
     const currentScrollY = window.scrollY;
-    const scrolled = currentScrollY > 100;
+    const scrolled = currentScrollY > 50;
     setIsScroll((prevIsScroll) => {
       if (scrolled !== prevIsScroll) {
         return scrolled;
@@ -47,8 +47,8 @@ export function LowerNavbar() {
     });
 
     // Handle navbar visibility based on scroll direction
-    // if (currentScrollY > 100) { // Only start hiding after 100px scroll
-    //   if (currentScrollY > lastScrollY.current && currentScrollY > 200) {
+    // if (currentScrollY > 50) { // Only start hiding after 100px scroll
+    //   if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
     //     // Scrolling down & past 200px - hide navbar
     //     setIsScroll(false);
     //   } else if (currentScrollY < lastScrollY.current) {
@@ -121,21 +121,6 @@ export function LowerNavbar() {
 
   return (
     <>
-      {/* <AnimatePresence mode="wait">
-        <motion.div
-          key={isScroll ? "scrolled-navbar" : "static-navbar"}
-          initial={isScroll ? { y: -100 } : { y: 0 }}
-          animate={{ y: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 60,
-            duration: 0.3,
-          }}
-          className="w-full z-98"
-        >
-        </motion.div>
-      </AnimatePresence>  */}
       <div className={`w-full z-98 ${isScroll ? "fixed top-0 left-0" : ""}`}>
         <Navbar
           dir="ltr"
@@ -144,12 +129,9 @@ export function LowerNavbar() {
             : "bg-opacity-100"
             }`}
           style={{
-            transform: isScroll
-              ? `translateY(${isScroll ? '0%' : '-100%'})`
-              : 'translateY(0%)',
+            // transform: `translateY(${isScroll ? '0%' : '-100%'})`,
             transition: "all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-            // opacity: isScroll ? 1 : 0 ,
-            // visibility: isScroll ? "visible" : "hidden",
+            // opacity: isScroll ? 1 : 0,
           }}
         >
           <div className="flex items-center justify-between text-dark-one h-full px-2 md:px8 lg:px-0 mx-auto max-w-[72.125rem]">
