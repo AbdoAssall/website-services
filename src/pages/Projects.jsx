@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { PageLayout } from "../layouts/PageLayout";
 import MetaTags from "../components/MetaTags";
-import PageHeader from "../components/projects/PageHeader";
+import PageHeader from "../components/UI/PageHeader";
 import ProjectsTabs from "../components/projects/ProjectsTabs";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Loading2 } from "../components/elements/Loading2";
