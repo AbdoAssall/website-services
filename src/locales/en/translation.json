@@ -14,7 +14,7 @@
       "meta": {
         "description": "Scope Hub is a professional agency offering academic and marketing services for the Arab and Gulf markets, including research, thesis writing, translation, proofreading, data analysis, feasibility studies, branding, social media design, motion graphics, whiteboard videos, and programming."
       },
-      "title": "Projects| Our Projects"
+      "title": "Projects | Our Projects"
     }
   },
   "navbar": {
@@ -328,5 +328,14 @@
         "path": "#"
       }
     ]
+  },
+  "pagination": {
+    "previous": "Previous page",
+    "next": "Next page",
+    "page": "Page",
+    "of": "of",
+    "goToPage": "Go to page",
+    "showing": "Showing {start} to {end} of {total} entries",
+    "noEntries": "No entries found"
   }
 }

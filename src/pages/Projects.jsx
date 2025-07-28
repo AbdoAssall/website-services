@@ -60,10 +60,15 @@ const Projects = () => {
                 ]}
             />
 
-            {/* Projects Tabs Section */}
+            {/* Projects Tabs Section with Pagination */}
             {loading
                 ? (<Loading2 />)
-                : (<ProjectsTabs projects={projects} />)
+                : (
+                    <ProjectsTabs
+                        projects={projects}
+                        itemsPerPage={3}
+                    />
+                )
             }
         </PageLayout>
     );

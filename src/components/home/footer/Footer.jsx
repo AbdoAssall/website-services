@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { Loading2 as Spinner } from '../../elements/Loading2';
+import SocialIcons from '../../elements/SocialIcons';
 
 const Footer = () => {
     const [projectsData, setProjectsData] = useState(null);
@@ -82,7 +83,7 @@ const Footer = () => {
     }, []);
 
     // Get translated projects based on current language
-    const translatedProjects  = () => {
+    const translatedProjects = () => {
         if (!projectsData?.projects) return [];
 
         return projectsData.projects.map(project => ({
@@ -126,23 +127,12 @@ const Footer = () => {
                                 {t('footer.readMore')}
                             </PrimaryLink>
                         </div>
-                        <div className="flex gap-4 mt-4 w-full">
-                            {socialLinks.map((item, index) => (
-                                <div className="tooltip" key={index}>
-                                    <div className="tooltip-content bg-white">
-                                        <div className="text-primary-one bg-white text-sm font-medium lowercase">
-                                            {item.name}
-                                        </div>
-                                    </div>
-                                    <Link
-                                        to={item.url}
-                                        aria-label={item.name}
-                                        className="w-9 h-9 rounded-full !bg-primary-one flex items-center justify-center text-sm !text-white transition-all"
-                                    >
-                                        <FontAwesomeIcon icon={item.icon} />
-                                    </Link>
-                                </div>
-                            ))}
+                        <div className="w-full">
+                            <SocialIcons
+                                className='flex gap-4 mt-4'
+                                iconClassName='w-9 h-9 rounded-full !bg-primary-one flex items-center justify-center text-sm !text-white transition-all'
+                                showTooltip={true}
+                            />
                         </div>
                     </div>
                 </div>
