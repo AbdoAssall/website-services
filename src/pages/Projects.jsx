@@ -33,7 +33,7 @@ const Projects = () => {
                 : (
                     <ProjectsTabs
                         projects={projects}
-                        itemsPerPage={3}
+                        itemsPerPage={6}
                     />
                 )
             }
