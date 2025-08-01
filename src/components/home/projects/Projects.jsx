@@ -1,34 +1,21 @@
 // @ts-nocheck
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import useProjects from "../../../hooks/useProjects";
+import { useLanguage } from "../../../store/LanguageContext";
 import Section from "../../UI/Section";
 import SectionShape from "../../UI/SectionShape";
 import "../../../styles/scss/projects.scss";
 import { ArrowRight, CircleFadingPlus } from 'lucide-react';
-import { useState, useEffect } from "react";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
-import { useLanguage } from "../../../contexts/LanguageContext";
 import { Loading2 as Spinner } from '../../elements/Loading2';
 
 const Projects = () => {
-    const { t, direction, language } = useLanguage();
-    const [projectsData, setProjectsData] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const { t, direction } = useLanguage();
+    const { projects, loading } = useProjects();
 
     useEffect(() => {
-        const fetchProjects = async () => {
-            try {
-                const response = await fetch('api/projects.json');
-                const data = await response.json();
-                setProjectsData(data);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error fetching projects:', error);
-                setLoading(false);
-            }
-        };
-        fetchProjects();
-
         Fancybox.bind("[data-fancybox]", {
             Toolbar: {
                 display: {
@@ -70,18 +57,6 @@ const Projects = () => {
             Fancybox.close();
         };
     }, [])
-
-    // Get translated projects based on current language
-    const translatedProjects  = () => {
-        if (!projectsData?.projects) return [];
-        
-        return projectsData.projects.map(project => ({
-            ...project,
-            name: project[language]?.name || project.ar.name,
-            category: project[language]?.category || project.ar.category,
-        }));
-    };
-    const projects = translatedProjects();
 
     return (
         <Section

@@ -11,6 +11,12 @@
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
+    //  "paths": {
+    //   "@hooks/*": ["hooks/*"],
+    //   "@components/*": ["components/*"],
+    //   "@utils/*": ["utils/*"],
+    //   "@pages/*": ["pages/*"],
+    // },
   },
   "include": ["src"],
   "exclude": ["node_modules", "build"]

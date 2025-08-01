@@ -2,11 +2,10 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import SecondaryLink from '../../UI/SecondaryLink';
 import { motion, AnimatePresence } from 'framer-motion'
-// import { fadeIn } from '../../../utils/variants';
 import SectionShape from "../../UI/SectionShape";
 import useSwipeNavigation from '../../../hooks/useSwipeNavigation';
 import { useTranslation } from 'react-i18next';
-import { useLanguage } from '/src/contexts/LanguageContext';
+import { useLanguage } from '../../../store/LanguageContext';
 
 const HeroSlider = () => {
     const { t } = useTranslation();

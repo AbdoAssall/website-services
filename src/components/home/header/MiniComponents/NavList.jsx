@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 import Dropdown from "../../../UI/Dropdown";
-import { useLanguage } from "../../../../contexts/LanguageContext";
+import { useLanguage } from "../../../../store/LanguageContext";
 import { useNavigation } from "../../../../hooks/useNavigation";
 
 export function NavList({ navItems, menuServices }) {

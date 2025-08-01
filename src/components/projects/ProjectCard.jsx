@@ -1,6 +1,6 @@
 // @ts-nocheck
 import PropTypes from 'prop-types';
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '../../store/LanguageContext';
 import { Link } from 'react-router-dom';
 import { MoveRight } from 'lucide-react';
 import SocialIcons from '../elements/SocialIcons';
@@ -12,7 +12,7 @@ const ProjectCard = ({
     image = '',
     date = '',
     client = '',
-    readMoreLink = "#"
+    link = "#"
 }) => {
     const { t, isRTL } = useLanguage();
 
@@ -32,7 +32,7 @@ const ProjectCard = ({
                         {/* Title */}
                         <h2 className={`text-xl md:text-[1.375rem] font-bold text-primary-two !mb-5 pb-5 border-b border-border-dark-one ${isRTL ? '!leading-9' : '!leading-7'}`}>
                             <Link
-                                to={readMoreLink}
+                                to={link}
                                 className='!m-0 !p-0'
                             >
                                 {title}
@@ -46,7 +46,7 @@ const ProjectCard = ({
 
                         {/* Read More Link */}
                         <Link
-                            to={readMoreLink}
+                            to={link}
                             className="inline-flex items-center !text-[0.938rem] leading-6 text-primary-one hover:!text-primary-one/85 transition-colors duration-300"
                         >
                             {t('projects.readMore')}
@@ -96,7 +96,7 @@ ProjectCard.propTypes = {
     image: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     client: PropTypes.string.isRequired,
-    readMoreLink: PropTypes.string
+    link: PropTypes.string
 };
 
 export default ProjectCard;

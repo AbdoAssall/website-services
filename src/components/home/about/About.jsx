@@ -2,7 +2,7 @@ import Section from "../../UI/Section";
 import { Briefcase, Play } from "lucide-react";
 import PrimaryLink from "../../UI/PrimaryLink";
 import '../../../styles/about.css'
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../../store/LanguageContext';
 
 const About = () => {
     const { direction, t } = useLanguage();

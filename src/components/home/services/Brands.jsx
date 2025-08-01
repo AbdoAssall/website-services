@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Section from "../../UI/Section";
-import { useLanguage } from "../../../contexts/LanguageContext";
+import { useLanguage } from "../../../store/LanguageContext";
 
 export const Brands = () => {
     const { direction } = useLanguage();

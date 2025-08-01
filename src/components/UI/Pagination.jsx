@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import PropTypes from 'prop-types';
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '../../store/LanguageContext';
 import { PaginationButton } from './PaginationButton';
 
 /**
@@ -84,7 +84,7 @@ const Pagination = ({
                         <PaginationButton
                             onClick={() => handlePageChange(1)}
                             active={currentPage === 1}
-                            ariaLabel={currentPage}
+                            ariaLabel={`Page ${currentPage}`}
                         >
                             1
                         </PaginationButton>
@@ -98,7 +98,7 @@ const Pagination = ({
                         key={page}
                         onClick={() => handlePageChange(page)}
                         active={currentPage === page}
-                        ariaLabel={currentPage}
+                        ariaLabel={`Page ${page}`}
                         className="min-w-[2.5rem]"
                     >
                         {page}
@@ -112,7 +112,7 @@ const Pagination = ({
                         <PaginationButton
                             onClick={() => handlePageChange(totalPages)}
                             active={currentPage === totalPages}
-                            ariaLabel={currentPage}
+                            ariaLabel={`Page ${totalPages}`}
                         >
                             {totalPages}
                         </PaginationButton>

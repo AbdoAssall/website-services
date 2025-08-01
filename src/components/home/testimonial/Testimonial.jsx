@@ -7,7 +7,7 @@ import "/src/styles/scss/testimonial.css"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import { Quote } from 'lucide-react';
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../../store/LanguageContext';
 
 
 const Testimonial = () => {
@@ -190,7 +190,7 @@ const Testimonial = () => {
                                         </div>
                                     </div>
                                     <div aria-hidden="true" className="icon-quote w-13 h-13 sm:w-15 sm:h-15 content-center rounded-full text-2xl bg-white shadow-md">
-                                        <Quote className="text-primary-one mx-auto w-7 h-7"  strokeWidth={1.5} />
+                                        <Quote className="text-primary-one mx-auto w-7 h-7" strokeWidth={1.5} />
                                     </div>
                                 </div>
                             </div>

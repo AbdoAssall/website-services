@@ -3,18 +3,18 @@ import { useState, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import ProjectCard from './ProjectCard';
 import Pagination from '../UI/Pagination';
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '../../store/LanguageContext';
 import Section from '../../components/UI/Section';
 
 /**
  * @param {{ projects?: Array<{
  *   category: string;
- *   title: string;
+ *   name: string;
  *   description: string;
- *   image: string;
+ *   ing: string;
  *   date: string;
  *   client: string;
- *   link?: string;
+ *   url?: string;
  * }>, 
  * itemsPerPage?: number
  *  }} props
@@ -133,12 +133,12 @@ const ProjectsTabs = ({ projects = [], itemsPerPage = 6 }) => {
                                 >
                                     <ProjectCard
                                         category={project.category}
-                                        title={project.title}
+                                        title={project.name}
                                         description={project.description}
-                                        image={project.image}
+                                        image={project.img}
                                         date={project.date}
                                         client={project.client}
-                                        readMoreLink={project.link}
+                                        link={project.url}
                                     />
                                 </div>
                             ))}
@@ -190,12 +190,12 @@ ProjectsTabs.propTypes = {
     projects: PropTypes.arrayOf(
         PropTypes.shape({
             category: PropTypes.string.isRequired,
-            title: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
             description: PropTypes.string.isRequired,
-            image: PropTypes.string.isRequired,
+            img: PropTypes.string.isRequired,
             date: PropTypes.string.isRequired,
             client: PropTypes.string.isRequired,
-            link: PropTypes.string,
+            url: PropTypes.string,
         })
     ),
     itemsPerPage: PropTypes.number

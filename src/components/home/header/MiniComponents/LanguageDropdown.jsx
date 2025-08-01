@@ -1,4 +1,4 @@
-import { useLanguage } from "../../../../contexts/LanguageContext";
+import { useLanguage } from "../../../../store/LanguageContext";
 
 export const LanguageDropdown = () => {
   const { direction, changeDirection, t } = useLanguage();

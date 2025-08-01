@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ArrowRight, ArrowUp, ArrowLeft, Briefcase } from 'lucide-react';
 import SectionShape2 from "../../UI/SectionShape2";
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../../store/LanguageContext';
 import "/src/styles/scss/questions.css"
 
 const Questions = () => {

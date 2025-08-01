@@ -1,7 +1,7 @@
 import TextInput from "../../../UI/TextInput";
 import { Search, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLanguage } from "../../../../contexts/LanguageContext";
+import { useLanguage } from "../../../../store/LanguageContext";
 import PropTypes from "prop-types";
 
 export const SearchBar = function ({ openSearchBar }) {

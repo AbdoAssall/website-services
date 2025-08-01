@@ -5,9 +5,9 @@ import { Navbar } from "@material-tailwind/react";
 import { MobileSidebar } from "./MobileSidebar";
 import { Menu, Search } from "lucide-react";
 // import { motion, AnimatePresence } from "framer-motion";
-import { ContuctForm } from "./MiniComponents/ContactForm";
+import { ContactForm } from "./MiniComponents/ContactForm";
 import { LanguageDropdown } from "./MiniComponents/LanguageDropdown";
-import { useLanguage } from "../../../contexts/LanguageContext";
+import { useLanguage } from "../../../store/LanguageContext";
 import { SearchBar } from "./MiniComponents/SearchBar";
 import { NavList } from "./MiniComponents/NavList";
 
@@ -184,7 +184,7 @@ export function LowerNavbar() {
                     className="mx-auto w-7 h-7 text-white leading-10"
                   />
                 </button>
-                <ContuctForm />
+                <ContactForm />
               </div>
               {/* Menu button mobile */}
               <button

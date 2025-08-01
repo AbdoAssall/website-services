@@ -4,7 +4,7 @@ import './index.css'
 import './styles/style.css'
 import App from './App.jsx'
 import './i18n'
-import { LanguageProvider } from './contexts/LanguageContext';
+import { LanguageProvider } from './store/LanguageContext';
 import { HelmetProvider } from 'react-helmet-async'
 
 createRoot(document.getElementById('root')).render(

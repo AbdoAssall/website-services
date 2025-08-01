@@ -1,6 +1,6 @@
 import { Navbar } from "../components/home/header/Navbar";
 import PropTypes from "prop-types";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../store/LanguageContext";
 import ScrollProgressCircle from "../components/elements/ScrollProgressCircle";
 import Footer from "../components/home/footer/Footer";
 

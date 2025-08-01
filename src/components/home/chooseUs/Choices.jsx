@@ -1,5 +1,5 @@
 import Section from "../../UI/Section";
-import { useLanguage } from "../../../contexts/LanguageContext";
+import { useLanguage } from "../../../store/LanguageContext";
 import '../../../styles/scss/choices.css'
 
 const Choices = () => {

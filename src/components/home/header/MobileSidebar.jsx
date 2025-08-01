@@ -10,7 +10,7 @@ import {
 } from "@material-tailwind/react";
 import { Search, X } from "lucide-react";
 import TextInput from "../../UI/TextInput";
-import { useLanguage } from "../../../contexts/LanguageContext";
+import { useLanguage } from "../../../store/LanguageContext";
 import { useNavigation } from "../../../hooks/useNavigation";
 import { MobileAccordion } from "./MiniComponents/MobileAccordion";
 

@@ -6,7 +6,7 @@ import '../../../styles/services.css';
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import { useLanguage } from "../../../contexts/LanguageContext";
+import { useLanguage } from "../../../store/LanguageContext";
 // import "slick-carousel/slick/slick-theme.css";
 
 const Services = () => {

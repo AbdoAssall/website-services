@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import { Briefcase } from "lucide-react";
 import '/src/styles/scss/section.css'
 import PrimaryLink from "./PrimaryLink";
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '../../store/LanguageContext';
 
 export default function Section({
-    children = {},
+    children,
     className = '',
     id = '',
     style = {},
@@ -16,7 +16,7 @@ export default function Section({
     subTitle = '',
     sectionTitle = '',
     description = '',
-    button = '',
+    button = null,
     buttonLink = '#',
     btnStyle = ''
 }) {

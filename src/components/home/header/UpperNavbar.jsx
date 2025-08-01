@@ -2,10 +2,10 @@
 import { Navbar } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
-import { useLanguage } from "../../../contexts/LanguageContext";
+import { useLanguage } from "../../../store/LanguageContext";
 
 export function UpperNavbar() {
-    const { direction ,t } = useLanguage();
+    const { direction, t } = useLanguage();
     const navList = (
         <ul className={`flex flex-col-reverse md:mb-0 md:mt-0 md:flex-row items-center md:gap-6 ${direction === 'rtl' ? '!p-0' : ''}`}>
             <li className={`flex items-center gap-x-2 p-1 ${direction === 'rtl' ? 'flex-row-reverse' : ''}`}>
@@ -28,7 +28,7 @@ export function UpperNavbar() {
             <div className="py-2 mx-auto px-4 xl:px-0 max-w-[72.125rem] flex items-center justify-between text-white">
                 <div className="hidden lg:flex items-center">
                     <Link to="#" className="get_a_quote hover:!text-white" target="_blank" rel="nofollow">
-                    {t('upper.qoute')}
+                        {t('upper.qoute')}
                     </Link>
                     <p>{t('upper.welcome')}</p>
                 </div>

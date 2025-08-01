@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import Section from "../../UI/Section";
 import { CircleCheck, ArrowRight, CircleX } from 'lucide-react';
 import "/src/styles/scss/plans.css"
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../../store/LanguageContext';
 
 const Plans = () => {
     const { direction, isLTR, t } = useLanguage();

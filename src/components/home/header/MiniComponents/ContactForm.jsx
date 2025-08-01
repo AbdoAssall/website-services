@@ -1,52 +1,25 @@
 // @ts-nocheck
-import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import InputLabel from "../../../UI/InputLabel";
 import TextInput from "../../../UI/TextInput";
 import Textarea from "../../../UI/Textarea";
 import PrimaryButton from "../../../UI/PrimaryButton";
 import { Loading2 as Spinner } from '../../../elements/Loading2';
-import { useLanguage } from '../../../../contexts/LanguageContext';
+import { useLanguage } from '../../../../store/LanguageContext';
+import useProjects from "../../../../hooks/useProjects";
 
-export const ContuctForm = () => {
-    const [lastProjects, setLastProjects] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const { isRTL, t, direction, language } = useLanguage();
+export const ContactForm = () => {
+    const { isRTL, t, direction } = useLanguage();
+    const { projects, loading } = useProjects();
 
-    useEffect(() => {
-        const fetchProjects = async () => {
-            try {
-                const response = await fetch('api/projects.json');
-                const data = await response.json();
-                setLastProjects(data);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error fetching projects:', error);
-            }
-        };
-        fetchProjects();
-    }, [])
-
-    // Get translated projects based on current language
-    const getTranslatedProjects = () => {
-        if (!lastProjects?.projects || lastProjects.projects.length === 0) return [];
-
-        // Get last 5 projects (excluding the last one)
-        const projects = lastProjects.projects.slice(Math.max(0, lastProjects.projects.length - 6), lastProjects.projects.length - 1);
-
-        // Apply language translation to each project
-        return projects.map(project => ({
-            ...project,
-            name: project[language]?.name || project.ar.name,
-        }));
-    };
-
-    const filterProjects = getTranslatedProjects();
+    // Get last 5 projects (excluding the last one)
+    const filterProjects = projects.slice(Math.max(0, projects.length - 6), projects.length - 1);
     const date = new Date().getFullYear();
 
     return (
         <dialog id="my_modal_2" className="modal">
             <div dir="rtl" className={`modal-box max-w-17/20 max-h-22/25 p-0 ${isRTL ? 'text-right' : 'text-left'} bg-white`}>
+                {/* Logo and Contact Form */}
                 <div className="card lg:card-side flex-col-reverse bg-primary-three shadow-sm">
                     <div className={`card-body p-10 ${isRTL ? 'text-right' : 'text-left'}`}>
                         <div className={`w-full flex ${isRTL ? 'justify-start' : 'justify-end'}`}>
@@ -92,6 +65,8 @@ export const ContuctForm = () => {
                             @ {date} {t('contact.form.copyright')}
                         </div>
                     </div>
+
+                    {/* Contact Form */}
                     <div className={`card-body p-10 lg:w-3/5 drop-shadow-lg rounded-r-xl bg-white ${isRTL ? 'text-right' : 'text-left'}`}>
                         <form>
                             <div>
@@ -136,6 +111,8 @@ export const ContuctForm = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Close Button */}
                 <form method="dialog">
                     <button
                         aria-label={t('contact.form.close')}

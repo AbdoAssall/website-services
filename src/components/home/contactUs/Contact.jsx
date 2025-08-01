@@ -2,7 +2,7 @@ import Section from "../../UI/Section";
 import PrimaryLink from "../../UI/PrimaryLink";
 import { Briefcase, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../../store/LanguageContext';
 
 const Contact = () => {
     const { t, isRTL } = useLanguage();

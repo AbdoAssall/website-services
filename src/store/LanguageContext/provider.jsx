@@ -7,11 +7,11 @@ import { LanguageContext } from './context';
 // Provider component
 export function LanguageProvider({ children }) {
   const { t, i18n } = useTranslation();
-  
+
   // Get current language and direction
   const currentLanguage = i18n.language;
   const direction = currentLanguage === 'ar' ? 'rtl' : 'ltr';
-  
+
   // Initialize direction on mount
   useEffect(() => {
     document.documentElement.dir = direction;

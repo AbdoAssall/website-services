@@ -9,7 +9,7 @@ import {
     AccordionBody,
 } from "@material-tailwind/react";
 import { ChevronDown } from "lucide-react";
-import { useLanguage } from "../../../../contexts/LanguageContext";
+import { useLanguage } from "../../../../store/LanguageContext";
 
 export function MobileAccordion({
     accordionId,
