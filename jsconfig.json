@@ -10,13 +10,17 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
-    //  "paths": {
-    //   "@hooks/*": ["hooks/*"],
-    //   "@components/*": ["components/*"],
-    //   "@utils/*": ["utils/*"],
-    //   "@pages/*": ["pages/*"],
-    // },
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@api/*": ["api/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@layout/*": ["layout/*"],
+      "@pages/*": ["pages/*"],
+      "@store/*": ["store/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules", "build"]

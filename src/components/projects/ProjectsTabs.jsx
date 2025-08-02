@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ProjectCard from './ProjectCard';
 import Pagination from '../UI/Pagination';
 import { useLanguage } from '../../store/LanguageContext';
-import Section from '../../components/UI/Section';
+import Section from '@components/UI/Section';
 
 /**
  * @param {{ projects?: Array<{
@@ -74,14 +74,6 @@ const ProjectsTabs = ({ projects = [], itemsPerPage = 6 }) => {
     // Handle page change
     const handlePageChange = (page) => {
         setCurrentPage(page);
-        // Scroll to top of projects section
-        const projectsSection = document.querySelector('.projects-section');
-        if (projectsSection) {
-            projectsSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
     };
 
     return (
@@ -151,6 +143,7 @@ const ProjectsTabs = ({ projects = [], itemsPerPage = 6 }) => {
                             onPageChange={handlePageChange}
                             maxVisiblePages={5}
                             showFirstLast={true}
+                            element='.projects-section'
                             className={`transition-all duration-300 ease-in-out ${isAnimating
                                 ? 'opacity-0 transform scale-95'
                                 : 'opacity-100 transform scale-100'

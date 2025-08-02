@@ -12,6 +12,7 @@ import { PaginationButton } from './PaginationButton';
  *   maxVisiblePages?: number, 
  *   showFirstLast?: boolean, 
  *   className?: string,
+ *   element?: string
  * }} props
  */
 
@@ -21,7 +22,8 @@ const Pagination = ({
     onPageChange = () => { },
     maxVisiblePages = 5,
     showFirstLast = true,
-    className = ''
+    className = '',
+    element = ''
 }) => {
     const { isRTL, t } = useLanguage();
 
@@ -49,8 +51,20 @@ const Pagination = ({
     const showStartEllipsis = visiblePages[0] > 2;
     const showEndEllipsis = visiblePages[visiblePages.length - 1] < totalPages - 1;
 
+    const scrollToTop = () => {
+        // Scroll to top of section
+        const projectsSection = document.querySelector(element);
+        if (projectsSection) {
+            projectsSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     const handlePageChange = (page) => {
         if (page >= 1 && page <= totalPages && page !== currentPage) {
+            scrollToTop();
             onPageChange(page);
         }
     };
@@ -84,7 +98,7 @@ const Pagination = ({
                         <PaginationButton
                             onClick={() => handlePageChange(1)}
                             active={currentPage === 1}
-                            ariaLabel={`Page ${currentPage}`}
+                            ariaLabel={`Page ${1}`}
                         >
                             1
                         </PaginationButton>
@@ -150,7 +164,8 @@ Pagination.propTypes = {
     onPageChange: PropTypes.func.isRequired,
     maxVisiblePages: PropTypes.number,
     showFirstLast: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
+    element: PropTypes.string
 };
 
 export default Pagination;

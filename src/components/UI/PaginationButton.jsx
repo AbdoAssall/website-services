@@ -20,8 +20,9 @@ export const PaginationButton = ({
     className: buttonClassName = ''
 }) => (
     <button
+        type="button"
         onClick={onClick}
-        disabled={disabled}
+        // disabled={disabled}
         aria-label={ariaLabel}
         className={`
                 relative inline-flex items-center justify-center min-w-[2.5rem] h-10 px-3 py-2
