@@ -1,22 +1,12 @@
 // @ts-nocheck
 import PostItem from "./PostItem";
-import { Loading2 as Spinner } from '../../../elements/Loading2';
-import PropTypes from 'prop-types';
-import { useLanguage } from '../../../../store/LanguageContext';
+import { Loading2 as Spinner } from '@components/elements/Loading2';
+import { useLanguage } from '@store/LanguageContext';
+import useProjects from "@hooks/useProjects";
+import { slugify } from "@utils/slugify";
 
-/**
- * ProjectsSection component props
- * @typedef {Object} ProjectsSectionProps
- * @property {Array<{id: string|number, date: string, name: string, img: string}>} projects - List of project objects.
- * @property {boolean} loading - Loading state for projects.
- */
-
-/**
- * Renders the projects section in the footer.
- * @param {ProjectsSectionProps} props
- */
-
-export const ProjectsSection = ({ projects, loading }) => {
+export const ProjectsSection = () => {
+    const { projects, loading } = useProjects();
     const { t } = useLanguage();
 
     return (
@@ -33,12 +23,13 @@ export const ProjectsSection = ({ projects, loading }) => {
                     {loading ? (
                         <Spinner />
                     ) : (
-                        projects.slice(0, 3).map((project) => (
+                        projects?.slice(0, 3).map((project) => (
                             <li key={project.id} className="!mb-[1.563rem] group">
                                 <PostItem
                                     date={project.date}
                                     title={project.name}
                                     imagePath={project.img}
+                                    url={`${project.url}/${slugify(project.name)}`}
                                 />
                             </li>
                         ))
@@ -50,16 +41,4 @@ export const ProjectsSection = ({ projects, loading }) => {
             </div>
         </div>
     );
-};
-
-ProjectsSection.propTypes = {
-    projects: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-            date: PropTypes.string.isRequired,
-            name: PropTypes.string.isRequired,
-            img: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-    loading: PropTypes.bool.isRequired,
 };

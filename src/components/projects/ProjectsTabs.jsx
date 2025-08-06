@@ -130,7 +130,7 @@ const ProjectsTabs = ({ projects = [], itemsPerPage = 6 }) => {
                                         image={project.img}
                                         date={project.date}
                                         client={project.client}
-                                        link={project.url}
+                                        url={project.url}
                                     />
                                 </div>
                             ))}

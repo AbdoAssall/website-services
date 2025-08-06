@@ -26,11 +26,14 @@ export default [
             ['@hooks', './src/hooks'],
             ['@components', './src/components'],
             ['@utils', './src/utils'],
-            ['@layout', './src/layout'],
+            ['@layouts', './src/layouts'],
             ['@api', './src/api'],
             ['@pages', './src/pages'],
             ['@store', './src/store'],
-            ['@styles', './src/styles']
+            ['@styles', './src/styles'],
+            ['@', './node_modules'],
+            ['@tailwindcss', './node_modules/tailwindcss'],
+            ['@/*', ['*']],
           ],
           extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
         },

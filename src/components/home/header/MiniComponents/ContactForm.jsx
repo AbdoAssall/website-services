@@ -7,6 +7,7 @@ import PrimaryButton from "../../../UI/PrimaryButton";
 import { Loading2 as Spinner } from '../../../elements/Loading2';
 import { useLanguage } from '../../../../store/LanguageContext';
 import useProjects from "../../../../hooks/useProjects";
+import { slugify } from "@utils/slugify";
 
 export const ContactForm = () => {
     const { isRTL, t, direction } = useLanguage();
@@ -15,6 +16,12 @@ export const ContactForm = () => {
     // Get last 5 projects (excluding the last one)
     const filterProjects = projects.slice(Math.max(0, projects.length - 6), projects.length - 1);
     const date = new Date().getFullYear();
+
+    // Function to close the modal
+    const closeModal = () => {
+        const modal = document.getElementById('my_modal_2');
+        if (modal) modal.close();
+    };
 
     return (
         <dialog id="my_modal_2" className="modal">
@@ -51,7 +58,11 @@ export const ContactForm = () => {
                                 <div className={`mt-3 flex items-center flex-wrap gap-3 ${isRTL ? 'justify-start' : 'justify-end'}`}>
                                     {filterProjects?.map((project) => (
                                         <div key={project.id} className='relative overflow-hidden'>
-                                            <Link to={project.url} aria-label={project.name} >
+                                            <Link
+                                                to={`${project.url}/${slugify(project.name)}`}
+                                                aria-label={project.name}
+                                                onClick={closeModal}
+                                            >
                                                 <div className="absolute inset-0 bg-primary-one opacity-0 hover:opacity-70 transition-all duration-500 z-2 rounded-lg"></div>
                                                 <img src={project.img} alt={project.name} className="w-26 h-26 rounded-lg object-cover" loading="lazy" />
                                             </Link>

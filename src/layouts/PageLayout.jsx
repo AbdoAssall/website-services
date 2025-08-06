@@ -1,8 +1,13 @@
+// @ts-nocheck
 import { Navbar } from "../components/home/header/Navbar";
 import PropTypes from "prop-types";
 import { useLanguage } from "../store/LanguageContext";
 import ScrollProgressCircle from "../components/elements/ScrollProgressCircle";
 import Footer from "../components/home/footer/Footer";
+
+/**
+ * @param {{ children: React.ReactNode }} props
+*/
 
 export function PageLayout({ children }) {
     const { direction } = useLanguage();
@@ -18,5 +23,5 @@ export function PageLayout({ children }) {
 }
 
 PageLayout.propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node
 }

@@ -1,7 +1,6 @@
 // @ts-nocheck
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../../store/LanguageContext';
-import useProjects from "../../../hooks/useProjects";
 import { FooterBranding } from './sections/FooterBranding';
 import { EssentialsSection } from './sections/EssentialsSection';
 import { ProjectsSection } from './sections/ProjectsSection';
@@ -9,7 +8,6 @@ import { ContactSection } from './sections/ContactSection';
 
 const Footer = () => {
     const { t, isRTL, direction, language } = useLanguage();
-    const { projects, loading } = useProjects();
     const date = new Date().getFullYear();
 
     return (
@@ -21,7 +19,7 @@ const Footer = () => {
                 {/* Essentials Section */}
                 <EssentialsSection t={t} isRTL={isRTL} Link={Link} />
                 {/* Projects Section - Replaced Recent Posts */}
-                <ProjectsSection projects={projects} loading={loading} />
+                <ProjectsSection />
                 {/* Contact Us Section */}
                 <ContactSection />
             </div>

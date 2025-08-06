@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
  * @property {string} date - The date of the post.
  * @property {string} title - The title of the post.
  * @property {string} imagePath - The image URL for the post.
+ * @property {string} url - The URL for the post.
  */
 
 /**
@@ -15,7 +16,7 @@ import PropTypes from 'prop-types';
  * @param {PostItemProps} props
  */
 
-const PostItem = ({ date, title, imagePath }) => {
+const PostItem = ({ date, title, imagePath, url }) => {
     return (
         <div className="flex space-x-4">
             <div className="flex-shrink-0 relative overflow-hidden rounded-[0.313rem]">
@@ -36,7 +37,11 @@ const PostItem = ({ date, title, imagePath }) => {
                     {date}
                 </div>
                 <h2 className="!leading-6.5 !font-semibold">
-                    <Link to="#" aria-label={title} className="text-sm !text-white hover:!text-primary-one transition-colors">
+                    <Link
+                        to={url}
+                        aria-label={title}
+                        className="text-sm !text-white hover:!text-primary-one transition-colors"
+                    >
                         {title}
                     </Link>
                 </h2>
@@ -49,6 +54,7 @@ PostItem.propTypes = {
     date: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     imagePath: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
 };
 
 export default PostItem;

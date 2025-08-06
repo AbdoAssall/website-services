@@ -4,6 +4,7 @@ import { useLanguage } from '../../store/LanguageContext';
 import { Link } from 'react-router-dom';
 import { MoveRight } from 'lucide-react';
 import SocialIcons from '../elements/SocialIcons';
+import { slugify } from '@utils/slugify';
 
 const ProjectCard = ({
     category = '',
@@ -12,7 +13,7 @@ const ProjectCard = ({
     image = '',
     date = '',
     client = '',
-    link = "#"
+    url = "#"
 }) => {
     const { t, isRTL } = useLanguage();
 
@@ -32,7 +33,7 @@ const ProjectCard = ({
                         {/* Title */}
                         <h2 className={`text-xl md:text-[1.375rem] font-bold text-primary-two !mb-5 pb-5 border-b border-border-dark-one ${isRTL ? '!leading-9' : '!leading-7'}`}>
                             <Link
-                                to={link}
+                                to={`${url}/${slugify(title)}`}
                                 className='!m-0 !p-0'
                             >
                                 {title}
@@ -46,7 +47,7 @@ const ProjectCard = ({
 
                         {/* Read More Link */}
                         <Link
-                            to={link}
+                            to={`${url}/${slugify(title)}`}
                             className="inline-flex items-center !text-[0.938rem] leading-6 text-primary-one hover:!text-primary-one/85 transition-colors duration-300"
                         >
                             {t('projects.readMore')}
@@ -96,7 +97,7 @@ ProjectCard.propTypes = {
     image: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     client: PropTypes.string.isRequired,
-    link: PropTypes.string
+    url: PropTypes.string
 };
 
 export default ProjectCard;

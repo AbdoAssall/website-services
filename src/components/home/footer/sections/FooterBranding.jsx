@@ -14,7 +14,7 @@ export const FooterBranding = () => {
                         <img
                             alt={t('navbar.logoAlt')}
                             className="w-42.5 h-auto border-0"
-                            src="assets/images/logo-white.png"
+                            src="/assets/images/logo-white.png"
                             loading='lazy'
                         />
                     </Link>

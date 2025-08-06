@@ -1,3 +1,4 @@
+// @ts-nocheck
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
@@ -12,6 +13,7 @@ const PageHeader = ({
 
     return (
         <section
+            id="page-header"
             className="relative bg-cover bg-center bg-no-repeat bg-fixed py-24 md:py-25 min-h-80 overflow-hidden"
             style={{
                 backgroundImage: `url(${backgroundImage})`,
@@ -62,7 +64,7 @@ PageHeader.propTypes = {
     title: PropTypes.string,
     breadcrumbs: PropTypes.arrayOf(
         PropTypes.shape({
-            label: PropTypes.string.isRequired,
+            label: PropTypes.string,
             href: PropTypes.string
         })
     ),

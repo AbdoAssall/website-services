@@ -10,11 +10,16 @@ import useProjects from "../hooks/useProjects";
 const Projects = () => {
     const { t } = useLanguage();
     const { projects, loading } = useProjects();
+    // const location = useLocation();
+
+    // Check if we're on a child route (single project page)
+    // const isProjectPage = location.pathname.includes('/projects/') &&
+    //     location.pathname.includes('/projects');
 
     return (
         <PageLayout>
             <MetaTags
-                titleKey="head.projects.title"
+                titleKey={t("head.projects.title")}
                 descriptionKey="head.projects.meta.description"
             />
 

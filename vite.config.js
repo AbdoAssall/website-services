@@ -14,11 +14,12 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, 'src/hooks'),
       '@components': path.resolve(__dirname, 'src/components'),
       '@utils': path.resolve(__dirname, 'src/utils'),
-      '@layout': path.resolve(__dirname, 'src/layout'),
+      '@layouts': path.resolve(__dirname, 'src/layouts'),
       '@api': path.resolve(__dirname, 'src/api'),
       '@pages': path.resolve(__dirname, 'src/pages'),
       '@store': path.resolve(__dirname, 'src/store'),
-      '@styles': path.resolve(__dirname, 'src/styles')
+      '@styles': path.resolve(__dirname, 'src/styles'),
+      '@/*': path.resolve(__dirname, 'src/*'),
     }
   }
 })

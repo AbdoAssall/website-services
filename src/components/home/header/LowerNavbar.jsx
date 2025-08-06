@@ -138,7 +138,7 @@ export function LowerNavbar() {
             {/* Logo */}
             <Link to="/" className="py-1 md:py-1.5">
               <img
-                src="assets/images/logo-default.png"
+                src="/assets/images/logo-default.png"
                 className="logo"
                 alt={t('navbar.logoAlt')}
                 width="150"
