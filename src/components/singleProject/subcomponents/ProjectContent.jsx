@@ -28,7 +28,7 @@ const ProjectContent = ({ project }) => {
         <article className="project-content">
             {/* Project Title */}
             <header className="mb-8">
-                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-heading-dark mb-4 leading-tight">
+                <h1 className={`text-3xl lg:text-4xl xl:text-5xl font-bold text-heading-dark mb-4 ${isRTL ? '!leading-12' : '!leading-10'}`}>
                     {project.name}
                 </h1>
                 <div className="flex flex-wrap items-center gap-4 text-sm text-dark-two">
@@ -153,7 +153,10 @@ const ProjectContent = ({ project }) => {
                         {project.technologies.map((tech, index) => (
                             <span
                                 key={index}
-                                className="px-4 py-2 bg-sky border border-border-dark-one text-dark-one rounded-full text-sm font-medium hover:bg-primary-one hover:text-white transition-colors duration-300"
+                                className="px-4 py-2 bg-sky border border-border-dark-one text-dark-one rounded-full text-sm font-medium hover:bg-primary-one hover:text-white active:bg-primary-one active:text-white transition-colors duration-300"
+                                tabIndex={0}
+                                onFocus={e => { e.target.style.backgroundColor = '#078586'; e.target.style.color = '#fff'; }}
+                                onBlur={e => { e.target.style.backgroundColor = ''; e.target.style.color = ''; }}
                             >
                                 {tech}
                             </span>

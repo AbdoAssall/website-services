@@ -92,11 +92,11 @@ const ProjectImages = ({ project }) => {
                                 <img
                                     src={images[selectedImage].url}
                                     alt={images[selectedImage].caption || `${project.name} - Image ${selectedImage + 1}`}
-                                    className="w-full h-64 md:h-96 lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
+                                    className="w-full h-64 md:h-96 lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-105 group-active:scale-105"
                                     loading="lazy"
                                 />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div className="opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
                                         <div className="bg-white/90 backdrop-blur-sm rounded-full p-3">
                                             <svg
                                                 className="w-6 h-6 text-primary-one"

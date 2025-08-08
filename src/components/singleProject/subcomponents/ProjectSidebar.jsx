@@ -144,7 +144,7 @@ const ProjectSidebar = ({ project }) => {
                             </h4>
                             <SocialIcons
                                 className="flex gap-2"
-                                iconClassName="w-8 h-8 text-xs !bg-sky hover:!bg-primary-one hover:!text-white rounded-md flex items-center justify-center border border-border-dark-one transition-all duration-300"
+                                iconClassName="w-8 h-8 text-xs !bg-sky hover:!bg-primary-one hover:!text-white active:!bg-primary-one active:!text-white rounded-md flex items-center justify-center border border-border-dark-one transition-all duration-300"
                                 showTitle={true}
                             />
                         </div>

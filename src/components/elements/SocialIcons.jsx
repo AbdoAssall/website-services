@@ -7,14 +7,15 @@ const SocialIcons = ({
     iconClassName = "w-9 h-9 text-sm !bg-primary-three !text-dark-one hover:!bg-primary-one/85 hover:!text-white rounded-full flex items-center justify-center border border-border-dark-one transition-all duration-500",
     customIcons = null,
     showTooltip = false,
-    showTitle = false
+    showTitle = false,
+    ...props
 }) => {
     const defaultSocialIcons = [
-        { name: 'Facebook', icon: faFacebookF, href: '#' },
-        { name: 'Instagram', icon: faInstagram, href: '#' },
-        { name: 'WhatsApp', icon: faWhatsapp, href: '#' },
-        { name: 'Tiktok', icon: faTiktok, href: '#' },
-        { name: 'Snapchat', icon: faSnapchat, href: '#' }
+        { name: 'Facebook', icon: faFacebookF, href: '' },
+        { name: 'Instagram', icon: faInstagram, href: '' },
+        { name: 'WhatsApp', icon: faWhatsapp, href: '' },
+        { name: 'Tiktok', icon: faTiktok, href: '' },
+        { name: 'Snapchat', icon: faSnapchat, href: '' }
     ];
 
     const socialIcons = customIcons || defaultSocialIcons;
@@ -35,6 +36,9 @@ const SocialIcons = ({
                                 className={iconClassName}
                                 title={showTitle ? social.name : ''}
                                 aria-label={social.name}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                {...props}
                             >
                                 <FontAwesomeIcon icon={social.icon} />
                             </a>
@@ -45,6 +49,7 @@ const SocialIcons = ({
                             className={iconClassName}
                             title={showTitle ? social.name : ''}
                             aria-label={social.name}
+                            {...props}
                         >
                             <FontAwesomeIcon icon={social.icon} />
                         </a>
