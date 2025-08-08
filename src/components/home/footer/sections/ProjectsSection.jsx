@@ -3,7 +3,6 @@ import PostItem from "./PostItem";
 import { Loading2 as Spinner } from '@components/elements/Loading2';
 import { useLanguage } from '@store/LanguageContext';
 import useProjects from "@hooks/useProjects";
-import { slugify } from "@utils/slugify";
 
 export const ProjectsSection = () => {
     const { projects, loading } = useProjects();
@@ -29,7 +28,7 @@ export const ProjectsSection = () => {
                                     date={project.date}
                                     title={project.name}
                                     imagePath={project.img}
-                                    url={`${project.url}/${slugify(project.name)}`}
+                                    url={`/projects/${project.slug}`}
                                 />
                             </li>
                         ))

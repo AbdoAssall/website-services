@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 export default function PrimaryLink({
     className = '',
     ariaLabel = '',
-    children = null,
+    children = '',
     to = "#",
     ...props
 }) {
     return (
         <Link
-        aria-label={ariaLabel}
+            aria-label={ariaLabel}
             {...props}
             to={to}
             className={

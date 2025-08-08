@@ -18,9 +18,28 @@
     "projects": [
         {
             "id": 1,
-            "url": "/projects",
+            "slug": "shared-time-human-resources-management",
             "img": "/assets/images/projects/project-1.jpg",
             "date": "March 08, 2021",
+            "website": "https://example.com",
+            "location": "New York, USA",
+            "files": [
+                {
+                    "name": "Keyboard shortcuts",
+                    "url": "/assets/files/keyboard-shortcuts-windows.pdf",
+                    "type": "pdf"
+                },
+                {
+                    "name": "Project Documentation",
+                    "url": "/assets/files/project-documentation.pdf",
+                    "type": "pdf"
+                },
+                {
+                    "name": "Requirements Sheet",
+                    "url": "/assets/files/project-documentation.docx",
+                    "type": "docx"
+                }
+            ],
             "images": [
                 {
                     "url": "/assets/images/projects/project-1.jpg",
@@ -35,20 +54,57 @@
                 "name": "إدارة الموارد البشرية بالوقت المشترك",
                 "category": "الموارد البشرية",
                 "description": "نظام متكامل لإدارة الموارد البشرية يتيح تتبع الحضور والانصراف بطريقة فعالة ومشتركة.",
-                "client": "حلول المعلومات التقنية"
+                "client": "حلول المعلومات التقنية",
+                "challenge": "كانت الشركة تواجه تحديات في إدارة الموارد البشرية وتتبع أداء الموظفين بطريقة فعالة. لم يكن لديهم نظام موحد لإدارة الحضور والانصراف.",
+                "result": "تحسنت كفاءة إدارة الموارد البشرية بنسبة 85% وتم توفير الوقت والجهد في العمليات اليومية.",
+                "solution": {
+                    "description": "قمنا بتطوير نظام متكامل يجمع جميع وظائف إدارة الموارد البشرية في مكان واحد، مع واجهة سهلة الاستخدام وتقارير تفصيلية.",
+                    "efficiency": "عمليات مبسطة لأداء أفضل",
+                    "innovation": "أحدث التقنيات والمنهجيات"
+                },
+                "technologies": [
+                    "التخطيط الاستراتيجي",
+                    "تحسين العمليات",
+                    "تحليل البيانات",
+                    "إدارة الفريق",
+                    "ضمان الجودة"
+                ]
             },
             "en": {
                 "name": "Shared Time Human Resources Management",
                 "category": "Human Resources",
                 "description": "An integrated HR management system that enables effective and shared tracking of attendance and departure.",
-                "client": "The Infotech Solutions"
+                "client": "The Infotech Solutions",
+                "challenge": "The company faced challenges in managing human resources and tracking employee performance effectively. They lacked a unified system for attendance and departure management.",
+                "result": "HR management efficiency improved by 85% and saved time and effort in daily operations.",
+                "solution": {
+                    "description": "We developed an integrated system that brings all HR management functions into one place, with an easy-to-use interface and detailed reporting capabilities.",
+                    "efficiency": "Streamlined processes for better performance",
+                    "innovation": "Latest technologies and methodologies"
+                },
+                "technologies": [
+                    "Strategic Planning",
+                    "Process Optimization",
+                    "Data Analysis",
+                    "Team Management",
+                    "Quality Assurance"
+                ]
             }
         },
         {
             "id": 2,
-            "url": "/projects",
+            "slug": "six-essential-steps-to-writing-a-successful-job",
             "img": "/assets/images/projects/project-2.jpg",
             "date": "February 15, 2021",
+            "website": "https://example.com",
+            "location": "San Francisco, USA",
+            "files": [
+                {
+                    "name": "Training Manual",
+                    "url": "/assets/files/project-2-manual.pdf",
+                    "type": "pdf"
+                }
+            ],
             "images": [
                 {
                     "url": "/assets/images/projects/project-2.jpg",
@@ -75,85 +131,261 @@
                 "name": "ست خطوات أساسية لكتابة وظيفة ناجحة",
                 "category": "التدريب",
                 "description": "دليل شامل يوضح الخطوات الأساسية لكتابة وصف وظيفي فعال وجذاب للمرشحين المناسبين.",
-                "client": "تقنيات الابتكار التقني"
+                "client": "تقنيات الابتكار التقني",
+                "challenge": "صعوبة في كتابة أوصاف وظيفية تجذب المرشحين المناسبين وتوضح متطلبات الوظيفة بدقة.",
+                "result": "تحسن جودة المرشحين المتقدمين بنسبة 70% وانخفض الوقت المطلوب لملء الوظائف الشاغرة.",
+                "solution": {
+                    "description": "تطوير منهجية من ست خطوات أساسية لكتابة أوصاف وظيفية احترافية وفعالة.",
+                    "efficiency": "عمليات مبسطة لأداء أفضل",
+                    "innovation": "أحدث التقنيات والمنهجيات"
+                },
+                "technologies": [
+                    "التخطيط الاستراتيجي",
+                    "تحسين العمليات",
+                    "تحليل البيانات",
+                    "إدارة الفريق",
+                    "ضمان الجودة"
+                ]
             },
             "en": {
                 "name": "Six Essential Steps to Writing a Successful Job",
                 "category": "Training",
                 "description": "A comprehensive guide that outlines the essential steps to writing an effective and attractive job description for suitable candidates.",
-                "client": "Tech Innovators Inc"
+                "client": "Tech Innovators Inc",
+                "challenge": "Difficulty in writing job descriptions that attract suitable candidates and accurately describe job requirements.",
+                "result": "Quality of applicants improved by 70% and reduced time required to fill vacant positions.",
+                "solution": {
+                    "description": "Developed a six-step methodology for writing professional and effective job descriptions.",
+                    "efficiency": "Streamlined processes for better performance",
+                    "innovation": "Latest technologies and methodologies"
+                },
+                "technologies": [
+                    "Strategic Planning",
+                    "Process Optimization",
+                    "Data Analysis",
+                    "Team Management",
+                    "Quality Assurance"
+                ]
             }
         },
         {
             "id": 3,
-            "url": "/projects",
+            "slug": "time-hr-prepares-for-plastic-manufacturing-contract",
             "img": "/assets/images/projects/project-3.jpg",
             "date": "February 05, 2021",
+            "website": "https://example.com",
+            "location": "Los Angeles, USA",
+            "files": [
+                {
+                    "name": "Strategic Plan",
+                    "url": "/assets/files/project-3-plan.pdf",
+                    "type": "pdf"
+                }
+            ],
             "ar": {
                 "name": "تايم إتش آر تستعد لعقد تصنيع البلاستيك",
                 "category": "القيادة",
                 "description": "مشروع استراتيجي لتطوير وتحسين عمليات تصنيع البلاستيك باستخدام أحدث التقنيات.",
-                "client": "مجموعة جالكان الأخوات"
+                "client": "مجموعة جالكان الأخوات",
+                "challenge": "الحاجة إلى تطوير عمليات التصنيع وتحسين الكفاءة في إنتاج المواد البلاستيكية.",
+                "result": "زيادة الإنتاجية بنسبة 60% وتحسين جودة المنتجات النهائية.",
+                "solution": {
+                    "description": "تطوير استراتيجية شاملة تشمل التقنيات الحديثة وتحسين سلسلة التوريد.",
+                    "efficiency": "عمليات مبسطة لأداء أفضل",
+                    "innovation": "أحدث التقنيات والمنهجيات"
+                },
+                "technologies": [
+                    "التخطيط الاستراتيجي",
+                    "تحسين العمليات",
+                    "تحليل البيانات",
+                    "إدارة الفريق",
+                    "ضمان الجودة"
+                ]
             },
             "en": {
                 "name": "Time HR Prepares for Plastic Manufacturing Contract",
                 "category": "Leadership",
                 "description": "A strategic project to develop and improve plastic manufacturing processes using the latest technologies.",
-                "client": "Jalkan Sisters Group"
+                "client": "Jalkan Sisters Group",
+                "challenge": "Need to develop manufacturing processes and improve efficiency in plastic material production.",
+                "result": "Increased productivity by 60% and improved final product quality.",
+                "solution": {
+                    "description": "Developed a comprehensive strategy including modern technologies and supply chain improvements.",
+                    "efficiency": "Streamlined processes for better performance",
+                    "innovation": "Latest technologies and methodologies"
+                },
+                "technologies": [
+                    "Strategic Planning",
+                    "Process Optimization",
+                    "Data Analysis",
+                    "Team Management",
+                    "Quality Assurance"
+                ]
             }
         },
         {
             "id": 4,
-            "url": "/projects",
+            "slug": "essential-steps-for-writing-job-description",
             "img": "/assets/images/projects/project-4.jpg",
             "date": "April 14, 2021",
+            "website": "https://example.com",
+            "location": "Chicago, USA",
+            "files": [
+                {
+                    "name": "Job Description Guide",
+                    "url": "/assets/files/project-4-guide.pdf",
+                    "type": "pdf"
+                }
+            ],
             "ar": {
                 "name": "الخطوات الأساسية لكتابة وصف الوظيفة",
                 "category": "الموارد البشرية",
                 "description": "منهجية علمية لصياغة أوصاف وظيفية دقيقة تساعد في جذب المواهب المناسبة.",
-                "client": "مجموعة الأمهات الستة"
+                "client": "مجموعة الأمهات الستة",
+                "challenge": "عدم وضوح أوصاف الوظائف مما يؤدي إلى جذب مرشحين غير مناسبين.",
+                "result": "تحسن معدل نجاح التوظيف بنسبة 80% وانخفاض معدل دوران الموظفين.",
+                "solution": {
+                    "description": "تطوير منهجية منظمة لكتابة أوصاف وظيفية واضحة ومفصلة.",
+                    "efficiency": "عمليات مبسطة لأداء أفضل",
+                    "innovation": "أحدث التقنيات والمنهجيات"
+                },
+                "technologies": [
+                    "التخطيط الاستراتيجي",
+                    "تحسين العمليات",
+                    "تحليل البيانات",
+                    "إدارة الفريق",
+                    "ضمان الجودة"
+                ]
             },
             "en": {
                 "name": "Essential Steps for Writing Job Description",
                 "category": "Human Resources",
                 "description": "A scientific methodology for drafting accurate job descriptions that help attract suitable talent.",
-                "client": "The Sixmothers Group"
+                "client": "The Sixmothers Group",
+                "challenge": "Unclear job descriptions leading to attracting unsuitable candidates.",
+                "result": "Improved hiring success rate by 80% and reduced employee turnover.",
+                "solution": {
+                    "description": "Developed an organized methodology for writing clear and detailed job descriptions.",
+                    "efficiency": "Streamlined processes for better performance",
+                    "innovation": "Latest technologies and methodologies"
+                },
+                "technologies": [
+                    "Strategic Planning",
+                    "Process Optimization",
+                    "Data Analysis",
+                    "Team Management",
+                    "Quality Assurance"
+                ]
             }
         },
         {
             "id": 5,
-            "url": "/projects",
+            "slug": "complex-dismissal-for-small-company",
             "img": "/assets/images/projects/project-5.jpg",
             "date": "January 22, 2021",
+            "website": "https://example.com",
+            "location": "Miami, USA",
+            "files": [
+                {
+                    "name": "Training Program",
+                    "url": "/assets/files/project-5-training.pptx",
+                    "type": "pptx"
+                }
+            ],
             "ar": {
                 "name": "الفصل المعقد لشركة صغيرة",
                 "category": "التدريب",
                 "description": "برنامج تدريبي متخصص يساعد الشركات الصغيرة على إدارة عمليات الفصل المعقدة بطريقة مهنية.",
-                "client": "مجموعة الأمهات الستة"
+                "client": "مجموعة الأمهات الستة",
+                "challenge": "صعوبة في إدارة عمليات الفصل المعقدة والحفاظ على سمعة الشركة.",
+                "result": "تحسن إدارة العلاقات مع الموظفين وانخفاض النزاعات القانونية بنسبة 90%.",
+                "solution": {
+                    "description": "تطوير برنامج تدريبي شامل يغطي جميع جوانب إدارة عمليات الفصل.",
+                    "efficiency": "عمليات مبسطة لأداء أفضل",
+                    "innovation": "أحدث التقنيات والمنهجيات"
+                },
+                "technologies": [
+                    "التخطيط الاستراتيجي",
+                    "تحسين العمليات",
+                    "تحليل البيانات",
+                    "إدارة الفريق",
+                    "ضمان الجودة"
+                ]
             },
             "en": {
                 "name": "Complex Dismissal for Small Company",
                 "category": "Training",
                 "description": "A specialized training program that helps small companies manage complex dismissal processes professionally.",
-                "client": "The Sixmothers Group"
+                "client": "The Sixmothers Group",
+                "challenge": "Difficulty in managing complex dismissal processes while maintaining company reputation.",
+                "result": "Improved employee relations management and reduced legal disputes by 90%.",
+                "solution": {
+                    "description": "Developed a comprehensive training program covering all aspects of dismissal process management.",
+                    "efficiency": "Streamlined processes for better performance",
+                    "innovation": "Latest technologies and methodologies"
+                },
+                "technologies": [
+                    "Strategic Planning",
+                    "Process Optimization",
+                    "Data Analysis",
+                    "Team Management",
+                    "Quality Assurance"
+                ]
             }
         },
         {
             "id": 6,
-            "url": "/projects",
+            "slug": "company-values-and-relations",
             "img": "/assets/images/projects/project-6.jpg",
             "date": "December 08, 2020",
+            "website": "https://example.com",
+            "location": "Seattle, USA",
+            "files": [
+                {
+                    "name": "Company Values Study",
+                    "url": "/assets/files/project-6-values.pdf",
+                    "type": "pdf"
+                }
+            ],
             "ar": {
                 "name": "قيم الشركة والعلاقة",
                 "category": "القيادة",
                 "description": "دراسة شاملة حول كيفية بناء قيم الشركة وتعزيز العلاقات الداخلية والخارجية.",
-                "client": "استوديو جيمس"
+                "client": "استوديو جيمس",
+                "challenge": "ضعف في ثقافة الشركة وعدم وضوح القيم الأساسية للموظفين.",
+                "result": "تحسن رضا الموظفين بنسبة 75% وزيادة الولاء للشركة.",
+                "solution": {
+                    "description": "تطوير استراتيجية شاملة لبناء ثقافة الشركة وتعزيز القيم الأساسية.",
+                    "efficiency": "عمليات مبسطة لأداء أفضل",
+                    "innovation": "أحدث التقنيات والمنهجيات"
+                },
+                "technologies": [
+                    "التخطيط الاستراتيجي",
+                    "تحسين العمليات",
+                    "تحليل البيانات",
+                    "إدارة الفريق",
+                    "ضمان الجودة"
+                ]
             },
             "en": {
                 "name": "Company Values and Relations",
                 "category": "Leadership",
                 "description": "A comprehensive study on how to build company values and strengthen internal and external relationships.",
-                "client": "James Studio"
+                "client": "James Studio",
+                "challenge": "Weak company culture and unclear core values for employees.",
+                "result": "Improved employee satisfaction by 75% and increased company loyalty.",
+                "solution": {
+                    "description": "Developed a comprehensive strategy for building company culture and strengthening core values.",
+                    "efficiency": "Streamlined processes for better performance",
+                    "innovation": "Latest technologies and methodologies"
+                },
+                "technologies": [
+                    "Strategic Planning",
+                    "Process Optimization",
+                    "Data Analysis",
+                    "Team Management",
+                    "Quality Assurance"
+                ]
             }
         }
     ]

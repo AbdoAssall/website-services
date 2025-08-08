@@ -4,15 +4,33 @@ interface Project {
     category: string;
     description: string;
     client: string;
+    challenge: string;
+    solution: string;
+    result: string;
   };
 }
 
 export const translateProjects = (projects: Project[], language: string) => {
-  return projects.map((project: Project) => ({
-    ...project,
-    name: project[language]?.name || project.ar.name,
-    category: project[language]?.category || project.ar.category,
-    description: project[language]?.description || project.ar.description,
-    client: project[language]?.client || project.ar.client,
-  }));
+  return projects.map((project) => {
+    const langData = project[language] || project.ar;
+    return {
+      ...project,
+      ...langData,
+    };
+  });
+  // return projects.map((project: Project) => {
+  //     const fallbackLang = "ar";
+  //   const langData = project[language] || project[fallbackLang] || {};
+
+  //   return {
+  //     ...project,
+  //     name: langData.name || project[fallbackLang]?.name,
+  //     category: langData.category || project[fallbackLang]?.category,
+  //     description: langData.description || project[fallbackLang]?.description,
+  //     client: langData.client || project[fallbackLang]?.client,
+  //     challenge: langData.challenge || project[fallbackLang]?.challenge,
+  //     solution: langData.solution || project[fallbackLang]?.solution,
+  //     result: langData.result || project[fallbackLang]?.result,
+  //   };
+  // });
 };

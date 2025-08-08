@@ -7,7 +7,6 @@ import PrimaryButton from "../../../UI/PrimaryButton";
 import { Loading2 as Spinner } from '../../../elements/Loading2';
 import { useLanguage } from '../../../../store/LanguageContext';
 import useProjects from "../../../../hooks/useProjects";
-import { slugify } from "@utils/slugify";
 
 export const ContactForm = () => {
     const { isRTL, t, direction } = useLanguage();
@@ -59,7 +58,7 @@ export const ContactForm = () => {
                                     {filterProjects?.map((project) => (
                                         <div key={project.id} className='relative overflow-hidden'>
                                             <Link
-                                                to={`${project.url}/${slugify(project.name)}`}
+                                                to={`/projects/${project.slug}`}
                                                 aria-label={project.name}
                                                 onClick={closeModal}
                                             >
@@ -116,7 +115,7 @@ export const ContactForm = () => {
                             </div>
                         </form>
                         <div className="grid">
-                            <PrimaryButton type="submit" disabled={false} className="hover:!bg-primary-one/95 hover:!text-white ltr:!uppercase">
+                            <PrimaryButton type="submit" disabled={false} className="hover:!bg-primary-one/95 ltr:!uppercase">
                                 {t('contact.form.submit')}
                             </PrimaryButton>
                         </div>

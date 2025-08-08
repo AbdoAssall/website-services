@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Clock } from 'lucide-react';
 import PropTypes from 'prop-types';
+import { useLanguage } from '@store/LanguageContext';
 
 /**
  * PostItem component props
@@ -17,6 +18,8 @@ import PropTypes from 'prop-types';
  */
 
 const PostItem = ({ date, title, imagePath, url }) => {
+    const { language } = useLanguage();
+
     return (
         <div className="flex space-x-4">
             <div className="flex-shrink-0 relative overflow-hidden rounded-[0.313rem]">
@@ -34,7 +37,15 @@ const PostItem = ({ date, title, imagePath, url }) => {
             <div>
                 <div className="flex items-center gap-2 text-xs text-white/85 mb-1">
                     <Clock size={12} />
-                    {date}
+                    <time dateTime={date}>
+                        {date
+                            ? new Date(date).toLocaleDateString(language, {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                            })
+                            : 'Date not available'}
+                    </time>
                 </div>
                 <h2 className="!leading-6.5 !font-semibold">
                     <Link

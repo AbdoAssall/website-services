@@ -1,4 +1,3 @@
-// @ts-nocheck
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';

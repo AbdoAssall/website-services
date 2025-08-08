@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { PageLayout } from "@layouts/PageLayout";
@@ -7,6 +6,7 @@ import PageHeader from "../components/UI/PageHeader";
 import { useLanguage } from "../store/LanguageContext";
 import { Loading2 } from "../components/elements/Loading2";
 import useProjects from "@hooks/useProjects";
+import Project from "@components/singleProject/Project";
 
 const SingleProject = () => {
     const { slug } = useParams();
@@ -19,19 +19,16 @@ const SingleProject = () => {
 
     const project = getProjectBySlug(slug);
 
-    // If the project does not exist (for example, due to a delay in fetching), we start requesting data.
     useEffect(() => {
         if (project) {
             setCurrentProject(project);
         }
     }, [project, setCurrentProject]);
 
-    console.log(project)
-
     return (
         <PageLayout>
             <MetaTags
-                titleKey={`${project?.name} | ${t('head.siteName')}`}
+                titleKey={`${project?.name || ''} | ${t('head.siteName')}`}
                 descriptionKey="head.projects.meta.description"
             />
 
@@ -41,17 +38,14 @@ const SingleProject = () => {
                 breadcrumbs={[
                     { label: t('navbar.home'), href: "/" },
                     { label: t('projects.projects'), href: "/projects" },
-                    { label: project?.name }
+                    { label: project?.name || '' }
                 ]}
             />
 
-            {loading
+            {loading || !project
                 ? (<Loading2 />)
-                : (
-                    <h1>{project?.name}</h1>
-                )
+                : (<Project project={project} />)
             }
-
         </PageLayout>
     );
 };

@@ -2,7 +2,7 @@
 import { PageLayout } from "../layouts/PageLayout";
 import MetaTags from "../components/MetaTags";
 import PageHeader from "../components/UI/PageHeader";
-import ProjectsTabs from "../components/projects/ProjectsTabs";
+import ProjectsTabs from "../components/projects/Tabs/ProjectsTabs";
 import { useLanguage } from "../store/LanguageContext";
 import { Loading2 } from "../components/elements/Loading2";
 import useProjects from "../hooks/useProjects";

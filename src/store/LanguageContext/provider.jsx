@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
-import { setLanguageWithDirection } from '../../i18n';
-import { LanguageContext } from './context';
+import { useEffect } from "react";
+import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
+import { setLanguageWithDirection } from "../../i18n";
+import { LanguageContext } from "./context";
 
 // Provider component
 export function LanguageProvider({ children }) {
@@ -10,7 +10,7 @@ export function LanguageProvider({ children }) {
 
   // Get current language and direction
   const currentLanguage = i18n.language;
-  const direction = currentLanguage === 'ar' ? 'rtl' : 'ltr';
+  const direction = currentLanguage === "ar" ? "rtl" : "ltr";
 
   // Initialize direction on mount
   useEffect(() => {
@@ -26,16 +26,16 @@ export function LanguageProvider({ children }) {
 
   // Toggle between RTL and LTR
   const toggleDirection = () => {
-    const newLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
+    const newLanguage = currentLanguage === "ar" ? "en" : "ar";
     changeLanguage(newLanguage);
   };
 
   // Change direction directly
   const changeDirection = (newDirection) => {
-    if (newDirection === 'rtl') {
-      changeLanguage('ar');
-    } else if (newDirection === 'ltr') {
-      changeLanguage('en');
+    if (newDirection === "rtl") {
+      changeLanguage("ar");
+    } else if (newDirection === "ltr") {
+      changeLanguage("en");
     } else {
       console.warn('Invalid direction. Use "rtl" or "ltr".');
     }
@@ -45,12 +45,12 @@ export function LanguageProvider({ children }) {
   const value = {
     direction,
     language: currentLanguage,
-    isRTL: direction === 'rtl',
-    isLTR: direction === 'ltr',
+    isRTL: direction === "rtl",
+    isLTR: direction === "ltr",
     toggleDirection,
     changeDirection,
     changeLanguage,
-    t
+    t,
   };
 
   return (
@@ -61,5 +61,5 @@ export function LanguageProvider({ children }) {
 }
 
 LanguageProvider.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };

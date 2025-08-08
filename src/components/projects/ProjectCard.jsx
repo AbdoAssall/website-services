@@ -1,10 +1,8 @@
-// @ts-nocheck
 import PropTypes from 'prop-types';
 import { useLanguage } from '../../store/LanguageContext';
 import { Link } from 'react-router-dom';
 import { MoveRight } from 'lucide-react';
 import SocialIcons from '../elements/SocialIcons';
-import { slugify } from '@utils/slugify';
 
 const ProjectCard = ({
     category = '',
@@ -13,9 +11,9 @@ const ProjectCard = ({
     image = '',
     date = '',
     client = '',
-    url = "#"
+    slug = ""
 }) => {
-    const { t, isRTL } = useLanguage();
+    const { t, isRTL, language } = useLanguage();
 
     return (
         <article className={`group bg-white ${isRTL ? ' pl-7.5 pr-7.5 lg:pr-0' : 'pr-7.5 pl-7.5 lg:pl-0'} py-7.5 rounded-[0.625rem] shadow-lg border border-gray-100 overflow-hidden mb-8 hover:shadow-xl transition-shadow duration-300`}>
@@ -33,7 +31,7 @@ const ProjectCard = ({
                         {/* Title */}
                         <h2 className={`text-xl md:text-[1.375rem] font-bold text-primary-two !mb-5 pb-5 border-b border-border-dark-one ${isRTL ? '!leading-9' : '!leading-7'}`}>
                             <Link
-                                to={`${url}/${slugify(title)}`}
+                                to={`/projects/${slug}`}
                                 className='!m-0 !p-0'
                             >
                                 {title}
@@ -47,7 +45,7 @@ const ProjectCard = ({
 
                         {/* Read More Link */}
                         <Link
-                            to={`${url}/${slugify(title)}`}
+                            to={`/projects/${slug}`}
                             className="inline-flex items-center !text-[0.938rem] leading-6 text-primary-one hover:!text-primary-one/85 transition-colors duration-300"
                         >
                             {t('projects.readMore')}
@@ -78,10 +76,19 @@ const ProjectCard = ({
                     {/* Date and Client */}
                     <div className="p-5 relative bottom-0 right-0 md:absolute md:bottom-0 md:right-7.5 md:z-2 bg-primary-three rounded-b-[0.625rem] md:rounded-b-none md:rounded-t-[0.625rem]">
                         <div className="text-sm font-normal text-primary-two mb-1 leading-relaxed">
-                            <span className="!text-[0.813rem] font-semibold uppercase">{t('projects.date')}:</span> {date}
+                            <span className="!text-[0.813rem] font-semibold uppercase">{t('projects.date')}: </span>
+                            <time dateTime={date} className="text-primary-two">
+                                {date
+                                    ? new Date(date).toLocaleDateString(language, {
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric'
+                                    })
+                                    : 'Date not available'}
+                            </time>
                         </div>
                         <div className="text-sm font-normal text-primary-two leading-relaxed">
-                            <span className="!text-[0.813rem] font-semibold uppercase">{t('projects.client')}:</span> {client}
+                            <span className="!text-[0.813rem] font-semibold uppercase">{t('projects.client')}: </span> {client}
                         </div>
                     </div>
                 </div>
@@ -97,7 +104,7 @@ ProjectCard.propTypes = {
     image: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     client: PropTypes.string.isRequired,
-    url: PropTypes.string
+    slug: PropTypes.string
 };
 
 export default ProjectCard;

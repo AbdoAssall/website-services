@@ -10,12 +10,15 @@ import Contact from "../components/home/contactUs/Contact";
 import Plans from "../components/home/plans/Plans";
 import Questions from "../components/home/faq/Questions";
 import MetaTags from "../components/MetaTags";
+import { useLanguage } from "@store/LanguageContext";
 
 const Index = () => {
+    const { t } = useLanguage();
+
     return (
         <PageLayout>
             <MetaTags
-                titleKey="head.home.title"
+                titleKey={t("head.home.title")}
                 descriptionKey="head.home.meta.description"
             />
             <HeroSlider />

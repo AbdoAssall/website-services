@@ -10,7 +10,6 @@ import { ArrowRight, CircleFadingPlus } from 'lucide-react';
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { Loading2 as Spinner } from '../../elements/Loading2';
-import { slugify } from "@utils/slugify";
 
 const Projects = () => {
     const { t, direction } = useLanguage();
@@ -130,7 +129,7 @@ const Projects = () => {
                                             <div className="content-box-inner">
                                                 <h2>
                                                     <Link
-                                                        to={`${project.url}/${slugify(project.name)}`}
+                                                        to={`/projects/${project.slug}`}
                                                         className={`block ${direction === 'rtl' ? 'text-lg' : 'text-xl'} font-bold leading-7.5 mb-3 hover:!text-primary-one`}
                                                         title={project.name}
                                                     >
@@ -147,7 +146,7 @@ const Projects = () => {
                                                     </Link>
                                                 </p>
                                                 <Link
-                                                    to={project.url}
+                                                    to={`/projects/${project.slug}`}
                                                     className="read-more-link w-12.5 h-12.5 leading-12.5 rounded-full hover:!text-white"
                                                     title={t("projects.viewProject")}
                                                 >
