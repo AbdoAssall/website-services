@@ -139,7 +139,7 @@ const Projects = () => {
                                                 <p>
                                                     <Link
                                                         className={`cat !text-light-gray text-lg leading-6.5 inline-block hover:!text-primary-one  ${direction === 'rtl' ? 'font-semibold' : ''}`}
-                                                        to="#"
+                                                        to={`/projects?category=${encodeURIComponent(project.category)}`}
                                                         aria-label={project.category}
                                                     >
                                                         {project.category}

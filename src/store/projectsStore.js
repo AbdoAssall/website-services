@@ -9,7 +9,14 @@ const useProjectsStore = create((set, get) => ({
         category: null,  // e.g. "Human Resources", "Training", etc.
         searchQuery: ''
     },
+    // Pagination state
+    currentPage: 1,
+    itemsPerPage: 6,
     currentProject: null,
+
+    // Actions for pagination
+    setCurrentPage: (page) => set({ currentPage: page }),
+    setItemsPerPage: (count) => set({ itemsPerPage: count }),
 
     // Fetch all projects
     fetchProjects: async () => {
@@ -32,12 +39,18 @@ const useProjectsStore = create((set, get) => ({
          * @param {Partial<{category: string|null, searchQuery: string}>} filters
     */
     setFilters: (filters) => {
-        set((state) => ({ filters: { ...state.filters, ...filters } }));
+        set((state) => ({
+            filters: { ...state.filters, ...filters },
+            currentPage: 1
+        }));
     },
 
     // Reset filters
     resetFilters: () => {
-        set({ filters: { category: null, searchQuery: '' } });
+        set({
+            filters: { category: null, searchQuery: '' },
+            currentPage: 1
+        });
     },
 
     /**
@@ -56,6 +69,11 @@ const useProjectsStore = create((set, get) => ({
     getProjectById: (id) => {
         const projects = get().projects || [];
         return projects.find((p) => String(p.id) === String(id)) || null;
+    },
+
+    getProjectBySlug: (slug) => {
+        const projects = get().projects || [];
+        return projects.find((p) => p.slug === slug);
     },
 }));
 export default useProjectsStore;

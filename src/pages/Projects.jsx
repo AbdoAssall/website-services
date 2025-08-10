@@ -15,6 +15,7 @@ const Projects = () => {
     // Check if we're on a child route (single project page)
     // const isProjectPage = location.pathname.includes('/projects/') &&
     //     location.pathname.includes('/projects');
+    // console.log(projects)
 
     return (
         <PageLayout>
@@ -33,14 +34,9 @@ const Projects = () => {
             />
 
             {/* Projects Tabs Section with Pagination */}
-            {loading
+            {loading && !projects.length
                 ? (<Loading2 />)
-                : (
-                    <ProjectsTabs
-                        projects={projects}
-                        itemsPerPage={6}
-                    />
-                )
+                : (<ProjectsTabs />)
             }
         </PageLayout>
     );

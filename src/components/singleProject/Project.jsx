@@ -65,7 +65,11 @@ Project.propTypes = {
         date: PropTypes.string,
         website: PropTypes.string,
         challenge: PropTypes.string,
-        solution: PropTypes.string,
+        solution: PropTypes.shape({
+            description: PropTypes.string,
+            efficiency: PropTypes.string,
+            innovation: PropTypes.string
+        }),
         result: PropTypes.string,
         img: PropTypes.string,
         images: PropTypes.arrayOf(PropTypes.shape({
