@@ -1,12 +1,10 @@
 // @ts-nocheck
-import { Link } from "react-router-dom";
 import Section from "../../UI/Section";
 import SectionShape from "../../UI/SectionShape";
-import '../../../styles/services.css';
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import { useLanguage } from "../../../store/LanguageContext";
+import ServicesCard from "@components/UI/ServicesCard";
 // import "slick-carousel/slick/slick-theme.css";
 
 const Services = () => {
@@ -110,51 +108,15 @@ const Services = () => {
         >
             <div className="w-full relative">
                 <Slider {...settings}>
-                    {servicesData.map((service, index) => (
-                        <div
-                            key={index}
-                            className="card service-box w-92.5 px-3 bg-[#020101]/24 slick-slide-item"
-                        >
-                            <div className="card-body pb-1 px-2.5 items-center text-center">
-                                <Link
-                                    to={service.url || '#'}
-                                    aria-label={service.title}
-                                    className={`card-title pb-6 ${direction === 'rtl' ? 'text-xl' : '!text-2xl'} !font-bold !font-spartan !text-white leading-7.5`}
-                                >
-                                    {service.title}
-                                </Link>
-                                <p dir={direction} className="text-white">{service.description}</p>
-                            </div>
-                            <div className="icon-serv">
-                                <img src="assets/images/icons/thumbs-up.png" alt="service icon" className="icon-thumbs" />
-                            </div>
-                            <div className="card-overlay-img">
-                                <figure>
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="relative rounded-[0.625rem]"
-                                        loading="lazy"
-                                        width="500"
-                                        height="500"
-                                        srcSet={`${service.image} 500w, ${service.image} 300w, ${service.image} 100w, ${service.image} 150w`}
-                                        sizes="(max-width: 500px) 100vw, 500px"
-                                    />
-                                </figure>
-                            </div>
-                            <Link
-                                to={service.url || '#'}
-                                aria-label={service.title}
-                                className={`pt-7 flex items-center justify-center gap-1 ${direction === 'rtl' ? 'flex-row-reverse' : 'flex-row-reverse'} capitalize !text-white text-center`}
-                            >
-                                {t('services.readMore')}
-                                {direction === 'rtl' ? (
-                                    <ArrowLeft size={18} strokeWidth={2} />
-                                ) : (
-                                    <ArrowRight size={18} strokeWidth={2} />
-                                )}
-                            </Link>
-                        </div>
+                    {servicesData.map((service) => (
+                        <ServicesCard
+                            key={service.id}
+                            service={service}
+                            className="slick-slide-item"
+                            titleColor="!text-white"
+                            textColor="!text-white"
+                            linkColor="!text-white"
+                        />
                     ))}
                 </Slider>
             </div>

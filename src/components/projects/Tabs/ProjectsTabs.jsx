@@ -60,6 +60,7 @@ const ProjectsTabs = () => {
         }
 
     }, [searchParams, categories, filters.category, currentPage, setFilters, setCurrentPage, setSearchParams]);
+
     // Step 4: Update the tab change function
     const handleTabChange = (category = '') => {
         // Do nothing if the active tab is already clicked.
@@ -110,7 +111,7 @@ const ProjectsTabs = () => {
     const activeTab = filters.category || categories[0];
 
     return (
-        <Section className='py-16 projects-section'>
+        <Section className='py-16 projects-page'>
             {/* Tabs Navigation Component */}
             <ProjectsTabsNavigation
                 categories={categories}

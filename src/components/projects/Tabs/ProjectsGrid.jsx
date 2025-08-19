@@ -85,7 +85,7 @@ const ProjectsGrid = ({
                         onPageChange={onPageChange}
                         maxVisiblePages={5}
                         showFirstLast={true}
-                        element='.projects-section'
+                        element='.projects-page'
                         className={`transition-all duration-300 ease-in-out ${isAnimating
                             ? 'opacity-0 transform scale-95'
                             : 'opacity-100 transform scale-100'

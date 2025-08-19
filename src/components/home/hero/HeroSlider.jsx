@@ -183,8 +183,8 @@ const HeroSlider = () => {
                                                 transition={{ duration: 0.6, delay: 1.7 }}
                                             >
                                                 <SecondaryLink
-                                                    onClick={(e) => e.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-                                                    to="#services"
+                                                    // onClick={(e) => e.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                                                    to="/services"
                                                     aria-label={slide.buttonServ}
                                                     className={`${index === 1 ? '!bg-primary-one !text-white' : '!bg-primary-two !text-white'} hover:!bg-white active:!bg-white`}
                                                 >

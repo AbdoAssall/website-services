@@ -1,5 +1,5 @@
 .service-box {
-    box-shadow: rgba(0,0,0,0.06) 0px 5px 22px 0px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 22px 0px;
     margin: 0px 0px 30px;
     border-radius: 0.625rem;
     padding-bottom: 2rem;
@@ -67,14 +67,14 @@
 /* Change cursor when actively dragging */
 .slick-list:active {
     cursor: grab;
-  }
+}
 /* Custom styles for slick dots */
 .slick-dots li button:before {
     color: #ffffff !important;
     /* opacity: 0.5; */
 }
-
 .slick-dots li.slick-active button:before {
-    color: #ffffff !important; /* Color for active dot */
+    color: #ffffff !important;
+    /* Color for active dot */
     opacity: 1;
 }

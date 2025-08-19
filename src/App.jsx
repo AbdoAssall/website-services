@@ -6,6 +6,7 @@ import { Loading3 } from "./components/elements/Loading3";
 const Home = React.lazy(() => import("./pages/Index"));
 const Projects = React.lazy(() => import("./pages/Projects"));
 const Project = React.lazy(() => import("./pages/SingleProject"));
+const Services = React.lazy(() => import("./pages/Services"));
 
 function App() {
   return (
@@ -21,10 +22,17 @@ function App() {
           <Projects />
         </React.Suspense>
         } />
+
         <Route path="/projects/:slug" element={<React.Suspense fallback={(<Loading3 />)}>
           <Project />
         </React.Suspense>
         } />
+
+        <Route path="/services" element={<React.Suspense fallback={(<Loading3 />)}>
+          <Services />
+        </React.Suspense>
+        } />
+
       </Routes>
     </Router >
   )
