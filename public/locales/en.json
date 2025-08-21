@@ -111,32 +111,25 @@
     "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form believable",
     "readMore": "Read More",
     "services": "Services",
-    "items": [
-      {
-        "title": "Risk Management",
-        "description": "Mitigating workplace issues before they escalate, sharing human time."
-      },
-      {
-        "title": "HR Consulting",
-        "description": "Professional HR solutions for your business growth and employee satisfaction."
-      },
-      {
-        "title": "Training Programs",
-        "description": "Comprehensive training solutions to develop your workforce capabilities."
-      },
-      {
-        "title": "Strategic Planning",
-        "description": "Custom strategic plans to achieve your company goals and ensure sustainable growth."
-      },
-      {
-        "title": "Financial Consulting",
-        "description": "Advanced financial advisory services to improve financial performance and manage risks."
-      },
-      {
-        "title": "Business Development",
-        "description": "Innovative growth strategies to expand your business scope and enter new markets."
-      }
-    ]
+    "process": "Our Process",
+    "features": "Service Features",
+    "whyChooseUs": "Why Choose Us",
+    "contactUs": "Contact Us",
+    "downloadBrochure": "Download Brochure",
+    "getQuote": "Get Free Quote",
+    "allServices": "All Services",
+    "relatedServices": "Related Services",
+    "yearsExperience": "Years Experience",
+    "happyClients": "Happy Clients",
+    "successRate": "Success Rate",
+    "onTimeDelivery": "On-Time Delivery",
+    "getFreeConsultation": "Get Free Consultation Now",
+    "readyToStart": "Ready to get started? Contact us today for a personalized consultation and quote.",
+    "callUs": "Call Us",
+    "email": "Email",
+    "address": "Address",
+    "resources": "Resources",
+    "caseStudies": "Case Studies"
   },
   "chooseUs": {
     "title": "Choices & Events",

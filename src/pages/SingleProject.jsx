@@ -34,7 +34,7 @@ const SingleProject = () => {
 
             {/* Page Header Section */}
             <PageHeader
-                title={t('projects.projects')}
+                title={project?.name || ''}
                 breadcrumbs={[
                     { label: t('navbar.home'), href: "/" },
                     { label: t('projects.projects'), href: "/projects" },

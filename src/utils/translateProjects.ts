@@ -1,16 +1,4 @@
-interface Project {
-  [key: string]: {
-    name: string;
-    category: string;
-    description: string;
-    client: string;
-    challenge: string;
-    solution: string;
-    result: string;
-  };
-}
-
-export const translateProjects = (projects: Project[], language: string) => {
+export const translateProjects = (projects: any[], language: string) => {
   return projects.map((project) => {
     const langData = project[language] || project.ar;
     return {
