@@ -3,58 +3,15 @@ import Section from "../../UI/Section";
 import SectionShape from "../../UI/SectionShape";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import { useLanguage } from "../../../store/LanguageContext";
 import ServicesCard from "@components/UI/ServicesCard";
-// import "slick-carousel/slick/slick-theme.css";
+import useServices from "@hooks/useServices";
+import { Loading2 as Spinner } from '../../elements/Loading2';
 
 const Services = () => {
     const { t, direction } = useLanguage();
-
-    const servicesStaticData = [
-        {
-            id: 1,
-            url: "/services/risk-management",
-            image: "assets/images/services/service-image-4.jpg",
-            icon: "assets/images/icons/risk-management.png"
-        },
-        {
-            id: 2,
-            url: "/services/hr-consulting",
-            image: "assets/images/services/service-image-5.jpg",
-            icon: "assets/images/icons/hr-consulting.png"
-        },
-        {
-            id: 3,
-            url: "/services/training-programs",
-            image: "assets/images/services/service-image-6.jpg",
-            icon: "assets/images/icons/training.png"
-        },
-        {
-            id: 4,
-            url: "/services/strategic-planning",
-            image: "assets/images/services/service-image-4.jpg",
-            icon: "assets/images/icons/strategy.png"
-        },
-        {
-            id: 5,
-            url: "/services/financial-consulting",
-            image: "assets/images/services/service-image-5.jpg",
-            icon: "assets/images/icons/finance.png"
-        },
-        {
-            id: 6,
-            url: "/services/business-development",
-            image: "assets/images/services/service-image-6.jpg",
-            icon: "assets/images/icons/business-dev.png"
-        }
-    ];
-
-    // Combine static data with translations
-    const servicesData = servicesStaticData.map((service, index) => ({
-        ...service,
-        title: t(`services.items.${index}.title`),
-        description: t(`services.items.${index}.description`),
-    }));
+    const { services, loading } = useServices();
 
     const settings = {
         dots: true,
@@ -108,16 +65,20 @@ const Services = () => {
         >
             <div className="w-full relative">
                 <Slider {...settings}>
-                    {servicesData.map((service) => (
-                        <ServicesCard
-                            key={service.id}
-                            service={service}
-                            className="slick-slide-item"
-                            titleColor="!text-white"
-                            textColor="!text-white"
-                            linkColor="!text-white"
-                        />
-                    ))}
+                    {loading
+                        ? (<Spinner />)
+                        : (
+                            services.map((service) => (
+                                <ServicesCard
+                                    key={service.id}
+                                    service={service}
+                                    className="slick-slide-item"
+                                    titleColor="!text-white"
+                                    textColor="!text-white"
+                                    linkColor="!text-white"
+                                />
+                            ))
+                        )}
                 </Slider>
             </div>
             <SectionShape />

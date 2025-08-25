@@ -6,44 +6,150 @@
         "ar": {
             "name": "إدارة المخاطر",
             "description": "تخفيف مشاكل مكان العمل قبل تفاقمها، مشاركة الوقت البشري.",
-            "fullDescription": "نحن نقدم نهجًا شاملاً لإدارة المخاطر لمساعدة مؤسستك على تحديد وتقييم وتخفيف المخاطر المحتملة. يضمن خبراؤنا حماية أصولك وسمعتك.",
-            "steps": [
-                "رؤية المنظمة ورسالتها وقيمها",
-                "الأهداف الاستراتيجية المتفق عليها",
-                "التقييم والتحكم.",
-                "تنفيذ استراتيجيتك.",
-                "صياغة استراتيجية.",
-                "جمع وتحليل المعلومات.",
-                "توضيح رؤيتك"
+            "content": {
+                "title": "تقديم تجارب خدمة عالمية المستوى!..",
+                "fullDescription": "نحن نقدم نهجًا شاملاً لإدارة المخاطر لمساعدة مؤسستك على تحديد وتقييم وتخفيف المخاطر المحتملة. يضمن خبراؤنا حماية أصولك وسمعتك."
+            },
+            "benefits": [
+                {
+                    "title": "التحقق من الخلفية",
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
+                    "icon": "/assets/images/icons/true.png"
+                },
+                {
+                    "title": "وصف الوظيفة",
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
+                    "icon": "/assets/images/icons/true.png"
+                }
             ],
+            "highlights": {
+                "img": "/assets/images/services/service-image-6.jpg",
+                "items": [
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "عمل إبداعي",
+                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                    },
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "أفضل حل",
+                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                    }
+                ]
+            },
+            "steps": {
+                "img": "/assets/images/services/service-image-5.jpg",
+                "items": [
+                    "رؤية المنظمة ورسالتها وقيمها",
+                    "الأهداف الاستراتيجية المتفق عليها",
+                    "التقييم والتحكم.",
+                    "تنفيذ استراتيجيتك.",
+                    "صياغة استراتيجية.",
+                    "جمع وتحليل المعلومات.",
+                    "توضيح رؤيتك"
+                ]
+            },
             "features": [
                 "تحديد المخاطر وتقييمها",
                 "تطوير استراتيجية التخفيف",
                 "مراقبة الامتثال",
                 "التخطيط للاستجابة للأزمات"
             ],
-            "process": "تبدأ عمليتنا بفهم شامل لعملك. نجري تقييمًا تفصيليًا للمخاطر، ونطور استراتيجيات مخصصة، ونقدم الدعم المستمر لضمان بقائك محميًا."
+            "process": "تبدأ عمليتنا بفهم شامل لعملك. نجري تقييمًا تفصيليًا للمخاطر، ونطور استراتيجيات مخصصة، ونقدم الدعم المستمر لضمان بقائك محميًا.",
+            "confidence": {
+                "description": "التنديد باللذة ومدح الألم سيعطيك صورة كاملة لمن يختار الاستمتاع بلذة ليس لها عواقب مزعجة.",
+                "tabs": [
+                    {
+                        "label": "تحليل الهدف",
+                        "title": "كيف تحدد السوق المستهدف؟",
+                        "description": "تحليل السوق المستهدف يحدد أين وكيف يتناسب منتجك في السوق الحقيقي. باستخدام هذه المعلومات، يمكنك: تحديد الأسواق الأكثر والأقل قيمة لعملك. تطوير شخصيات مشترين دقيقة."
+                    },
+                    {
+                        "label": "تحليل البحث",
+                        "title": "ما هي تقنيات تحليل البيانات في البحث؟",
+                        "description": "أكثر طرق تحليل البيانات شيوعًا هي: تحليل المحتوى: هذه إحدى أكثر الطرق شيوعًا لتحليل البيانات النوعية. ... التحليل السردي: تُستخدم هذه الطريقة لتحليل المحتوى من مصادر مختلفة، مثل مقابلات المستجيبين، أو الملاحظات من الميدان، أو الاستطلاعات."
+                    },
+                    {
+                        "label": "البيان المالي",
+                        "title": "ما هي البيانات المالية الأساسية الأربعة؟",
+                        "description": "البيان المالي هو مزيج من التقارير الرئيسية الثلاثة عن الأعمال. سيحتوي على بيان التدفق النقدي، وبيان الدخل، والميزانية العمومية للعمل. تشكل الثلاثة معًا صورة شاملة عن صحة العمل."
+                    }
+                ]
+            }
         },
         "en": {
             "name": "Risk Management",
             "description": "Mitigating workplace issues before they escalate, sharing human time.",
-            "fullDescription": "We provide a comprehensive approach to risk management to help your organization identify, assess, and mitigate potential risks. Our experts ensure that your assets and reputation are protected.",
-            "steps": [
-                "organisation's vision, mission and values",
-                "The agreed strategic aims and objectives",
-                "Evaluate and Control.",
-                "Implement Your Strategy.",
-                "Formulate a Strategy.",
-                "Gather and Analyze Information.",
-                "Clarify Your Vision"
+            "content": {
+                "title": "Providing world class service experiences!..",
+                "fullDescription": "We provide a comprehensive approach to risk management to help your organization identify, assess, and mitigate potential risks. Our experts ensure that your assets and reputation are protected."
+            },
+            "benefits": [
+                {
+                    "title": "Background Checks",
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
+                    "icon": "/assets/images/icons/true.png"
+                },
+                {
+                    "title": "Position Description",
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
+                    "icon": "/assets/images/icons/true.png"
+                }
             ],
+            "highlights": {
+                "img": "/assets/images/services/service-image-6.jpg",
+                "items": [
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "Creative work",
+                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                    },
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "Best Solution",
+                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                    }
+                ]
+            },
+            "steps": {
+                "img": "/assets/images/services/service-image-5.jpg",
+                "items": [
+                    "organisation's vision, mission and values",
+                    "The agreed strategic aims and objectives",
+                    "Evaluate and Control.",
+                    "Implement Your Strategy.",
+                    "Formulate a Strategy.",
+                    "Gather and Analyze Information.",
+                    "Clarify Your Vision"
+                ]
+            },
             "features": [
                 "Risk Identification & Assessment",
                 "Mitigation Strategy Development",
                 "Compliance Monitoring",
                 "Crisis Response Planning"
             ],
-            "process": "Our process begins with a thorough understanding of your business. We conduct a detailed risk assessment, develop tailored strategies, and provide ongoing support to ensure you remain protected."
+            "process": "Our process begins with a thorough understanding of your business. We conduct a detailed risk assessment, develop tailored strategies, and provide ongoing support to ensure you remain protected.",
+            "confidence": {
+                "description": "Denouncing pleasure and praising pain was will give you a complete who chooses to enjoy a pleasure that has no annoying consequences.",
+                "tabs": [
+                    {
+                        "label": "Target Analysis",
+                        "title": "How do you identify your target market?",
+                        "description": "Target market analysis determines where, and how, your product fits into the real-life market. With this information, you can: Determine which markets are most and least valuable to your business. Develop accurate buyer personas."
+                    },
+                    {
+                        "label": "Research analysis",
+                        "title": "What is data analysis techniques in research?",
+                        "description": "The most commonly used data analysis methods are: Content analysis: This is one of the most common methods to analyze qualitative data. ... Narrative analysis: This method is used to analyze content from various sources, such as interviews of respondents, observations from the field, or surveys."
+                    },
+                    {
+                        "label": "Financial statement",
+                        "title": "What are the four basic financial statements?",
+                        "description": "A financial statement is the combination of the three major reports on a business. It will contain the cash flow statement, the income statement and the balance sheet of the business. All three together produce an overall picture of the health of the business."
+                    }
+                ]
+            }
         }
     },
     {
@@ -53,44 +159,150 @@
         "ar": {
             "name": "استشارات الموارد البشرية",
             "description": "حلول الموارد البشرية المهنية لنمو أعمالك ورضا الموظفين.",
-            "fullDescription": "تم تصميم خدمات استشارات الموارد البشرية لدينا لتحسين عمليات الموارد البشرية لديك، مما يضمن الامتثال وتعزيز بيئة عمل إيجابية. من اكتساب المواهب إلى إدارة الأداء، نحن شريكك في النجاح.",
-            "steps": [
-                "رؤية المنظمة ورسالتها وقيمها",
-                "الأهداف الاستراتيجية المتفق عليها",
-                "التقييم والتحكم.",
-                "تنفيذ استراتيجيتك.",
-                "صياغة استراتيجية.",
-                "جمع وتحليل المعلومات.",
-                "توضيح رؤيتك"
+            "content": {
+                "title": "تقديم تجارب خدمة عالمية المستوى!..",
+                "fullDescription": "تم تصميم خدمات استشارات الموارد البشرية لدينا لتحسين عمليات الموارد البشرية لديك، مما يضمن الامتثال وتعزيز بيئة عمل إيجابية. من اكتساب المواهب إلى إدارة الأداء، نحن شريكك في النجاح."
+            },
+            "benefits": [
+                {
+                    "title": "التحقق من الخلفية",
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
+                    "icon": "/assets/images/icons/true.png"
+                },
+                {
+                    "title": "وصف الوظيفة",
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
+                    "icon": "/assets/images/icons/true.png"
+                }
             ],
+            "highlights": {
+                "img": "/assets/images/services/service-image-6.jpg",
+                "items": [
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "عمل إبداعي",
+                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                    },
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "أفضل حل",
+                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                    }
+                ]
+            },
+            "steps": {
+                "img": "/assets/images/services/service-image-5.jpg",
+                "items": [
+                    "رؤية المنظمة ورسالتها وقيمها",
+                    "الأهداف الاستراتيجية المتفق عليها",
+                    "التقييم والتحكم.",
+                    "تنفيذ استراتيجيتك.",
+                    "صياغة استراتيجية.",
+                    "جمع وتحليل المعلومات.",
+                    "توضيح رؤيتك"
+                ]
+            },
             "features": [
                 "اكتساب المواهب والتوظيف",
                 "علاقات الموظفين",
                 "إدارة الأداء",
                 "التدريب والتطوير"
             ],
-            "process": "نحن نتشارك معك لفهم تحديات الموارد البشرية الفريدة لديك. يقوم فريقنا بتطوير وتنفيذ حلول مخصصة تتماشى مع أهداف عملك وتعزز ثقافة داعمة في مكان العمل."
+            "process": "نحن نتشارك معك لفهم تحديات الموارد البشرية الفريدة لديك. يقوم فريقنا بتطوير وتنفيذ حلول مخصصة تتماشى مع أهداف عملك وتعزز ثقافة داعمة في مكان العمل.",
+            "confidence": {
+                "description": "التنديد باللذة ومدح الألم سيعطيك صورة كاملة لمن يختار الاستمتاع بلذة ليس لها عواقب مزعجة.",
+                "tabs": [
+                    {
+                        "label": "تحليل الهدف",
+                        "title": "كيف تحدد السوق المستهدف؟",
+                        "description": "تحليل السوق المستهدف يحدد أين وكيف يتناسب منتجك في السوق الحقيقي. باستخدام هذه المعلومات، يمكنك: تحديد الأسواق الأكثر والأقل قيمة لعملك. تطوير شخصيات مشترين دقيقة."
+                    },
+                    {
+                        "label": "تحليل البحث",
+                        "title": "ما هي تقنيات تحليل البيانات في البحث؟",
+                        "description": "أكثر طرق تحليل البيانات شيوعًا هي: تحليل المحتوى: هذه إحدى أكثر الطرق شيوعًا لتحليل البيانات النوعية. ... التحليل السردي: تُستخدم هذه الطريقة لتحليل المحتوى من مصادر مختلفة، مثل مقابلات المستجيبين، أو الملاحظات من الميدان، أو الاستطلاعات."
+                    },
+                    {
+                        "label": "البيان المالي",
+                        "title": "ما هي البيانات المالية الأساسية الأربعة؟",
+                        "description": "البيان المالي هو مزيج من التقارير الرئيسية الثلاثة عن الأعمال. سيحتوي على بيان التدفق النقدي، وبيان الدخل، والميزانية العمومية للعمل. تشكل الثلاثة معًا صورة شاملة عن صحة العمل."
+                    }
+                ]
+            }
         },
         "en": {
             "name": "HR Consulting",
             "description": "Professional HR solutions for your business growth and employee satisfaction.",
-            "fullDescription": "Our HR consulting services are designed to optimize your human resources processes, ensuring compliance and fostering a positive work environment. From talent acquisition to performance management, we are your partner in success.",
-            "steps": [
-                "organisation's vision, mission and values",
-                "The agreed strategic aims and objectives",
-                "Evaluate and Control.",
-                "Implement Your Strategy.",
-                "Formulate a Strategy.",
-                "Gather and Analyze Information.",
-                "Clarify Your Vision"
+            "content": {
+                "title": "Providing world class service experiences!..",
+                "fullDescription": "Our HR consulting services are designed to optimize your human resources processes, ensuring compliance and fostering a positive work environment. From talent acquisition to performance management, we are your partner in success."
+            },
+            "benefits": [
+                {
+                    "title": "Background Checks",
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
+                    "icon": "/assets/images/icons/true.png"
+                },
+                {
+                    "title": "Position Description",
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
+                    "icon": "/assets/images/icons/true.png"
+                }
             ],
+            "highlights": {
+                "img": "/assets/images/services/service-image-6.jpg",
+                "items": [
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "Creative work",
+                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                    },
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "Best Solution",
+                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                    }
+                ]
+            },
+            "steps": {
+                "img": "/assets/images/services/service-image-5.jpg",
+                "items": [
+                    "organisation's vision, mission and values",
+                    "The agreed strategic aims and objectives",
+                    "Evaluate and Control.",
+                    "Implement Your Strategy.",
+                    "Formulate a Strategy.",
+                    "Gather and Analyze Information.",
+                    "Clarify Your Vision"
+                ]
+            },
             "features": [
                 "Talent Acquisition & Recruitment",
                 "Employee Relations",
                 "Performance Management",
                 "Training & Development"
             ],
-            "process": "We partner with you to understand your unique HR challenges. Our team develops and implements customized solutions that align with your business objectives and promote a supportive workplace culture."
+            "process": "We partner with you to understand your unique HR challenges. Our team develops and implements customized solutions that align with your business objectives and promote a supportive workplace culture.",
+            "confidence": {
+                "description": "Denouncing pleasure and praising pain was will give you a complete who chooses to enjoy a pleasure that has no annoying consequences.",
+                "tabs": [
+                    {
+                        "label": "Target Analysis",
+                        "title": "How do you identify your target market?",
+                        "description": "Target market analysis determines where, and how, your product fits into the real-life market. With this information, you can: Determine which markets are most and least valuable to your business. Develop accurate buyer personas."
+                    },
+                    {
+                        "label": "Research analysis",
+                        "title": "What is data analysis techniques in research?",
+                        "description": "The most commonly used data analysis methods are: Content analysis: This is one of the most common methods to analyze qualitative data. ... Narrative analysis: This method is used to analyze content from various sources, such as interviews of respondents, observations from the field, or surveys."
+                    },
+                    {
+                        "label": "Financial statement",
+                        "title": "What are the four basic financial statements?",
+                        "description": "A financial statement is the combination of the three major reports on a business. It will contain the cash flow statement, the income statement and the balance sheet of the business. All three together produce an overall picture of the health of the business."
+                    }
+                ]
+            }
         }
     },
     {
@@ -100,44 +312,150 @@
         "ar": {
             "name": "برامج التدريب",
             "description": "حلول تدريبية شاملة لتطوير قدرات القوى العاملة لديك.",
-            "fullDescription": "نقدم مجموعة واسعة من برامج التدريب المصممة لتعزيز مهارات ومعارف القوى العاملة لديك. تم تصميم ورش العمل التفاعلية لدينا لإشراك الموظفين ودفع النمو.",
-            "steps": [
-                "رؤية المنظمة ورسالتها وقيمها",
-                "الأهداف الاستراتيجية المتفق عليها",
-                "التقييم والتحكم.",
-                "تنفيذ استراتيجيتك.",
-                "صياغة استراتيجية.",
-                "جمع وتحليل المعلومات.",
-                "توضيح رؤيتك"
+            "content": {
+                "title": "تقديم تجارب خدمة عالمية المستوى!..",
+                "fullDescription": "نقدم مجموعة واسعة من برامج التدريب المصممة لتعزيز مهارات ومعارف القوى العاملة لديك. تم تصميم ورش العمل التفاعلية لدينا لإشراك الموظفين ودفع النمو."
+            },
+            "benefits": [
+                {
+                    "title": "التحقق من الخلفية",
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
+                    "icon": "/assets/images/icons/true.png"
+                },
+                {
+                    "title": "وصف الوظيفة",
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
+                    "icon": "/assets/images/icons/true.png"
+                }
             ],
+            "highlights": {
+                "img": "/assets/images/services/service-image-6.jpg",
+                "items": [
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "عمل إبداعي",
+                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                    },
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "أفضل حل",
+                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                    }
+                ]
+            },
+            "steps": {
+                "img": "/assets/images/services/service-image-5.jpg",
+                "items": [
+                    "رؤية المنظمة ورسالتها وقيمها",
+                    "الأهداف الاستراتيجية المتفق عليها",
+                    "التقييم والتحكم.",
+                    "تنفيذ استراتيجيتك.",
+                    "صياغة استراتيجية.",
+                    "جمع وتحليل المعلومات.",
+                    "توضيح رؤيتك"
+                ]
+            },
             "features": [
                 "تنمية المهارات القيادية",
                 "تدريب المبيعات وخدمة العملاء",
                 "بناء الفريق والتعاون",
                 "التدريب على الامتثال"
             ],
-            "process": "نبدأ بتقييم احتياجاتك التدريبية وتصميم برامج مخصصة. يقوم مدربونا الخبراء بتقديم جلسات جذابة، ونحن نقيس الفعالية لضمان تحقيق نتائج دائمة."
+            "process": "نبدأ بتقييم احتياجاتك التدريبية وتصميم برامج مخصصة. يقوم مدربونا الخبراء بتقديم جلسات جذابة، ونحن نقيس الفعالية لضمان تحقيق نتائج دائمة.",
+            "confidence": {
+                "description": "التنديد باللذة ومدح الألم سيعطيك صورة كاملة لمن يختار الاستمتاع بلذة ليس لها عواقب مزعجة.",
+                "tabs": [
+                    {
+                        "label": "تحليل الهدف",
+                        "title": "كيف تحدد السوق المستهدف؟",
+                        "description": "تحليل السوق المستهدف يحدد أين وكيف يتناسب منتجك في السوق الحقيقي. باستخدام هذه المعلومات، يمكنك: تحديد الأسواق الأكثر والأقل قيمة لعملك. تطوير شخصيات مشترين دقيقة."
+                    },
+                    {
+                        "label": "تحليل البحث",
+                        "title": "ما هي تقنيات تحليل البيانات في البحث؟",
+                        "description": "أكثر طرق تحليل البيانات شيوعًا هي: تحليل المحتوى: هذه إحدى أكثر الطرق شيوعًا لتحليل البيانات النوعية. ... التحليل السردي: تُستخدم هذه الطريقة لتحليل المحتوى من مصادر مختلفة، مثل مقابلات المستجيبين، أو الملاحظات من الميدان، أو الاستطلاعات."
+                    },
+                    {
+                        "label": "البيان المالي",
+                        "title": "ما هي البيانات المالية الأساسية الأربعة؟",
+                        "description": "البيان المالي هو مزيج من التقارير الرئيسية الثلاثة عن الأعمال. سيحتوي على بيان التدفق النقدي، وبيان الدخل، والميزانية العمومية للعمل. تشكل الثلاثة معًا صورة شاملة عن صحة العمل."
+                    }
+                ]
+            }
         },
         "en": {
             "name": "Training Programs",
             "description": "Comprehensive training solutions to develop your workforce capabilities.",
-            "fullDescription": "We offer a wide range of training programs designed to enhance the skills and knowledge of your workforce. Our interactive workshops are tailored to engage employees and drive growth.",
-            "steps": [
-                "organisation's vision, mission and values",
-                "The agreed strategic aims and objectives",
-                "Evaluate and Control.",
-                "Implement Your Strategy.",
-                "Formulate a Strategy.",
-                "Gather and Analyze Information.",
-                "Clarify Your Vision"
+            "content": {
+                "title": "Providing world class service experiences!..",
+                "fullDescription": "We offer a wide range of training programs designed to enhance the skills and knowledge of your workforce. Our interactive workshops are tailored to engage employees and drive growth."
+            },
+            "benefits": [
+                {
+                    "title": "Background Checks",
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
+                    "icon": "/assets/images/icons/true.png"
+                },
+                {
+                    "title": "Position Description",
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
+                    "icon": "/assets/images/icons/true.png"
+                }
             ],
+            "highlights": {
+                "img": "/assets/images/services/service-image-6.jpg",
+                "items": [
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "Creative work",
+                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                    },
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "Best Solution",
+                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                    }
+                ]
+            },
+            "steps": {
+                "img": "/assets/images/services/service-image-5.jpg",
+                "items": [
+                    "organisation's vision, mission and values",
+                    "The agreed strategic aims and objectives",
+                    "Evaluate and Control.",
+                    "Implement Your Strategy.",
+                    "Formulate a Strategy.",
+                    "Gather and Analyze Information.",
+                    "Clarify Your Vision"
+                ]
+            },
             "features": [
                 "Leadership Development",
                 "Sales & Customer Service Training",
                 "Team Building & Collaboration",
                 "Compliance Training"
             ],
-            "process": "We start by assessing your training needs and designing customized programs. Our expert trainers deliver engaging sessions, and we measure effectiveness to ensure lasting results."
+            "process": "We start by assessing your training needs and designing customized programs. Our expert trainers deliver engaging sessions, and we measure effectiveness to ensure lasting results.",
+            "confidence": {
+                "description": "Denouncing pleasure and praising pain was will give you a complete who chooses to enjoy a pleasure that has no annoying consequences.",
+                "tabs": [
+                    {
+                        "label": "Target Analysis",
+                        "title": "How do you identify your target market?",
+                        "description": "Target market analysis determines where, and how, your product fits into the real-life market. With this information, you can: Determine which markets are most and least valuable to your business. Develop accurate buyer personas."
+                    },
+                    {
+                        "label": "Research analysis",
+                        "title": "What is data analysis techniques in research?",
+                        "description": "The most commonly used data analysis methods are: Content analysis: This is one of the most common methods to analyze qualitative data. ... Narrative analysis: This method is used to analyze content from various sources, such as interviews of respondents, observations from the field, or surveys."
+                    },
+                    {
+                        "label": "Financial statement",
+                        "title": "What are the four basic financial statements?",
+                        "description": "A financial statement is the combination of the three major reports on a business. It will contain the cash flow statement, the income statement and the balance sheet of the business. All three together produce an overall picture of the health of the business."
+                    }
+                ]
+            }
         }
     },
     {
@@ -147,44 +465,150 @@
         "ar": {
             "name": "التسويق الرقمي",
             "description": "حول تواجدك الرقمي إلى نتائج قابلة للقياس مع استراتيجياتنا التسويقية المتقدمة.",
-            "fullDescription": "نحول حضورك الرقمي باستراتيجيات تسويقية شاملة تحقق النتائج وتنمي أعمالك. فريقنا من خبراء التسويق الرقمي يستخدم أحدث الأدوات والتقنيات لضمان وصولك إلى جمهورك المستهدف.",
-            "steps": [
-                "رؤية المنظمة ورسالتها وقيمها",
-                "الأهداف الاستراتيجية المتفق عليها",
-                "التقييم والتحكم.",
-                "تنفيذ استراتيجيتك.",
-                "صياغة استراتيجية.",
-                "جمع وتحليل المعلومات.",
-                "توضيح رؤيتك"
+            "content": {
+                "title": "تقديم تجارب خدمة عالمية المستوى!..",
+                "fullDescription": "نحول حضورك الرقمي باستراتيجيات تسويقية شاملة تحقق النتائج وتنمي أعمالك. فريقنا من خبراء التسويق الرقمي يستخدم أحدث الأدوات والتقنيات لضمان وصولك إلى جمهورك المستهدف."
+            },
+            "benefits": [
+                {
+                    "title": "التحقق من الخلفية",
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
+                    "icon": "/assets/images/icons/true.png"
+                },
+                {
+                    "title": "وصف الوظيفة",
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
+                    "icon": "/assets/images/icons/true.png"
+                }
             ],
+            "highlights": {
+                "img": "/assets/images/services/service-image-6.jpg",
+                "items": [
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "عمل إبداعي",
+                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                    },
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "أفضل حل",
+                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                    }
+                ]
+            },
+            "steps": {
+                "img": "/assets/images/services/service-image-5.jpg",
+                "items": [
+                    "رؤية المنظمة ورسالتها وقيمها",
+                    "الأهداف الاستراتيجية المتفق عليها",
+                    "التقييم والتحكم.",
+                    "تنفيذ استراتيجيتك.",
+                    "صياغة استراتيجية.",
+                    "جمع وتحليل المعلومات.",
+                    "توضيح رؤيتك"
+                ]
+            },
             "features": [
                 "تحسين محركات البحث والإعلانات المدفوعة",
                 "تسويق وسائل التواصل الاجتماعي",
                 "استراتيجية وإنشاء المحتوى",
                 "التحليلات والتقارير المفصلة"
             ],
-            "process": "نحلل جمهورك المستهدف، ونطور استراتيجيات قائمة على البيانات، وننفذ حملات عبر قنوات متعددة، ونحسن باستمرار لتحقيق أقصى عائد على الاستثمار."
+            "process": "نحلل جمهورك المستهدف، ونطور استراتيجيات قائمة على البيانات، وننفذ حملات عبر قنوات متعددة، ونحسن باستمرار لتحقيق أقصى عائد على الاستثمار.",
+            "confidence": {
+                "description": "التنديد باللذة ومدح الألم سيعطيك صورة كاملة لمن يختار الاستمتاع بلذة ليس لها عواقب مزعجة.",
+                "tabs": [
+                    {
+                        "label": "تحليل الهدف",
+                        "title": "كيف تحدد السوق المستهدف؟",
+                        "description": "تحليل السوق المستهدف يحدد أين وكيف يتناسب منتجك في السوق الحقيقي. باستخدام هذه المعلومات، يمكنك: تحديد الأسواق الأكثر والأقل قيمة لعملك. تطوير شخصيات مشترين دقيقة."
+                    },
+                    {
+                        "label": "تحليل البحث",
+                        "title": "ما هي تقنيات تحليل البيانات في البحث؟",
+                        "description": "أكثر طرق تحليل البيانات شيوعًا هي: تحليل المحتوى: هذه إحدى أكثر الطرق شيوعًا لتحليل البيانات النوعية. ... التحليل السردي: تُستخدم هذه الطريقة لتحليل المحتوى من مصادر مختلفة، مثل مقابلات المستجيبين، أو الملاحظات من الميدان، أو الاستطلاعات."
+                    },
+                    {
+                        "label": "البيان المالي",
+                        "title": "ما هي البيانات المالية الأساسية الأربعة؟",
+                        "description": "البيان المالي هو مزيج من التقارير الرئيسية الثلاثة عن الأعمال. سيحتوي على بيان التدفق النقدي، وبيان الدخل، والميزانية العمومية للعمل. تشكل الثلاثة معًا صورة شاملة عن صحة العمل."
+                    }
+                ]
+            }
         },
         "en": {
             "name": "Digital Marketing",
             "description": "Transform your digital presence into measurable results with our advanced marketing strategies.",
-            "fullDescription": "Transform your online presence with our comprehensive digital marketing strategies that drive results and grow your business. Our team of digital marketing experts uses cutting-edge tools and techniques to ensure you reach your target audience effectively.",
-            "steps": [
-                "organisation's vision, mission and values",
-                "The agreed strategic aims and objectives",
-                "Evaluate and Control.",
-                "Implement Your Strategy.",
-                "Formulate a Strategy.",
-                "Gather and Analyze Information.",
-                "Clarify Your Vision"
+            "content": {
+                "title": "Providing world class service experiences!..",
+                "fullDescription": "Transform your online presence with our comprehensive digital marketing strategies that drive results and grow your business. Our team of digital marketing experts uses cutting-edge tools and techniques to ensure you reach your target audience effectively."
+            },
+            "benefits": [
+                {
+                    "title": "Background Checks",
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
+                    "icon": "/assets/images/icons/true.png"
+                },
+                {
+                    "title": "Position Description",
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
+                    "icon": "/assets/images/icons/true.png"
+                }
             ],
+            "highlights": {
+                "img": "/assets/images/services/service-image-6.jpg",
+                "items": [
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "Creative work",
+                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                    },
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "Best Solution",
+                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                    }
+                ]
+            },
+            "steps": {
+                "img": "/assets/images/services/service-image-5.jpg",
+                "items": [
+                    "organisation's vision, mission and values",
+                    "The agreed strategic aims and objectives",
+                    "Evaluate and Control.",
+                    "Implement Your Strategy.",
+                    "Formulate a Strategy.",
+                    "Gather and Analyze Information.",
+                    "Clarify Your Vision"
+                ]
+            },
             "features": [
                 "SEO & SEM Optimization",
                 "Social Media Marketing",
                 "Content Strategy & Creation",
                 "Analytics & Detailed Reporting"
             ],
-            "process": "We analyze your target audience, develop data-driven strategies, execute campaigns across multiple channels, and continuously optimize for maximum ROI and sustainable growth."
+            "process": "We analyze your target audience, develop data-driven strategies, execute campaigns across multiple channels, and continuously optimize for maximum ROI and sustainable growth.",
+            "confidence": {
+                "description": "Denouncing pleasure and praising pain was will give you a complete who chooses to enjoy a pleasure that has no annoying consequences.",
+                "tabs": [
+                    {
+                        "label": "Target Analysis",
+                        "title": "How do you identify your target market?",
+                        "description": "Target market analysis determines where, and how, your product fits into the real-life market. With this information, you can: Determine which markets are most and least valuable to your business. Develop accurate buyer personas."
+                    },
+                    {
+                        "label": "Research analysis",
+                        "title": "What is data analysis techniques in research?",
+                        "description": "The most commonly used data analysis methods are: Content analysis: This is one of the most common methods to analyze qualitative data. ... Narrative analysis: This method is used to analyze content from various sources, such as interviews of respondents, observations from the field, or surveys."
+                    },
+                    {
+                        "label": "Financial statement",
+                        "title": "What are the four basic financial statements?",
+                        "description": "A financial statement is the combination of the three major reports on a business. It will contain the cash flow statement, the income statement and the balance sheet of the business. All three together produce an overall picture of the health of the business."
+                    }
+                ]
+            }
         }
     },
     {
@@ -194,68 +618,150 @@
         "ar": {
             "name": "حلول إبداعية",
             "description": "حلول إبداعية وديناميكية لعملك.",
-            "fullDescription": "نحن نقدم حلولاً إبداعية وديناميكية مصممة خصيصًا لتلبية احتياجات عملك. فريقنا متخصص في تحويل الأفكار إلى واقع ملموس.",
-            "highlights": [
+            "content": {
+                "title": "تقديم تجارب خدمة عالمية المستوى!..",
+                "fullDescription": "نحن نقدم حلولاً إبداعية وديناميكية مصممة خصيصًا لتلبية احتياجات عملك. فريقنا متخصص في تحويل الأفكار إلى واقع ملموس."
+            },
+            "benefits": [
                 {
-                    "icon": "/assets/images/icons/innovation.png",
-                    "title": "عمل إبداعي",
-                    "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                    "title": "التحقق من الخلفية",
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
+                    "icon": "/assets/images/icons/true.png"
                 },
                 {
-                    "icon": "/assets/images/icons/innovation.png",
-                    "title": "أفضل حل",
-                    "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                    "title": "وصف الوظيفة",
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
+                    "icon": "/assets/images/icons/true.png"
                 }
             ],
-            "steps": [
-                "رؤية المنظمة ورسالتها وقيمها",
-                "الأهداف الاستراتيجية المتفق عليها",
-                "التقييم والتحكم.",
-                "تنفيذ استراتيجيتك.",
-                "صياغة استراتيجية.",
-                "جمع وتحليل المعلومات.",
-                "توضيح رؤيتك"
-            ],
+            "highlights": {
+                "img": "/assets/images/services/service-image-6.jpg",
+                "items": [
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "عمل إبداعي",
+                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                    },
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "أفضل حل",
+                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                    }
+                ]
+            },
+            "steps": {
+                "img": "/assets/images/services/service-image-5.jpg",
+                "items": [
+                    "رؤية المنظمة ورسالتها وقيمها",
+                    "الأهداف الاستراتيجية المتفق عليها",
+                    "التقييم والتحكم.",
+                    "تنفيذ استراتيجيتك.",
+                    "صياغة استراتيجية.",
+                    "جمع وتحليل المعلومات.",
+                    "توضيح رؤيتك"
+                ]
+            },
             "features": [
                 "تنمية المهارات القيادية",
                 "تدريب المبيعات وخدمة العملاء",
                 "بناء الفريق والتعاون",
                 "التدريب على الامتثال"
             ],
-            "process": "نبدأ بتقييم احتياجاتك التدريبية وتصميم برامج مخصصة. يقوم مدربونا الخبراء بتقديم جلسات جذابة، ونحن نقيس الفعالية لضمان تحقيق نتائج دائمة."
+            "process": "نبدأ بتقييم احتياجاتك التدريبية وتصميم برامج مخصصة. يقوم مدربونا الخبراء بتقديم جلسات جذابة، ونحن نقيس الفعالية لضمان تحقيق نتائج دائمة.",
+            "confidence": {
+                "description": "التنديد باللذة ومدح الألم سيعطيك صورة كاملة لمن يختار الاستمتاع بلذة ليس لها عواقب مزعجة.",
+                "tabs": [
+                    {
+                        "label": "تحليل الهدف",
+                        "title": "كيف تحدد السوق المستهدف؟",
+                        "description": "تحليل السوق المستهدف يحدد أين وكيف يتناسب منتجك في السوق الحقيقي. باستخدام هذه المعلومات، يمكنك: تحديد الأسواق الأكثر والأقل قيمة لعملك. تطوير شخصيات مشترين دقيقة."
+                    },
+                    {
+                        "label": "تحليل البحث",
+                        "title": "ما هي تقنيات تحليل البيانات في البحث؟",
+                        "description": "أكثر طرق تحليل البيانات شيوعًا هي: تحليل المحتوى: هذه إحدى أكثر الطرق شيوعًا لتحليل البيانات النوعية. ... التحليل السردي: تُستخدم هذه الطريقة لتحليل المحتوى من مصادر مختلفة، مثل مقابلات المستجيبين، أو الملاحظات من الميدان، أو الاستطلاعات."
+                    },
+                    {
+                        "label": "البيان المالي",
+                        "title": "ما هي البيانات المالية الأساسية الأربعة؟",
+                        "description": "البيان المالي هو مزيج من التقارير الرئيسية الثلاثة عن الأعمال. سيحتوي على بيان التدفق النقدي، وبيان الدخل، والميزانية العمومية للعمل. تشكل الثلاثة معًا صورة شاملة عن صحة العمل."
+                    }
+                ]
+            }
         },
         "en": {
             "name": "Creative Solutions",
             "description": "Creative and dynamic solutions for your business.",
-            "fullDescription": "We provide creative and dynamic solutions tailored to your business needs. Our team specializes in turning ideas into reality.",
-            "highlights": [
+            "content": {
+                "title": "Providing world class service experiences!..",
+                "fullDescription": "We provide creative and dynamic solutions tailored to your business needs. Our team specializes in turning ideas into reality."
+            },
+            "benefits": [
                 {
-                    "icon": "/assets/images/icons/innovation.png",
-                    "title": "Creative work",
-                    "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                    "title": "Background Checks",
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
+                    "icon": "/assets/images/icons/true.png"
                 },
                 {
-                    "icon": "/assets/images/icons/innovation.png",
-                    "title": "Best Solution",
-                    "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                    "title": "Position Description",
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
+                    "icon": "/assets/images/icons/true.png"
                 }
             ],
-            "steps": [
-                "organisation's vision, mission and values",
-                "The agreed strategic aims and objectives",
-                "Evaluate and Control.",
-                "Implement Your Strategy.",
-                "Formulate a Strategy.",
-                "Gather and Analyze Information.",
-                "Clarify Your Vision"
-            ],
+            "highlights": {
+                "img": "/assets/images/services/service-image-6.jpg",
+                "items": [
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "Creative work",
+                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                    },
+                    {
+                        "icon": "/assets/images/icons/innovation.png",
+                        "title": "Best Solution",
+                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                    }
+                ]
+            },
+            "steps": {
+                "img": "/assets/images/services/service-image-5.jpg",
+                "items": [
+                    "organisation's vision, mission and values",
+                    "The agreed strategic aims and objectives",
+                    "Evaluate and Control.",
+                    "Implement Your Strategy.",
+                    "Formulate a Strategy.",
+                    "Gather and Analyze Information.",
+                    "Clarify Your Vision"
+                ]
+            },
             "features": [
                 "Leadership Development",
                 "Sales & Customer Service Training",
                 "Team Building & Collaboration",
                 "Compliance Training"
             ],
-            "process": "We start by assessing your training needs and designing customized programs. Our expert trainers deliver engaging sessions, and we measure effectiveness to ensure lasting results."
+            "process": "We start by assessing your training needs and designing customized programs. Our expert trainers deliver engaging sessions, and we measure effectiveness to ensure lasting results.",
+            "confidence": {
+                "description": "Denouncing pleasure and praising pain was will give you a complete who chooses to enjoy a pleasure that has no annoying consequences.",
+                "tabs": [
+                    {
+                        "label": "Target Analysis",
+                        "title": "How do you identify your target market?",
+                        "description": "Target market analysis determines where, and how, your product fits into the real-life market. With this information, you can: Determine which markets are most and least valuable to your business. Develop accurate buyer personas."
+                    },
+                    {
+                        "label": "Research analysis",
+                        "title": "What is data analysis techniques in research?",
+                        "description": "The most commonly used data analysis methods are: Content analysis: This is one of the most common methods to analyze qualitative data. ... Narrative analysis: This method is used to analyze content from various sources, such as interviews of respondents, observations from the field, or surveys."
+                    },
+                    {
+                        "label": "Financial statement",
+                        "title": "What are the four basic financial statements?",
+                        "description": "A financial statement is the combination of the three major reports on a business. It will contain the cash flow statement, the income statement and the balance sheet of the business. All three together produce an overall picture of the health of the business."
+                    }
+                ]
+            }
         }
     }
 ]

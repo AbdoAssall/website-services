@@ -8,21 +8,19 @@ import { useLanguage } from '@store/LanguageContext';
  * @property {string} description - The description of the highlight.
  */
 
+/**
+ * @typedef {Object} HighlightsSection
+ * @property {string} img - The URL for the highlights section image.
+ * @property {Highlight[]} items - An array of highlight objects.
+ */
 
 /**
  * @typedef {Object} Service
  * @property {string} name - The name of the service.
- * @property {Highlight[]} [highlights] - An array of highlight objects.
- * @property {string} img - The URL for the main service image.
- * @property {Service} [ar] - The Arabic version of the service data.
- * @property {Service} [en] - The English version of the service data.
+ * @property {HighlightsSection} [highlights] - The highlights section containing image and items.
  */
 
 /**
- * Renders a section highlighting creative solutions and best practices,
- * featuring a two-column layout with textual content and an image.
- * It is responsive and supports both LTR and RTL directions.
- *
  * @param {Object} props - The component props.
  * @param {Service} props.service - The service object containing data for the component.
  * @returns {JSX.Element} The rendered CreativeSolutions component.
@@ -31,10 +29,10 @@ const CreativeSolutions = ({ service }) => {
     const { isRTL } = useLanguage();
 
     return (
-        <div className={`flex flex-col md:flex-row gap-8 md:gap-12 items-center`}>
+        <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center`}>
             {/* Left Column: Textual Content */}
             <div
-                className={`w-full md:w-1/2 space-y-8 ${isRTL ? 'text-right' : 'text-left'
+                className={`w-full lg:w-1/2 space-y-8 ${isRTL ? 'text-right' : 'text-left'
                     }`}
             >
                 {/* The heading is visually hidden but available for screen readers for better SEO and accessibility */}
@@ -43,15 +41,15 @@ const CreativeSolutions = ({ service }) => {
                 </h2>
 
                 {service.highlights &&
-                    service.highlights.map((item, index) => (
+                    service.highlights.items.map((item, index) => (
                         <div
                             key={index}
                             className={`flex gap-4 items-start`}
                         >
                             <div className="flex-shrink-0 w-16 h-16 bg-sky rounded-full flex items-center justify-center">
                                 <img
-                                    src={item.icon}
-                                    alt="" // Decorative image, alt text is handled by the title
+                                    src={'/assets/images/icons/innovation.png'}
+                                    alt={item.title}
                                     className="w-10 h-10"
                                     style={{ color: 'var(--color-primary-one)' }}
                                 />
@@ -69,52 +67,31 @@ const CreativeSolutions = ({ service }) => {
             </div>
 
             {/* Right Column: Image */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full lg:w-1/2">
                 <img
-                    src={service.img}
+                    src={service?.highlights?.img}
                     alt={service.name}
                     className="w-full h-auto rounded-lg object-cover shadow-lg"
-                    loading="lazy" // Lazy loading for performance
+                    loading="lazy"
                 />
             </div>
         </div>
     );
 };
 
-/**
- * PropTypes for the CreativeSolutions component.
- * Ensures that the 'service' prop and its nested properties are of the correct type.
- */
 CreativeSolutions.propTypes = {
     service: PropTypes.shape({
         name: PropTypes.string,
         img: PropTypes.string.isRequired,
-        highlights: PropTypes.arrayOf(
-            PropTypes.shape({
-                icon: PropTypes.string.isRequired,
-                title: PropTypes.string.isRequired,
-                description: PropTypes.string.isRequired,
-            })
-        ),
-        ar: PropTypes.shape({
-            name: PropTypes.string.isRequired,
-            highlights: PropTypes.arrayOf(
+        highlights: PropTypes.shape({
+            img: PropTypes.string,
+            items: PropTypes.arrayOf(
                 PropTypes.shape({
                     icon: PropTypes.string.isRequired,
                     title: PropTypes.string.isRequired,
                     description: PropTypes.string.isRequired,
                 })
-            ).isRequired,
-        }),
-        en: PropTypes.shape({
-            name: PropTypes.string.isRequired,
-            highlights: PropTypes.arrayOf(
-                PropTypes.shape({
-                    icon: PropTypes.string.isRequired,
-                    title: PropTypes.string.isRequired,
-                    description: PropTypes.string.isRequired,
-                })
-            ).isRequired,
+            )
         }),
     }),
 };

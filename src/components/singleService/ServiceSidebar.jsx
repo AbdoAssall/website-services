@@ -32,22 +32,6 @@ ServiceSidebar.propTypes = {
     services: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.number.isRequired,
         slug: PropTypes.string.isRequired,
-        ar: PropTypes.shape({
-            name: PropTypes.string,
-            description: PropTypes.string,
-            fullDescription: PropTypes.string,
-            steps: PropTypes.arrayOf(PropTypes.string),
-            features: PropTypes.arrayOf(PropTypes.string),
-            process: PropTypes.string
-        }),
-        en: PropTypes.shape({
-            name: PropTypes.string,
-            description: PropTypes.string,
-            fullDescription: PropTypes.string,
-            steps: PropTypes.arrayOf(PropTypes.string),
-            features: PropTypes.arrayOf(PropTypes.string),
-            process: PropTypes.string
-        })
     })).isRequired,
     currentServiceSlug: PropTypes.string.isRequired
 };

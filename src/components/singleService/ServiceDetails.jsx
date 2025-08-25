@@ -15,7 +15,7 @@ const ServiceDetails = ({ service, services }) => {
     return (
         <div className={`py-20 ${isRTL ? 'rtl' : 'ltr'}`}>
             <div className="container mx-auto px-4">
-                <div className={`flex flex-col gap-12 relative ${isRTL ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                <div className={`flex flex-col gap-12 relative ${isRTL ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
                     {/* Main Content */}
                     <div className="lg:w-8/12">
                         <ServiceContent service={service} />
@@ -23,7 +23,7 @@ const ServiceDetails = ({ service, services }) => {
 
                     {/* Vertical Separator Line */}
                     <div className={`
-                        hidden md:block absolute top-0 bottom-0 w-px bg-border-dark-one
+                        hidden lg:block absolute top-0 bottom-0 w-px bg-border-dark-one
                         ${isRTL ? 'right-1/3' : 'left-2/3'}
                     `}
                         style={{

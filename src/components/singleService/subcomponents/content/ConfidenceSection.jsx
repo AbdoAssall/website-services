@@ -1,41 +1,73 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import PropTypes from 'prop-types';
 import { useLanguage } from '@store/LanguageContext';
 import { TargetAnalysisContent } from './TargetAnalysisContent';
 import { Target, BarChart3, DollarSign } from 'lucide-react';
 
-export const ConfidenceSection = () => {
-    const { isRTL } = useLanguage();
-    const [isActive, setIsActive] = useState('target-analysis');
+/**
+ * @typedef {object} ConfidenceTab - Defines the structure for a single tab object.
+ * @property {string} label - The text for the tab button.
+ * @property {string} title - The title for the tab content.
+ * @property {string} description - The description for the tab content.
+ */
+
+/**
+ * @typedef {object} ConfidenceSectionData - Defines the structure for the confidence prop.
+ * @property {string} description - The main description for the section.
+ * @property {ConfidenceTab[]} tabs - The array of tabs.
+ */
+
+/**
+ * A section with tabs to display detailed information dynamically.
+ * @param {object} props - The component props.
+ * @param {ConfidenceSectionData} props.confidence - The data for the confidence section.
+ * @returns {JSX.Element | null} The rendered component or null if no data is provided.
+ */
+export const ConfidenceSection = ({ confidence }) => {
+    const { t } = useLanguage();
     const [isTransitioning, setIsTransitioning] = useState(false);
 
-    const tabs = [
-        {
-            id: 'target-analysis',
-            label: 'Target Analysis',
-            title: 'How do you identify your target market?',
-            description: "Target market analysis determines where, and how, your product fits into the real-life market. With this information, you can: Determine which markets are most and least valuable to your business. Develop accurate buyer personas.",
-            icon: Target,
-            active: true
-        },
-        {
-            id: 'research-analysis',
-            label: 'Research analysis',
-            title: 'What is data analysis techniques in research?',
-            description: "The most commonly used data analysis methods are: Content analysis: This is one of the most common methods to analyze qualitative data. ... Narrative analysis: This method is used to analyze content from various sources, such as interviews of respondents, observations from the field, or surveys.",
-            icon: BarChart3,
-            active: false
-        },
-        {
-            id: 'financial-statement',
-            label: 'Financial statement',
-            title: 'What are the four basic financial statements?',
-            description: 'A financial statement is the combination of the three major reports on a business. It will contain the cash flow statement, the income statement and the balance sheet of the business. All three together produce an overall picture of the health of the business.',
-            icon: DollarSign,
-            active: false
-        }
-    ];
+    const processedTabs = useMemo(() => {
+        if (!confidence?.tabs) return [];
+        const iconMap = [Target, BarChart3, DollarSign];
 
-    const activeTab = tabs.find((tab) => tab.id === isActive) || tabs[0];
+        return confidence.tabs.map((tab, i) => {
+            const id = `id-${i}`;
+            return {
+                ...tab,
+                id,
+                icon: iconMap[i] || iconMap[0],
+            };
+        });
+    }, [confidence]);
+
+    const [isActive, setIsActive] = useState(processedTabs.length > 0 ? processedTabs[0].id : '');
+
+    // const tabs = [
+    //     {
+    //         id: 'target-analysis',
+    //         label: 'Target Analysis',
+    //         title: 'How do you identify your target market?',
+    //         description: "Target market analysis determines where, and how, your product fits into the real-life market. With this information, you can: Determine which markets are most and least valuable to your business. Develop accurate buyer personas.",
+    //         icon: Target,
+    //     },
+    //     {
+    //         id: 'research-analysis',
+    //         label: 'Research analysis',
+    //         title: 'What is data analysis techniques in research?',
+    //         description: "The most commonly used data analysis methods are: Content analysis: This is one of the most common methods to analyze qualitative data. ... Narrative analysis: This method is used to analyze content from various sources, such as interviews of respondents, observations from the field, or surveys.",
+    //         icon: BarChart3,
+    //     },
+    //     {
+    //         id: 'financial-statement',
+    //         label: 'Financial statement',
+    //         title: 'What are the four basic financial statements?',
+    //         description: 'A financial statement is the combination of the three major reports on a business. It will contain the cash flow statement, the income statement and the balance sheet of the business. All three together produce an overall picture of the health of the business.',
+    //         icon: DollarSign,
+    //     }
+    // ];
+
+    const activeTab = processedTabs.find((tab) => tab.id === isActive) || processedTabs[0];
 
     const handleActiveTabChange = (tabId = '') => {
         if (tabId === isActive) return; // Prevent re-setting the same tab
@@ -53,18 +85,17 @@ export const ConfidenceSection = () => {
         <div className="space-y-6">
             {/* Section Title */}
             <h2 className="text-2xl md:text-3xl font-bold text-heading-dark">
-                Confidence in future
+                {t('services.confidence.title')}
             </h2>
 
             {/* Description */}
             <p className="text-dark-one leading-relaxed">
-                Denouncing pleasure and praising pain was will give you a complete who chooses to enjoy a
-                pleasure that has no annoying consequences.
+                {confidence.description}
             </p>
 
             {/* Tabs */}
-            <div className={`mt-8 flex flex-wrap gap-4 md:gap-2 justify-center md:justify-start`}>
-                {tabs.map((tab) => {
+            <div className={`mt-8 flex flex-wrap gap-4 justify-center lg:justify-start`}>
+                {processedTabs.map((tab) => {
                     const Icon = tab.icon;
                     return (
                         <button
@@ -111,4 +142,17 @@ export const ConfidenceSection = () => {
             )}
         </div>
     );
+};
+
+ConfidenceSection.propTypes = {
+    confidence: PropTypes.shape({
+        description: PropTypes.string.isRequired,
+        tabs: PropTypes.arrayOf(
+            PropTypes.shape({
+                label: PropTypes.string.isRequired,
+                title: PropTypes.string.isRequired,
+                description: PropTypes.string.isRequired
+            })
+        ).isRequired
+    }).isRequired
 };

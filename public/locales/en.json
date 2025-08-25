@@ -42,6 +42,9 @@
     "phone": "+98 060 712 34",
     "email": "sendmail@creote.com",
     "address": "United States 866 Wilshire, 2nd Street Los Angeles 90024.",
+    "contactUs": "Contact Us",
+    "question": "Have Questions?",
+    "descrip": "Nothing prevents our being to what we like.",
     "form": {
       "title": "Contact Form",
       "name": "Your Name",
@@ -111,25 +114,12 @@
     "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form believable",
     "readMore": "Read More",
     "services": "Services",
+    "strategic": "Strategic Planning Process",
     "process": "Our Process",
-    "features": "Service Features",
-    "whyChooseUs": "Why Choose Us",
-    "contactUs": "Contact Us",
-    "downloadBrochure": "Download Brochure",
-    "getQuote": "Get Free Quote",
-    "allServices": "All Services",
-    "relatedServices": "Related Services",
-    "yearsExperience": "Years Experience",
-    "happyClients": "Happy Clients",
-    "successRate": "Success Rate",
-    "onTimeDelivery": "On-Time Delivery",
-    "getFreeConsultation": "Get Free Consultation Now",
-    "readyToStart": "Ready to get started? Contact us today for a personalized consultation and quote.",
-    "callUs": "Call Us",
-    "email": "Email",
-    "address": "Address",
-    "resources": "Resources",
-    "caseStudies": "Case Studies"
+    "features": "Key Features",
+    "confidence": {
+      "title": "Confidence in Future"
+    }
   },
   "chooseUs": {
     "title": "Choices & Events",

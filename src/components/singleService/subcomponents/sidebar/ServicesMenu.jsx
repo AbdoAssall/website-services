@@ -12,7 +12,7 @@ import { ServiceMenuItem } from './ServiceMenuItem';
  * @returns {JSX.Element} Services menu component
  */
 export const ServicesMenu = ({ services, currentServiceSlug }) => {
-    const { language, isRTL, t } = useLanguage();
+    const { isRTL, t } = useLanguage();
     const ChevronIcon = isRTL ? ChevronLeft : ChevronRight;
 
     // Service icons mapping
@@ -41,14 +41,13 @@ export const ServicesMenu = ({ services, currentServiceSlug }) => {
             <div className="divide-y divide-border-dark-one">
                 {services.map((service) => {
                     const Icon = getServiceIcon(service.slug);
-                    const serviceData = service[language] || service.ar;
                     const isActive = service.slug === currentServiceSlug;
 
                     return (
                         <ServiceMenuItem
                             key={service.id}
                             service={service}
-                            serviceName={serviceData.name}
+                            serviceName={service.name}
                             icon={Icon}
                             isActive={isActive}
                             isRTL={isRTL}
@@ -65,22 +64,7 @@ ServicesMenu.propTypes = {
     services: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.number.isRequired,
         slug: PropTypes.string.isRequired,
-        ar: PropTypes.shape({
-            name: PropTypes.string,
-            description: PropTypes.string,
-            fullDescription: PropTypes.string,
-            steps: PropTypes.arrayOf(PropTypes.string),
-            features: PropTypes.arrayOf(PropTypes.string),
-            process: PropTypes.string
-        }),
-        en: PropTypes.shape({
-            name: PropTypes.string,
-            description: PropTypes.string,
-            fullDescription: PropTypes.string,
-            steps: PropTypes.arrayOf(PropTypes.string),
-            features: PropTypes.arrayOf(PropTypes.string),
-            process: PropTypes.string
-        })
+        name: PropTypes.string.isRequired,
     })).isRequired,
     currentServiceSlug: PropTypes.string.isRequired,
 };
