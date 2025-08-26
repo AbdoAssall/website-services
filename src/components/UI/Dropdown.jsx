@@ -1,8 +1,14 @@
+// @ts-nocheck
 import { useState } from "react";
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useNavigation } from "@hooks/useNavigation";
 
-const Dropdown = ({ title, children, to = '#', ...props }) => {
+const Dropdown = ({ title, children, to = '#', item, ...props }) => {
+    const {
+        isNavItemActive,
+    } = useNavigation();
+
     const [isOpen, setIsOpen] = useState(false);
 
     let timeout;
@@ -24,10 +30,22 @@ const Dropdown = ({ title, children, to = '#', ...props }) => {
                 onMouseLeave={handleMouseLeave}
                 className="dropdown inline-block cursor-pointer"
             >
-                <a {...props} href={to} className="relative z-20 flex items-center gap-x-1 focus:outline-none">
-                    <span className="group-hover:text-primary-one text-dark-one font-semibold">{title}</span>
+                <div
+
+                    className="relative z-20 flex items-center gap-x-1 focus:outline-none"
+                >
+                    <NavLink
+                        {...props}
+                        to={to}
+                        aria-label={title}
+                        className={({ isActive }) =>
+                            `group-hover:!text-primary-one font-semibold ${isActive && isNavItemActive(item) ? "!text-primary-one" : "!text-dark-one"}`
+                        }
+                    >
+                        {title}
+                    </NavLink>
                     <svg
-                        className="w-5 h-5 text-light-gray group-hover:text-primary-one"
+                        className="w-5 h-5 text-light-gray group-hover:text-primary-one transition-colors duration-500"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
@@ -38,7 +56,7 @@ const Dropdown = ({ title, children, to = '#', ...props }) => {
                             clipRule="evenodd"
                         />
                     </svg>
-                </a>
+                </div>
 
                 {isOpen && (
                     <div className="list absolute left-0 right-0 lg:top-14 z-10 w-48 pt-2 mt-2 bg-white rounded-md shadow-md">
@@ -54,5 +72,6 @@ export default Dropdown;
 Dropdown.propTypes = {
     title: PropTypes.string,
     to: PropTypes.string,
+    item: PropTypes.any,
     children: PropTypes.node.isRequired
 }

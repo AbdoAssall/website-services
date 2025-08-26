@@ -1,5 +1,5 @@
 import HeroSlider from "../components/home/hero/HeroSlider";
-import About from "../components/home/about/About";
+import AboutUs from "../components/home/about/AboutUs";
 import { Brands } from "../components/home/services/Brands";
 import Services from "../components/home/services/Services";
 import Choices from "../components/home/chooseUs/Choices";
@@ -22,7 +22,7 @@ const Index = () => {
                 descriptionKey="head.home.meta.description"
             />
             <HeroSlider />
-            <About />
+            <AboutUs />
             <Brands />
             <Services />
             <Choices />

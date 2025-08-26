@@ -8,48 +8,12 @@ import { useLanguage } from "../../../store/LanguageContext";
 import ServicesCard from "@components/UI/ServicesCard";
 import useServices from "@hooks/useServices";
 import { Loading2 as Spinner } from '../../elements/Loading2';
+import { settings } from "@utils/settings";
 
 const Services = () => {
     const { t, direction } = useLanguage();
     const { services, loading } = useServices();
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        centerMode: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        swipeToSlide: false,
-        arrows: false,
-        initialSlide: 0,
-        autoplay: true,
-        speed: 600,
-        autoplaySpeed: 5000,
-        cssEase: "linear",
-        rtl: direction === 'rtl',
-        ltr: direction === 'ltr',
-        accessibility: true,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    initialSlide: 1,
-                    infinite: true,
-                }
-            },
-        ]
-    };
+    const sliderSettings = settings(direction);
 
     return (
         <Section
@@ -64,7 +28,7 @@ const Services = () => {
             description={t('services.description')}
         >
             <div className="w-full relative">
-                <Slider {...settings}>
+                <Slider {...sliderSettings}>
                     {loading
                         ? (<Spinner />)
                         : (

@@ -10,9 +10,11 @@ import { LanguageDropdown } from "./MiniComponents/LanguageDropdown";
 import { useLanguage } from "../../../store/LanguageContext";
 import { SearchBar } from "./MiniComponents/SearchBar";
 import { NavList } from "./MiniComponents/NavList";
+import useServices from "@hooks/useServices";
 
 export function LowerNavbar() {
   const { t } = useLanguage();
+  const { services } = useServices();
   const [openNav, setOpenNav] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
@@ -47,18 +49,6 @@ export function LowerNavbar() {
     });
 
     // Handle navbar visibility based on scroll direction
-    // if (currentScrollY > 50) { // Only start hiding after 100px scroll
-    //   if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
-    //     // Scrolling down & past 200px - hide navbar
-    //     setIsScroll(false);
-    //   } else if (currentScrollY < lastScrollY.current) {
-    //     // Scrolling up - show navbar
-    //     setIsScroll(true);
-    //   }
-    // } else {
-    //   // Near top of page - always show navbar
-    //   setIsScroll(true);
-    // }
 
     lastScrollY.current = currentScrollY;
   }, []);
@@ -108,12 +98,12 @@ export function LowerNavbar() {
   ];
 
   // Menu services
-  const menuServices = [
-    { id: 1, title: t("navbar.service1"), to: "#" },
-    { id: 2, title: t("navbar.service2"), to: "#" },
-    { id: 3, title: t("navbar.service3"), to: "#" },
-    { id: 4, title: t("navbar.service4"), to: "#" },
-  ];
+  // const menuServices = [
+  //   { id: 1, title: t("navbar.service1"), to: "#" },
+  //   { id: 2, title: t("navbar.service2"), to: "#" },
+  //   { id: 3, title: t("navbar.service3"), to: "#" },
+  //   { id: 4, title: t("navbar.service4"), to: "#" },
+  // ];
 
   const openSearchBar = useCallback(() => {
     setOpenSearch((prev) => !prev);
@@ -148,7 +138,7 @@ export function LowerNavbar() {
             </Link>
             <div className="flex items-center gap-2 lg:gap-4">
               <div dir="rtl" className="mr-4 hidden lg:block">
-                <NavList navItems={navItems} menuServices={menuServices} />
+                <NavList navItems={navItems} menuServices={services} />
               </div>
 
               {/* Searsh bar */}
@@ -220,7 +210,7 @@ export function LowerNavbar() {
       <MobileSidebar
         openNav={openNav}
         setOpenNav={setOpenNav}
-        menuServices={menuServices}
+        menuServices={services}
         navItems={navItems}
       />
     </>

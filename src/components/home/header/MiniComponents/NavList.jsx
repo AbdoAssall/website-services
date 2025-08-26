@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Link, NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
@@ -6,7 +7,7 @@ import { useLanguage } from "../../../../store/LanguageContext";
 import { useNavigation } from "../../../../hooks/useNavigation";
 
 export function NavList({ navItems, menuServices }) {
-    const { direction, t } = useLanguage();
+    const { direction, t, isRTL } = useLanguage();
     const {
         isNavItemActive,
         handleNavClick,
@@ -41,33 +42,30 @@ export function NavList({ navItems, menuServices }) {
             {/* Navigation Items */}
             {navItems.map((item) => (
                 <li key={item.id} className="p-1 font-normal">
-                    {item.isScrollLink ? (
-                        item.hasSubmenu ? (
-                            <Dropdown
-                                title={item.title}
-                                to={item.to}
-                                onClick={(e) => handleNavClick(item, e)}
-                            >
-                                {menuServices.map((item) => (
-                                    <Link
-                                        key={item.id}
-                                        to={item.to}
-                                        className="block px-4 py-3 text-sm text-gray-600 hover:bg-gray-100"
-                                    >
-                                        {item.title}
-                                    </Link>
-                                ))}
-                            </Dropdown>
-                        ) : (
-                            <a
-                                href={item.to}
-                                className="flex items-center"
-                                onClick={(e) => handleNavClick(item, e)}
-                            >
-                                {item.title}
-                            </a>
-                        )
-
+                    {item.hasSubmenu ? (
+                        <Dropdown
+                            title={item.title}
+                            to={item.to}
+                            item={item}
+                        >
+                            {menuServices.map((service) => (
+                                <Link
+                                    key={service.id}
+                                    to={`/services/${service.slug}`}
+                                    className={`block px-4 py-3 !text-sm !text-gray-600 hover:!bg-gray-100 hover:!text-primary-one ${isRTL ? '!font-medium' : ''}`}
+                                >
+                                    {service.name}
+                                </Link>
+                            ))}
+                        </Dropdown>
+                    ) : item.isScrollLink ? (
+                        <a
+                            href={item.to}
+                            className="flex items-center"
+                            onClick={(e) => handleNavClick(item, e)}
+                        >
+                            {item.title}
+                        </a>
                     ) : (
                         <NavLink
                             to={item.to}
@@ -98,7 +96,7 @@ NavList.propTypes = {
     menuServices: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
-            title: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
             to: PropTypes.string,
         })
     ).isRequired,

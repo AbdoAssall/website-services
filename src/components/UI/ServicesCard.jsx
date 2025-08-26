@@ -60,7 +60,7 @@ const ServicesCard = ({
             <Link
                 to={`/services/${service.slug}`}
                 aria-label={service.name}
-                className={`pt-7 flex items-center justify-center gap-1 ${direction === 'rtl' ? 'flex-row-reverse' : 'flex-row-reverse'} capitalize ${linkColor} text-center`}
+                className={`pt-7 flex items-center justify-center gap-1 ${direction === 'rtl' ? 'flex-row-reverse font-medium' : 'flex-row-reverse'} capitalize ${linkColor} text-center`}
             >
                 {t('services.readMore')}
                 {direction === 'rtl' ? (

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import {
     List,
@@ -10,6 +10,7 @@ import {
 } from "@material-tailwind/react";
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "../../../../store/LanguageContext";
+import { useNavigation } from "@hooks/useNavigation";
 
 export function MobileAccordion({
     accordionId,
@@ -17,10 +18,10 @@ export function MobileAccordion({
     onToggle,
     title,
     item,
-    onNavClick,
     onCloseDrawer,
-    items,
+    services,
 }) {
+    const { isNavItemActive } = useNavigation();
     const { direction } = useLanguage();
 
     const handleAccordionToggle = () => {
@@ -44,28 +45,26 @@ export function MobileAccordion({
                     className={`items-center border-b-0 ${direction === 'rtl' ? 'pr-3 justify-normal' : ' pl-3 justify-start'
                         } content-center py-0`}
                 >
-                    <a
-                        href={item.to}
-                        onClick={(e) => {
-                            onNavClick(item, e)
-                            onCloseDrawer()
-                        }}
-                        className={`${direction === 'rtl' ? 'ml-auto' : 'mr-auto'
-                            } !text-dark-one !font-medium`}
+                    <NavLink
+                        to={item.to}
+                        onClick={() => onCloseDrawer()}
+                        className={({ isActive }) =>
+                            `${direction === 'rtl' ? 'ml-auto' : 'mr-auto'} font-medium ${isActive && isNavItemActive(item) ? "!text-primary-one" : "!text-dark-one hover:!text-primary-one"}`
+                        }
                     >
                         {title}
-                    </a>
+                    </NavLink>
                 </AccordionHeader>
             </ListItem>
             <AccordionBody className="menu py-2">
                 <List className="p-0">
-                    {items.map((item) => (
+                    {services.map((service) => (
                         <Link
-                            key={item.id}
-                            to={item.to}
-                            className="!text-dark-one !font-normal hover:!text-primary-one"
+                            key={service.id}
+                            to={`/services/${service.slug}`}
+                            className={`!text-dark-one hover:!text-primary-one ${direction === 'rtl' ? '!font-normal' : '!font-normal'}`}
                         >
-                            <ListItem>{item.title}</ListItem>
+                            <ListItem>{service.name}</ListItem>
                         </Link>
                     ))}
                 </List>
@@ -82,10 +81,10 @@ MobileAccordion.propTypes = {
     item: PropTypes.object.isRequired,
     onNavClick: PropTypes.func,
     onCloseDrawer: PropTypes.func,
-    items: PropTypes.arrayOf(
+    services: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
-            title: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
             to: PropTypes.string.isRequired,
             isScrollLink: PropTypes.bool,
         })

@@ -71,6 +71,7 @@ export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {
           <List className="text-dark-one font-medium">
             <NavLink
               to="/"
+              onClick={() => closeDrawer()}
               className="!text-dark-one hover:!text-primary-one !duration-200"
             >
               <ListItem className={isHomePage ? "text-primary-one" : ""}>
@@ -83,35 +84,33 @@ export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {
             {navItems.map((item) => (
               <div key={item.id}>
                 <hr className="mb-2 border-gray-200" />
-                {item.isScrollLink ? (
-                  item.hasSubmenu ? (
-                    <MobileAccordion
-                      accordionId={item.id}
-                      isOpen={open === item.id}
-                      onToggle={handleOpen}
-                      title={item.title}
-                      item={item}
-                      onNavClick={handleNavClick}
-                      onCloseDrawer={closeDrawer}
-                      items={menuServices}
-                    />
-                  ) : (
-                    <a
-                      href={item.to}
-                      className="cursor-pointer"
-                      onClick={(e) => {
-                        handleNavClick(item, e)
-                        closeDrawer()
-                      }}
-                    >
-                      <ListItem className="!text-dark-one !font-medium hover:!text-primary-one">
-                        {item.title}
-                      </ListItem>
-                    </a>
-                  )
+                {item.hasSubmenu ? (
+                  <MobileAccordion
+                    accordionId={item.id}
+                    isOpen={open === item.id}
+                    onToggle={handleOpen}
+                    title={item.title}
+                    item={item}
+                    onCloseDrawer={closeDrawer}
+                    services={menuServices}
+                  />
+                ) : item.isScrollLink ? (
+                  <a
+                    href={item.to}
+                    className="cursor-pointer"
+                    onClick={(e) => {
+                      handleNavClick(item, e)
+                      closeDrawer()
+                    }}
+                  >
+                    <ListItem className="!text-dark-one !font-medium hover:!text-primary-one">
+                      {item.title}
+                    </ListItem>
+                  </a>
                 ) : (
                   <NavLink
                     to={item.to}
+                    onClick={() => closeDrawer()}
                     className={({ isActive }) =>
                       `!text-dark-one font-medium ${isActive && isNavItemActive(item) ? "!text-primary-one" : "hover:!text-primary-one"}`
                     }
@@ -134,7 +133,7 @@ MobileSidebar.propTypes = {
   menuServices: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
     })
   ).isRequired,
   navItems: PropTypes.arrayOf(
