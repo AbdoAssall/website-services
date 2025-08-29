@@ -67,7 +67,7 @@ h5 a,
 h5,
 h6 a,
 h6 {
-    font-weight: 700 !important;
+    font-weight: 700;
     margin: 0;
     color: var(--primary-color-two) !important;
     font-family: var(--family-one) !important;

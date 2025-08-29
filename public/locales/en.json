@@ -112,7 +112,21 @@
       "title": "Best Solution",
       "description": "Consulting solutions is a dynamic, versatile, elegant and modern business"
     },
-    "readMore": "Read More"
+    "readMore": "Read More",
+    "counters": [
+      {
+        "label": "Projects Completed",
+        "description": "Power of choices when nothing what we like best principle."
+      },
+      {
+        "label": "Happy Clients",
+        "description": "Except to obtain some of advantages from it has any right."
+      },
+      {
+        "label": "Experienced Team",
+        "description": "Complete account of the system and expound actual teachings."
+      }
+    ]
   },
   "services": {
     "title": "Our Services",

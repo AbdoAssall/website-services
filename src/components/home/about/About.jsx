@@ -1,10 +1,12 @@
+import PropTypes from 'prop-types';
 import { Briefcase, Play } from "lucide-react";
 import PrimaryLink from "../../UI/PrimaryLink";
 import '../../../styles/about.css'
 import { useLanguage } from '../../../store/LanguageContext';
 
-const About = () => {
-    const { direction, t } = useLanguage();
+
+const About = ({ btn = true, isSubTitle = false }) => {
+    const { direction, isRTL, t } = useLanguage();
 
     return (
         <div dir="ltr" className="flex w-full flex-col md:flex-row">
@@ -38,13 +40,20 @@ const About = () => {
                 </div>
             </div>
             <div className="divider md:divider-horizontal"></div>
-            <div className={`grid md:w-1/2 grow mt-21 md:mt-0 ${direction === 'rtl' ? 'text-right' : 'text-start'}`}>
+            <div className={`relative grid md:w-1/2 grow ${isSubTitle ? 'mt-28' : 'mt-21'} md:mt-0 ${direction === 'rtl' ? 'text-right' : 'text-start'}`}>
                 <div className={`flex gap-3 ${direction === 'rtl' ? 'justify-end' : 'justify-start'}`}>
-                    <Briefcase className="text-primary-one w-5 h-5" />
+                    {isSubTitle
+                        ? (
+                            <div className={`small_text_sub uppercase ${isRTL ? '-right-1' : '-left-1'}`}>
+                                {t('about.title')}
+                            </div>
+                        ) : (
+                            <Briefcase className="text-primary-one w-5 h-5" />
+                        )}
                     <h5 className="section-title">{t('about.title')}</h5>
                 </div>
-                <div className="mt-1 md:mt-4.5">
-                    <h2 className={`text-3xl md:text-[2.75rem] font-bold ${direction === 'rtl' ? 'md:!leading-13' : '!leading-10 '} text-primary-two capitalize`}>
+                <div className={`${isSubTitle ? 'mt-4.5' : 'mt-1 md:mt-4.5'}`}>
+                    <h2 className={`!text-4xl md:!text-5xl !font-semibold ${direction === 'rtl' ? 'md:!leading-13 !mt-2' : '!leading-11 '} text-primary-two capitalize`}>
                         {t('about.mainTitle')}
                     </h2>
                     <p className="mt-4 text-dark-one">
@@ -79,12 +88,19 @@ const About = () => {
                     <div className="rtl:self-end">
                         <img src="assets/images/sign.png" className="w-34 lg:w-auto h-auto object-contain" alt="Sign" loading="lazy" />
                     </div>
-                    <div>
-                        <PrimaryLink to="/about-us" ariaLabel={t('about.readMore')}>{t('about.readMore')}</PrimaryLink>
-                    </div>
+                    {btn && (
+                        <div>
+                            <PrimaryLink to="/about-us" ariaLabel={t('about.readMore')}>{t('about.readMore')}</PrimaryLink>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
     );
 }
 export default About;
+
+About.propTypes = {
+    btn: PropTypes.bool,
+    isSubTitle: PropTypes.bool,
+};

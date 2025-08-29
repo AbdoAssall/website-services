@@ -4,7 +4,7 @@ import About from "./About";
 const AboutUs = () => {
     return (
         <Section>
-            <About />
+            <About btn={true} isSubTitle={false} />
         </Section>
     );
 }

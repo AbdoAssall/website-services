@@ -2,6 +2,7 @@ import { PageLayout } from "../layouts/PageLayout";
 import MetaTags from "../components/MetaTags";
 import PageHeader from "../components/UI/PageHeader";
 import { useLanguage } from "../store/LanguageContext";
+import AboutPage from "@components/aboutUs/AboutPage";
 
 const About = () => {
     const { t } = useLanguage();
@@ -22,7 +23,7 @@ const About = () => {
                 ]}
             />
 
-            <h1>About us page</h1>
+            <AboutPage />
         </PageLayout>
     );
 };

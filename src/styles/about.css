@@ -38,3 +38,15 @@
         background-color: rgba(255, 255, 255, 0.2);
     }
 }
+.small_text_sub {
+    position: absolute;
+    color: transparent;
+    top: -21px;
+    opacity: 0.1;
+    font-size: 4.75rem;
+    line-height: 3.75rem;
+    font-family: var(--family-one);
+    font-weight: 700;
+    text-shadow: 1px 1px 0 var(--heading-dark), -1px -1px 0 var(--heading-dark), 1px -1px 0 1px var(--heading-dark), -1px 1px 0 var(--heading-dark), 1px 1px 0 var(--heading-dark);
+    -webkit-text-stroke: 1px var(--heading-dark);
+}

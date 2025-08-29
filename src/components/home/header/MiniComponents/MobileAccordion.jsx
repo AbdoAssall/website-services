@@ -79,14 +79,11 @@ MobileAccordion.propTypes = {
     onToggle: PropTypes.func.isRequired,
     title: PropTypes.string.isRequired,
     item: PropTypes.object.isRequired,
-    onNavClick: PropTypes.func,
     onCloseDrawer: PropTypes.func,
     services: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
             name: PropTypes.string.isRequired,
-            to: PropTypes.string.isRequired,
-            isScrollLink: PropTypes.bool,
         })
     ).isRequired,
 };

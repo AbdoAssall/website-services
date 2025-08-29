@@ -94,16 +94,8 @@ export function LowerNavbar() {
     { id: 2, title: t("navbar.articles"), to: "#", isScrollLink: false, hasSubmenu: false },
     { id: 3, title: t("navbar.projects"), to: "/projects", isScrollLink: false, hasSubmenu: false },
     { id: 4, title: t("navbar.prices"), to: "#plans", isScrollLink: true, hasSubmenu: false },
-    { id: 5, title: t("navbar.contactUs"), to: "#", isScrollLink: false, hasSubmenu: false },
+    { id: 5, title: t("navbar.contactUs"), to: "/contact", isScrollLink: false, hasSubmenu: false },
   ];
-
-  // Menu services
-  // const menuServices = [
-  //   { id: 1, title: t("navbar.service1"), to: "#" },
-  //   { id: 2, title: t("navbar.service2"), to: "#" },
-  //   { id: 3, title: t("navbar.service3"), to: "#" },
-  //   { id: 4, title: t("navbar.service4"), to: "#" },
-  // ];
 
   const openSearchBar = useCallback(() => {
     setOpenSearch((prev) => !prev);
