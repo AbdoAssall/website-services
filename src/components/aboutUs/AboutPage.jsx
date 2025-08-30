@@ -1,6 +1,7 @@
 import Section from "@components/UI/Section";
 import About from "@components/home/about/About";
 import CounterSection from "./subcomponents/CounterSection";
+import Team from "./subcomponents/Team";
 
 const AboutPage = () => {
     return (
@@ -9,6 +10,7 @@ const AboutPage = () => {
                 <About btn={false} isSubTitle={true} />
             </Section>
             <CounterSection />
+            <Team />
         </div>
     );
 }

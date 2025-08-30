@@ -15,6 +15,7 @@ export default function Section({
     descriptionStyle = '',
     innerContentStyle = '',
     subTitle = '',
+    isSubTitle = false,
     sectionTitle = '',
     description = '',
     button = '',
@@ -28,14 +29,21 @@ export default function Section({
         <section {...props} id={id} className={`relative py-12 ${className}`} style={style}>
             <div className="flex flex-col mx-auto !px-4 xl:!px-0 max-w-6xl">
                 {contentStyle && (
-                    <div className={`flex flex-col ${contentStyle}`}>
+                    <div className={`relative flex flex-col ${contentStyle}`}>
                         {subTitle && (
                             <div className="flex gap-3 justify-start">
-                                <Briefcase className="text-primary-one w-5 h-5" />
+                                {isSubTitle
+                                    ? (
+                                        <div className={`small_text_sub capitalize !w-full ${isRTL ? '-right-1' : 'left-0'}`}>
+                                            {subTitle}
+                                        </div>
+                                    ) : (
+                                        <Briefcase className="text-primary-one w-5 h-5" />
+                                    )}
                                 <h5 className={`section-title`}>{subTitle}</h5>
                             </div>
                         )}
-                        <div className={`mt-1 md:mt-4.5 flex flex-col text-center w-full ${innerContentStyle}`}>
+                        <div className={`${isSubTitle ? 'mt-4.5' : 'mt-1 md:mt-4.5'} flex flex-col text-center w-full ${innerContentStyle}`}>
                             {sectionTitle && (
                                 <h2 className={`text-3xl md:text-[3.13rem] font-bold ${isRTL ? 'md:!leading-13' : '!leading-10'} text-primary-two capitalize ${titleStyle}`}>
                                     {sectionTitle}
@@ -72,6 +80,7 @@ Section.propTypes = {
     descriptionStyle: PropTypes.string,
     innerContentStyle: PropTypes.string,
     subTitle: PropTypes.string,
+    isSubTitle: PropTypes.bool,
     sectionTitle: PropTypes.string,
     description: PropTypes.string,
     button: PropTypes.string,

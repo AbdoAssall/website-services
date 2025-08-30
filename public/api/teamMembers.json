@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+        "en": {
+            "name": "Amelia Margaret",
+            "position": "Director",
+            "description": "The HR Manager of Creote, she is very intelligent and smart."
+        },
+        "ar": {
+            "name": "أميليا مارجريت",
+            "position": "مديرة",
+            "description": "مديرة الموارد البشرية في Creote، تتميز بذكاء وفطنة عالية."
+        }
+    },
+    {
+        "id": 2,
+        "image": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=400&fit=crop&crop=face",
+        "en": {
+            "name": "Brown Angelino",
+            "position": "President",
+            "description": "The President of Creote, he is very intelligent and smart."
+        },
+        "ar": {
+            "name": "براون أنجيلينو",
+            "position": "رئيس",
+            "description": "رئيس شركة Creote، يتميز بذكاء وفطنة عالية."
+        }
+    },
+    {
+        "id": 3,
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+        "en": {
+            "name": "Adam Clinton",
+            "position": "CEO & Founder",
+            "description": "The CEO & Founder of Creote, he is very intelligent and smart."
+        },
+        "ar": {
+            "name": "آدم كلينتون",
+            "position": "الرئيس التنفيذي والمؤسس",
+            "description": "الرئيس التنفيذي ومؤسس Creote، يتميز بذكاء وفطنة عالية."
+        }
+    },
+    {
+        "id": 4,
+        "image": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=400&fit=crop&crop=face",
+        "en": {
+            "name": "Astely Fletcher",
+            "position": "Team Leader",
+            "description": "The Team Leader at Creote, he is very intelligent and smart."
+        },
+        "ar": {
+            "name": "أستلي فليتشر",
+            "position": "قائد الفريق",
+            "description": "قائد الفريق في Creote، يتميز بذكاء وفطنة عالية."
+        }
+    }
+]
