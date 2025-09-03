@@ -1,10 +1,18 @@
-export default function InputError({ message, className = '', ...props }) {
-    return message ? (
+import PropTypes from "prop-types";
+
+export default function InputError({ message = '', className = '', ...props }) {
+    return (
         <p
             {...props}
-            className={'text-sm text-red-600 dark:text-red-400 ' + className}
+            role="alert"
+            className={`!mt-1 !text-sm !text-red-500 ${className}`}
         >
             {message}
         </p>
-    ) : null;
+    );
 }
+
+InputError.propTypes = {
+    className: PropTypes.string,
+    message: PropTypes.string,
+};

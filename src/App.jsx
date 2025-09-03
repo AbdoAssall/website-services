@@ -9,6 +9,7 @@ const Project = React.lazy(() => import("./pages/SingleProject"));
 const Services = React.lazy(() => import("./pages/Services"));
 const SingleService = React.lazy(() => import("./pages/SingleService"));
 const About = React.lazy(() => import("./pages/About"));
+const Contact = React.lazy(() => import("./pages/Contact"));
 
 function App() {
   return (
@@ -46,6 +47,11 @@ function App() {
 
         <Route path="/about-us" element={<React.Suspense fallback={(<Loading3 />)}>
           <About />
+        </React.Suspense>
+        } />
+
+        <Route path="/contact" element={<React.Suspense fallback={(<Loading3 />)}>
+          <Contact />
         </React.Suspense>
         } />
 

@@ -48,7 +48,7 @@ export const ContactInfo = () => {
             {/* Contact Button */}
             <div className="absolute left-0 right-0 z-3 flex justify-center mt-8">
                 <a
-                    href="tel:+98060712234"
+                    href="https://wa.me/201065378259"
                     className="md:w-3/4 px-5 sm:px-7 py-4 sm:py-4.5 text-center block border border-primary-one rounded-none rounded-tl-[0.625rem] rounded-br-[0.625rem] !bg-primary-one !text-md sm:!text-base font-semibold !font-spartan capitalize tracking-widest text-nowrap whitespace-nowrap !text-white hover:!bg-white hover:!text-primary-one hover:rounded-none hover:rounded-tr-[0.625rem] hover:rounded-bl-[0.625rem] active:!bg-transparent active:!text-primary-one active:rounded-none active:rounded-tr-[0.625rem] active:rounded-bl-[0.625rem] transition-all duration-500 ease-in-out cursor-pointer"
                     aria-label="Schedule an appointment"
                 >

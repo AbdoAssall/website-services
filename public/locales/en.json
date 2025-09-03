@@ -28,6 +28,12 @@
         "description": "Scope Hub is a professional agency offering academic and marketing services for the Arab and Gulf markets, including research, thesis writing, translation, proofreading, data analysis, feasibility studies, branding, social media design, motion graphics, whiteboard videos, and programming."
       },
       "title": "About Us | ScopeHub"
+    },
+    "contact": {
+      "meta": {
+        "description": "Scope Hub is a professional agency offering academic and marketing services for the Arab and Gulf markets, including research, thesis writing, translation, proofreading, data analysis, feasibility studies, branding, social media design, motion graphics, whiteboard videos, and programming."
+      },
+      "title": "Contact | ScopeHub"
     }
   },
   "navbar": {
@@ -45,12 +51,24 @@
     "logoAlt": "Scopehub"
   },
   "contact": {
+    "title": "Contact",
     "phone": "+98 060 712 34",
     "email": "sendmail@creote.com",
     "address": "United States 866 Wilshire, 2nd Street Los Angeles 90024.",
     "contactUs": "Contact Us",
     "question": "Have Questions?",
     "descrip": "Nothing prevents our being to what we like.",
+    "info": {
+      "subTitle": "Contact Info to",
+      "title": "Reach Our Expert Team",
+      "description": "Send a message through given form. If your enquiry is time sensitive please use below contact details.",
+      "addressTitle": "Post Address",
+      "address": "280 Granite Run Drive Suite #200 Lancaster, PA 1760",
+      "enquiriesTitle": "General Enquires",
+      "enquiries": "Phone: +98 060 712 34 & Email: sendmail@qetus.com",
+      "hoursTitle": "Operation Hours",
+      "hours": "Mon-Satday: 09.00 to 07.00 (Sunday: Closed)"
+    },
     "form": {
       "title": "Contact Form",
       "name": "Your Name",
@@ -62,7 +80,37 @@
       "description": "We help you see the world differently, discover opportunities you may never have imagined and overcome challenges that seem impossible.",
       "readMore": "Read More",
       "latestProjects": "Latest Projects",
-      "copyright": " ScopHub. All Rights Reserved."
+      "copyright": " ScopHub. All Rights Reserved.",
+      "placeholder": {
+        "name": "Enter Your Name",
+        "email": "Enter Your Email",
+        "address": "Enter Your Subject",
+        "message": "Enter Your Message"
+      },
+      "validation": {
+        "name": {
+          "required": "Name is required",
+          "minLength": "Name must be at least 3 characters",
+          "maxLength": "Name must not exceed 50 characters",
+          "pattern": "Name can only contain letters and spaces"
+        },
+        "email": {
+          "required": "Email is required",
+          "pattern": "Please enter a valid email address"
+        },
+        "address": {
+          "required": "Address is required",
+          "minLength": "Address must be at least 10 characters"
+        },
+        "message": {
+          "required": "Message is required",
+          "minLength": "Message must be at least 15 characters",
+          "maxLength": "Message must not exceed 1000 characters"
+        }
+      },
+      "submitting": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
     }
   },
   "upper": {

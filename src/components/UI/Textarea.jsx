@@ -1,32 +1,26 @@
 // @ts-nocheck
 /* eslint-disable react/prop-types */
-import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
+import { forwardRef } from 'react';
 
-export default forwardRef(function Textarea(
-    { className = '', isFocused = false, ...props },
+const Textarea = forwardRef(function Textarea(
+    {
+        className = '',
+        ...props
+    },
     ref,
 ) {
-    const localRef = useRef(null);
-
-    useImperativeHandle(ref, () => ({
-        focus: () => localRef.current?.focus(),
-    }));
-
-    useEffect(() => {
-        if (isFocused) {
-            localRef.current?.focus();
-        }
-    }, [isFocused]);
-
     return (
         <textarea
             {...props}
             className={
-                'rounded-md border-gray-300 shadow-sm focus:border-primary-one focus:ring-primary-one' +
+                'w-full px-4 py-3 !text-dark-one border border-gray-200 rounded-md shadow-sm focus:border-primary-one focus:ring-0 focus:ring-primary-one focus:outline-none transition-colors duration-200 font-inter text-base resize-none ' +
                 className
             }
-            ref={localRef}
-        >
-        </textarea>
+            ref={ref}
+        />
     );
 });
+
+Textarea.displayName = 'Textarea';
+
+export default Textarea;

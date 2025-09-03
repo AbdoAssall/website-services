@@ -1,23 +1,36 @@
+// @ts-nocheck
 import PropTypes from "prop-types";
-// import { forwardRef } from 'react';
+import { forwardRef } from "react";
 
-export default function TextInput({
-    type = 'text', placeholder = '', className = '', id = '', name = '', ...props },
-) {
+/**
+ * @param {React.InputHTMLAttributes<HTMLInputElement>} props
+ * @param {React.ForwardedRef<HTMLInputElement>} ref
+ */
+const TextInput = forwardRef(({
+    type = 'text',
+    placeholder = '',
+    className = '',
+    id = '',
+    name,
+    ...props
+}, ref) => {
     return (
         <input
             {...props}
+            ref={ref}
             type={type}
             id={id}
             name={name}
             className={
-                'rounded-md border-gray-300 shadow-sm focus:border-primary-one focus:ring-primary-one ' +
+                'w-full px-4 py-3 !text-dark-one placeholder:!text-dark-two border border-gray-200 rounded-md shadow-sm focus:border-primary-one focus:ring-0 focus:ring-primary-one focus:outline-none transition-colors duration-200 font-inter text-base ' +
                 className
             }
             placeholder={placeholder}
         />
     );
-};
+});
+
+TextInput.displayName = 'TextInput';
 
 TextInput.propTypes = {
     className: PropTypes.string,
@@ -25,4 +38,6 @@ TextInput.propTypes = {
     type: PropTypes.string,
     name: PropTypes.string,
     placeholder: PropTypes.string,
-}
+};
+
+export default TextInput;

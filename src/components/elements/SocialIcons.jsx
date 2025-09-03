@@ -11,9 +11,9 @@ const SocialIcons = ({
     ...props
 }) => {
     const defaultSocialIcons = [
-        { name: 'Facebook', icon: faFacebookF, href: '' },
-        { name: 'Instagram', icon: faInstagram, href: '' },
-        { name: 'WhatsApp', icon: faWhatsapp, href: '' },
+        { name: 'Facebook', icon: faFacebookF, href: 'https://www.facebook.com/share/17GCWtEE8H/' },
+        { name: 'Instagram', icon: faInstagram, href: 'https://www.instagram.com/scopehub10?igsh=MWJwenFxYWIxY3FhMw==' },
+        { name: 'WhatsApp', icon: faWhatsapp, href: 'https://wa.me/201065378259' },
         { name: 'Tiktok', icon: faTiktok, href: '' },
         { name: 'Snapchat', icon: faSnapchat, href: '' }
     ];
