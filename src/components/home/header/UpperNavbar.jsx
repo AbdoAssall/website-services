@@ -10,14 +10,14 @@ export function UpperNavbar() {
         <ul className={`flex flex-col-reverse md:mb-0 md:mt-0 md:flex-row items-center md:gap-6 ${direction === 'rtl' ? '!p-0' : ''}`}>
             <li className={`flex items-center gap-x-2 p-1 ${direction === 'rtl' ? 'flex-row-reverse' : ''}`}>
                 <Phone className="font-normal w-4 h-4 text-white md:text-primary-one" />
-                <a href="#" className="flex items-center">
-                    +98 060 712 34
+                <a href="https://wa.me/201065378259" className="flex items-center">
+                    +20 106 537 8259
                 </a>
             </li>
             <li className={`flex items-center gap-x-2 p-1 ${direction === 'rtl' ? 'flex-row-reverse' : ''}`}>
                 <Mail className="font-normal w-4 h-4 text-white md:text-primary-one" />
-                <a href="#" className="flex items-center">
-                    sendmail@creote.com
+                <a href="mailto:support@scopehub.net" className="flex items-center">
+                    support@scopehub.net
                 </a>
             </li>
         </ul>

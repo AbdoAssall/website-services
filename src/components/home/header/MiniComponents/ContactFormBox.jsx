@@ -1,14 +1,11 @@
 // @ts-nocheck
 import { Link } from "react-router-dom";
-import InputLabel from "../../../UI/InputLabel";
-import TextInput from "../../../UI/TextInput";
-import Textarea from "../../../UI/Textarea";
-import PrimaryButton from "../../../UI/PrimaryButton";
 import { Loading2 as Spinner } from '../../../elements/Loading2';
 import { useLanguage } from '../../../../store/LanguageContext';
 import useProjects from "../../../../hooks/useProjects";
+import ContactForm from "@components/contact/subcomponents/ContactForm";
 
-export const ContactForm = () => {
+export const ContactFormBox = () => {
     const { isRTL, t, direction } = useLanguage();
     const { projects, loading } = useProjects();
 
@@ -77,49 +74,11 @@ export const ContactForm = () => {
                     </div>
 
                     {/* Contact Form */}
-                    <div className={`card-body p-10 lg:w-3/5 drop-shadow-lg rounded-r-xl bg-white ${isRTL ? 'text-right' : 'text-left'}`}>
-                        <form>
-                            <div>
-                                <InputLabel htmlFor="name" className={`uppercase ${isRTL ? '!text-base' : ''}`} value={t('contact.form.name')} />
-                                <TextInput
-                                    id="name"
-                                    name="name"
-                                    className={`block w-full !mt-1 ${isRTL ? 'text-right' : 'text-left'}`}
-                                />
-                            </div>
-                            <div className="mt-3">
-                                <InputLabel htmlFor="email" className={`uppercase ${isRTL ? '!text-base' : ''}`} value={t('contact.form.email')} />
-                                <TextInput
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    className={`block w-full !mt-1 ${isRTL ? 'text-right' : 'text-left'}`}
-                                />
-                            </div>
-                            <div className="mt-3">
-                                <InputLabel htmlFor="address" className={`uppercase ${isRTL ? '!text-base' : ''}`} value={t('contact.form.address')} />
-                                <TextInput
-                                    id="address"
-                                    name="address"
-                                    className={`block w-full !mt-1 ${isRTL ? 'text-right' : 'text-left'}`}
-                                />
-                            </div>
-                            <div className="mt-3">
-                                <InputLabel htmlFor="message" className={`uppercase ${isRTL ? '!text-base' : ''}`} value={t('contact.form.message')} />
-                                <Textarea
-                                    id="message"
-                                    name="message"
-                                    className={`block w-full !mt-2 ${isRTL ? 'text-right' : 'text-left'}`}
-                                >
-                                </Textarea>
-                            </div>
-                        </form>
-                        <div className="grid">
-                            <PrimaryButton type="submit" disabled={false} className="hover:!bg-primary-one/95 ltr:!uppercase">
-                                {t('contact.form.submit')}
-                            </PrimaryButton>
-                        </div>
-                    </div>
+                    <ContactForm
+                        isPlaceholder={false}
+                        icon={false}
+                        className="lg:w-3/5 !rounded-none !rounded-r-xl"
+                    />
                 </div>
 
                 {/* Close Button */}

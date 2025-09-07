@@ -58,7 +58,7 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className="">
-                            <PrimaryLink ariaLabel={`${t('contact.form.readMore')}`}>{t('contactUs.contactUs')}</PrimaryLink>
+                            <PrimaryLink to="/contact" ariaLabel={`${t('contact.form.readMore')}`}>{t('contactUs.contactUs')}</PrimaryLink>
                         </div>
                     </div>
                 </div>

@@ -21,5 +21,15 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, 'src/styles'),
       '@/*': path.resolve(__dirname, 'src/*'),
     }
-  }
+  },
+  // server: {
+  //   proxy: {
+  //     // Any request starting with /api will be routed to the backend server.
+  //     '/api': {
+  //       target: 'http://localhost:3001', // Backend server address
+  //       changeOrigin: true, // Essential to avoid browser errors
+  //       secure: false,
+  //     },
+  //   },
+  // },
 })

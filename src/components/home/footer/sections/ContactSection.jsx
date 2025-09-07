@@ -32,20 +32,20 @@ export const ContactSection = () => {
                             <span className="font-semibold text-white capitalize">
                                 {t('footer.phone')}
                             </span>
-                            <p className="max-w-xs mt-2 !text-sm !font-semibold text-[#FFFFFFD4] leading-relaxed">
-                                +555 5678 12340
-                            </p>
+                            <a href="https://wa.me/201065378259" className="max-w-xs mt-2 !block !text-sm !font-semibold !text-[#FFFFFFD4] leading-relaxed">
+                                +20 106 537 8259
+                            </a>
                         </div>
                     </li>
-                    <li className="flex gap-3">
+                    <li className="flex gap-3 !mt-4">
                         <Mail size={20} className="text-primary-one mt-1 flex-shrink-0" />
                         <div>
                             <span className="font-semibold text-white select-none capitalize">
                                 {t('footer.email')}
                             </span>
-                            <p className="max-w-xs mt-2 !text-sm !font-semibold text-[#FFFFFFD4] leading-relaxed">
-                                support@creote.com
-                            </p>
+                            <a href="mailto:support@scopehub.net" className="max-w-xs mt-2 !block !text-sm !font-semibold !text-[#FFFFFFD4] leading-relaxed">
+                                support@scopehub.net
+                            </a>
                         </div>
                     </li>
                 </ul>

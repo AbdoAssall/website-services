@@ -52,8 +52,8 @@
   },
   "contact": {
     "title": "Contact",
-    "phone": "+98 060 712 34",
-    "email": "sendmail@creote.com",
+    "phone": "+20 106 537 8259",
+    "email": "support@scopehub.net",
     "address": "United States 866 Wilshire, 2nd Street Los Angeles 90024.",
     "contactUs": "Contact Us",
     "question": "Have Questions?",
@@ -65,7 +65,7 @@
       "addressTitle": "Post Address",
       "address": "280 Granite Run Drive Suite #200 Lancaster, PA 1760",
       "enquiriesTitle": "General Enquires",
-      "enquiries": "Phone: +98 060 712 34 & Email: sendmail@qetus.com",
+      "enquiries": "Phone: +20 106 537 8259 & Email: support@scopehub.net",
       "hoursTitle": "Operation Hours",
       "hours": "Mon-Satday: 09.00 to 07.00 (Sunday: Closed)"
     },
@@ -110,7 +110,9 @@
       },
       "submitting": "Sending...",
       "success": "Message sent successfully!",
-      "error": "Failed to send message. Please try again."
+      "error": "Failed to send message. Please try again.",
+      "rateLimitError": "Too many requests. Please try again later",
+      "validationError": "Please check your input and try again."
     }
   },
   "upper": {
