@@ -1,31 +1,34 @@
-import Section from "../../UI/Section";
+import { useMemo } from "react";
 import { useLanguage } from "../../../store/LanguageContext";
+import Section from "../../UI/Section";
 import '../../../styles/scss/choices.css'
+import { motion } from 'framer-motion';
+import { itemVariants } from '@utils/variants/animationVariants';
 
 const Choices = () => {
     const { t } = useLanguage();
 
-    const choicesData = [
-        {
-            image: "assets/images/choices/solution.png"
-        },
-        {
-            image: "assets/images/choices/team-management.png"
-        },
-        {
-            image: "assets/images/choices/email-marketing.png"
-        },
-        {
-            image: "assets/images/choices/24-hours-support.png"
-        },
-    ];
-
-    // Combine static data with translations
-    const choices = choicesData.map((choice, index) => ({
-        ...choice,
-        title: t(`chooseUs.items.${index}.title`),
-        description: t(`chooseUs.items.${index}.description`),
-    }));
+    const choices = useMemo(() => {
+        const choicesData = [
+            {
+                image: "assets/images/choices/solution.png"
+            },
+            {
+                image: "assets/images/choices/team-management.png"
+            },
+            {
+                image: "assets/images/choices/email-marketing.png"
+            },
+            {
+                image: "assets/images/choices/24-hours-support.png"
+            },
+        ];
+        return choicesData.map((choice, index) => ({
+            ...choice,
+            title: t(`chooseUs.items.${index}.title`),
+            description: t(`chooseUs.items.${index}.description`),
+        }));
+    }, [t])
 
     return (
         <Section
@@ -35,7 +38,13 @@ const Choices = () => {
             sectionTitle={t('chooseUs.title')}
             description={t('chooseUs.description')}
         >
-            <div className="choices-container flex justify-center items-center mt-18 md:flex-wrap flex-col md:flex-row gap-x-6 gap-y-24">
+            <motion.div
+                className="choices-container flex justify-center items-center mt-18 md:flex-wrap flex-col md:flex-row gap-x-6 gap-y-24"
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+            >
                 {choices.map((choice, index) => (
                     <div key={index} className="relative grou">
                         <div
@@ -75,7 +84,7 @@ const Choices = () => {
                         </div>
                     </div>
                 ))}
-            </div>
+            </motion.div>
         </Section>
     );
 }

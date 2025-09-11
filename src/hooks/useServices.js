@@ -2,7 +2,7 @@
 import { useEffect, useMemo } from "react";
 import { useLanguage } from "../store/LanguageContext";
 import useServicesStore from "../store/servicesStore";
-import { translateServices } from "@utils/translateServices";
+import { translateServices } from "@utils/translation/translateServices";
 
 const useServices = () => {
     const { language } = useLanguage();

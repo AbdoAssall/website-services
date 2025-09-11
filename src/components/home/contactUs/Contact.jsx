@@ -3,6 +3,8 @@ import PrimaryLink from "../../UI/PrimaryLink";
 import { Briefcase, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from '../../../store/LanguageContext';
+import { motion } from 'framer-motion';
+import { itemVariantsRight } from '@utils/variants/animationVariants';
 
 const Contact = () => {
     const { t, isRTL } = useLanguage();
@@ -31,7 +33,13 @@ const Contact = () => {
                 </div>
                 <div className="divider md:!w-[calc(0.25rem*5)] md:divider-horizontal"></div>
                 {/* Right side with content */}
-                <div className={`md:w-1/2 ${isRTL ? 'text-right' : 'text-start'}`}>
+                <motion.div
+                    className={`md:w-1/2 ${isRTL ? 'text-right' : 'text-start'}`}
+                    variants={itemVariantsRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                >
                     <div className={`flex gap-3 items-center ${isRTL ? 'justify-end' : 'justify-start'}`}>
                         <Briefcase className="text-primary-one w-5 h-5" />
                         <h5 className="section-title">{t('contactUs.title')}</h5>
@@ -61,7 +69,7 @@ const Contact = () => {
                             <PrimaryLink to="/contact" ariaLabel={`${t('contact.form.readMore')}`}>{t('contactUs.contactUs')}</PrimaryLink>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </Section>
     );

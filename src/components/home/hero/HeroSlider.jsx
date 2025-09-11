@@ -6,35 +6,28 @@ import SectionShape from "../../UI/SectionShape";
 import useSwipeNavigation from '../../../hooks/useSwipeNavigation';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../../store/LanguageContext';
+import { textVariants, textVariantsLeft, textVariantsRight } from '@utils/variants/animationVariants';
+import { useMemo } from 'react';
 
 const HeroSlider = () => {
     const { t } = useTranslation();
     const { direction } = useLanguage();
 
-    const slidesData = [
-        {
-            id: 1,
-            bgImage: "assets/images/slider/slider-1.jpg",
-        },
-        {
-            id: 2,
-            bgImage: "assets/images/slider/slider-2.jpg",
-        },
-        {
-            id: 3,
-            bgImage: "assets/images/slider/slider-3.jpg",
-        }
-    ];
-
-    // Combine static data with translations
-    const slides = slidesData.map((slide, index) => ({
-        ...slide,
-        subTitle: t(`hero.slides.${index}.subTitle`),
-        title: t(`hero.slides.${index}.title`),
-        description: t(`hero.slides.${index}.description`),
-        buttonServ: t(`hero.slides.${index}.buttonServ`),
-        buttonPro: t(`hero.slides.${index}.buttonPro`),
-    }));
+    const slides = useMemo(() => {
+        const slidesData = [
+            { id: 1, bgImage: "assets/images/slider/slider-1.jpg" },
+            { id: 2, bgImage: "assets/images/slider/slider-2.jpg" },
+            { id: 3, bgImage: "assets/images/slider/slider-3.jpg" }
+        ];
+        return slidesData.map((slide, index) => ({
+            ...slide,
+            subTitle: t(`hero.slides.${index}.subTitle`),
+            title: t(`hero.slides.${index}.title`),
+            description: t(`hero.slides.${index}.description`),
+            buttonServ: t(`hero.slides.${index}.buttonServ`),
+            buttonPro: t(`hero.slides.${index}.buttonPro`),
+        }));
+    }, [t]);
 
     const {
         currentIndex: currentSlide,
@@ -51,49 +44,6 @@ const HeroSlider = () => {
         autoplayInterval: 7000,
         pauseOnHover: false,
     });
-
-    // Animation variants
-    const textVariants = {
-        hidden: { y: -50, opacity: 0 },
-        show: {
-            y: 0,
-            opacity: 1,
-            transition: { duration: 0.8 }
-        },
-        exit: {
-            y: -50,
-            opacity: 0,
-            transition: { duration: 0.5 }
-        }
-    };
-
-    const textVariantsLeft = {
-        hidden: { x: -50, opacity: 0 },
-        show: {
-            x: 0,
-            opacity: 1,
-            transition: { duration: 0.8 }
-        },
-        exit: {
-            x: -50,
-            opacity: 0,
-            transition: { duration: 0.5 }
-        }
-    };
-
-    const textVariantsRight = {
-        hidden: { x: 50, opacity: 0 },
-        show: {
-            x: 0,
-            opacity: 1,
-            transition: { duration: 0.8 }
-        },
-        exit: {
-            x: 50,
-            opacity: 0,
-            transition: { duration: 0.5 }
-        }
-    };
 
     return (
         <section
@@ -233,22 +183,6 @@ const HeroSlider = () => {
                     />
                 ))}
             </div>
-
-            {/* Wave SVG */}
-            {/* <div className="absolute bottom-0 left-0 right-0 z-20 w-full overflow-hidden">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 1440 100"
-                    preserveAspectRatio="none"
-                    className="w-full h-32"
-                >
-                    <path
-                        d="M0,40 C220,120 380,0 640,60 C880,120 1120,20 1440,80 L1440,100 L0,100 Z"
-                        fill="white"
-                        fillOpacity="1"
-                    />
-                </svg>
-            </div> */}
         </section>
     )
 }

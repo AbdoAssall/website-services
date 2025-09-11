@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import { useMemo } from 'react';
 import Section from "../../UI/Section";
 import { CircleCheck, ArrowRight, CircleX } from 'lucide-react';
-import "/src/styles/scss/plans.css"
+import "@styles/scss/plans.css"
 import { useLanguage } from '../../../store/LanguageContext';
+import { motion } from 'framer-motion';
+import { containerVariants, itemVariants } from '@utils/variants/animationVariants';
 
 const Plans = () => {
     const { direction, isLTR, t } = useLanguage();
-
 
     // Use useMemo to make it reactive to language changes
     const plans = useMemo(() => {
@@ -32,7 +33,7 @@ const Plans = () => {
                 check: index === 0 ? 2 : index === 1 ? 4 : 5, // Basic: 2, Standard: 4, Advanced: 5
             };
         });
-    }, [t]); // Re-compute when 't' function changes (i.e., when language changes)
+    }, [t]);
 
     return (
         <Section
@@ -45,14 +46,21 @@ const Plans = () => {
             sectionTitle={t('plans.title')}
             description={t('plans.description')}
         >
-            <div className="mt-7.5 flex flex-col md:flex-row gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-12 justify-center items-center flex-wrap">
+            <motion.div
+                className="mt-7.5 flex flex-col md:flex-row gap-x-6 gap-y-12 md:gap-x-8 md:gap-y-12 justify-center items-center flex-wrap"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+            >
                 {plans.map((plan, planIndex) => (
-                    <article
+                    <motion.article
                         key={`${plan.name}-${planIndex}`}
                         className={`pricing-plan type-one ${plan.recommended ? 'type-two' : ''} max-w-85`}
                         role="region"
                         aria-labelledby={`plan-${planIndex}-title`}
                         aria-describedby={`plan-${planIndex}-description`}
+                        variants={itemVariants}
                     >
                         {/* SEO-optimized structured data would be added via JSON-LD script tag */}
                         <div
@@ -157,10 +165,9 @@ const Plans = () => {
                                 </Link>
                             </footer>
                         </div>
-                    </article>
+                    </motion.article>
                 ))}
-
-            </div>
+            </motion.div>
         </Section>
     );
 }

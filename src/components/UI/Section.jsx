@@ -4,6 +4,8 @@ import { Briefcase } from "lucide-react";
 import '@styles/scss/section.css'
 import PrimaryLink from "./PrimaryLink";
 import { useLanguage } from '../../store/LanguageContext';
+import { motion } from 'framer-motion';
+import { containerVariants, itemVariants } from '@utils/variants/animationVariants';
 
 export default function Section({
     children,
@@ -26,12 +28,24 @@ export default function Section({
     const { isRTL } = useLanguage();
 
     return (
-        <section {...props} id={id} className={`relative py-12 ${className}`} style={style}>
+        <section
+            {...props}
+            id={id}
+            className={`relative py-12 !overflow-hidden ${className}`}
+            style={style}
+        >
             <div className="flex flex-col mx-auto !px-4 xl:!px-0 max-w-6xl">
                 {contentStyle && (
-                    <div className={`relative flex flex-col ${contentStyle}`}>
+                    <motion.div
+                        className={`relative flex flex-col ${contentStyle}`}
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.2 }}
+                    >
+                        {/* ✨ 1. ANIMATE THE SUBTITLE */}
                         {subTitle && (
-                            <div className="flex gap-3 justify-start">
+                            <motion.div variants={itemVariants} className="flex gap-3 justify-start">
                                 {isSubTitle
                                     ? (
                                         <div className={`small_text_sub capitalize !w-full ${isRTL ? '-right-1' : 'left-0'}`}>
@@ -41,9 +55,10 @@ export default function Section({
                                         <Briefcase className="text-primary-one w-5 h-5" />
                                     )}
                                 <h5 className={`section-title`}>{subTitle}</h5>
-                            </div>
+                            </motion.div>
                         )}
-                        <div className={`${isSubTitle ? 'mt-4.5' : 'mt-1 md:mt-4.5'} flex flex-col text-center w-full ${innerContentStyle}`}>
+                        {/* ✨ 2. ANIMATE THE MAIN HEADER BLOCK */}
+                        <motion.div variants={itemVariants} className={`${isSubTitle ? 'mt-4.5' : 'mt-1 md:mt-4.5'} flex flex-col text-center w-full ${innerContentStyle}`}>
                             {sectionTitle && (
                                 <h2 className={`text-3xl md:text-[3.13rem] font-bold ${isRTL ? 'md:!leading-13' : '!leading-10'} text-primary-two capitalize ${titleStyle}`}>
                                     {sectionTitle}
@@ -59,8 +74,8 @@ export default function Section({
                                     <PrimaryLink to={buttonLink} ariaLabel={button}>{button}</PrimaryLink>
                                 </div>
                             )}
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 )}
                 <div className="mt-3">
                     {children}

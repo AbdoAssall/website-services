@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Section from "../../UI/Section";
 import { useLanguage } from "../../../store/LanguageContext";
+import { useMemo } from "react";
+import { settings as createSliderSettings } from "@utils/settings.jsx";
 
 export const Brands = () => {
     const { direction } = useLanguage();
@@ -15,23 +17,13 @@ export const Brands = () => {
         { name: 'Brand Logo', url: 'assets/images/brand/cecode-brand-5.png' },
     ];
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        centerMode: false,
-        // lazyLoad: true,
+    const settings = useMemo(() => createSliderSettings({
+        direction,
         slidesToShow: 5,
-        slidesToScroll: 1,
-        swipeToSlide: false,
         arrows: false,
-        autoplay: true,
-        speed: 600,
-        autoplaySpeed: 3000,
-        cssEase: "linear",
-        rtl: direction === 'rtl',
-        ltr: direction === 'ltr',
-        accessibility: true,
-        lazyLoad: 'ondemand',
+        overrides: {
+            autoplaySpeed: 3000,
+        },
         responsive: [
             {
                 breakpoint: 1024,
@@ -51,7 +43,7 @@ export const Brands = () => {
                 }
             },
         ]
-    };
+    }), [direction]);
 
     return (
         <Section

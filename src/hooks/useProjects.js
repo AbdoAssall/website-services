@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { useEffect, useMemo } from "react";
 import { useLanguage } from "../store/LanguageContext";
-import { translateProjects } from "../utils/translateProjects";
+import { translateProjects } from "../utils/translation/translateProjects";
 import useProjectsStore from "../store/projectsStore";
 
 const useProjects = () => {

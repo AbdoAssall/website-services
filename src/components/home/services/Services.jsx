@@ -1,19 +1,26 @@
 // @ts-nocheck
+import { useMemo } from "react";
+import { useLanguage } from "../../../store/LanguageContext";
 import Section from "../../UI/Section";
 import SectionShape from "../../UI/SectionShape";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
-import { useLanguage } from "../../../store/LanguageContext";
 import ServicesCard from "@components/UI/ServicesCard";
 import useServices from "@hooks/useServices";
 import { Loading2 as Spinner } from '../../elements/Loading2';
-import { settings } from "@utils/settings";
+import { settings as createSliderSettings } from '@utils/settings.jsx';
+import { motion } from 'framer-motion';
+import { itemVariants } from '@utils/variants/animationVariants';
 
 const Services = () => {
     const { t, direction } = useLanguage();
     const { services, loading } = useServices();
-    const sliderSettings = settings(direction);
+    const sliderSettings = useMemo(() => createSliderSettings({
+        direction,
+        slidesToShow: 3,
+        dots: true,
+    }), [direction]);
 
     return (
         <Section
@@ -27,7 +34,13 @@ const Services = () => {
             sectionTitle={t('services.mainTitle')}
             description={t('services.description')}
         >
-            <div className="w-full relative">
+            <motion.div
+                className="w-full relative"
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+            >
                 <Slider {...sliderSettings}>
                     {loading
                         ? (<Spinner />)
@@ -44,7 +57,7 @@ const Services = () => {
                             ))
                         )}
                 </Slider>
-            </div>
+            </motion.div>
             <SectionShape />
         </Section>
     );

@@ -7,7 +7,7 @@ import TextInput from "../../../UI/TextInput";
 import { Search, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import PropTypes from "prop-types";
-import { containerVariants, searchBarVariants, closeButtonVariants } from "@utils/searchVariants";
+import { containerVariants, searchBarVariants, closeButtonVariants } from "@utils/variants/searchVariants";
 import { Link, useNavigate } from "react-router-dom";
 
 export const SearchBar = function ({ openSearchBar }) {

@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { ArrowRight, ArrowUp, ArrowLeft, Briefcase } from 'lucide-react';
 import SectionShape2 from "../../UI/SectionShape2";
 import { useLanguage } from '../../../store/LanguageContext';
-import "/src/styles/scss/questions.css"
+import "@styles/scss/questions.css"
+import { motion } from 'framer-motion';
+import { itemVariantsLeft, itemVariantsRight } from '@utils/variants/animationVariants';
 
 const Questions = () => {
     const { t, direction, isRTL } = useLanguage();
@@ -12,18 +14,14 @@ const Questions = () => {
         setActiveQuestion(activeQuestion === index ? null : index);
     };
 
-    const questionsData = [
-        { id: 1 },
-        { id: 2 },
-        { id: 3 },
-        { id: 4 }
-    ];
-
-    const questions = questionsData.map((question, index) => ({
-        ...question,
-        question: t(`faq.items.${index}.question`),
-        answer: t(`faq.items.${index}.answer`)
-    }));
+    const questions = useMemo(() => {
+        const questionsData = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
+        return questionsData.map((question, index) => ({
+            ...question,
+            question: t(`faq.items.${index}.question`),
+            answer: t(`faq.items.${index}.answer`)
+        }));
+    }, [t]);
 
     return (
         <section
@@ -32,7 +30,13 @@ const Questions = () => {
         >
             <div dir={direction} id="faq" className="flex flex-col md:flex-row mx-auto relative">
                 {/* Right side with content */}
-                <div className="md:w-1/2">
+                <motion.div
+                    className="md:w-1/2"
+                    variants={isRTL ? itemVariantsRight : itemVariantsLeft} // Select variant based on direction
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                >
                     <div className={`py-27 px-4 sm:px-25 relative w-full flex flex-col content-start text-start`}>
                         <div className="mb-5 w-full">
                             <div className="flex gap-3 items-center justify-start">
@@ -85,7 +89,7 @@ const Questions = () => {
                             ))}
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 {/* Left side with image */}
                 <div className="md:w-1/2">
                     <div className="faq-image relative z-1 w-full h-full flex flex-wrap content-start"></div>

@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types';
 import { MoveRight } from 'lucide-react';
+import { useMemo } from 'react';
 
 /**
  * @param {{ t: (key: string) => string, isRTL: boolean, Link: React.ComponentType<any> }} props
 */
 
 export const EssentialsSection = ({ t, isRTL, Link }) => {
-    const essentialLinks = Array.from({ length: 7 }, (_, i) => ({
-        title: t(`footer.essentialLinks.${i}.title`),
-        path: t(`footer.essentialLinks.${i}.path`),
-    }));
+    const essentialLinks = useMemo(() => {
+        return Array.from({ length: 7 }, (_, i) => ({
+            title: t(`footer.essentialLinks.${i}.title`),
+            path: t(`footer.essentialLinks.${i}.path`),
+        }));
+    }, [t]);
 
     return (
         <div className="md:w-[17.06%] flex">

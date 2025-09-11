@@ -10,6 +10,8 @@ import { ArrowRight, CircleFadingPlus } from 'lucide-react';
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { Loading2 as Spinner } from '../../elements/Loading2';
+import { motion } from 'framer-motion';
+import { itemVariants } from '@utils/variants/animationVariants';
 
 const Projects = () => {
     const { t, direction } = useLanguage();
@@ -69,7 +71,13 @@ const Projects = () => {
             button={t("projects.moreProjects")}
             buttonLink="/projects"
         >
-            <div className="mt-9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
+            <motion.div
+                className="mt-9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7"
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+            >
                 {loading ? (
                     <Spinner />
                 ) : (
@@ -162,7 +170,7 @@ const Projects = () => {
                         );
                     })
                 )}
-            </div>
+            </motion.div>
             <SectionShape direction="top" />
             <SectionShape />
         </Section>

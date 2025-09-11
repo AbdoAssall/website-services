@@ -2,7 +2,7 @@
 import { useEffect, useMemo } from "react";
 import { useLanguage } from "../store/LanguageContext";
 import useTeamsStore from "../store/TeamsStore";
-import { teamMembers } from "@utils/teamMembers ";
+import { teamMembers } from "@utils/translation/teamMembers ";
 
 const useTeams = () => {
     const { language } = useLanguage();
