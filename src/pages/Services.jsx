@@ -3,12 +3,9 @@ import MetaTags from "../components/MetaTags";
 import PageHeader from "../components/UI/PageHeader";
 import ServicesSection from "../components/services/ServicesSection";
 import { useLanguage } from "../store/LanguageContext";
-// import { Loading2 } from "../components/elements/Loading2";
-// import useProjects from "../hooks/useProjects";
 
 const Services = () => {
     const { t } = useLanguage();
-    // const { projects, loading } = useProjects();
 
     return (
         <PageLayout>
@@ -28,10 +25,6 @@ const Services = () => {
 
             {/* Services Section */}
             <ServicesSection />
-            {/* {loading && !projects.length
-                ? (<Loading2 />)
-                : (<ProjectsTabs />)
-            } */}
         </PageLayout>
     );
 };

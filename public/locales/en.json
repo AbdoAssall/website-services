@@ -424,5 +424,13 @@
     "goToPage": "Go to page",
     "showing": "Showing {start} to {end} of {total} entries",
     "noEntries": "No entries found"
+  },
+  "error": {
+    "404": {
+      "oops": "Oops...",
+      "description1": "We are not being able to find the page you are looking for.",
+      "description2": "The page you are looking for was moved, removed, renamed or never existed.",
+      "backToHome": "Back to Home"
+    }
   }
 }

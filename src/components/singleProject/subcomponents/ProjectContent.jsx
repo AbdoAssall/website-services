@@ -31,7 +31,7 @@ const ProjectContent = ({ project }) => {
                 <h1 className={`text-3xl lg:text-4xl xl:text-5xl font-bold text-heading-dark mb-4 ${isRTL ? '!leading-12' : '!leading-10'}`}>
                     {project.name}
                 </h1>
-                <div className="flex flex-wrap items-center gap-4 text-sm text-dark-two">
+                <div className="flex flex-wrap items-center gap-4 mt-2 text-sm text-dark-two">
                     <span className="flex items-center">
                         <span className={`inline-block w-2 h-2 bg-primary-one rounded-full ${isRTL ? 'ml-2' : 'mr-2'}`}></span>
                         {project.category}

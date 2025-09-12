@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/elements/ScrollToTop";
 import { Loading } from "./components/elements/Loading";
 import { Loading3 } from "./components/elements/Loading3";
+import NotFoundPage from "@pages/error/404";
+
 const Home = React.lazy(() => import("./pages/Index"));
 const Projects = React.lazy(() => import("./pages/Projects"));
 const Project = React.lazy(() => import("./pages/SingleProject"));
@@ -16,6 +18,8 @@ function App() {
     <Router>
       <ScrollToTop />
       <Routes>
+        <Route path="*" element={<NotFoundPage />} />
+
         <Route path="/" element={<React.Suspense fallback={(<Loading />)}>
           <Home />
         </React.Suspense>
