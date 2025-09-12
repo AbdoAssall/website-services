@@ -65,7 +65,8 @@
       "addressTitle": "Post Address",
       "address": "280 Granite Run Drive Suite #200 Lancaster, PA 1760",
       "enquiriesTitle": "General Enquires",
-      "enquiries": "Phone: +20 106 537 8259 & Email: support@scopehub.net",
+      "phone": "Phone:",
+      "email": "Email:",
       "hoursTitle": "Operation Hours",
       "hours": "Mon-Satday: 09.00 to 07.00 (Sunday: Closed)"
     },

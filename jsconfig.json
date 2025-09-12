@@ -20,6 +20,7 @@
       "@store/*": ["store/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
+      "@config/*": ["config/*"],
       "@/*": ["*"],
       "@": ["node_modules/*"]
     }

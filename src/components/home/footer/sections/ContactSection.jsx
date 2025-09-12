@@ -32,7 +32,7 @@ export const ContactSection = () => {
                             <span className="font-semibold text-white capitalize">
                                 {t('footer.phone')}
                             </span>
-                            <a href="https://wa.me/201065378259" className="max-w-xs mt-2 !block !text-sm !font-semibold !text-[#FFFFFFD4] leading-relaxed">
+                            <a dir="ltr" href="https://wa.me/201065378259" className="max-w-xs mt-2 !block !text-sm !font-semibold !text-[#FFFFFFD4] leading-relaxed">
                                 +20 106 537 8259
                             </a>
                         </div>

@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import SecondaryLink from '../../UI/SecondaryLink';
 import { motion, AnimatePresence } from 'framer-motion'
 import SectionShape from "../../UI/SectionShape";
-import useSwipeNavigation from '../../../hooks/useSwipeNavigation';
+import useSwipeNavigation from '../../../hooks/slider/useSwipeNavigation';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../../store/LanguageContext';
 import { textVariants, textVariantsLeft, textVariantsRight } from '@utils/variants/animationVariants';

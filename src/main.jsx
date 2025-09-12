@@ -8,6 +8,7 @@ import { LanguageProvider } from './store/LanguageContext';
 import { HelmetProvider } from 'react-helmet-async'
 import { ToastContainer, Bounce } from 'react-toastify';
 
+// @ts-ignore
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>

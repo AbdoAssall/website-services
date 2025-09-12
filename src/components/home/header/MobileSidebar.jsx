@@ -11,7 +11,7 @@ import {
 import { Search, X } from "lucide-react";
 import TextInput from "../../UI/TextInput";
 import { useLanguage } from "../../../store/LanguageContext";
-import { useNavigation } from "../../../hooks/useNavigation";
+import { useNavigation } from "../../../hooks/scrollToSection/useNavigation";
 import { MobileAccordion } from "./MiniComponents/MobileAccordion";
 
 export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {

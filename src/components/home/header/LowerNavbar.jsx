@@ -1,120 +1,54 @@
 // @ts-nocheck
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "@material-tailwind/react";
 import { MobileSidebar } from "./MobileSidebar";
 import { Menu, Search } from "lucide-react";
-// import { motion, AnimatePresence } from "framer-motion";
 import { ContactFormBox } from "./MiniComponents/ContactFormBox";
 import { LanguageDropdown } from "./MiniComponents/LanguageDropdown";
 import { useLanguage } from "../../../store/LanguageContext";
 import { SearchBar } from "./MiniComponents/SearchBar";
 import { NavList } from "./MiniComponents/NavList";
 import useServices from "@hooks/useServices";
+import { useSticky } from "@hooks/sticky/useSticky";
+import { useBreakpointEffect } from "@hooks/resize/useBreakpointEffect";
+import { getNavItems } from "@config/navConfig";
 
 export function LowerNavbar() {
   const { t } = useLanguage();
   const { services } = useServices();
+  const { targetRef, isSticky, scrollDirection } = useSticky();
+
   const [openNav, setOpenNav] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
-  const [isScroll, setIsScroll] = useState(false);
-  const isMountedRef = useRef(true);
-  const lastScrollY = useRef(0);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 960) {
-        setOpenNav(false);
-      }
-    };
+  useBreakpointEffect(960, () => setOpenNav(false));
 
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      // isMountedRef.current = false;
-    };
-  }, []);
-
-  // Optimized scroll handler with useCallback to prevent recreation
-  const handleScroll = useCallback(() => {
-    // if (!isMountedRef.current) return;
-
-    const currentScrollY = window.scrollY;
-    const scrolled = currentScrollY > 50;
-    setIsScroll((prevIsScroll) => {
-      if (scrolled !== prevIsScroll) {
-        return scrolled;
-      }
-      return prevIsScroll;
-    });
-
-    // Handle navbar visibility based on scroll direction
-
-    lastScrollY.current = currentScrollY;
-  }, []);
-
-  // Use requestAnimationFrame for smooth scroll handling
-  const scrollTimeoutRef = useRef();
-  const rafRef = useRef();
-
-  useEffect(() => {
-    const throttledScrollHandler = () => {
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
-
-      if (rafRef.current) {
-        cancelAnimationFrame(rafRef.current);
-      }
-
-      rafRef.current = requestAnimationFrame(() => {
-        scrollTimeoutRef.current = setTimeout(handleScroll, 16);
-      });
-    };
-
-    window.addEventListener("scroll", throttledScrollHandler, {
-      passive: true,
-    });
-
-    return () => {
-      window.removeEventListener("scroll", throttledScrollHandler);
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
-      if (rafRef.current) {
-        cancelAnimationFrame(rafRef.current);
-      }
-      isMountedRef.current = false;
-    };
-  }, [handleScroll]);
-
-  // Navigation items
-  const navItems = [
-    { id: 1, title: t("navbar.services"), to: "/services", isScrollLink: false, hasSubmenu: true },
-    { id: 2, title: t("navbar.articles"), to: "#", isScrollLink: false, hasSubmenu: false },
-    { id: 3, title: t("navbar.projects"), to: "/projects", isScrollLink: false, hasSubmenu: false },
-    { id: 4, title: t("navbar.prices"), to: "#plans", isScrollLink: true, hasSubmenu: false },
-    { id: 5, title: t("navbar.contactUs"), to: "/contact", isScrollLink: false, hasSubmenu: false },
-  ];
+  // Get navigation data from our config file
+  const navItems = getNavItems(t);
 
   const openSearchBar = useCallback(() => {
     setOpenSearch((prev) => !prev);
   }, []);
 
+  // Determine if the navbar should be visible
+  // const isNavbarVisible = isSticky && scrollDirection === 'up';
+
   return (
     <>
-      <div className={`w-full z-98 ${isScroll ? "fixed top-0 left-0" : ""}`}>
+      <div ref={targetRef} style={{ height: '1px', position: 'relative', top: '0' }} />
+
+      <div
+        className={`w-full z-98 transition-transform duration-500 ease-in-out ${isSticky ? 'fixed top-0 left-0' : 'relative'
+          }`}
+        style={{
+          transform: isSticky ? (scrollDirection === 'down' ? 'translateY(-100%)' : 'translateY(0)') : 'translateY(0)',
+        }}
+      >
         <Navbar
           dir="ltr"
-          className={`header-lower px-4 py-2 lg:px-4 lg:py-4 h-max lg:h-[5.5rem] max-w-ful rounded-none border-0 bg-white ${isScroll
-            ? "shadow-lg backdrop-blur-sm bg-white/95"
-            : "bg-opacity-100"
+          className={`header-lower px-4 py-2 lg:px-4 lg:py-4 h-max lg:h-[5.5rem] max-w-ful rounded-none border-0 bg-white ${isSticky ? "shadow-lg backdrop-blur-sm bg-white/95" : "bg-opacity-100"
             }`}
-          style={{
-            // transform: `translateY(${isScroll ? '0%' : '-100%'})`,
-            transition: "all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-            // opacity: isScroll ? 1 : 0,
-          }}
         >
           <div className="flex items-center justify-between text-dark-one h-full px-2 md:px8 lg:px-0 mx-auto max-w-[72.125rem]">
             {/* Logo */}

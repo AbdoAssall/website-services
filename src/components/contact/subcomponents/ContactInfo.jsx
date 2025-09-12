@@ -46,7 +46,8 @@ const ContactInfo = () => {
                             {t('contact.info.enquiriesTitle')}
                         </h4>
                         <p className="text-dark-one text-base">
-                            {t('contact.info.enquiries')}
+                            {t('contact.info.phone')} <span dir="ltr">+20 106 537 8259</span> | &nbsp;
+                            {t('contact.info.email')} <span>support@scopehub.net</span>
                         </p>
                     </div>
                 </div>

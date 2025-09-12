@@ -2,7 +2,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-import { useNavigation } from "@hooks/useNavigation";
+import { useNavigation } from "@hooks/scrollToSection/useNavigation";
 
 const Dropdown = ({ title, children, to = '#', item, ...props }) => {
     const {

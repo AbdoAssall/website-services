@@ -10,7 +10,7 @@ import {
 } from "@material-tailwind/react";
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "../../../../store/LanguageContext";
-import { useNavigation } from "@hooks/useNavigation";
+import { useNavigation } from "@hooks/scrollToSection/useNavigation";
 
 export function MobileAccordion({
     accordionId,

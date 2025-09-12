@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import PropTypes from "prop-types";
 import Dropdown from "../../../UI/Dropdown";
 import { useLanguage } from "../../../../store/LanguageContext";
-import { useNavigation } from "../../../../hooks/useNavigation";
+import { useNavigation } from "../../../../hooks/scrollToSection/useNavigation";
 
 export function NavList({ navItems, menuServices }) {
     const { direction, t, isRTL } = useLanguage();

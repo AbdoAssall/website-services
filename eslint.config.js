@@ -31,6 +31,7 @@ export default [
             ['@pages', './src/pages'],
             ['@store', './src/store'],
             ['@styles', './src/styles'],
+            ['@config', './src/config'],
             ['@', './node_modules'],
             ['@tailwindcss', './node_modules/tailwindcss'],
             ['@/*', ['*']],

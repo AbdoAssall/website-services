@@ -3,7 +3,7 @@ import { Lightbulb, Users, Globe } from 'lucide-react';
 import Section from "@components/UI/Section";
 import SectionShape from '@components/UI/SectionShape';
 import { useLanguage } from '@store/LanguageContext';
-import useCountOnScroll from '@hooks/useCountOnScroll';
+import useCountOnScroll from '@hooks/counter/useCountOnScroll';
 
 const CounterSection = () => {
     const { t } = useLanguage();

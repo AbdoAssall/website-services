@@ -10,7 +10,7 @@ export function UpperNavbar() {
         <ul className={`flex flex-col-reverse md:mb-0 md:mt-0 md:flex-row items-center md:gap-6 ${direction === 'rtl' ? '!p-0' : ''}`}>
             <li className={`flex items-center gap-x-2 p-1 ${direction === 'rtl' ? 'flex-row-reverse' : ''}`}>
                 <Phone className="font-normal w-4 h-4 text-white md:text-primary-one" />
-                <a href="https://wa.me/201065378259" className="flex items-center">
+                <a dir="ltr" href="https://wa.me/201065378259" className="flex items-center">
                     +20 106 537 8259
                 </a>
             </li>
