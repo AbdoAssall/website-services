@@ -3,14 +3,14 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import { List, ListItem, Drawer, Card } from "@material-tailwind/react";
-import { Search, X } from "lucide-react";
+import { X } from "lucide-react";
 import { useLanguage } from "../../../store/LanguageContext";
 import { useNavigation } from "../../../hooks/scrollToSection/useNavigation";
 import { MobileAccordion } from "./MiniComponents/MobileAccordion";
 import { SearchBarInput } from "@components/common/SearchBarInput";
 
 export function MobileSidebar({ openNav, setOpenNav, openSearchBar, menuServices, navItems }) {
-  const { direction, t } = useLanguage();
+  const { t } = useLanguage();
   const [open, setOpen] = useState(0);
 
   const {

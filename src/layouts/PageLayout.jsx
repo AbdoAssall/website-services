@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { useLanguage } from "../store/LanguageContext";
 import ScrollProgressCircle from "../components/elements/ScrollProgressCircle";
 import Footer from "../components/home/footer/Footer";
+import WhatsAppWidget from "@components/common/WhatsAppWidget";
 
 /**
  * @param {{ children: React.ReactNode }} props
@@ -18,6 +19,7 @@ export function PageLayout({ children }) {
             <main className="max-w-full">{children}</main> {/* px-2 md:px-4 */}
             <Footer />
             <ScrollProgressCircle />
+            <WhatsAppWidget />
         </div>
     );
 }

@@ -39,7 +39,7 @@ const Services = () => {
                 variants={itemVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.1 }}
+                viewport={{ once: true, amount: 0.05 }}
             >
                 <Slider {...sliderSettings}>
                     {loading

@@ -43,7 +43,7 @@ const Choices = () => {
                 variants={itemVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.1 }}
+                viewport={{ once: true, amount: 0.05 }}
             >
                 {choices.map((choice, index) => (
                     <div key={index} className="relative grou">

@@ -66,7 +66,7 @@ const Testimonial = () => {
                 variants={itemVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.1 }}
+                viewport={{ once: true, amount: 0.05 }}
             >
                 {testimonials?.length > 0 ? (
                     <Slider {...settings} role="region" aria-label={t('testimonials.sectionTitle')} aria-hidden="false">
