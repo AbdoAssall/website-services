@@ -136,6 +136,7 @@ export function LowerNavbar() {
       <MobileSidebar
         openNav={openNav}
         setOpenNav={setOpenNav}
+        openSearchBar={openSearchBar}
         menuServices={services}
         navItems={navItems}
       />

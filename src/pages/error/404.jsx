@@ -33,7 +33,7 @@ const NotFoundPage = () => {
                         </p>
 
                         <div className="max-w-full mx-auto md:mx-0 mb-6">
-                            <SearchBarInput openSearchBar={openSearchBar} />
+                            <SearchBarInput openSearchBar={openSearchBar} styleSearchBtn="!p-2" />
                         </div>
 
                         {/* Back to Home Button */}

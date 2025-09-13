@@ -22,7 +22,7 @@ export const settings = ({
     NextArrow,
     PrevArrow,
     t,
-    responsive = [],
+    responsive = null,
     overrides = {}
 }) => {
     const baseSettings = {
@@ -48,7 +48,7 @@ export const settings = ({
     };
 
     // Use default responsive settings if no custom ones are provided.
-    const responsiveSettings = responsive || [
+    const responsiveSettings = [
         {
             breakpoint: 1024,
             settings: {
@@ -70,7 +70,7 @@ export const settings = ({
 
     const finalSettings = {
         ...baseSettings,
-        responsive: responsiveSettings,
+        responsive: responsive || responsiveSettings,
         ...overrides, // Apply any custom overrides
     };
 

@@ -2,21 +2,17 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
-import {
-  List,
-  ListItem,
-  Drawer,
-  Card,
-} from "@material-tailwind/react";
+import { List, ListItem, Drawer, Card } from "@material-tailwind/react";
 import { Search, X } from "lucide-react";
-import TextInput from "../../UI/TextInput";
 import { useLanguage } from "../../../store/LanguageContext";
 import { useNavigation } from "../../../hooks/scrollToSection/useNavigation";
 import { MobileAccordion } from "./MiniComponents/MobileAccordion";
+import { SearchBarInput } from "@components/common/SearchBarInput";
 
-export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {
+export function MobileSidebar({ openNav, setOpenNav, openSearchBar, menuServices, navItems }) {
   const { direction, t } = useLanguage();
   const [open, setOpen] = useState(0);
+
   const {
     isNavItemActive,
     handleNavClick,
@@ -62,11 +58,9 @@ export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {
               <X className="h-7 w-7 mx-auto text-gray-600" />
             </button>
           </div>
+          {/* Search Input */}
           <div className="p-2 relative text-center">
-            <TextInput type="search" className="relative" placeholder={t('navbar.search')} />
-            <span className={`inline-block bg-primary-one p-2 rounded-md absolute cursor-pointer ${direction === 'rtl' ? ' left-5' : 'right-5'} top-4.5`}>
-              <Search className="h-5 w-5 text-white" />
-            </span>
+            <SearchBarInput openSearchBar={openSearchBar} styleSearchBtn="!bg-primary-one !p-2" />
           </div>
           <List className="text-dark-one font-medium">
             <NavLink
@@ -130,6 +124,7 @@ export function MobileSidebar({ openNav, setOpenNav, menuServices, navItems }) {
 MobileSidebar.propTypes = {
   openNav: PropTypes.bool.isRequired,
   setOpenNav: PropTypes.func.isRequired,
+  openSearchBar: PropTypes.func.isRequired,
   menuServices: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,

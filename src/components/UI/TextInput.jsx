@@ -22,7 +22,7 @@ const TextInput = forwardRef(({
             id={id}
             name={name}
             className={
-                'w-full px-4 py-3 !text-dark-one placeholder:!text-dark-two border border-gray-200 rounded-md shadow-sm focus:border-primary-one focus:ring-0 focus:ring-primary-one focus:outline-none transition-colors duration-200 font-inter text-base ' +
+                'inline-block w-full px-4 py-2 !text-dark-one bg-white placeholder:!text-dark-two border border-gray-200 rounded-md shadow-sm focus:border-primary-one focus:ring-0 focus:ring-primary-one focus:outline-none transition-colors duration-200 font-inter text-base ' +
                 className
             }
             placeholder={placeholder}

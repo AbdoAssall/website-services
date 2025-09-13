@@ -9,7 +9,7 @@ import TextInput from "../UI/TextInput";
 import { Search, X } from "lucide-react";
 import { motion } from "framer-motion";
 
-export const SearchBarInput = function ({ openSearchBar }) {
+export const SearchBarInput = function ({ openSearchBar, styleSearchBtn }) {
     const { direction, t } = useLanguage();
     const navigate = useNavigate();
 
@@ -81,7 +81,7 @@ export const SearchBarInput = function ({ openSearchBar }) {
                 onChange={(e) => setQuery(e.target.value)} // <-- 3. Update the query status only
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setTimeout(() => setIsFocused(false), 200)}
-                className="inline-block !px-5 w-full !m-0 bg-white !text-dark-one"
+                className="!px-5 !m-0"
                 placeholder={t('navbar.search')}
                 dir={direction}
             />
@@ -102,7 +102,7 @@ export const SearchBarInput = function ({ openSearchBar }) {
             <button
                 type="submit"
                 aria-label="search"
-                className={`inline-block bg-primary-two p-3 rounded-md absolute top-1/2 -translate-y-1/2 ${direction === 'ltr' ? 'right-4' : 'left-4'}`}
+                className={`inline-block bg-primary-two p-3 rounded-md ${styleSearchBtn} absolute top-1/2 -translate-y-1/2 ${direction === 'ltr' ? 'right-4' : 'left-4'}`}
             >
                 <Search strokeWidth={1.5} className="h-5 w-5 text-white" />
             </button>
@@ -168,4 +168,5 @@ export const SearchBarInput = function ({ openSearchBar }) {
 
 SearchBarInput.propTypes = {
     openSearchBar: PropTypes.func.isRequired,
+    styleSearchBtn: PropTypes.string,
 }
