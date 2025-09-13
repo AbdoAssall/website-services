@@ -38,11 +38,11 @@ export const settings = ({
         speed: 600,
         autoplaySpeed: 5000,
         cssEase: "linear",
-        pauseOnHover: true,
+        pauseOnHover: false,
         pauseOnFocus: true,
         accessibility: true,
         adaptiveHeight: false,
-        lazyLoad: 'ondemand',
+        // lazyLoad: 'ondemand',
         rtl: direction === 'rtl',
         ltr: direction === 'ltr',
     };

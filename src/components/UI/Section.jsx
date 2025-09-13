@@ -34,10 +34,10 @@ export default function Section({
             className={`relative py-12 !overflow-hidden ${className}`}
             style={style}
         >
-            <div className="flex flex-col mx-auto !px-4 xl:!px-0 max-w-6xl !overflow-hidden">
+            <div className="flex flex-col mx-auto !px-4 xl:!px-0 max-w-6xl">
                 {contentStyle && (
                     <motion.div
-                        className={`relative flex flex-col !overflow-hidden ${contentStyle}`}
+                        className={`relative flex flex-col ${contentStyle}`}
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"

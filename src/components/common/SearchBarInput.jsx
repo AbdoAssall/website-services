@@ -46,7 +46,9 @@ export const SearchBarInput = function ({ openSearchBar, styleSearchBtn }) {
 
     // --- Auto-focus on component mount ---
     useEffect(() => {
-        inputRef.current?.focus();
+        if (window.innerWidth >= 1024) {
+            inputRef.current?.focus();
+        }
     }, []);
 
     // --- Event Handlers ---
