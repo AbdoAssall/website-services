@@ -34,6 +34,9 @@
         "description": "Scope Hub is a professional agency offering academic and marketing services for the Arab and Gulf markets, including research, thesis writing, translation, proofreading, data analysis, feasibility studies, branding, social media design, motion graphics, whiteboard videos, and programming."
       },
       "title": "Contact | ScopeHub"
+    },
+    "payment": {
+      "title": "Payment Page"
     }
   },
   "navbar": {
@@ -373,6 +376,33 @@
       "featureNotIncluded": "Feature not included",
       "selectPlan": "Select this plan"
     }
+  },
+  "payment": {
+    "title": "Complete Your Purchase",
+    "planDetails": "Plan Details",
+    "selectPayment": "Select Payment Method",
+    "paypal": "PayPal",
+    "payoneer": "Payoneer",
+    "bankTransfer": "Bank Transfer",
+    "vodafoneCash": "Vodafone Cash",
+    "instaPay": "InstaPay",
+    "proceedToWhatsApp": "Proceed via WhatsApp",
+    "backToPlans": "Back to Plans",
+    "recommended": "Recommended",
+    "features": "Features Included",
+    "price": "Price",
+    "period": "Year",
+    "total": "Total Amount",
+    "selectedMethod": "Selected Payment Method",
+    "egyptianOnly": "For Egyptian customers only",
+    "whatsappMessage": "Complete your order via WhatsApp chat with our support team",
+    "bankDescription": "Direct bank to bank transfer",
+    "paypalDescription": "Secure online payments worldwide",
+    "payoneerDescription": "International payment solution",
+    "whatsappGreeting": "Hello! I would like to purchase the",
+    "whatsappPlanInfo": "plan for",
+    "whatsappPaymentMethod": "using",
+    "whatsappAssistance": "Please help me complete this purchase."
   },
   "footer": {
     "description": "With over 20 years of experience, we guarantee you'll always get the best guidance. We serve our clients at all levels of their organizations...",

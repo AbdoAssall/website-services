@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "price": 22,
+        "check": 2,
+        "recommended": false,
+        "en": {
+            "tag": "Recommended",
+            "name": "Basic Pack",
+            "description": "Power of choice is untrammeled and do what we like best.",
+            "features": [
+                "4-5 Weeks from finish",
+                "Organisational Strategy",
+                "20 Days of support",
+                "Data sprint Results revision",
+                "Premium customer support"
+            ]
+        },
+        "ar": {
+            "tag": "موصى به",
+            "name": "الباقة الأساسية",
+            "description": "قوة الاختيار غير مقيدة ونفعل ما نحب بشكل أفضل.",
+            "features": [
+                "4-5 أسابيع من الانتهاء",
+                "الاستراتيجية التنظيمية",
+                "20 يوم من الدعم",
+                "مراجعة نتائج البيانات",
+                "دعم العملاء المتميز"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "price": 59,
+        "check": 4,
+        "recommended": true,
+        "en": {
+            "tag": "Most Recommended",
+            "name": "Standard Pack",
+            "description": "Matters to principle of selection our pleasures to secure.",
+            "features": [
+                "4-5 Weeks from finish",
+                "Organisational Strategy",
+                "20 Days of support",
+                "Data sprint Results revision",
+                "Premium customer support"
+            ]
+        },
+        "ar": {
+            "tag": "الأكثر توصية",
+            "name": "الباقة المعيارية",
+            "description": "الأمور التي تهم مبدأ اختيار ملذاتنا لتأمينها.",
+            "features": [
+                "4-5 أسابيع من الانتهاء",
+                "الاستراتيجية التنظيمية",
+                "20 يوم من الدعم",
+                "مراجعة نتائج البيانات",
+                "دعم العملاء المتميز"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "price": 99,
+        "check": 5,
+        "recommended": false,
+        "en": {
+            "tag": "Popular Pack",
+            "name": "Advanced Pack",
+            "description": "These cases are perfectly simple & easy to distinguish.",
+            "features": [
+                "4-5 Weeks from finish",
+                "Organisational Strategy",
+                "20 Days of support",
+                "Data sprint Results revision",
+                "Premium customer support"
+            ]
+        },
+        "ar": {
+            "tag": "الباقة الشعبية",
+            "name": "الباقة المتقدمة",
+            "description": "هذه الحالات بسيطة للغاية وسهلة التمييز.",
+            "features": [
+                "4-5 أسابيع من الانتهاء",
+                "الاستراتيجية التنظيمية",
+                "20 يوم من الدعم",
+                "مراجعة نتائج البيانات",
+                "دعم العملاء المتميز"
+            ]
+        }
+    }
+]

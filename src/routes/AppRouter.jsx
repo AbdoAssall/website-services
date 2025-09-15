@@ -4,6 +4,7 @@ import ScrollToTop from "../components/elements/ScrollToTop";
 import { Loading } from "../components/elements/Loading";
 import { Loading3 } from "../components/elements/Loading3";
 import NotFoundPage from "@pages/error/404";
+import PaymentPage from "@pages/Payment";
 
 const Home = React.lazy(() => import("../pages/Index"));
 const Projects = React.lazy(() => import("../pages/Projects"));
@@ -58,6 +59,8 @@ function AppRouter() {
                     <Contact />
                 </React.Suspense>
                 } />
+
+                <Route path="/payment/:planId" element={<PaymentPage />} />
 
             </Routes>
         </Router >

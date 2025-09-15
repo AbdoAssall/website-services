@@ -31,7 +31,7 @@ export default function Section({
         <section
             {...props}
             id={id}
-            className={`relative py-12 !overflow-hidden ${className}`}
+            className={`relative py-12 ${className}`}
             style={style}
         >
             <div className="flex flex-col mx-auto !px-4 xl:!px-0 max-w-6xl">
