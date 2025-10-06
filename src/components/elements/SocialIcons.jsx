@@ -48,6 +48,7 @@ const SocialIcons = ({
                             href={social.href}
                             className={iconClassName}
                             title={showTitle ? social.name : ''}
+                            target="_blank"
                             aria-label={social.name}
                             {...props}
                         >

@@ -60,7 +60,7 @@ export default function Section({
                         {/* ✨ 2. ANIMATE THE MAIN HEADER BLOCK */}
                         <motion.div variants={itemVariants} className={`${isSubTitle ? 'mt-4.5' : 'mt-1 md:mt-4.5'} flex flex-col text-center w-full ${innerContentStyle}`}>
                             {sectionTitle && (
-                                <h2 className={`text-3xl md:text-[3.13rem] font-bold ${isRTL ? 'md:!leading-13' : '!leading-10'} text-primary-two capitalize ${titleStyle}`}>
+                                <h2 className={`text-3xl md:text-[3.13rem] !font-semibold ${isRTL ? 'md:!leading-13' : '!leading-12'} text-primary-two capitalize ${titleStyle}`}>
                                     {sectionTitle}
                                 </h2>
                             )}

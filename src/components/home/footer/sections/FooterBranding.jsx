@@ -26,6 +26,7 @@ export const FooterBranding = () => {
                 </div>
                 <div className="pb-3">
                     <PrimaryLink
+                        to='/about-us'
                         className="!inline-block !min-w-40 !bg-transparent !border-[#FFFFFF0F] hover:!bg-white"
                         ariaLabel={t('footer.readMore')}
                         type="button"

@@ -15,7 +15,7 @@ export const ContactSection = () => {
                     </div>
                 </div>
                 <ul>
-                    <li className="flex gap-3">
+                    {/* <li className="flex gap-3">
                         <MapPin size={20} className="text-primary-one mt-1 flex-shrink-0" />
                         <div>
                             <span className="font-semibold text-white capitalize">
@@ -25,7 +25,7 @@ export const ContactSection = () => {
                                 {t('contact.address')}
                             </p>
                         </div>
-                    </li>
+                    </li> */}
                     <li className="flex gap-3">
                         <Phone size={20} className="text-primary-one mt-1 flex-shrink-0" />
                         <div>

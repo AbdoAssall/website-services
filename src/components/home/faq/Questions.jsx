@@ -15,16 +15,15 @@ const Questions = () => {
     };
 
     const questions = useMemo(() => {
-        const questionsData = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
-        return questionsData.map((question, index) => ({
-            ...question,
-            question: t(`faq.items.${index}.question`),
-            answer: t(`faq.items.${index}.answer`)
+        return Array.from({ length: 5 }, (_, i) => ({
+            question: t(`faq.items.${i}.question`),
+            answer: t(`faq.items.${i}.answer`)
         }));
     }, [t]);
 
     return (
         <section
+            id='faq'
             className="relative bg-cover bg-no-repeat bg-center w-full h-full bg-primary-two"
             style={{ backgroundImage: 'url("assets/images/footer-bg-two.jpg")' }}
         >
@@ -50,23 +49,23 @@ const Questions = () => {
                             </div>
                         </div>
                         <div className="faq-accordion w-full">
-                            {questions.map((item) => (
+                            {questions.map((item, i) => (
                                 <div
-                                    key={item.id}
+                                    key={i}
                                     className={`faq-item mb-2 transition-all duration-600`}
                                 >
                                     <div
-                                        className={`question-header ${activeQuestion === item.id ? '!bg-primary-one !border-primary-one' : ''}`}
-                                        onClick={() => activeQuestion !== item.id ? toggleQuestion(item.id) : null}
+                                        className={`question-header ${activeQuestion === i ? '!bg-primary-one !border-primary-one' : ''}`}
+                                        onClick={() => activeQuestion !== i ? toggleQuestion(i) : null}
                                     >
                                         <div className="question-title">
                                             <span className="faq-number">
-                                                {item.id}
+                                                {i + 1}
                                             </span>
                                             <span className="inline-block">{item.question}</span>
 
                                             <span className='faq-icon'>
-                                                {activeQuestion === item.id ? (
+                                                {activeQuestion === i ? (
                                                     <ArrowUp className="w-5 h-5" />
                                                 ) : (
                                                     isRTL ? (
@@ -79,7 +78,7 @@ const Questions = () => {
                                         </div>
                                     </div>
                                     <div
-                                        className={`transition-all duration-600 overflow-hidden ${activeQuestion === item.id ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
+                                        className={`transition-all duration-600 overflow-hidden ${activeQuestion === i ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
                                     >
                                         <div className="answer">
                                             {item.answer}

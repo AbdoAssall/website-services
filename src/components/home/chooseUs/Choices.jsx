@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { itemVariants } from '@utils/variants/animationVariants';
 
 const Choices = () => {
-    const { t } = useLanguage();
+    const { t, isRTL } = useLanguage();
 
     const choices = useMemo(() => {
         const choicesData = [
@@ -39,17 +39,16 @@ const Choices = () => {
             description={t('chooseUs.description')}
         >
             <motion.div
-                className="choices-container flex justify-center items-center mt-18 md:flex-wrap flex-col md:flex-row gap-x-6 gap-y-24"
+                className="choices-container mt-18 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-24 justify-items-center"
                 variants={itemVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.05 }}
             >
                 {choices.map((choice, index) => (
-                    <div key={index} className="relative grou">
+                    <div key={index} className="relative w-full">
                         <div
-                            // className="choice-card card bg-white w-full md:w-65.5 h69 shadow-md md:shadow-lg hover:bg-primary-one hover:rounded-tr-none overflow-hidden border border-gray-100 transition-all duration-300"
-                            className="choice-card bg-white w-full md:w-65.5 h69 shadow-md md:shadow-lg border border-gray-100 overflow-hidden hover:bg-primary-one hover:rounded-tr-none focus:bg-primary-one focus:rounded-tr-none active:bg-primary-one active:rounded-tr-none"
+                            className="choice-card bg-white w-full lg:w-65.5 sm:h-48 lg:h-59 shadow-md md:shadow-lg border border-gray-100 overflow-hidden hover:bg-primary-one hover:rounded-tr-none focus:bg-primary-one focus:rounded-tr-none active:bg-primary-one active:rounded-tr-none"
                             tabIndex={0}
                             role="button"
                             aria-label={`${choice.title} - ${choice.description}`}
@@ -61,8 +60,8 @@ const Choices = () => {
                                 }
                             }}
                         >
-                            <div className="card-bod px-7.5 pb-3 pt-19 justify-end">
-                                <h2 className="choice-title card-title text-2xl text-primary-two font-bold font-spartan group-hover:!text-white transition-colors duration-500">
+                            <div className="card-body px-7.5 pb-3 pt-19 justify-end">
+                                <h2 className={`choice-title card-title text-2xl text-primary-two font-bold font-spartan capitalize group-hover:!text-white transition-colors duration-500 ${isRTL ? 'md:!leading-13' : '!leading-9'}`}>
                                     {choice.title}
                                 </h2>
                                 <p className="choice-description text-dark-one grow-0 group-hover:text-white transition-colors !duration-500">

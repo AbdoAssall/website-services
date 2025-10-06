@@ -69,7 +69,7 @@ const HeroSlider = () => {
 
                     {/* Slide Content */}
                     {index === currentSlide && (
-                        <div className={`!px-2 sm:!px-9 pb-16 relative z-8 flex h-full ${index === 1 ? 'justify-center text-center sm:justify-start sm:rtl:text-right sm:ltr:text-left' : 'justify-center  text-center'} items-center text-white`}>
+                        <div className={`!px-2 sm:!px-9 pb-16 relative z-8 flex h-full ${index === 1 ? 'justify-center text-center sm:justify-start sm:rtl:text-right sm:ltr:text-left' : 'justify-center text-center'} items-center text-white`}>
                             <div className="max-w-4xl">
                                 <AnimatePresence mode='wait'>
                                     <motion.div
@@ -104,7 +104,7 @@ const HeroSlider = () => {
                                             initial="hidden"
                                             animate="show"
                                             transition={{ duration: 0.8, delay: 0.9 }}
-                                            className="!text-md md:!text-xl"
+                                            className="!text-md md:!text-lg max-w-xl mx-auto"
                                         >
                                             {slide.description}
                                         </motion.p>

@@ -1,10 +1,6 @@
 .pricing-plan.type-one {
   position: relative;
   transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -webkit-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
 }
 .pricing-plan.type-one .tag {
   width: calc(100% - 3.75rem);
@@ -28,10 +24,6 @@
   opacity: 1;
   z-index: -1;
   transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -webkit-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
 }
 [dir=ltr] .pricing-plan.type-one .pricing-plan-inner::before {
   right: -30px;
@@ -52,12 +44,7 @@
 .pricing-plan.type-one .pricing-plan-inner .upper-plan {
   position: relative;
   text-align: center;
-  border-bottom: 1px dashed rgba(34, 34, 34, 0.1);
   transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -webkit-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
 }
 .pricing-plan.type-one .pricing-plan-inner .upper-plan h2 {
   display: block;
@@ -65,10 +52,6 @@
   font-weight: 700;
   color: var(--heading-dark);
   transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -webkit-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
 }
 .pricing-plan.type-one .pricing-plan-inner .upper-plan .price {
   margin-top: 0.938rem;
@@ -81,10 +64,6 @@
   text-align: center;
   color: var(--heading-dark);
   transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -webkit-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
 }
 .pricing-plan.type-one .pricing-plan-inner .upper-plan .price h6 small {
   font-size: 2rem;
@@ -96,10 +75,6 @@
   position: relative;
   margin-bottom: 1.563rem;
   transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -webkit-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
 }
 .pricing-plan.type-one .pricing-plan-inner .lower-plan ul li {
   position: relative;
@@ -123,10 +98,6 @@
 .pricing-plan.type-one .pricing-plan-inner:hover .lower-plan ul li {
   color: var(--border-color-dark);
   transition: all 0.6s ease;
-  -moz-transition: all 0.6s ease;
-  -webkit-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
 }
 .pricing-plan.type-two .tag {
   background-color: white;

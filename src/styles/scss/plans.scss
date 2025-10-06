@@ -1,17 +1,17 @@
 .pricing-plan {
   &.type-one {
     position: relative;
-    transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
     -webkit-transition: all 0.6s ease;
     -ms-transition: all 0.6s ease;
     -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
     .tag {
       width: calc(100% - 3.75rem);
       background-color: var(--color-primary-one);
       color: white;
     }
-  
+
     .pricing-plan-inner {
       position: relative;
       overflow: hidden;
@@ -27,11 +27,11 @@
         border-radius: 0.375rem;
         opacity: 1;
         z-index: -1;
-        transition: all 0.6s ease;
         -moz-transition: all 0.6s ease;
         -webkit-transition: all 0.6s ease;
         -ms-transition: all 0.6s ease;
         -o-transition: all 0.6s ease;
+        transition: all 0.6s ease;
       }
       // LTR specific styles
       [dir="ltr"] & {
@@ -62,22 +62,22 @@
       .upper-plan {
         position: relative;
         text-align: center;
-        border-bottom: 1px dashed rgba(34, 34, 34, 0.1);
-        transition: all 0.6s ease;
+        // border-bottom: 1px dashed rgba(34, 34, 34, 0.1);
         -moz-transition: all 0.6s ease;
         -webkit-transition: all 0.6s ease;
         -ms-transition: all 0.6s ease;
         -o-transition: all 0.6s ease;
+        transition: all 0.6s ease;
         h2 {
           display: block;
           line-height: 32px;
           font-weight: 700;
           color: var(--heading-dark);
-          transition: all 0.6s ease;
           -moz-transition: all 0.6s ease;
           -webkit-transition: all 0.6s ease;
           -ms-transition: all 0.6s ease;
           -o-transition: all 0.6s ease;
+          transition: all 0.6s ease;
         }
         .price {
           margin-top: 0.938rem;
@@ -88,11 +88,11 @@
             font-weight: 700;
             text-align: center;
             color: var(--heading-dark);
-            transition: all 0.6s ease;
             -moz-transition: all 0.6s ease;
             -webkit-transition: all 0.6s ease;
             -ms-transition: all 0.6s ease;
             -o-transition: all 0.6s ease;
+            transition: all 0.6s ease;
             small {
               font-size: 2rem;
               line-height: 32px;
@@ -105,11 +105,11 @@
       .lower-plan {
         position: relative;
         margin-bottom: 1.563rem;
-        transition: all 0.6s ease;
         -moz-transition: all 0.6s ease;
         -webkit-transition: all 0.6s ease;
         -ms-transition: all 0.6s ease;
         -o-transition: all 0.6s ease;
+        transition: all 0.6s ease;
         ul {
           li {
             position: relative;
@@ -142,11 +142,11 @@
           ul {
             li {
               color: var(--border-color-dark);
-              transition: all 0.6s ease;
               -moz-transition: all 0.6s ease;
               -webkit-transition: all 0.6s ease;
               -ms-transition: all 0.6s ease;
               -o-transition: all 0.6s ease;
+              transition: all 0.6s ease;
             }
           }
         }

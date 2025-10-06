@@ -46,10 +46,6 @@
     "prices": "Prices",
     "contactUs": "Contact Us",
     "services": "Services",
-    "service1": "Service 1",
-    "service2": "Service 2",
-    "service3": "Service 3",
-    "service4": "Service 4",
     "search": "Search...",
     "logoAlt": "Scopehub"
   },
@@ -81,7 +77,7 @@
       "message": "Your Message (Optional)",
       "submit": "Send",
       "close": "Close",
-      "description": "We help you see the world differently, discover opportunities you may never have imagined and overcome challenges that seem impossible.",
+      "description": "With the experience of 10 years Scope Academic and Marketing Services is waiting for your communication to work together to achieve our goal.",
       "readMore": "Read More",
       "latestProjects": "Latest Projects",
       "copyright": " ScopHub. All Rights Reserved.",
@@ -120,29 +116,29 @@
     }
   },
   "upper": {
-    "qoute": "Get a quote",
-    "welcome": "Welcome to our consulting company."
+    "qoute": "Get an offer",
+    "welcome": "Welcome to Scope Academic and Marketing Services."
   },
   "hero": {
     "slides": [
       {
         "subTitle": "Strategy & Planning",
-        "title": "The Fastest Way to Achive Success",
-        "description": "We provide innovative solutions for your company",
+        "title": "The Fastest Way to Succeed",
+        "description": "We provide all academic and marketing services to ensure your success",
         "buttonServ": "Our Service",
         "buttonPro": "Projects"
       },
       {
         "subTitle": "Best Agency",
         "title": "Digital Marketing",
-        "description": "Transform your online presence with our expertise",
+        "description": "Enhance your appearance on the platforms of communication with our distinctive services",
         "buttonServ": "Our Service",
         "buttonPro": "Projects"
       },
       {
         "subTitle": "Expert Team",
         "title": "Strategic Planning",
-        "description": "Custom strategies to achieve your business goals",
+        "description": "A team with an experience exceeding 10 years on free work platforms now met together",
         "buttonServ": "Our Service",
         "buttonPro": "Projects"
       }
@@ -155,16 +151,16 @@
   },
   "about": {
     "title": "About Us",
-    "mainTitle": "Take Your Business To The Next Level",
-    "description": "With over 20 years of experience, we guarantee you'll always get the best guidance. We serve our clients at all levels of their organizations, giving them the maximum benefit, whether as trusted advisors or as members of our senior management.",
+    "mainTitle": "Go with your work to the next level ...",
+    "description": "A 10 -year work team on free work platforms our services include preparing research and scientific messages, translation, linguistic audit, statistical analysis, feasibility studies, logos design and visual identities, social media designs, mochen graphic and Witt board videos, programming services and site construction, introductory file work and preparing business and mVPS and MVPS plans.",
     "experience": "More Than 10 Years Of Experience",
     "creativeWork": {
-      "title": "Creative Work",
-      "description": "Creative work is a manifestation of creative effort including fine artwork"
+      "title": "Your optimal choice",
+      "description": "All you need in one place"
     },
     "bestSolution": {
-      "title": "Best Solution",
-      "description": "Consulting solutions is a dynamic, versatile, elegant and modern business"
+      "title": "Professionalism and mastery",
+      "description": "Mastering and quality are the basis of our work"
     },
     "readMore": "Read More",
     "counters": [
@@ -188,7 +184,7 @@
   },
   "services": {
     "title": "Our Services",
-    "mainTitle": "We Provide Different Services",
+    "mainTitle": "We provide multiple services for all your needs",
     "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form believable",
     "readMore": "Read More",
     "services": "Services",
@@ -201,24 +197,24 @@
   },
   "chooseUs": {
     "title": "Choices & Events",
-    "subtitle": "Why People Choose Us",
+    "subtitle": "Why do you choose us",
     "description": "I will explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
     "items": [
       {
-        "title": "Smart Solutions",
-        "description": "The card component has a figure and body part, and inside the body there are title and actions parts"
+        "title": "Comprehensive services",
+        "description": "We provide complete solutions for everything."
       },
       {
         "title": "Expert Team",
-        "description": "The card component has a figure and body part, and inside the body there are title and actions parts"
+        "description": "Freelance Experts in All Fields."
       },
       {
         "title": "Quick Response",
-        "description": "The card component has a figure and body part, and inside the body there are title and actions parts"
+        "description": "We are available to answer you anytime."
       },
       {
-        "title": "24/7 Support",
-        "description": "The card component has a figure and body part, and inside the body there are title and actions parts"
+        "title": "On-Time Delivery",
+        "description": "Commitment to deadlines."
       }
     ]
   },
@@ -257,7 +253,7 @@
     "getInTouchDescription": "Get in touch with us to discuss how we can help you achieve your business goals with our expertise."
   },
   "testimonials": {
-    "sectionTitle": "Words from Our Clients",
+    "sectionTitle": "What Our Clients Say About Us...",
     "subTitle": "Our Clients",
     "description": "This is similar to saying that shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.",
     "navigation": {
@@ -296,26 +292,30 @@
     "mainTitle": "Do You Have Any Questions?",
     "items": [
       {
-        "question": "How can content marketing increase efficiency?",
-        "answer": "As with the saying through shrinking from toil and pain these cases are perfectly simple and easy to distinguish."
+        "question": "Do you share clients' work online?",
+        "answer": "We usually do not share clients' work unless they allow us to."
       },
       {
-        "question": "How can content marketing help purchase journey?",
-        "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "question": "How many revisions are available?",
+        "answer": "We guarantee two months after delivery for revisions within the agreed scope of work."
       },
       {
-        "question": "How do we measure content's on sales and revenue?",
-        "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "question": "What is your level of expertise?",
+        "answer": "All our team members are successful freelancers with hundreds of reviews on various platforms."
       },
       {
-        "question": "Pain these cases are perfectly simple and easy to distinguish.",
-        "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "question": "What are the available payment methods?",
+        "answer": "All types of payment gateways are available, including PayPal, Payoneer, bank transfer, Instapay, e-wallets, and more."
+      },
+      {
+        "question": "What is the payment system?",
+        "answer": "Payment is made in advance, except for master’s and doctoral projects, which can be paid in two installments for convenience."
       }
     ]
   },
   "contactUs": {
     "title": "Consultations Anytime Anywhere",
-    "mainTitle": "Get Free Consultation Now Here",
+    "mainTitle": "Get Your Free Consultation Now",
     "description": "We help you see the world differently, discover opportunities you may never have imagined.",
     "phone": "Phone",
     "contactUs": "Contact Us",
@@ -325,47 +325,9 @@
   "plans": {
     "subtitle": "Choose Your Plan",
     "title": "Flexible Pricing",
-    "description": "This is like saying 'shrinking from toil and pain'. These cases are perfectly simple and easy to distinguish. We help you see the world differently",
+    "description": "Choose between different packages that suit you and for masters, doctorates, etc. Please contact us.",
     "period": "Year",
     "getStarted": "Get Started",
-    "items": [
-      {
-        "tag": "Recommended",
-        "name": "Basic Pack",
-        "description": "Power of choice is untrammeled and do what we like best.",
-        "features": [
-          "4-5 Weeks from finish",
-          "Organisational Strategy",
-          "20 Days of support",
-          "Data sprint Results revision",
-          "Premium customer support"
-        ]
-      },
-      {
-        "tag": "Most Recommended",
-        "name": "Standard Pack",
-        "description": "Matters to principle of selection our pleasures to secure.",
-        "features": [
-          "4-5 Weeks from finish",
-          "Organisational Strategy",
-          "20 Days of support",
-          "Data sprint Results revision",
-          "Premium customer support"
-        ]
-      },
-      {
-        "tag": "Popular Pack",
-        "name": "Advanced Pack",
-        "description": "These cases are perfectly simple & easy to distinguish.",
-        "features": [
-          "4-5 Weeks from finish",
-          "Organisational Strategy",
-          "20 Days of support",
-          "Data sprint Results revision",
-          "Premium customer support"
-        ]
-      }
-    ],
     "accessibility": {
       "planCard": "Pricing plan for",
       "recommendedBadge": "Recommended plan",
@@ -405,9 +367,9 @@
     "whatsappAssistance": "Please help me complete this purchase."
   },
   "footer": {
-    "description": "With over 20 years of experience, we guarantee you'll always get the best guidance. We serve our clients at all levels of their organizations...",
+    "description": "Over 10 years of experience on freelance platforms in the Arab and Gulf markets — we’ve come together here to succeed with you and help you succeed with us. We earn your trust every time.",
     "readMore": "Read More",
-    "essentials": "Essentials",
+    "essentials": "Important Pages",
     "projects": "Projects",
     "contactUs": "Contact Us",
     "address": "Address",
@@ -417,32 +379,22 @@
     "available": "No projects available",
     "essentialLinks": [
       {
-        "title": "Infrastructure",
-        "path": "#"
+        "title": "Contact Us"
       },
       {
-        "title": "Client Support",
-        "path": "#"
+        "title": "About Us"
       },
       {
-        "title": "Privacy Policy",
-        "path": "#"
+        "title": "Privacy Policy"
       },
       {
-        "title": "Terms of Use",
-        "path": "#"
+        "title": "Terms of Use"
       },
       {
-        "title": "Professionals",
-        "path": "#"
+        "title": "Payment Methods"
       },
       {
-        "title": "Careers",
-        "path": "#"
-      },
-      {
-        "title": "Sitemap",
-        "path": "#"
+        "title": "FAQ"
       }
     ]
   },

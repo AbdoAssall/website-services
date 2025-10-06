@@ -68,8 +68,8 @@ const About = ({ btn = true, isSubTitle = false }) => {
                     <h5 className="section-title">{t('about.title')}</h5>
                 </motion.div>
 
-                <motion.div variants={itemVariants} className={`${isSubTitle ? 'mt-4.5' : 'mt-1 md:mt-4.5'}`}>
-                    <h2 className={`!text-4xl md:!text-5xl !font-semibold ${direction === 'rtl' ? 'md:!leading-13 !mt-2' : '!leading-11 '} text-primary-two capitalize`}>
+                <motion.div dir={direction} variants={itemVariants} className={`${isSubTitle ? 'mt-4.5' : 'mt-1 md:mt-4.5'}`}>
+                    <h2 className={`!text-4xl md:!text-5xl !font-semibold ${direction === 'rtl' ? 'md:!leading-13 !mt-2' : '!leading-12'} text-primary-two capitalize`}>
                         {t('about.mainTitle')}
                     </h2>
                     <p className="mt-4 text-dark-one">
@@ -78,14 +78,16 @@ const About = ({ btn = true, isSubTitle = false }) => {
                 </motion.div>
 
                 {/* ✨ 6. WRAP THE TWO FEATURE BOXES TO ANIMATE THEM TOGETHER */}
-                <motion.div variants={itemVariants} className="flex gap-2 flex-col sm:flex-row justify-start rtl:justify-end">
+                <motion.div variants={itemVariants} className={`flex flex-col sm:flex-row ${isRTL ? 'gap-8' : 'gap-6'} justify-start rtl:justify-end`}>
                     <div className="mt-3">
                         <div className="mb-3">
                             <span className="inline-block w-20 h-20 rounded-full bg-primary-three">
                                 <img src="assets/images/icons/idea.png" className="w-15 h-15" alt="Idea icon" loading="lazy" />
                             </span>
                         </div>
-                        <h2 className="text-[1.375rem] font-bold capitalize">{t('about.creativeWork.title')}</h2>
+                        <h2 className={`text-[1.375rem] !font-bold capitalize truncate ${isRTL ? 'md:!leading-11' : '!leading-8'}`}>
+                            {t('about.creativeWork.title')}
+                        </h2>
                         <p className="mt-3 text-dark-one">
                             {t('about.creativeWork.description')}
                         </p>
@@ -96,7 +98,9 @@ const About = ({ btn = true, isSubTitle = false }) => {
                                 <img src="assets/images/icons/solution.png" className="w-15 h-15" alt="Idea icon" loading="lazy" />
                             </span>
                         </div>
-                        <h2 className="text-[1.375rem] font-bold capitalize">{t('about.bestSolution.title')}</h2>
+                        <h2 className={`text-[1.375rem] !font-bold capitalize ${isRTL ? 'md:!leading-11' : '!leading-8'}`}>
+                            {t('about.bestSolution.title')}
+                        </h2>
                         <p className="mt-3 text-dark-one">
                             {t('about.bestSolution.description')}
                         </p>

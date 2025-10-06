@@ -6,23 +6,23 @@
         "recommended": false,
         "en": {
             "tag": "Recommended",
-            "name": "Basic Pack",
-            "description": "Power of choice is untrammeled and do what we like best.",
+            "name": "Basic Package",
+            "description": "Graduation project development",
             "features": [
-                "4-5 Weeks from finish",
-                "Organisational Strategy",
-                "20 Days of support",
-                "Data sprint Results revision",
+                "2–3 weeks to complete",
+                "Professional presentation",
+                "20 days of support",
+                "Data results review",
                 "Premium customer support"
             ]
         },
         "ar": {
             "tag": "موصى به",
             "name": "الباقة الأساسية",
-            "description": "قوة الاختيار غير مقيدة ونفعل ما نحب بشكل أفضل.",
+            "description": "عمل مشروع التخرج",
             "features": [
-                "4-5 أسابيع من الانتهاء",
-                "الاستراتيجية التنظيمية",
+                "2-3 أسابيع من الانتهاء",
+                "عرض تقديمي احترافي",
                 "20 يوم من الدعم",
                 "مراجعة نتائج البيانات",
                 "دعم العملاء المتميز"
@@ -36,23 +36,23 @@
         "recommended": true,
         "en": {
             "tag": "Most Recommended",
-            "name": "Standard Pack",
-            "description": "Matters to principle of selection our pleasures to secure.",
+            "name": "Gold Package",
+            "description": "Three research papers at the lowest cost",
             "features": [
-                "4-5 Weeks from finish",
-                "Organisational Strategy",
-                "20 Days of support",
-                "Data sprint Results revision",
+                "3–4 weeks to complete",
+                "Each paper includes 10 pages",
+                "20 days of support",
+                "Data results review",
                 "Premium customer support"
             ]
         },
         "ar": {
             "tag": "الأكثر توصية",
-            "name": "الباقة المعيارية",
-            "description": "الأمور التي تهم مبدأ اختيار ملذاتنا لتأمينها.",
+            "name": "الباقة الذهبية",
+            "description": "ثلاثة أبحاث بأقل تكلفة",
             "features": [
-                "4-5 أسابيع من الانتهاء",
-                "الاستراتيجية التنظيمية",
+                "4-3 أسابيع من الانتهاء",
+                "كل بحث يشمل 10 صفحات",
                 "20 يوم من الدعم",
                 "مراجعة نتائج البيانات",
                 "دعم العملاء المتميز"
@@ -62,27 +62,33 @@
     {
         "id": 3,
         "price": 99,
-        "check": 5,
+        "check": 8,
         "recommended": false,
         "en": {
-            "tag": "Popular Pack",
-            "name": "Advanced Pack",
-            "description": "These cases are perfectly simple & easy to distinguish.",
+            "tag": "Premium Package",
+            "name": "Advanced Package",
+            "description": "A comprehensive business plan for your project with the MVP",
             "features": [
-                "4-5 Weeks from finish",
-                "Organisational Strategy",
-                "20 Days of support",
-                "Data sprint Results revision",
+                "4–5 weeks to complete",
+                "Project background",
+                "Financial, strategic, and marketing plan",
+                "In-depth market study and competitor analysis",
+                "MVP Landing Page or App",
+                "20 days of support",
+                "Data results review",
                 "Premium customer support"
             ]
         },
         "ar": {
-            "tag": "الباقة الشعبية",
+            "tag": "الباقة الفاخرة",
             "name": "الباقة المتقدمة",
-            "description": "هذه الحالات بسيطة للغاية وسهلة التمييز.",
+            "description": "خطة عمل شاملة لمشروعك مع ال MVP",
             "features": [
                 "4-5 أسابيع من الانتهاء",
-                "الاستراتيجية التنظيمية",
+                " خلفية المشروع",
+                "الخطة المالية والإستراتيجية والتسويقية",
+                "دراسة السوق بعمق وتحليل المنافسين",
+                "MVP Landing Page or App",
                 "20 يوم من الدعم",
                 "مراجعة نتائج البيانات",
                 "دعم العملاء المتميز"

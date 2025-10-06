@@ -59,7 +59,7 @@ const Dropdown = ({ title, children, to = '#', item, ...props }) => {
                 </div>
 
                 {isOpen && (
-                    <div className="list absolute left-0 right-0 lg:top-14 z-10 w-48 pt-2 mt-2 bg-white rounded-md shadow-md">
+                    <div className="list absolute left-0 right-0 lg:top-14 z-10 w-55 pt-2 mt-2 max-h-96 bg-white rounded-md shadow-md overflow-y-auto">
                         {children}
                     </div>
                 )}

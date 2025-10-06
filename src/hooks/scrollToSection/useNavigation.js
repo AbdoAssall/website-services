@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -61,11 +62,25 @@ export const useNavigation = () => {
         }
     }, [isHomePage, navigate, location.pathname]);
 
+    const handleSectionClick = useCallback((sectionId, e) => {
+        if (e) e.preventDefault();
+
+        // Ensure sectionId has # prefix
+        const cleanId = sectionId.startsWith('#') ? sectionId : `#${sectionId}`;
+
+        if (isHomePage) {
+            scrollToSection(cleanId);
+        } else {
+            navigate("/", { state: { scrollTo: cleanId } });
+        }
+    }, [isHomePage, navigate]);
+
     return {
         isHomePage,
         isNavItemActive,
         handleNavClick,
         handlePageLoadScroll,
+        handleSectionClick,
         location
     };
 };
