@@ -8,7 +8,7 @@ import { itemVariantsLeft, itemVariantsRight } from '@utils/variants/animationVa
 
 const Questions = () => {
     const { t, direction, isRTL } = useLanguage();
-    const [activeQuestion, setActiveQuestion] = useState(1);
+    const [activeQuestion, setActiveQuestion] = useState(0);
 
     const toggleQuestion = (index) => {
         setActiveQuestion(activeQuestion === index ? null : index);

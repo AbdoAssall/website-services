@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useMemo } from 'react';
 import { Lightbulb, Users, Globe } from 'lucide-react';
 import Section from "@components/UI/Section";
@@ -8,9 +9,9 @@ import useCountOnScroll from '@hooks/counter/useCountOnScroll';
 const CounterSection = () => {
     const { t } = useLanguage();
     const counterData = useMemo(() => [
-        { target: 4536, label: 'Projects Completed', icon: Lightbulb, suffix: '+' },
-        { target: 29848, label: 'Happy Clients', icon: Users, suffix: '+' },
-        { target: 44, label: 'Experienced Team', icon: Globe, suffix: 'K' }
+        { target: 1653, label: 'Projects Completed', icon: Lightbulb, suffix: '+' },
+        { target: 29_848, label: 'Happy Clients', icon: Users, suffix: '+' },
+        { target: 40, label: 'Experienced Team', icon: Globe, suffix: 'K' }
     ], []);
     const [counterRef, counters] = useCountOnScroll(counterData);
 
@@ -40,12 +41,12 @@ const CounterSection = () => {
                             </div>
 
                             {/* Counter */}
-                            <div className="flex items-baseline mb-2">
+                            <div dir='ltr' className="flex items-baseline mb-2">
                                 <span className="text-4xl lg:text-5xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-primary-one">
                                     {counter.current.toLocaleString()}
                                 </span>
                                 <span className="text-3xl lg:text-4xl font-bold text-gray-800 ml-1 transition-colors duration-300 group-hover:text-primary-one">
-                                    {counter.suffix}
+                                    {counter.suffix === 'K' ? `${counter.suffix}+` : counter.suffix}
                                 </span>
                             </div>
 

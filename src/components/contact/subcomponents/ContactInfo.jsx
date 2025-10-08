@@ -6,7 +6,7 @@ const ContactInfo = () => {
     const { isRTL, t } = useLanguage();
 
     return (
-        <div className={`bg-primary-three p-10 ${isRTL ? 'text-right' : 'text-left'} drop-shadow-lg`}>
+        <div className={`bg-primary-three p-10 h-full ${isRTL ? 'text-right' : 'text-left'} drop-shadow-lg`}>
             <div className="mb-12">
                 <h3 className="!text-primary-one !text-lg lg:!text-2xl !font-semibold font-spartan underline !mb-2">
                     {t('contact.info.subTitle')}
@@ -22,7 +22,7 @@ const ContactInfo = () => {
             {/* Contact Details */}
             <div className="space-y-6">
                 {/* Post Address */}
-                <div className={`flex items-start gap-4`}>
+                {/* <div className={`flex items-start gap-4`}>
                     <div className="w-12 h-12 bg-primary-one rounded-full flex items-center justify-center flex-shrink-0">
                         <MapPin className="w-5 h-5 text-white" />
                     </div>
@@ -34,7 +34,7 @@ const ContactInfo = () => {
                             {t('contact.info.address')}
                         </p>
                     </div>
-                </div>
+                </div> */}
 
                 {/* General Enquires */}
                 <div className={`flex items-start gap-4`}>

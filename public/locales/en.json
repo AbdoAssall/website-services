@@ -59,15 +59,15 @@
     "descrip": "Nothing prevents our being to what we like.",
     "info": {
       "subTitle": "Contact Info to",
-      "title": "Reach Our Expert Team",
-      "description": "Send a message through given form. If your enquiry is time sensitive please use below contact details.",
+      "title": "Contact Our Specialized Team...",
+      "description": "Send a message through this form and we will get back to you as soon as possible. If it’s urgent, you can contact us via WhatsApp using the number below, and we’ll respond promptly.",
       "addressTitle": "Post Address",
       "address": "280 Granite Run Drive Suite #200 Lancaster, PA 1760",
       "enquiriesTitle": "General Enquires",
       "phone": "Phone:",
       "email": "Email:",
       "hoursTitle": "Operation Hours",
-      "hours": "Mon-Satday: 09.00 to 07.00 (Sunday: Closed)"
+      "hours": "24/7 Every Day"
     },
     "form": {
       "title": "Contact Form",
@@ -165,22 +165,22 @@
     "readMore": "Read More",
     "counters": [
       {
-        "label": "Projects Completed",
-        "description": "Power of choices when nothing what we like best principle."
+        "label": "Completed Projects",
+        "description": "We make sure to complete our work to perfection."
       },
       {
         "label": "Happy Clients",
-        "description": "Except to obtain some of advantages from it has any right."
+        "description": "Our clients always recommend us."
       },
       {
-        "label": "Experienced Team",
-        "description": "Complete account of the system and expound actual teachings."
+        "label": "Expert Team",
+        "description": "Achieved through a skilled and experienced team."
       }
     ]
   },
   "team": {
     "subtitle": "Our Professionals",
-    "title": "Meet Our expert Team"
+    "title": "Meet Our Team"
   },
   "services": {
     "title": "Our Services",

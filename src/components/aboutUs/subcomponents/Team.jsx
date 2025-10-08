@@ -18,10 +18,13 @@ const Team = () => {
             sectionTitle={t('team.title')}
             isSubTitle={true}
         >
-            <div className={`mt-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 ${isRTL ? 'rtl' : 'ltr'}`}>
+            <div className={`mt-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full mx-auto ${isRTL ? 'rtl' : 'ltr'}`}>
                 {loading
-                    ? (<Spinner />)
-                    : (
+                    ? (
+                        <div className="col-span-full flex justify-center">
+                            <Spinner />
+                        </div>
+                    ) : (
                         teamMembers.map((member) => (
                             <div
                                 key={member.id}

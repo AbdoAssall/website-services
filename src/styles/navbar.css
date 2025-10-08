@@ -79,33 +79,35 @@
 }
 @media (max-width: 767px) {
     .header-lower .logo {
-        width: 9.375rem;
-        height: 3.125rem;
+        width: 7.375rem;
+        height: auto;
+        /* width: 9.375rem;
+        height: 3.125rem; */
     }
 }
 @media (max-width: 960px) {
-   .mobile a {
-    line-height: 1.625rem;
-    font-weight: 500;
-    color: var(--text-color-dark-one);
-    font-family: var(--family-one);
-    transition: 0.5s ease-in-out;
-}
-[dir="ltr"] {
     .mobile a {
-        font-weight: 600;
-        font-size: 1.063rem !important;
-    }
-}
-[dir="rtl"] {
-    .mobile a {
+        line-height: 1.625rem;
         font-weight: 500;
-        font-size: 1rem !important;
+        color: var(--text-color-dark-one);
+        font-family: var(--family-one);
+        transition: 0.5s ease-in-out;
     }
-}
-.mobile .menu a {
-    font-family: var(--family-two) !important;
-    font-weight: normal;
-    font-size: 0.938rem !important;
-}
+    [dir="ltr"] {
+        .mobile a {
+            font-weight: 600;
+            font-size: 1.063rem !important;
+        }
+    }
+    [dir="rtl"] {
+        .mobile a {
+            font-weight: 500;
+            font-size: 1rem !important;
+        }
+    }
+    .mobile .menu a {
+        font-family: var(--family-two) !important;
+        font-weight: normal;
+        font-size: 0.938rem !important;
+    }
 }
