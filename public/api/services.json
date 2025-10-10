@@ -7,18 +7,18 @@
             "name": "رسائل ماجستير وكتوراه",
             "description": "إعداد رسائل الماجستير والدكتوراه لجميع التخصصات وحتى المناقشة.",
             "content": {
-                "title": "تقديم تجارب خدمة عالمية المستوى!..",
-                "fullDescription": "نحن نقدم نهجًا شاملاً لإدارة المخاطر لمساعدة مؤسستك على تحديد وتقييم وتخفيف المخاطر المحتملة. يضمن خبراؤنا حماية أصولك وسمعتك."
+                "title": "رسالتك العلمية من العنوان وحتى المناقشة!",
+                "fullDescription": "نحن نعمل معك من بداية اختيار العنوان وكتابة المقترح حتى مناقشة الرسالة. متخصصينا جميعهم من حملة الماجستير والدكتوراه وبعضهم باحثين لديهم أبحاث علمية منشورة..."
             },
             "benefits": [
                 {
-                    "title": "التحقق من الخلفية",
-                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
+                    "title": "مواعيد دقيقة",
+                    "description": "دائما نلتزم بالمواعيد ونحرص عليها.",
                     "icon": "/assets/images/icons/true.png"
                 },
                 {
-                    "title": "وصف الوظيفة",
-                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
+                    "title": "احترافية العمل",
+                    "description": "نلتزم بالدقة والإحترافية في عملنا.",
                     "icon": "/assets/images/icons/true.png"
                 }
             ],
@@ -27,52 +27,51 @@
                 "items": [
                     {
                         "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل إبداعي",
-                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                        "title": "عمل تخصصي",
+                        "description": "نهتم بالتخصص كل رسالة يجب أن ينفذها مختص في هذا التخصص."
                     },
                     {
                         "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل حل",
-                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                        "title": "أفضل جودة",
+                        "description": "نهتم بالجودة والمخرجات لأنها أهم شيء في العمل."
                     }
                 ]
             },
             "steps": {
                 "img": "/assets/images/services/service-image-5.jpg",
                 "items": [
-                    "رؤية المنظمة ورسالتها وقيمها",
-                    "الأهداف الاستراتيجية المتفق عليها",
-                    "التقييم والتحكم.",
-                    "تنفيذ استراتيجيتك.",
-                    "صياغة استراتيجية.",
-                    "جمع وتحليل المعلومات.",
-                    "توضيح رؤيتك"
+                    "نفهم التخصص جيدا",
+                    "نفهم المطلوب والتعليمات بدقة",
+                    "نختار العنوان",
+                    "نسير على المعايير العلمية",
+                    "ننفذ خطة الدراسة",
+                    "ثم بعد ذلك نبدا بعمل فصل تلو الآخر",
+                    "نراجع كل فصل قبل البدأ في الآخر"
                 ]
             },
             "features": [
-                "تحديد المخاطر وتقييمها",
-                "تطوير استراتيجية التخفيف",
-                "مراقبة الامتثال",
-                "التخطيط للاستجابة للأزمات"
+                "التواصل الجيد",
+                "الفهم الدقيق",
+                "المراجعة الدقيقة"
             ],
-            "process": "تبدأ عمليتنا بفهم شامل لعملك. نجري تقييمًا تفصيليًا للمخاطر، ونطور استراتيجيات مخصصة، ونقدم الدعم المستمر لضمان بقائك محميًا.",
+            "process": "عملنا يبدأ من فهم احتياجات العمل ومتطلباته وما يحتاجه العميل ونقدم جميع الدعم له...",
             "confidence": {
-                "description": "التنديد باللذة ومدح الألم سيعطيك صورة كاملة لمن يختار الاستمتاع بلذة ليس لها عواقب مزعجة.",
+                "description": "",
                 "tabs": [
                     {
-                        "label": "تحليل الهدف",
-                        "title": "كيف تحدد السوق المستهدف؟",
-                        "description": "تحليل السوق المستهدف يحدد أين وكيف يتناسب منتجك في السوق الحقيقي. باستخدام هذه المعلومات، يمكنك: تحديد الأسواق الأكثر والأقل قيمة لعملك. تطوير شخصيات مشترين دقيقة."
+                        "label": "التعديلات",
+                        "title": "هل التعديلات غير محدودة ؟",
+                        "description": "نعم التعديلات غير محدودة وبشكل كامل."
                     },
                     {
-                        "label": "تحليل البحث",
-                        "title": "ما هي تقنيات تحليل البيانات في البحث؟",
-                        "description": "أكثر طرق تحليل البيانات شيوعًا هي: تحليل المحتوى: هذه إحدى أكثر الطرق شيوعًا لتحليل البيانات النوعية. ... التحليل السردي: تُستخدم هذه الطريقة لتحليل المحتوى من مصادر مختلفة، مثل مقابلات المستجيبين، أو الملاحظات من الميدان، أو الاستطلاعات."
+                        "label": "جمع البيانات",
+                        "title": "هل انتم مسؤولون عن جمع البيانات ؟",
+                        "description": "لا نحن فقط مسؤولون عن عمل الإستبيان لكن جمع البيانات أو المقابلات هي مسؤولية العميل."
                     },
                     {
-                        "label": "البيان المالي",
-                        "title": "ما هي البيانات المالية الأساسية الأربعة؟",
-                        "description": "البيان المالي هو مزيج من التقارير الرئيسية الثلاثة عن الأعمال. سيحتوي على بيان التدفق النقدي، وبيان الدخل، والميزانية العمومية للعمل. تشكل الثلاثة معًا صورة شاملة عن صحة العمل."
+                        "label": "القسم التحليلي",
+                        "title": "هل تقومون بعمل التحليلات الإحصائية والبيانية ؟",
+                        "description": "نعم بالطبع نقوم بالتحليل الإحصائي الكامل."
                     }
                 ]
             }
@@ -81,18 +80,18 @@
             "name": "Master's and PhD Theses",
             "description": "Preparation of Master's and PhD theses for all specializations up to the defense.",
             "content": {
-                "title": "Providing world class service experiences!..",
-                "fullDescription": "We provide a comprehensive approach to risk management to help your organization identify, assess, and mitigate potential risks. Our experts ensure that your assets and reputation are protected."
+                "title": "Your Academic Thesis — From Title to Defense!",
+                "fullDescription": "We work with you from the very beginning — selecting the title, writing the proposal, and all the way to the thesis defense. All our specialists hold master’s or doctoral degrees, and some are published researchers..."
             },
             "benefits": [
                 {
-                    "title": "Background Checks",
-                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
+                    "title": "Accurate Deadlines",
+                    "description": "We always commit to deadlines and take them seriously.",
                     "icon": "/assets/images/icons/true.png"
                 },
                 {
-                    "title": "Position Description",
-                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
+                    "title": "Professional Work",
+                    "description": "We adhere to precision and professionalism in all our work.",
                     "icon": "/assets/images/icons/true.png"
                 }
             ],
@@ -101,52 +100,51 @@
                 "items": [
                     {
                         "icon": "/assets/images/icons/innovation.png",
-                        "title": "Creative work",
-                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                        "title": "Specialized Work",
+                        "description": "We value specialization — every thesis is handled by an expert in the same field."
                     },
                     {
                         "icon": "/assets/images/icons/innovation.png",
-                        "title": "Best Solution",
-                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                        "title": "Top Quality",
+                        "description": "We focus on quality and output as they are the most important aspects of our work."
                     }
                 ]
             },
             "steps": {
                 "img": "/assets/images/services/service-image-5.jpg",
                 "items": [
-                    "organisation's vision, mission and values",
-                    "The agreed strategic aims and objectives",
-                    "Evaluate and Control.",
-                    "Implement Your Strategy.",
-                    "Formulate a Strategy.",
-                    "Gather and Analyze Information.",
-                    "Clarify Your Vision"
+                    "Understand the field thoroughly",
+                    "Carefully study the requirements and instructions",
+                    "Select the title",
+                    "Follow academic standards",
+                    "Develop the study plan",
+                    "Work on each chapter one by one",
+                    "Review each chapter before starting the next"
                 ]
             },
             "features": [
-                "Risk Identification & Assessment",
-                "Mitigation Strategy Development",
-                "Compliance Monitoring",
-                "Crisis Response Planning"
+                "Effective communication",
+                "Accurate understanding",
+                "Thorough review"
             ],
-            "process": "Our process begins with a thorough understanding of your business. We conduct a detailed risk assessment, develop tailored strategies, and provide ongoing support to ensure you remain protected.",
+            "process": "Our work begins by understanding the project’s needs, requirements, and the client’s expectations — we provide full support throughout the process...",
             "confidence": {
-                "description": "Denouncing pleasure and praising pain was will give you a complete who chooses to enjoy a pleasure that has no annoying consequences.",
+                "description": "",
                 "tabs": [
                     {
-                        "label": "Target Analysis",
-                        "title": "How do you identify your target market?",
-                        "description": "Target market analysis determines where, and how, your product fits into the real-life market. With this information, you can: Determine which markets are most and least valuable to your business. Develop accurate buyer personas."
+                        "label": "Revisions",
+                        "title": "Are revisions unlimited?",
+                        "description": "Yes, revisions are completely unlimited."
                     },
                     {
-                        "label": "Research analysis",
-                        "title": "What is data analysis techniques in research?",
-                        "description": "The most commonly used data analysis methods are: Content analysis: This is one of the most common methods to analyze qualitative data. ... Narrative analysis: This method is used to analyze content from various sources, such as interviews of respondents, observations from the field, or surveys."
+                        "label": "Data Collection",
+                        "title": "Are you responsible for data collection?",
+                        "description": "No, we are only responsible for creating the questionnaire — data collection or interviews are the client’s responsibility."
                     },
                     {
-                        "label": "Financial statement",
-                        "title": "What are the four basic financial statements?",
-                        "description": "A financial statement is the combination of the three major reports on a business. It will contain the cash flow statement, the income statement and the balance sheet of the business. All three together produce an overall picture of the health of the business."
+                        "label": "Analytical Section",
+                        "title": "Do you perform statistical and graphical analysis?",
+                        "description": "Yes, of course — we provide full statistical analysis."
                     }
                 ]
             }
