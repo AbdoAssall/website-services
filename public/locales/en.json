@@ -136,8 +136,8 @@
         "buttonPro": "Projects"
       },
       {
-        "subTitle": "Expert Team",
-        "title": "Strategic Planning",
+        "subTitle": "Specialized Expertise",
+        "title": "Expert Team",
         "description": "A team with an experience exceeding 10 years on free work platforms now met together",
         "buttonServ": "Our Service",
         "buttonPro": "Projects"
@@ -185,7 +185,7 @@
   "services": {
     "title": "Our Services",
     "mainTitle": "We provide multiple services for all your needs",
-    "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form believable",
+    "description": "We provide a wide range of academic and marketing services tailored to meet all your needs — from project and research preparation to professional website development and branding design.",
     "readMore": "Read More",
     "services": "Services",
     "strategic": "Work Strategy...",
@@ -196,9 +196,9 @@
     }
   },
   "chooseUs": {
-    "title": "Choices & Events",
+    "title": "Why Us",
     "subtitle": "Why do you choose us",
-    "description": "I will explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
+    "description": "Scope is a carefully selected team focused on delivering quality and value to our clients.",
     "items": [
       {
         "title": "Comprehensive services",
@@ -255,7 +255,7 @@
   "testimonials": {
     "sectionTitle": "What Our Clients Say About Us...",
     "subTitle": "Our Clients",
-    "description": "This is similar to saying that shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.",
+    "description": "The reviews from our valued clients reflect the high quality of the services we provide them.",
     "navigation": {
       "previous": "Previous",
       "next": "Next"
@@ -315,8 +315,8 @@
   },
   "contactUs": {
     "title": "Consultations Anytime Anywhere",
-    "mainTitle": "Get Your Free Consultation Now",
-    "description": "We help you see the world differently, discover opportunities you may never have imagined.",
+    "mainTitle": "Get a Free Consultation Now...",
+    "description": "We’ll help you reach your goal in the fastest way possible.",
     "phone": "Phone",
     "contactUs": "Contact Us",
     "label": "Phone number",
