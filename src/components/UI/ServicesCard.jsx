@@ -48,7 +48,7 @@ const ServicesCard = ({
                     <img
                         src={service.img}
                         alt={service.name}
-                        className="relative rounded-[0.625rem]"
+                        className="relative rounded-[0.625rem] w-83.5 !h-83.5 object-cover"
                         loading="lazy"
                         width="500"
                         height="500"

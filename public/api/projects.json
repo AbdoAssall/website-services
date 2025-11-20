@@ -2,14 +2,14 @@
     "categories": [
         {
             "en": [
-                "Human Resources",
+                "University Research",
                 "Training",
                 "Leadership"
             ]
         },
         {
             "ar": [
-                "الموارد البشرية",
+                "أبحاث جامعية",
                 "التدريب",
                 "القيادة"
             ]
@@ -18,76 +18,99 @@
     "projects": [
         {
             "id": 1,
-            "slug": "shared-time-human-resources-management",
+            "slug": "digital-marketing-in-business-a-systematic-review",
             "img": "/assets/images/projects/project-1.jpg",
-            "date": "March 08, 2021",
-            "website": "https://example.com",
-            "location": "New York, USA",
+            "date": "June 11, 2022",
+            "website": "",
             "files": [
                 {
-                    "name": "Keyboard shortcuts",
-                    "url": "/assets/files/keyboard-shortcuts-windows.pdf",
+                    "name": "Digital Marketing in business A Systematic Review",
+                    "url": "https://drive.google.com/file/d/1tHlfSrp3p_LC2Q-Za3Jj8vbOX05TxmlL/view",
                     "type": "pdf"
-                },
-                {
-                    "name": "Project Documentation",
-                    "url": "/assets/files/project-documentation.pdf",
-                    "type": "pdf"
-                },
-                {
-                    "name": "Requirements Sheet",
-                    "url": "/assets/files/project-documentation.docx",
-                    "type": "docx"
                 }
             ],
             "images": [
                 {
-                    "url": "/assets/images/projects/project-1.jpg",
-                    "caption": "Detail View 1"
+                    "url": "/assets/images/projects/project-1.1.png",
+                    "caption": ""
                 },
                 {
-                    "url": "/assets/images/projects/project-5.jpg",
-                    "caption": "Detail View 2"
+                    "url": "/assets/images/projects/project-1.2.png",
+                    "caption": ""
+                },
+                {
+                    "url": "/assets/images/projects/project-1.3.png",
+                    "caption": ""
                 }
             ],
             "ar": {
-                "name": "إدارة الموارد البشرية بالوقت المشترك",
-                "category": "الموارد البشرية",
-                "description": "نظام متكامل لإدارة الموارد البشرية يتيح تتبع الحضور والانصراف بطريقة فعالة ومشتركة.",
-                "client": "حلول المعلومات التقنية",
-                "challenge": "كانت الشركة تواجه تحديات في إدارة الموارد البشرية وتتبع أداء الموظفين بطريقة فعالة. لم يكن لديهم نظام موحد لإدارة الحضور والانصراف.",
-                "result": "تحسنت كفاءة إدارة الموارد البشرية بنسبة 85% وتم توفير الوقت والجهد في العمليات اليومية.",
+                "name": "التسويق الرقمي في الأعمال: مراجعة منهجية",
+                "category": "أبحاث جامعية",
+                "location": "تركيا",
+                "client": "خالد الشمري",
+                "description": "بحث جامعي ك Systematic Review باللغة الإنجليزية عن تأثر التسويق الرقمي على الشركات المتوسطة والصغيرة.",
+                "challenges": [
+                    "فهرس",
+                    "ملخص البحث",
+                    "مقدمة",
+                    "مشكلة البحث",
+                    "هدف البحث",
+                    "أهمية البحث",
+                    "حدود البحث",
+                    "أسئلة البحث ",
+                    "منهجية البحث وجمع الداتا",
+                    "الأدب النظري",
+                    "النتائج والتوصيات"
+                ],
                 "solution": {
-                    "description": "قمنا بتطوير نظام متكامل يجمع جميع وظائف إدارة الموارد البشرية في مكان واحد، مع واجهة سهلة الاستخدام وتقارير تفصيلية.",
-                    "efficiency": "عمليات مبسطة لأداء أفضل",
-                    "innovation": "أحدث التقنيات والمنهجيات"
+                    "description": "كل موضوع له تخصص مستقل فالعمل يكون بين يدي متخصص متقن للتخصص وأغلب متخصصينا يحملون الماجستير والدكتوراه في تخصصاتهم لذلك يهمنا.",
+                    "efficiency": "القدرة على تسليم العمل بأعلى جودة.",
+                    "innovation": "نهتم بالمواعيد ووقت التسليم."
+                },
+                "results": {
+                    "head": "النتيجة",
+                    "description": "نجاح الطالب بالعلامة الكاملة."
                 },
                 "technologies": [
-                    "التخطيط الاستراتيجي",
-                    "تحسين العمليات",
-                    "تحليل البيانات",
-                    "إدارة الفريق",
-                    "ضمان الجودة"
+                    "أحدث المراجع",
+                    "قياس اقتباس",
+                    "قياس AI",
+                    "مراجعة وتدقيق"
                 ]
             },
             "en": {
-                "name": "Shared Time Human Resources Management",
-                "category": "Human Resources",
-                "description": "An integrated HR management system that enables effective and shared tracking of attendance and departure.",
-                "client": "The Infotech Solutions",
-                "challenge": "The company faced challenges in managing human resources and tracking employee performance effectively. They lacked a unified system for attendance and departure management.",
-                "result": "HR management efficiency improved by 85% and saved time and effort in daily operations.",
+                "name": "Digital Marketing in Business: A Systematic Review",
+                "category": "University Research",
+                "location": "Turkey",
+                "client": "Khalid Al-Shammari",
+                "description": "A university research paper (Systematic Review) in English about the impact of digital marketing on small and medium-sized enterprises.",
+                "challenges": [
+                    "Table of Contents",
+                    "Abstract",
+                    "Introduction",
+                    "Research Problem",
+                    "Research Objective",
+                    "Research Importance",
+                    "Research Limitations",
+                    "Research Questions",
+                    "Research Methodology and Data Collection",
+                    "Theoretical Framework",
+                    "Findings and Recommendations"
+                ],
                 "solution": {
-                    "description": "We developed an integrated system that brings all HR management functions into one place, with an easy-to-use interface and detailed reporting capabilities.",
-                    "efficiency": "Streamlined processes for better performance",
-                    "innovation": "Latest technologies and methodologies"
+                    "description": "Every topic has its own specialization, so work is handled by an expert highly skilled in the field. Most of our specialists hold master's or PhD degrees in their disciplines, which matters greatly to us.",
+                    "efficiency": "The ability to deliver the work with the highest quality.",
+                    "innovation": "We prioritize deadlines and delivery time."
+                },
+                "results": {
+                    "head": "Result",
+                    "description": "The student achieved full marks."
                 },
                 "technologies": [
-                    "Strategic Planning",
-                    "Process Optimization",
-                    "Data Analysis",
-                    "Team Management",
-                    "Quality Assurance"
+                    "Latest references",
+                    "Plagiarism check",
+                    "AI detection",
+                    "Review and proofreading"
                 ]
             }
         },

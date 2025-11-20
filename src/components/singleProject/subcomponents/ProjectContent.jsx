@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useLanguage } from "@store/LanguageContext";
+import { CheckCircle } from 'lucide-react';
 
 /**
  * Displays the main textual content of a project, including its name,
@@ -12,12 +13,14 @@ import { useLanguage } from "@store/LanguageContext";
  * @param {string} [props.project.category] - The category of the project.
  * @param {string} [props.project.date] - The completion date of the project.
  * @param {string} [props.project.description] - The detailed description of the project.
- * @param {string} [props.project.challenge] - The challenges encountered in the project.
+ * @param {string[]} [props.project.challenges] - The challenges encountered in the project.
  * @param {object} [props.project.solution] - The solution provided for the project.
  * @param {string} [props.project.solution.description] - The main description of the solution.
  * @param {string} [props.project.solution.efficiency] - A note on the efficiency of the solution.
  * @param {string} [props.project.solution.innovation] - A note on the innovation of the solution.
- * @param {string} [props.project.result] - The results and impact of the project.
+ * @param {object} [props.project.results] - The results and impact of the project.
+ * @param {string} [props.project.results.head] 
+ * @param {string} [props.project.results.description] 
  * @param {string[]} [props.project.technologies] - An array of technologies used.
  * @returns {JSX.Element} The rendered ProjectContent component.
  */
@@ -28,7 +31,7 @@ const ProjectContent = ({ project }) => {
         <article className="project-content">
             {/* Project Title */}
             <header className="mb-8">
-                <h1 className={`text-3xl lg:text-4xl xl:text-5xl font-bold text-heading-dark mb-4 ${isRTL ? '!leading-12' : '!leading-10'}`}>
+                <h1 className={`text-3xl lg:text-4xl xl:text-5xl font-bold text-heading-dark mb-4 ${isRTL ? '!leading-12 md:!leading-15' : '!leading-10 md:!leading-13'}`}>
                     {project.name}
                 </h1>
                 <div className="flex flex-wrap items-center gap-4 mt-2 text-sm text-dark-two">
@@ -57,15 +60,26 @@ const ProjectContent = ({ project }) => {
             </section>
 
             {/* Challenge Section */}
-            {project.challenge && (
+            {project.challenges && (
                 <section className="mb-10">
                     <h2 className="text-2xl lg:text-3xl font-bold text-heading-dark !mb-4">
                         {t('projects.challenge')}
                     </h2>
                     <div className="bg-sky/50 border-l-4 border-primary-one p-6 lg:p-8 rounded-tr-lg rounded-br-lg">
-                        <p className="text-dark-one leading-relaxed !text-base lg:!text-lg">
-                            {project.challenge}
-                        </p>
+                    {project.challenges.map((challenge, i) => (
+                        <div key={i} className={`flex items-start gap-3 ${isRTL ? 'text-right' : 'text-left'}`}>
+                            <div className="flex-shrink-0 mt-1">
+                                <CheckCircle
+                                    size={18}
+                                    className="text-primary-one"
+                                    aria-hidden="true"
+                                />
+                            </div>
+                            <p className="text-dark-one leading-relaxed !text-base lg:!text-lg">
+                                {challenge}
+                            </p>
+                        </div>
+                    ))}
                     </div>
                 </section>
             )}
@@ -107,10 +121,10 @@ const ProjectContent = ({ project }) => {
             )}
 
             {/* Results Section */}
-            {project.result && (
+            {project.results && (
                 <section className="mb-10">
                     <h2 className="text-2xl lg:text-3xl font-bold text-heading-dark !mb-6">
-                        {t('projects.results')}
+                        {project.results.head}
                     </h2>
                     <div className="bg-gradient-to-r from-primary-one/5 to-primary-one/10 border border-primary-one/20 p-6 lg:p-8 rounded-lg">
                         <div className="flex items-start">
@@ -135,7 +149,7 @@ const ProjectContent = ({ project }) => {
                                     {t('projects.success')}
                                 </h3>
                                 <p className="text-dark-one leading-relaxed text-lg">
-                                    {project.result}
+                                    {project.results.description}
                                 </p>
                             </div>
                         </div>
@@ -174,13 +188,16 @@ ProjectContent.propTypes = {
         category: PropTypes.string,
         date: PropTypes.string,
         description: PropTypes.string,
-        challenge: PropTypes.string,
+        challenges: PropTypes.arrayOf(PropTypes.string),
         solution: PropTypes.shape({
             description: PropTypes.string,
             efficiency: PropTypes.string,
             innovation: PropTypes.string
         }),
-        result: PropTypes.string,
+        results: PropTypes.shape({
+            head: PropTypes.string,
+            description: PropTypes.string,
+        }),
         technologies: PropTypes.arrayOf(PropTypes.string)
     }).isRequired
 };

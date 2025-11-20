@@ -22,10 +22,10 @@ const PageHeader = ({
             <div className="absolute inset-0 bg-primary-two/80 z-1"></div>
 
             {/* Content */}
-            <div className="relative z-10 container mx-auto px-4">
+            <div className="relative z-10 container !max-w-220 mx-auto px-4">
                 <div className="text-center text-white">
                     {/* Page Title */}
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl !text-white font-bold !mb-5 capitalize">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl !text-white font-bold !mb-5 !leading-11 md:!leading-16 capitalize">
                         {title}
                     </h1>
 

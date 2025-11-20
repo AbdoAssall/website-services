@@ -2,7 +2,7 @@
     {
         "id": 1,
         "slug": "masters-and-phd-theses",
-        "img": "/assets/images/services/service-image-4.jpg",
+        "img": "/assets/images/services/Academic-2.webp",
         "ar": {
             "name": "رسائل ماجستير وكتوراه",
             "description": "إعداد رسائل الماجستير والدكتوراه لجميع التخصصات وحتى المناقشة.",
@@ -153,7 +153,7 @@
     {
         "id": 2,
         "slug": "research",
-        "img": "/assets/images/services/service-image-5.jpg",
+        "img": "/assets/images/services/Academic-3.webp",
         "ar": {
             "name": "أبحاث",
             "description": "إعداد الأبحاث الجامعية وأوراق النشر.",
@@ -302,7 +302,7 @@
     {
         "id": 3,
         "slug": "graduation-projects",
-        "img": "/assets/images/services/service-image-6.jpg",
+        "img": "/assets/images/services/Academic-1.webp",
         "ar": {
             "name": "مشاريع تخرج",
             "description": "إعداد مشاريع التخرج بجميع التخصصات.",
@@ -910,7 +910,7 @@
     {
         "id": 7,
         "slug": "motion-graphics",
-        "img": "/assets/images/services/service-image-6.jpg",
+        "img": "/assets/images/services/Academic-8.webp",
         "ar": {
             "name": "موشن جرافك",
             "description": "نقدم خدمات الموشن جرافك.",
