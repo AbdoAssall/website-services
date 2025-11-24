@@ -25,14 +25,14 @@ const PageHeader = ({
             <div className="relative z-10 container !max-w-220 mx-auto px-4">
                 <div className="text-center text-white">
                     {/* Page Title */}
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl !text-white font-bold !mb-5 !leading-11 md:!leading-16 capitalize">
+                    <h1 className={`text-4xl md:text-5xl lg:text-6xl !text-white font-bold !mb-5 ${isRTL ? '!leading-11 md:!leading-18' : '!leading-11 md:!leading-16'} capitalize`}>
                         {title}
                     </h1>
 
                     {/* Breadcrumb Navigation */}
                     <nav className="flex justify-center items-center space-x-2 text-sm md:text-base">
                         {breadcrumbs.map((crumb, index) => (
-                            <div key={index} className="flex items-center content-center uppercase font-semibold font-spartan mx-0">
+                            <div key={index} className="flex items-center content-center uppercase font-semibold font-spartan max-w-120 mx-0">
                                 {crumb.href ? (
                                     <Link
                                         to={crumb.href}

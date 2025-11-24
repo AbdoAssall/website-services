@@ -27,11 +27,13 @@ import { CheckCircle } from 'lucide-react';
 const ProjectContent = ({ project }) => {
     const { language, isRTL, t } = useLanguage();
 
+    const boldWords = ['الفصل', 'المراجع', 'الملحقات', 'Chapter', 'References', 'Appendices'];
+
     return (
         <article className="project-content">
             {/* Project Title */}
             <header className="mb-8">
-                <h1 className={`text-3xl lg:text-4xl xl:text-5xl font-bold text-heading-dark mb-4 ${isRTL ? '!leading-12 md:!leading-15' : '!leading-10 md:!leading-13'}`}>
+                <h1 className={`text-3xl lg:text-4xl xl:text-5xl font-bold text-heading-dark mb-4 ${isRTL ? '!leading-12 md:!leading-16' : '!leading-10 md:!leading-13'}`}>
                     {project.name}
                 </h1>
                 <div className="flex flex-wrap items-center gap-4 mt-2 text-sm text-dark-two">
@@ -76,7 +78,7 @@ const ProjectContent = ({ project }) => {
                                 />
                             </div>
                             <p className="text-dark-one leading-relaxed !text-base lg:!text-lg">
-                                {challenge}
+                                {boldWords.some(bold => challenge.includes(bold)) ? <strong>{challenge}</strong> : challenge}
                             </p>
                         </div>
                     ))}

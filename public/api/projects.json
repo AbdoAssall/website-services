@@ -3,15 +3,17 @@
         {
             "en": [
                 "University Research",
-                "Training",
-                "Leadership"
+                "Research Proposals",
+                "Business Plans"
             ]
         },
         {
             "ar": [
                 "أبحاث جامعية",
-                "التدريب",
-                "القيادة"
+                "خطط أبحاث",
+                "خطط أعمال",
+                "استبيانات",
+                "رسائل الماجستير والدكتوراه"
             ]
         }
     ],
@@ -116,243 +118,357 @@
         },
         {
             "id": 2,
-            "slug": "six-essential-steps-to-writing-a-successful-job",
-            "img": "/assets/images/projects/project-2.jpg",
-            "date": "February 15, 2021",
-            "website": "https://example.com",
-            "location": "San Francisco, USA",
+            "slug": "design-of-a-strip-mall-and-fire-network-system",
+            "img": "/assets/images/projects/project-1.jpg",
+            "date": "July 5, 2022",
+            "website": "",
             "files": [
                 {
-                    "name": "Training Manual",
-                    "url": "/assets/files/project-2-manual.pdf",
+                    "name": "Proposal On Design of a strip mall and fire network system",
+                    "url": "https://drive.google.com/file/d/1CPxNS7qYf53JaRc9-VyucyHGVRp5gxPC/view",
                     "type": "pdf"
                 }
             ],
             "images": [
                 {
-                    "url": "/assets/images/projects/project-2.jpg",
-                    "caption": "Detail View 1"
+                    "url": "/assets/images/projects/project-2.1.png",
+                    "caption": ""
                 },
                 {
-                    "url": "/assets/images/projects/project-3.jpg",
-                    "caption": "Detail View 2"
+                    "url": "/assets/images/projects/project-2.2.png",
+                    "caption": ""
                 },
                 {
-                    "url": "/assets/images/projects/project-1.jpg",
-                    "caption": "Detail View 3"
-                },
-                {
-                    "url": "/assets/images/projects/project-4.jpg",
-                    "caption": "Detail View 4"
-                },
-                {
-                    "url": "/assets/images/projects/project-5.jpg",
-                    "caption": "Detail View 5"
+                    "url": "/assets/images/projects/project-2.3.png",
+                    "caption": ""
                 }
             ],
             "ar": {
-                "name": "ست خطوات أساسية لكتابة وظيفة ناجحة",
-                "category": "التدريب",
-                "description": "دليل شامل يوضح الخطوات الأساسية لكتابة وصف وظيفي فعال وجذاب للمرشحين المناسبين.",
-                "client": "تقنيات الابتكار التقني",
-                "challenge": "صعوبة في كتابة أوصاف وظيفية تجذب المرشحين المناسبين وتوضح متطلبات الوظيفة بدقة.",
-                "result": "تحسن جودة المرشحين المتقدمين بنسبة 70% وانخفض الوقت المطلوب لملء الوظائف الشاغرة.",
+                "name": "تصميم مركز تسوق شريطي ونظام شبكة مكافحة الحريق",
+                "category": "خطط أبحاث",
+                "location": "السعودية",
+                "client": "مشعل العطوي",
+                "description": "خطة بحث في تخصص الهندسة المعمارية باللغة الإنجليزية لتصميم مول تجاري بنظام اطفاء حريق ذاتي.",
+                "challenges": [
+                    "فهرس",
+                    "مقدمة البحث",
+                    "مشكلة البحث",
+                    "هدف البحث",
+                    "أهمية البحث",
+                    "حدود البحث",
+                    "أسئلة البحث ",
+                    "منهجية البحث وجمع الداتا",
+                    "الأدب النظري"
+                ],
                 "solution": {
-                    "description": "تطوير منهجية من ست خطوات أساسية لكتابة أوصاف وظيفية احترافية وفعالة.",
-                    "efficiency": "عمليات مبسطة لأداء أفضل",
-                    "innovation": "أحدث التقنيات والمنهجيات"
+                    "description": "كل موضوع له تخصص مستقل فالعمل يكون بين يدي متخصص متقن للتخصص وأغلب متخصصينا يحملون الماجستير والدكتوراه في تخصصاتهم لذلك يهمنا..",
+                    "efficiency": "القدرة على تسليم العمل بأعلى جودة.",
+                    "innovation": "نهتم بالمواعيد ووقت التسليم."
+                },
+                "results": {
+                    "head": "النتيجة...",
+                    "description": "قبول المشرف خطة العمل من الطالب."
                 },
                 "technologies": [
-                    "التخطيط الاستراتيجي",
-                    "تحسين العمليات",
-                    "تحليل البيانات",
-                    "إدارة الفريق",
-                    "ضمان الجودة"
+                    "أحدث المراجع",
+                    "قياس اقتباس",
+                    "قياس AI",
+                    "مراجعة وتدقيق"
                 ]
             },
             "en": {
-                "name": "Six Essential Steps to Writing a Successful Job",
-                "category": "Training",
-                "description": "A comprehensive guide that outlines the essential steps to writing an effective and attractive job description for suitable candidates.",
-                "client": "Tech Innovators Inc",
-                "challenge": "Difficulty in writing job descriptions that attract suitable candidates and accurately describe job requirements.",
-                "result": "Quality of applicants improved by 70% and reduced time required to fill vacant positions.",
+                "name": "Design of a strip mall and fire network system",
+                "category": "Research Proposals",
+                "location": "Saudi Arabia",
+                "client": "Mishal Al-Atwi",
+                "description": "A research proposal in the field of Architectural Engineering, written in English, for designing a commercial mall with an automatic fire suppression system.",
+                "challenges": [
+                    "Table of Contents",
+                    "Research Introduction",
+                    "Research Problem",
+                    "Research Objective",
+                    "Research Importance",
+                    "Research Limitations",
+                    "Research Questions",
+                    "Research Methodology and Data Collection",
+                    "Theoretical Framework"
+                ],
                 "solution": {
-                    "description": "Developed a six-step methodology for writing professional and effective job descriptions.",
-                    "efficiency": "Streamlined processes for better performance",
-                    "innovation": "Latest technologies and methodologies"
+                    "description": "Every topic requires its own specialization, so the work is handled by an expert proficient in the field. Most of our specialists hold master's or PhD degrees, which is important to us.",
+                    "efficiency": "The ability to deliver the work with the highest quality.",
+                    "innovation": "We prioritize deadlines and delivery time."
+                },
+                "results": {
+                    "head": "Result...",
+                    "description": "The supervisor accepted the student's research proposal."
                 },
                 "technologies": [
-                    "Strategic Planning",
-                    "Process Optimization",
-                    "Data Analysis",
-                    "Team Management",
-                    "Quality Assurance"
+                    "Latest references",
+                    "Plagiarism check",
+                    "AI detection",
+                    "Review and proofreading"
                 ]
             }
         },
         {
             "id": 3,
-            "slug": "time-hr-prepares-for-plastic-manufacturing-contract",
-            "img": "/assets/images/projects/project-3.jpg",
-            "date": "February 05, 2021",
-            "website": "https://example.com",
-            "location": "Los Angeles, USA",
+            "slug": "structure-of-mba-and-phd-theses-in-business-administration-from-a-previous-project",
+            "img": "/assets/images/projects/project-1.jpg",
+            "date": "Feb 10, 2023",
+            "website": "",
             "files": [
                 {
-                    "name": "Strategic Plan",
-                    "url": "/assets/files/project-3-plan.pdf",
+                    "name": "Royal Nights Hotel",
+                    "url": "https://drive.google.com/file/d/1QkzGgmOQPMinA2yEc4VEWJuq7spOeQGd/view",
                     "type": "pdf"
                 }
             ],
+            "images": [
+                {
+                    "url": "/assets/images/projects/project-3.1.png",
+                    "caption": ""
+                },
+                {
+                    "url": "/assets/images/projects/project-3.2.png",
+                    "caption": ""
+                },
+                {
+                    "url": "/assets/images/projects/project-3.3.png",
+                    "caption": ""
+                }
+            ],
             "ar": {
-                "name": "تايم إتش آر تستعد لعقد تصنيع البلاستيك",
-                "category": "القيادة",
-                "description": "مشروع استراتيجي لتطوير وتحسين عمليات تصنيع البلاستيك باستخدام أحدث التقنيات.",
-                "client": "مجموعة جالكان الأخوات",
-                "challenge": "الحاجة إلى تطوير عمليات التصنيع وتحسين الكفاءة في إنتاج المواد البلاستيكية.",
-                "result": "زيادة الإنتاجية بنسبة 60% وتحسين جودة المنتجات النهائية.",
-                "solution": {
-                    "description": "تطوير استراتيجية شاملة تشمل التقنيات الحديثة وتحسين سلسلة التوريد.",
-                    "efficiency": "عمليات مبسطة لأداء أفضل",
-                    "innovation": "أحدث التقنيات والمنهجيات"
+                "name": "هيكل عمل رسائل الماجستير والدكتوراه في إدارة الأعمال من مشروع سابق",
+                "category": "رسائل الماجستير والدكتوراه",
+                "location": "السعودية",
+                "client": "",
+                "description": "خطة عمل لمشروع فندقي 4 نجوم متكامل في مدينة برشلونة.",
+                "challenges": [
+                    "فهرس",
+                    "ملخص البحث",
+                    "مقدمة البحث",
+                    "الفصل الأول:",
+                    "مقدمة",
+                    "مشكلة البحث",
+                    "هدف البحث",
+                    "أهمية البحث",
+                    "حدود البحث",
+                    "أسئلة البحث ",
+                    "الفصل الثاني:",
+                    "الأدب النظري",
+                    "الفصل الثالث:",
+                    "منهجية البحث وجمع الداتا",
+                    "الفصل الرابع:",
+                    "المناقشة والتحليل",
+                    "الفصل الخامس:",
+                    "النتائج والتوصيات",
+                    "المراجع",
+                    "الملحقات"
+                ],
+                "results": {
+                    "head": "النتيجة...",
+                    "description": "قبول المشرف رسالة الماجستير من الطالب بتقدير ممتاز."
                 },
                 "technologies": [
-                    "التخطيط الاستراتيجي",
-                    "تحسين العمليات",
-                    "تحليل البيانات",
-                    "إدارة الفريق",
-                    "ضمان الجودة"
+                    "أحدث المراجع",
+                    "قياس اقتباس",
+                    "قياس AI",
+                    "تنسيق وتدقيق"
                 ]
             },
             "en": {
-                "name": "Time HR Prepares for Plastic Manufacturing Contract",
-                "category": "Leadership",
-                "description": "A strategic project to develop and improve plastic manufacturing processes using the latest technologies.",
-                "client": "Jalkan Sisters Group",
-                "challenge": "Need to develop manufacturing processes and improve efficiency in plastic material production.",
-                "result": "Increased productivity by 60% and improved final product quality.",
-                "solution": {
-                    "description": "Developed a comprehensive strategy including modern technologies and supply chain improvements.",
-                    "efficiency": "Streamlined processes for better performance",
-                    "innovation": "Latest technologies and methodologies"
+                "name": "Structure of MBA and PhD Theses in Business Administration from a Previous Project",
+                "category": "Master's and PhD Theses",
+                "location": "Saudi Arabia",
+                "client": "",
+                "description": "A business plan for a fully integrated 4-star hotel project in the city of Barcelona.",
+                "challenges": [
+                    "Table of Contents",
+                    "Research Abstract",
+                    "Research Introduction",
+                    "Chapter One:",
+                    "Introduction",
+                    "Research Problem",
+                    "Research Objective",
+                    "Research Importance",
+                    "Research Limitations",
+                    "Research Questions",
+                    "Chapter Two:",
+                    "Theoretical Framework",
+                    "Chapter Three:",
+                    "Research Methodology and Data Collection",
+                    "Chapter Four:",
+                    "Discussion and Analysis",
+                    "Chapter Five:",
+                    "Findings and Recommendations",
+                    "References",
+                    "Appendices"
+                ],
+                "results": {
+                    "head": "Result...",
+                    "description": "The supervisor accepted the student's master's thesis with an excellent grade."
                 },
                 "technologies": [
-                    "Strategic Planning",
-                    "Process Optimization",
-                    "Data Analysis",
-                    "Team Management",
-                    "Quality Assurance"
+                    "Latest references",
+                    "Plagiarism check",
+                    "AI detection",
+                    "Formatting and proofreading"
                 ]
             }
         },
         {
             "id": 4,
-            "slug": "essential-steps-for-writing-job-description",
-            "img": "/assets/images/projects/project-4.jpg",
-            "date": "April 14, 2021",
-            "website": "https://example.com",
-            "location": "Chicago, USA",
+            "slug": "business-plan-royal-nights-hotel",
+            "img": "/assets/images/projects/project-1.jpg",
+            "date": "December 24, 2024",
+            "website": "",
             "files": [
                 {
-                    "name": "Job Description Guide",
-                    "url": "/assets/files/project-4-guide.pdf",
+                    "name": "Royal Nights Hotel",
+                    "url": "https://drive.google.com/file/d/1QkzGgmOQPMinA2yEc4VEWJuq7spOeQGd/view",
                     "type": "pdf"
                 }
             ],
+            "images": [
+                {
+                    "url": "/assets/images/projects/project-4.1.png",
+                    "caption": ""
+                },
+                {
+                    "url": "/assets/images/projects/project-4.2.png",
+                    "caption": ""
+                },
+                {
+                    "url": "/assets/images/projects/project-4.3.png",
+                    "caption": ""
+                }
+            ],
             "ar": {
-                "name": "الخطوات الأساسية لكتابة وصف الوظيفة",
-                "category": "الموارد البشرية",
-                "description": "منهجية علمية لصياغة أوصاف وظيفية دقيقة تساعد في جذب المواهب المناسبة.",
-                "client": "مجموعة الأمهات الستة",
-                "challenge": "عدم وضوح أوصاف الوظائف مما يؤدي إلى جذب مرشحين غير مناسبين.",
-                "result": "تحسن معدل نجاح التوظيف بنسبة 80% وانخفاض معدل دوران الموظفين.",
-                "solution": {
-                    "description": "تطوير منهجية منظمة لكتابة أوصاف وظيفية واضحة ومفصلة.",
-                    "efficiency": "عمليات مبسطة لأداء أفضل",
-                    "innovation": "أحدث التقنيات والمنهجيات"
+                "name": "خطة عمل فندق الليالي الملكية",
+                "category": "خطط أعمال",
+                "location": "أسبانيا",
+                "client": "عمار الفارسي",
+                "description": "خطة عمل لمشروع فندقي 4 نجوم متكامل في مدينة برشلونة.",
+                "challenges": [
+                    "فهرس",
+                    "الملخص التنفيذي",
+                    "الوصف العام",
+                    "تحليل الشركة",
+                    "تحليل العملاء",
+                    "تحليل المنافسين",
+                    "الخطة الاستراتيجية",
+                    "خطة العمليات",
+                    "الخطة المالية",
+                    "المعالم الرئيسية"
+                ],
+                "results": {
+                    "head": "النتيجة...",
+                    "description": "قبول المشروع بامتياز."
                 },
                 "technologies": [
-                    "التخطيط الاستراتيجي",
-                    "تحسين العمليات",
-                    "تحليل البيانات",
-                    "إدارة الفريق",
-                    "ضمان الجودة"
+                    "أحدث المراجع",
+                    "قياس اقتباس",
+                    "قياس AI",
+                    "تنسيق وتدقيق"
                 ]
             },
             "en": {
-                "name": "Essential Steps for Writing Job Description",
-                "category": "Human Resources",
-                "description": "A scientific methodology for drafting accurate job descriptions that help attract suitable talent.",
-                "client": "The Sixmothers Group",
-                "challenge": "Unclear job descriptions leading to attracting unsuitable candidates.",
-                "result": "Improved hiring success rate by 80% and reduced employee turnover.",
-                "solution": {
-                    "description": "Developed an organized methodology for writing clear and detailed job descriptions.",
-                    "efficiency": "Streamlined processes for better performance",
-                    "innovation": "Latest technologies and methodologies"
+                "name": "Business Plan Royal Nights Hotel",
+                "category": "Business Plans",
+                "location": "Spain",
+                "client": "Ammar Al-Farsi",
+                "description": "A business plan for a fully integrated 4-star hotel project in the city of Barcelona.",
+                "challenges": [
+                    "Table of Contents",
+                    "Executive Summary",
+                    "General Description",
+                    "Company Analysis",
+                    "Customer Analysis",
+                    "Competitive Analysis",
+                    "Strategic Plan",
+                    "Operations Plan",
+                    "Financial Plan",
+                    "Key Milestones"
+                ],
+                "results": {
+                    "head": "Result...",
+                    "description": "The project was accepted with excellence."
                 },
                 "technologies": [
-                    "Strategic Planning",
-                    "Process Optimization",
-                    "Data Analysis",
-                    "Team Management",
-                    "Quality Assurance"
+                    "Latest references",
+                    "Plagiarism check",
+                    "AI detection",
+                    "Formatting and proofreading"
                 ]
             }
         },
         {
             "id": 5,
-            "slug": "complex-dismissal-for-small-company",
-            "img": "/assets/images/projects/project-5.jpg",
-            "date": "January 22, 2021",
-            "website": "https://example.com",
-            "location": "Miami, USA",
+            "slug": "insurance-as-a-tool-to-enhance-financial-awareness-and-encourage-long-term-investment",
+            "img": "/assets/images/projects/project-1.jpg",
+            "date": "oct 24, 2025",
+            "website": "",
             "files": [
                 {
-                    "name": "Training Program",
-                    "url": "/assets/files/project-5-training.pptx",
-                    "type": "pptx"
+                    "name": "Survey Form",
+                    "url": "/assets/files/Survey Form.pdf",
+                    "type": "pdf"
+                }
+            ],
+            "images": [
+                {
+                    "url": "/assets/images/projects/project-5.1.png",
+                    "caption": ""
+                },
+                {
+                    "url": "/assets/images/projects/project-5.2.png",
+                    "caption": ""
+                },
+                {
+                    "url": "/assets/images/projects/project-5.3.png",
+                    "caption": ""
                 }
             ],
             "ar": {
-                "name": "الفصل المعقد لشركة صغيرة",
-                "category": "التدريب",
-                "description": "برنامج تدريبي متخصص يساعد الشركات الصغيرة على إدارة عمليات الفصل المعقدة بطريقة مهنية.",
-                "client": "مجموعة الأمهات الستة",
-                "challenge": "صعوبة في إدارة عمليات الفصل المعقدة والحفاظ على سمعة الشركة.",
-                "result": "تحسن إدارة العلاقات مع الموظفين وانخفاض النزاعات القانونية بنسبة 90%.",
-                "solution": {
-                    "description": "تطوير برنامج تدريبي شامل يغطي جميع جوانب إدارة عمليات الفصل.",
-                    "efficiency": "عمليات مبسطة لأداء أفضل",
-                    "innovation": "أحدث التقنيات والمنهجيات"
+                "name": "التأمين كأداة لتعزيز الوعي المالي وتحفيز الاستثمار طويل الأجل",
+                "category": "استبيانات",
+                "location": "السعودية",
+                "client": "",
+                "description": "استبيان لقياس التأمين التكافلي مقابل طرق الاستثمار الأخرى بالعربية والإنجليزية.",
+                "challenges": [
+                    "مقدمة الإستبيان",
+                    "أقسام الإستبيان",
+                    "مراجع الإستبيان"
+                ],
+                "results": {
+                    "head": "النتيجة...",
+                    "description": "نجاح الإستبيان."
                 },
                 "technologies": [
-                    "التخطيط الاستراتيجي",
-                    "تحسين العمليات",
-                    "تحليل البيانات",
-                    "إدارة الفريق",
-                    "ضمان الجودة"
+                    "بحث واستطلاع",
+                    "أحدث المراجع",
+                    "تنسيق وتدقيق"
                 ]
             },
             "en": {
-                "name": "Complex Dismissal for Small Company",
-                "category": "Training",
-                "description": "A specialized training program that helps small companies manage complex dismissal processes professionally.",
-                "client": "The Sixmothers Group",
-                "challenge": "Difficulty in managing complex dismissal processes while maintaining company reputation.",
-                "result": "Improved employee relations management and reduced legal disputes by 90%.",
-                "solution": {
-                    "description": "Developed a comprehensive training program covering all aspects of dismissal process management.",
-                    "efficiency": "Streamlined processes for better performance",
-                    "innovation": "Latest technologies and methodologies"
+                "name": "Insurance as a Tool to Enhance Financial Awareness and Encourage Long-Term Investment",
+                "category": "Surveys",
+                "location": "Saudi Arabia",
+                "client": "",
+                "description": "A survey to measure Takaful insurance compared to other investment methods, in both Arabic and English.",
+                "challenges": [
+                    "Survey Introduction",
+                    "Survey Sections",
+                    "Survey References"
+                ],
+                "results": {
+                    "head": "Result...",
+                    "description": "The survey was successful."
                 },
                 "technologies": [
-                    "Strategic Planning",
-                    "Process Optimization",
-                    "Data Analysis",
-                    "Team Management",
-                    "Quality Assurance"
+                    "Research and Survey",
+                    "Latest References",
+                    "Formatting and Proofreading"
                 ]
             }
         },
