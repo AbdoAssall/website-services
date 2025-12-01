@@ -4,7 +4,10 @@
             "en": [
                 "University Research",
                 "Research Proposals",
-                "Business Plans"
+                "Business Plans",
+                "Surveys",
+                "Master's and PhD Theses",
+                "Website Design and Development"
             ]
         },
         {
@@ -119,8 +122,8 @@
         {
             "id": 2,
             "slug": "design-of-a-strip-mall-and-fire-network-system",
-            "img": "/assets/images/projects/project-1.jpg",
-            "date": "July 5, 2022",
+            "img": "/assets/images/projects/project-2.jpg",
+            "date": "July 05, 2022",
             "website": "",
             "files": [
                 {
@@ -213,13 +216,13 @@
         {
             "id": 3,
             "slug": "structure-of-mba-and-phd-theses-in-business-administration-from-a-previous-project",
-            "img": "/assets/images/projects/project-1.jpg",
+            "img": "/assets/images/projects/project-3.jpg",
             "date": "Feb 10, 2023",
             "website": "",
             "files": [
                 {
-                    "name": "Royal Nights Hotel",
-                    "url": "https://drive.google.com/file/d/1QkzGgmOQPMinA2yEc4VEWJuq7spOeQGd/view",
+                    "name": "My Academic format for masters & PhD",
+                    "url": "https://drive.google.com/file/d/1SdxCctwprDZ7e7BrikD71TPKsq3ptdOr/view",
                     "type": "pdf"
                 }
             ],
@@ -242,7 +245,7 @@
                 "category": "رسائل الماجستير والدكتوراه",
                 "location": "السعودية",
                 "client": "",
-                "description": "خطة عمل لمشروع فندقي 4 نجوم متكامل في مدينة برشلونة.",
+                "description": "",
                 "challenges": [
                     "فهرس",
                     "ملخص البحث",
@@ -281,7 +284,7 @@
                 "category": "Master's and PhD Theses",
                 "location": "Saudi Arabia",
                 "client": "",
-                "description": "A business plan for a fully integrated 4-star hotel project in the city of Barcelona.",
+                "description": "",
                 "challenges": [
                     "Table of Contents",
                     "Research Abstract",
@@ -319,7 +322,7 @@
         {
             "id": 4,
             "slug": "business-plan-royal-nights-hotel",
-            "img": "/assets/images/projects/project-1.jpg",
+            "img": "/assets/images/projects/project-4.jpg",
             "date": "December 24, 2024",
             "website": "",
             "files": [
@@ -405,7 +408,7 @@
         {
             "id": 5,
             "slug": "insurance-as-a-tool-to-enhance-financial-awareness-and-encourage-long-term-investment",
-            "img": "/assets/images/projects/project-1.jpg",
+            "img": "/assets/images/projects/project-5.jpg",
             "date": "oct 24, 2025",
             "website": "",
             "files": [

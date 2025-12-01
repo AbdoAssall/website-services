@@ -30,31 +30,29 @@ const ProjectsTabs = () => {
         const categoryFromUrl = searchParams.get('category');
         const pageFromUrl = searchParams.get('page');
         const pageNum = parseInt(pageFromUrl, 10);
-        const viewAllLabel = categories[0]; // "عرض الكل" أو "View All" باللغة الحالية
+        const viewAllLabel = categories[0]; // assuming the first category is "View All"
 
         // **new logic for handling language change**
-        // إذا كان هناك فلتر نشط في الحالة، ولكنه غير موجود في قائمة التصنيفات الحالية
+        // if the current filter is not in the categories (due to language change), reset it to "View All"
         if (filters.category && !categories.includes(filters.category)) {
-            // هذا يعني أن اللغة تغيرت والفلتر القديم لم يعد صالحًا
-            // الحل: قم بإعادة التعيين إلى "عرض الكل"
-            setFilters({ category: viewAllLabel });
+            setFilters({ category: viewAllLabel }); // reset to "View All"
 
-            // وقم بتنظيف الرابط من التصنيف القديم
+            // update the URL to remove the invalid category
             setSearchParams(params => {
                 params.delete('category');
                 return params;
             });
         }
-        // إذا كان هناك تصنيف في الرابط وهو يختلف عن الفلتر الحالي، قم بتطبيقه
+        // if there is cat in the url then appled it
         else if (categoryFromUrl && categoryFromUrl !== filters.category) {
             setFilters({ category: categoryFromUrl });
         }
-        // إذا لم يكن هناك تصنيف في الرابط، تأكد أن الفلتر هو "عرض الكل"
+        // if there is no category in the URL, ensure the filter is "View All"
         else if (!categoryFromUrl && filters.category !== viewAllLabel) {
             setFilters({ category: viewAllLabel });
         }
 
-        // التعامل مع رقم الصفحة يبقى كما هو
+        // Handle page number from URL
         if (pageNum && pageNum !== currentPage) {
             setCurrentPage(pageNum);
         }
@@ -68,14 +66,14 @@ const ProjectsTabs = () => {
 
         setIsAnimating(true); // Start the animation
 
-        // عند تغيير الفلتر، قم بتحديث الرابط
+        // when filter changes, update the URL params
         setSearchParams(params => {
-            if (category === categories[0]) { // إذا كان "View All"
-                params.delete('category'); // احذف التصنيف من الرابط
+            if (category === categories[0]) { // If "View All" is selected
+                params.delete('category'); // clear the category from the URL
             } else {
-                params.set('category', category); // أضف التصنيف للرابط
+                params.set('category', category); // set the selected category
             }
-            params.delete('page'); // احذف رقم الصفحة دائمًا عند تغيير الفلتر
+            params.delete('page'); // 
             return params;
         });
 

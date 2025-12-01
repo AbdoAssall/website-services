@@ -9,14 +9,13 @@ import { useLanguage } from '@store/LanguageContext';
  */
 
 /**
- * @typedef {Object} HighlightsSection
- * @property {string} img - The URL for the highlights section image.
- * @property {Highlight[]} items - An array of highlight objects.
+ * @typedef {Array<Highlight>} HighlightsSection 
  */
 
 /**
  * @typedef {Object} Service
  * @property {string} name - The name of the service.
+ * @property {string[]} images - An array of image URLs related to the service.
  * @property {HighlightsSection} [highlights] - The highlights section containing image and items.
  */
 
@@ -29,7 +28,7 @@ const CreativeSolutions = ({ service }) => {
     const { isRTL } = useLanguage();
 
     return (
-        <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center`}>
+        <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:pt-8`}>
             {/* Left Column: Textual Content */}
             <div
                 className={`w-full lg:w-1/2 space-y-8 ${isRTL ? 'text-right' : 'text-left'
@@ -41,7 +40,7 @@ const CreativeSolutions = ({ service }) => {
                 </h2>
 
                 {service.highlights &&
-                    service.highlights.items.map((item, index) => (
+                    service.highlights.map((item, index) => (
                         <div
                             key={index}
                             className={`flex gap-4 items-start`}
@@ -67,11 +66,11 @@ const CreativeSolutions = ({ service }) => {
             </div>
 
             {/* Right Column: Image */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 h-full">
                 <img
-                    src={service?.highlights?.img}
+                    src={service?.images[1]}
                     alt={service.name}
-                    className="w-full h-auto rounded-lg object-cover shadow-lg"
+                    className="w-full !h-73 rounded-lg object-cover shadow-lg"
                     loading="lazy"
                 />
             </div>
@@ -82,17 +81,13 @@ const CreativeSolutions = ({ service }) => {
 CreativeSolutions.propTypes = {
     service: PropTypes.shape({
         name: PropTypes.string,
-        img: PropTypes.string.isRequired,
-        highlights: PropTypes.shape({
-            img: PropTypes.string,
-            items: PropTypes.arrayOf(
-                PropTypes.shape({
-                    icon: PropTypes.string.isRequired,
-                    title: PropTypes.string.isRequired,
-                    description: PropTypes.string.isRequired,
-                })
-            )
-        }),
+        images: PropTypes.arrayOf(PropTypes.string).isRequired,
+        highlights: PropTypes.arrayOf(
+            PropTypes.shape({
+                title: PropTypes.string.isRequired,
+                description: PropTypes.string.isRequired,
+            })
+        ),
     }),
 };
 

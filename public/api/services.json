@@ -2,7 +2,11 @@
     {
         "id": 1,
         "slug": "masters-and-phd-theses",
-        "img": "/assets/images/services/Academic-2.webp",
+        "img": "/assets/images/services/service-1.jpg",
+        "images": [
+            "/assets/images/services/service-image-1.jpg",
+            "/assets/images/services/service-image-2.jpg"
+        ],
         "ar": {
             "name": "رسائل ماجستير وكتوراه",
             "description": "إعداد رسائل الماجستير والدكتوراه لجميع التخصصات وحتى المناقشة.",
@@ -13,42 +17,32 @@
             "benefits": [
                 {
                     "title": "مواعيد دقيقة",
-                    "description": "دائما نلتزم بالمواعيد ونحرص عليها.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "دائما نلتزم بالمواعيد ونحرص عليها."
                 },
                 {
                     "title": "احترافية العمل",
-                    "description": "نلتزم بالدقة والإحترافية في عملنا.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "نلتزم بالدقة والإحترافية في عملنا."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل تخصصي",
-                        "description": "نهتم بالتخصص كل رسالة يجب أن ينفذها مختص في هذا التخصص."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل جودة",
-                        "description": "نهتم بالجودة والمخرجات لأنها أهم شيء في العمل."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "نفهم التخصص جيدا",
-                    "نفهم المطلوب والتعليمات بدقة",
-                    "نختار العنوان",
-                    "نسير على المعايير العلمية",
-                    "ننفذ خطة الدراسة",
-                    "ثم بعد ذلك نبدا بعمل فصل تلو الآخر",
-                    "نراجع كل فصل قبل البدأ في الآخر"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "عمل تخصصي",
+                    "description": "نهتم بالتخصص كل رسالة يجب أن ينفذها مختص في هذا التخصص."
+                },
+                {
+                    "title": "أفضل جودة",
+                    "description": "نهتم بالجودة والمخرجات لأنها أهم شيء في العمل."
+                }
+            ],
+            "steps": [
+                "نفهم التخصص جيدا",
+                "نفهم المطلوب والتعليمات بدقة",
+                "نختار العنوان",
+                "نسير على المعايير العلمية",
+                "ننفذ خطة الدراسة",
+                "ثم بعد ذلك نبدا بعمل فصل تلو الآخر",
+                "نراجع كل فصل قبل البدأ في الآخر"
+            ],
             "features": [
                 "التواصل الجيد",
                 "الفهم الدقيق",
@@ -86,42 +80,32 @@
             "benefits": [
                 {
                     "title": "Accurate Deadlines",
-                    "description": "We always commit to deadlines and take them seriously.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "We always commit to deadlines and take them seriously."
                 },
                 {
                     "title": "Professional Work",
-                    "description": "We adhere to precision and professionalism in all our work.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "We adhere to precision and professionalism in all our work."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Specialized Work",
-                        "description": "We value specialization — every thesis is handled by an expert in the same field."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Top Quality",
-                        "description": "We focus on quality and output as they are the most important aspects of our work."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "Understand the field thoroughly",
-                    "Carefully study the requirements and instructions",
-                    "Select the title",
-                    "Follow academic standards",
-                    "Develop the study plan",
-                    "Work on each chapter one by one",
-                    "Review each chapter before starting the next"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "Specialized Work",
+                    "description": "We value specialization — every thesis is handled by an expert in the same field."
+                },
+                {
+                    "title": "Top Quality",
+                    "description": "We focus on quality and output as they are the most important aspects of our work."
+                }
+            ],
+            "steps": [
+                "Understand the field thoroughly",
+                "Carefully study the requirements and instructions",
+                "Select the title",
+                "Follow academic standards",
+                "Develop the study plan",
+                "Work on each chapter one by one",
+                "Review each chapter before starting the next"
+            ],
             "features": [
                 "Effective communication",
                 "Accurate understanding",
@@ -154,6 +138,10 @@
         "id": 2,
         "slug": "research",
         "img": "/assets/images/services/Academic-3.webp",
+        "images": [
+            "/assets/images/services/service-image-1.jpg",
+            "/assets/images/services/service-image-2.jpg"
+        ],
         "ar": {
             "name": "أبحاث",
             "description": "إعداد الأبحاث الجامعية وأوراق النشر.",
@@ -164,41 +152,31 @@
             "benefits": [
                 {
                     "title": "مواعيد دقيقة",
-                    "description": "دائما نلتزم بالمواعيد ونحرص عليها.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "دائما نلتزم بالمواعيد ونحرص عليها."
                 },
                 {
                     "title": "احترافية العمل",
-                    "description": "نلتزم بالدقة والإحترافية في عملنا.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "نلتزم بالدقة والإحترافية في عملنا."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل تخصصي",
-                        "description": "نهتم بالتخصص كل تخصص يجب أن ينفذها مختص في هذا التخصص."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل جودة",
-                        "description": "نهتم بالجودة والمخرجات لأنها أهم شيء في العمل."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "اختيار العنوان",
-                    "معرفة شروط الجامعة",
-                    "تنفيذ البحث",
-                    "تنسيق البحث",
-                    "مراجعة البحث",
-                    "تسليم البحث"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "عمل تخصصي",
+                    "description": "نهتم بالتخصص كل تخصص يجب أن ينفذها مختص في هذا التخصص."
+                },
+                {
+                    "title": "أفضل جودة",
+                    "description": "نهتم بالجودة والمخرجات لأنها أهم شيء في العمل."
+                }
+            ],
+            "steps": [
+                "اختيار العنوان",
+                "معرفة شروط الجامعة",
+                "تنفيذ البحث",
+                "تنسيق البحث",
+                "مراجعة البحث",
+                "تسليم البحث"
+            ],
             "features": [
                 "التواصل الجيد",
                 "الفهم الدقيق",
@@ -236,41 +214,31 @@
             "benefits": [
                 {
                     "title": "Accurate Deadlines",
-                    "description": "We always commit to deadlines and make sure to meet them.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "We always commit to deadlines and make sure to meet them."
                 },
                 {
                     "title": "Professional Work",
-                    "description": "We adhere to accuracy and professionalism in our work.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "We adhere to accuracy and professionalism in our work."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Specialized Work",
-                        "description": "We focus on specialization — every field should be handled by an expert in that field."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Top Quality",
-                        "description": "We care about quality and outcomes, as they are the most important part of our work."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "Selecting the title",
-                    "Understanding university requirements",
-                    "Conducting the research",
-                    "Formatting the research",
-                    "Reviewing the research",
-                    "Submitting the research"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "Specialized Work",
+                    "description": "We focus on specialization — every field should be handled by an expert in that field."
+                },
+                {
+                    "title": "Top Quality",
+                    "description": "We care about quality and outcomes, as they are the most important part of our work."
+                }
+            ],
+            "steps": [
+                "Selecting the title",
+                "Understanding university requirements",
+                "Conducting the research",
+                "Formatting the research",
+                "Reviewing the research",
+                "Submitting the research"
+            ],
             "features": [
                 "Good communication",
                 "Accurate understanding",
@@ -303,6 +271,10 @@
         "id": 3,
         "slug": "graduation-projects",
         "img": "/assets/images/services/Academic-1.webp",
+        "images": [
+            "/assets/images/services/service-image-1.jpg",
+            "/assets/images/services/service-image-2.jpg"
+        ],
         "ar": {
             "name": "مشاريع تخرج",
             "description": "إعداد مشاريع التخرج بجميع التخصصات.",
@@ -313,41 +285,31 @@
             "benefits": [
                 {
                     "title": "مواعيد دقيقة",
-                    "description": "دائما نلتزم بالمواعيد ونحرص عليها.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "دائما نلتزم بالمواعيد ونحرص عليها."
                 },
                 {
                     "title": "احترافية العمل",
-                    "description": "نلتزم بالدقة والإحترافية في عملنا.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "نلتزم بالدقة والإحترافية في عملنا."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل تخصصي",
-                        "description": "نهتم بالتخصص كل تخصص يجب أن ينفذها مختص في هذا التخصص."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل جودة",
-                        "description": "نهتم بالجودة والمخرجات لأنها أهم شيء في العمل."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "اختيار العنوان",
-                    "معرفة شروط الجامعة",
-                    "تنفيذ البحث",
-                    "تنسيق البحث",
-                    "مراجعة البحث",
-                    "تسليم البحث"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "عمل تخصصي",
+                    "description": "نهتم بالتخصص كل تخصص يجب أن ينفذها مختص في هذا التخصص."
+                },
+                {
+                    "title": "أفضل جودة",
+                    "description": "نهتم بالجودة والمخرجات لأنها أهم شيء في العمل."
+                }
+            ],
+            "steps": [
+                "اختيار العنوان",
+                "معرفة شروط الجامعة",
+                "تنفيذ البحث",
+                "تنسيق البحث",
+                "مراجعة البحث",
+                "تسليم البحث"
+            ],
             "features": [
                 "التواصل الجيد",
                 "الفهم الدقيق",
@@ -385,41 +347,31 @@
             "benefits": [
                 {
                     "title": "Accurate Deadlines",
-                    "description": "We always adhere strictly to deadlines and respect them.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "We always adhere strictly to deadlines and respect them."
                 },
                 {
                     "title": "Work Professionalism",
-                    "description": "We commit to precision and professionalism in everything we do.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "We commit to precision and professionalism in everything we do."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Specialized Work",
-                        "description": "We focus on specialization — every project must be handled by an expert in that specific field."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Top Quality",
-                        "description": "We care deeply about quality and deliverables — they are the most important aspects of our work."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "Choosing the topic",
-                    "Understanding university requirements",
-                    "Conducting the research",
-                    "Formatting the research",
-                    "Reviewing the research",
-                    "Delivering the final research"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "Specialized Work",
+                    "description": "We focus on specialization — every project must be handled by an expert in that specific field."
+                },
+                {
+                    "title": "Top Quality",
+                    "description": "We care deeply about quality and deliverables — they are the most important aspects of our work."
+                }
+            ],
+            "steps": [
+                "Choosing the topic",
+                "Understanding university requirements",
+                "Conducting the research",
+                "Formatting the research",
+                "Reviewing the research",
+                "Delivering the final research"
+            ],
             "features": [
                 "Excellent communication",
                 "Accurate understanding",
@@ -451,77 +403,76 @@
     {
         "id": 4,
         "slug": "project-feasibility-studies",
-        "img": "/assets/images/services/service-image-4.jpg",
+        "img": "/assets/images/services/service-4.jpg",
+        "images": [
+            "/assets/images/services/service-image-1.jpg",
+            "/assets/images/services/service-image-2.jpg"
+        ],
         "ar": {
             "name": "دراسة جدوى المشاريع",
             "description": "إعداد دراسات الجدوى للمشاريع والشركات.",
             "content": {
-                "title": "تقديم تجارب خدمة عالمية المستوى!..",
-                "fullDescription": "نحول حضورك الرقمي باستراتيجيات تسويقية شاملة تحقق النتائج وتنمي أعمالك. فريقنا من خبراء التسويق الرقمي يستخدم أحدث الأدوات والتقنيات لضمان وصولك إلى جمهورك المستهدف."
+                "title": "دراسة مشروعك معنا!",
+                "fullDescription": "دراسة الجدوى هو حجر الأساس لكل مشروع وعلى أساسه يتم تقييم المشروع لذلك نحن في سكوب نقوم بدراسة مشروعك دراسة كاملة وإعداد دراسة معمقة للسوق وإعداد دراسة معمقة وتفصيلية..."
             },
             "benefits": [
                 {
-                    "title": "التحقق من الخلفية",
-                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
-                    "icon": "/assets/images/icons/true.png"
+                    "title": "مواعيد دقيقة",
+                    "description": "دائما نلتزم بالمواعيد ونحرص عليها."
                 },
                 {
-                    "title": "وصف الوظيفة",
-                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
-                    "icon": "/assets/images/icons/true.png"
+                    "title": "احترافية العمل",
+                    "description": "نلتزم بالدقة والإحترافية في عملنا."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل إبداعي",
-                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل حل",
-                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "رؤية المنظمة ورسالتها وقيمها",
-                    "الأهداف الاستراتيجية المتفق عليها",
-                    "التقييم والتحكم.",
-                    "تنفيذ استراتيجيتك.",
-                    "صياغة استراتيجية.",
-                    "جمع وتحليل المعلومات.",
-                    "توضيح رؤيتك"
-                ]
-            },
-            "features": [
-                "تحسين محركات البحث والإعلانات المدفوعة",
-                "تسويق وسائل التواصل الاجتماعي",
-                "استراتيجية وإنشاء المحتوى",
-                "التحليلات والتقارير المفصلة"
+            "highlights": [
+                {
+                    "title": "عمل تخصصي",
+                    "description": "نهتم بالتخصص كل تخصص يجب أن ينفذها مختص في هذا التخصص."
+                },
+                {
+                    "title": "أفضل جودة",
+                    "description": "نهتم بالجودة والمخرجات لأنها أهم شيء في العمل."
+                }
             ],
-            "process": "نحلل جمهورك المستهدف، ونطور استراتيجيات قائمة على البيانات، وننفذ حملات عبر قنوات متعددة، ونحسن باستمرار لتحقيق أقصى عائد على الاستثمار.",
+            "steps": [
+                "دراسة السوق",
+                "معرفة المنافسين",
+                "تحليل الفرص والمخاطر",
+                "تحليل SWOT",
+                "تحليل Tows",
+                "تحليل Porter",
+                "إعداد القائمة المالية",
+                "تسليم العمل"
+            ],
+            "features": [
+                "التواصل الجيد",
+                "الفهم الدقيق",
+                "المراجعة الدقيقة"
+            ],
+            "process": "عملنا يبدأ من فهم احتياجات العمل ومتطلباته وما يحتاجه العميل ونقدم جميع الدعم له...",
             "confidence": {
-                "description": "التنديد باللذة ومدح الألم سيعطيك صورة كاملة لمن يختار الاستمتاع بلذة ليس لها عواقب مزعجة.",
+                "description": "",
                 "tabs": [
                     {
-                        "label": "تحليل الهدف",
-                        "title": "كيف تحدد السوق المستهدف؟",
-                        "description": "تحليل السوق المستهدف يحدد أين وكيف يتناسب منتجك في السوق الحقيقي. باستخدام هذه المعلومات، يمكنك: تحديد الأسواق الأكثر والأقل قيمة لعملك. تطوير شخصيات مشترين دقيقة."
+                        "label": "التعديلات",
+                        "title": "هل التعديلات غير محدودة؟ ",
+                        "description": "نعم التعديلات غير محدودة وبشكل كامل."
                     },
                     {
-                        "label": "تحليل البحث",
-                        "title": "ما هي تقنيات تحليل البيانات في البحث؟",
-                        "description": "أكثر طرق تحليل البيانات شيوعًا هي: تحليل المحتوى: هذه إحدى أكثر الطرق شيوعًا لتحليل البيانات النوعية. ... التحليل السردي: تُستخدم هذه الطريقة لتحليل المحتوى من مصادر مختلفة، مثل مقابلات المستجيبين، أو الملاحظات من الميدان، أو الاستطلاعات."
+                        "label": "النشر",
+                        "title": "هل تنشرون هذه الأعمال على موقعكم؟",
+                        "description": "بالطبع لا إلا إذا سمح لنا بالنشر."
                     },
                     {
-                        "label": "البيان المالي",
-                        "title": "ما هي البيانات المالية الأساسية الأربعة؟",
-                        "description": "البيان المالي هو مزيج من التقارير الرئيسية الثلاثة عن الأعمال. سيحتوي على بيان التدفق النقدي، وبيان الدخل، والميزانية العمومية للعمل. تشكل الثلاثة معًا صورة شاملة عن صحة العمل."
+                        "label": "جمع البيانات",
+                        "title": "هل انتم مسؤولون عن جمع البيانات؟",
+                        "description": "لا نحن فقط مسؤولون عن عمل الإستبيان لكن جمع البيانات أو المقابلات هي مسؤولية العميل."
+                    },
+                    {
+                        "label": "القسم التحليلي",
+                        "title": "هل تقومون بعمل التحليلات الإحصائية والبيانية؟",
+                        "description": "نعم بالطبع نقوم بالتحليل الإحصائي الكامل."
                     }
                 ]
             }
@@ -530,72 +481,67 @@
             "name": "Project Feasibility Studies",
             "description": "Preparation of feasibility studies for projects and companies.",
             "content": {
-                "title": "Providing world class service experiences!..",
-                "fullDescription": "Transform your online presence with our comprehensive digital marketing strategies that drive results and grow your business. Our team of digital marketing experts uses cutting-edge tools and techniques to ensure you reach your target audience effectively."
+                "title": "Study Your Project With Us!",
+                "fullDescription": "A feasibility study is the foundation of every project, and based on it the project is evaluated. At Scope, we conduct a complete study of your project and prepare an in-depth market analysis along with detailed and comprehensive assessments..."
             },
             "benefits": [
                 {
-                    "title": "Background Checks",
-                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
-                    "icon": "/assets/images/icons/true.png"
+                    "title": "Accurate Deadlines",
+                    "description": "We always adhere to deadlines and value punctuality."
                 },
                 {
-                    "title": "Position Description",
-                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
-                    "icon": "/assets/images/icons/true.png"
+                    "title": "Professional Work",
+                    "description": "We commit to accuracy and professionalism in our work."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Creative work",
-                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Best Solution",
-                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "organisation's vision, mission and values",
-                    "The agreed strategic aims and objectives",
-                    "Evaluate and Control.",
-                    "Implement Your Strategy.",
-                    "Formulate a Strategy.",
-                    "Gather and Analyze Information.",
-                    "Clarify Your Vision"
-                ]
-            },
-            "features": [
-                "SEO & SEM Optimization",
-                "Social Media Marketing",
-                "Content Strategy & Creation",
-                "Analytics & Detailed Reporting"
+            "highlights": [
+                {
+                    "title": "Specialized Work",
+                    "description": "We care about specialization; every task must be handled by an expert in that specific field."
+                },
+                {
+                    "title": "Top Quality",
+                    "description": "We focus on quality and final outputs because they are the most important part of the work."
+                }
             ],
-            "process": "We analyze your target audience, develop data-driven strategies, execute campaigns across multiple channels, and continuously optimize for maximum ROI and sustainable growth.",
+            "steps": [
+                "Market Study",
+                "Competitor Analysis",
+                "Opportunity and Risk Analysis",
+                "SWOT Analysis",
+                "TOWS Analysis",
+                "Porter Analysis",
+                "Preparing the Financial Statement",
+                "Delivering the Work"
+            ],
+            "features": [
+                "Good Communication",
+                "Accurate Understanding",
+                "Thorough Review"
+            ],
+            "process": "Our work begins by understanding the project needs, its requirements, and what the client expects. We provide full support throughout...",
             "confidence": {
-                "description": "Denouncing pleasure and praising pain was will give you a complete who chooses to enjoy a pleasure that has no annoying consequences.",
+                "description": "",
                 "tabs": [
                     {
-                        "label": "Target Analysis",
-                        "title": "How do you identify your target market?",
-                        "description": "Target market analysis determines where, and how, your product fits into the real-life market. With this information, you can: Determine which markets are most and least valuable to your business. Develop accurate buyer personas."
+                        "label": "Revisions",
+                        "title": "Are revisions unlimited?",
+                        "description": "Yes, revisions are completely unlimited."
                     },
                     {
-                        "label": "Research analysis",
-                        "title": "What is data analysis techniques in research?",
-                        "description": "The most commonly used data analysis methods are: Content analysis: This is one of the most common methods to analyze qualitative data. ... Narrative analysis: This method is used to analyze content from various sources, such as interviews of respondents, observations from the field, or surveys."
+                        "label": "Publishing",
+                        "title": "Do you publish these works on your website?",
+                        "description": "Of course not, unless we are given permission to publish."
                     },
                     {
-                        "label": "Financial statement",
-                        "title": "What are the four basic financial statements?",
-                        "description": "A financial statement is the combination of the three major reports on a business. It will contain the cash flow statement, the income statement and the balance sheet of the business. All three together produce an overall picture of the health of the business."
+                        "label": "Data Collection",
+                        "title": "Are you responsible for collecting data?",
+                        "description": "No, we are only responsible for creating the survey; data collection or interviews are the client's responsibility."
+                    },
+                    {
+                        "label": "Analytical Section",
+                        "title": "Do you conduct statistical and graphical analyses?",
+                        "description": "Yes, we absolutely provide full statistical analysis."
                     }
                 ]
             }
@@ -604,7 +550,11 @@
     {
         "id": 5,
         "slug": "project-business-plans",
-        "img": "/assets/images/services/service-image-6.jpg",
+        "img": "/assets/images/services/service-5.jpg",
+        "images": [
+            "/assets/images/services/service-image-1.jpg",
+            "/assets/images/services/service-image-2.jpg"
+        ],
         "ar": {
             "name": "خطط أعمال المشاريع",
             "description": "إعداد خطط الأعمال الشاملة بالخطة المالية والتسويقية.",
@@ -615,42 +565,32 @@
             "benefits": [
                 {
                     "title": "التحقق من الخلفية",
-                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا."
                 },
                 {
                     "title": "وصف الوظيفة",
-                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل إبداعي",
-                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل حل",
-                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "رؤية المنظمة ورسالتها وقيمها",
-                    "الأهداف الاستراتيجية المتفق عليها",
-                    "التقييم والتحكم.",
-                    "تنفيذ استراتيجيتك.",
-                    "صياغة استراتيجية.",
-                    "جمع وتحليل المعلومات.",
-                    "توضيح رؤيتك"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "عمل إبداعي",
+                    "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                },
+                {
+                    "title": "أفضل حل",
+                    "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                }
+            ],
+            "steps": [
+                "رؤية المنظمة ورسالتها وقيمها",
+                "الأهداف الاستراتيجية المتفق عليها",
+                "التقييم والتحكم.",
+                "تنفيذ استراتيجيتك.",
+                "صياغة استراتيجية.",
+                "جمع وتحليل المعلومات.",
+                "توضيح رؤيتك"
+            ],
             "features": [
                 "تنمية المهارات القيادية",
                 "تدريب المبيعات وخدمة العملاء",
@@ -689,42 +629,32 @@
             "benefits": [
                 {
                     "title": "Background Checks",
-                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power."
                 },
                 {
                     "title": "Position Description",
-                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Creative work",
-                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Best Solution",
-                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "organisation's vision, mission and values",
-                    "The agreed strategic aims and objectives",
-                    "Evaluate and Control.",
-                    "Implement Your Strategy.",
-                    "Formulate a Strategy.",
-                    "Gather and Analyze Information.",
-                    "Clarify Your Vision"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "Creative work",
+                    "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                },
+                {
+                    "title": "Best Solution",
+                    "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                }
+            ],
+            "steps": [
+                "organisation's vision, mission and values",
+                "The agreed strategic aims and objectives",
+                "Evaluate and Control.",
+                "Implement Your Strategy.",
+                "Formulate a Strategy.",
+                "Gather and Analyze Information.",
+                "Clarify Your Vision"
+            ],
             "features": [
                 "Leadership Development",
                 "Sales & Customer Service Training",
@@ -758,6 +688,10 @@
         "id": 6,
         "slug": "website-building-and-programming",
         "img": "/assets/images/services/service-image-6.jpg",
+        "images": [
+            "/assets/images/services/service-image-1.jpg",
+            "/assets/images/services/service-image-2.jpg"
+        ],
         "ar": {
             "name": "بناء وبرمجة مواقع إليكترونية",
             "description": "إنشاء مواقع اليكترونية احترافية لمشاريعك.",
@@ -768,42 +702,32 @@
             "benefits": [
                 {
                     "title": "التحقق من الخلفية",
-                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا."
                 },
                 {
                     "title": "وصف الوظيفة",
-                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل إبداعي",
-                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل حل",
-                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "رؤية المنظمة ورسالتها وقيمها",
-                    "الأهداف الاستراتيجية المتفق عليها",
-                    "التقييم والتحكم.",
-                    "تنفيذ استراتيجيتك.",
-                    "صياغة استراتيجية.",
-                    "جمع وتحليل المعلومات.",
-                    "توضيح رؤيتك"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "عمل إبداعي",
+                    "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                },
+                {
+                    "title": "أفضل حل",
+                    "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                }
+            ],
+            "steps": [
+                "رؤية المنظمة ورسالتها وقيمها",
+                "الأهداف الاستراتيجية المتفق عليها",
+                "التقييم والتحكم.",
+                "تنفيذ استراتيجيتك.",
+                "صياغة استراتيجية.",
+                "جمع وتحليل المعلومات.",
+                "توضيح رؤيتك"
+            ],
             "features": [
                 "تنمية المهارات القيادية",
                 "تدريب المبيعات وخدمة العملاء",
@@ -842,42 +766,32 @@
             "benefits": [
                 {
                     "title": "Background Checks",
-                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power."
                 },
                 {
                     "title": "Position Description",
-                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Creative work",
-                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Best Solution",
-                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "organisation's vision, mission and values",
-                    "The agreed strategic aims and objectives",
-                    "Evaluate and Control.",
-                    "Implement Your Strategy.",
-                    "Formulate a Strategy.",
-                    "Gather and Analyze Information.",
-                    "Clarify Your Vision"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "Creative work",
+                    "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                },
+                {
+                    "title": "Best Solution",
+                    "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                }
+            ],
+            "steps": [
+                "organisation's vision, mission and values",
+                "The agreed strategic aims and objectives",
+                "Evaluate and Control.",
+                "Implement Your Strategy.",
+                "Formulate a Strategy.",
+                "Gather and Analyze Information.",
+                "Clarify Your Vision"
+            ],
             "features": [
                 "Leadership Development",
                 "Sales & Customer Service Training",
@@ -911,6 +825,10 @@
         "id": 7,
         "slug": "motion-graphics",
         "img": "/assets/images/services/Academic-8.webp",
+        "images": [
+            "/assets/images/services/service-image-1.jpg",
+            "/assets/images/services/service-image-2.jpg"
+        ],
         "ar": {
             "name": "موشن جرافك",
             "description": "نقدم خدمات الموشن جرافك.",
@@ -921,42 +839,32 @@
             "benefits": [
                 {
                     "title": "التحقق من الخلفية",
-                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا."
                 },
                 {
                     "title": "وصف الوظيفة",
-                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل إبداعي",
-                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل حل",
-                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "رؤية المنظمة ورسالتها وقيمها",
-                    "الأهداف الاستراتيجية المتفق عليها",
-                    "التقييم والتحكم.",
-                    "تنفيذ استراتيجيتك.",
-                    "صياغة استراتيجية.",
-                    "جمع وتحليل المعلومات.",
-                    "توضيح رؤيتك"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "عمل إبداعي",
+                    "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                },
+                {
+                    "title": "أفضل حل",
+                    "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                }
+            ],
+            "steps": [
+                "رؤية المنظمة ورسالتها وقيمها",
+                "الأهداف الاستراتيجية المتفق عليها",
+                "التقييم والتحكم.",
+                "تنفيذ استراتيجيتك.",
+                "صياغة استراتيجية.",
+                "جمع وتحليل المعلومات.",
+                "توضيح رؤيتك"
+            ],
             "features": [
                 "تنمية المهارات القيادية",
                 "تدريب المبيعات وخدمة العملاء",
@@ -995,42 +903,32 @@
             "benefits": [
                 {
                     "title": "Background Checks",
-                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power."
                 },
                 {
                     "title": "Position Description",
-                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Creative work",
-                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Best Solution",
-                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "organisation's vision, mission and values",
-                    "The agreed strategic aims and objectives",
-                    "Evaluate and Control.",
-                    "Implement Your Strategy.",
-                    "Formulate a Strategy.",
-                    "Gather and Analyze Information.",
-                    "Clarify Your Vision"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "Creative work",
+                    "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                },
+                {
+                    "title": "Best Solution",
+                    "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                }
+            ],
+            "steps": [
+                "organisation's vision, mission and values",
+                "The agreed strategic aims and objectives",
+                "Evaluate and Control.",
+                "Implement Your Strategy.",
+                "Formulate a Strategy.",
+                "Gather and Analyze Information.",
+                "Clarify Your Vision"
+            ],
             "features": [
                 "Leadership Development",
                 "Sales & Customer Service Training",
@@ -1064,6 +962,10 @@
         "id": 8,
         "slug": "cgi-videos",
         "img": "/assets/images/services/service-image-6.jpg",
+        "images": [
+            "/assets/images/services/service-image-1.jpg",
+            "/assets/images/services/service-image-2.jpg"
+        ],
         "ar": {
             "name": "فيديوهات CGI",
             "description": "ننشئ فيديوهات تسويقية CGI.",
@@ -1074,42 +976,32 @@
             "benefits": [
                 {
                     "title": "التحقق من الخلفية",
-                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا."
                 },
                 {
                     "title": "وصف الوظيفة",
-                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل إبداعي",
-                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل حل",
-                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "رؤية المنظمة ورسالتها وقيمها",
-                    "الأهداف الاستراتيجية المتفق عليها",
-                    "التقييم والتحكم.",
-                    "تنفيذ استراتيجيتك.",
-                    "صياغة استراتيجية.",
-                    "جمع وتحليل المعلومات.",
-                    "توضيح رؤيتك"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "عمل إبداعي",
+                    "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                },
+                {
+                    "title": "أفضل حل",
+                    "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                }
+            ],
+            "steps": [
+                "رؤية المنظمة ورسالتها وقيمها",
+                "الأهداف الاستراتيجية المتفق عليها",
+                "التقييم والتحكم.",
+                "تنفيذ استراتيجيتك.",
+                "صياغة استراتيجية.",
+                "جمع وتحليل المعلومات.",
+                "توضيح رؤيتك"
+            ],
             "features": [
                 "تنمية المهارات القيادية",
                 "تدريب المبيعات وخدمة العملاء",
@@ -1148,42 +1040,32 @@
             "benefits": [
                 {
                     "title": "Background Checks",
-                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power."
                 },
                 {
                     "title": "Position Description",
-                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Creative work",
-                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Best Solution",
-                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "organisation's vision, mission and values",
-                    "The agreed strategic aims and objectives",
-                    "Evaluate and Control.",
-                    "Implement Your Strategy.",
-                    "Formulate a Strategy.",
-                    "Gather and Analyze Information.",
-                    "Clarify Your Vision"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "Creative work",
+                    "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                },
+                {
+                    "title": "Best Solution",
+                    "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                }
+            ],
+            "steps": [
+                "organisation's vision, mission and values",
+                "The agreed strategic aims and objectives",
+                "Evaluate and Control.",
+                "Implement Your Strategy.",
+                "Formulate a Strategy.",
+                "Gather and Analyze Information.",
+                "Clarify Your Vision"
+            ],
             "features": [
                 "Leadership Development",
                 "Sales & Customer Service Training",
@@ -1217,6 +1099,10 @@
         "id": 9,
         "slug": "visual-identity-design",
         "img": "/assets/images/services/service-image-6.jpg",
+        "images": [
+            "/assets/images/services/service-image-1.jpg",
+            "/assets/images/services/service-image-2.jpg"
+        ],
         "ar": {
             "name": "تصميم هوية بصرية",
             "description": "نصمم هوية بصرية كاملة لشركتك.",
@@ -1227,42 +1113,32 @@
             "benefits": [
                 {
                     "title": "التحقق من الخلفية",
-                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا."
                 },
                 {
                     "title": "وصف الوظيفة",
-                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل إبداعي",
-                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل حل",
-                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "رؤية المنظمة ورسالتها وقيمها",
-                    "الأهداف الاستراتيجية المتفق عليها",
-                    "التقييم والتحكم.",
-                    "تنفيذ استراتيجيتك.",
-                    "صياغة استراتيجية.",
-                    "جمع وتحليل المعلومات.",
-                    "توضيح رؤيتك"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "عمل إبداعي",
+                    "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                },
+                {
+                    "title": "أفضل حل",
+                    "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                }
+            ],
+            "steps": [
+                "رؤية المنظمة ورسالتها وقيمها",
+                "الأهداف الاستراتيجية المتفق عليها",
+                "التقييم والتحكم.",
+                "تنفيذ استراتيجيتك.",
+                "صياغة استراتيجية.",
+                "جمع وتحليل المعلومات.",
+                "توضيح رؤيتك"
+            ],
             "features": [
                 "تنمية المهارات القيادية",
                 "تدريب المبيعات وخدمة العملاء",
@@ -1301,42 +1177,32 @@
             "benefits": [
                 {
                     "title": "Background Checks",
-                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power."
                 },
                 {
                     "title": "Position Description",
-                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Creative work",
-                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Best Solution",
-                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "organisation's vision, mission and values",
-                    "The agreed strategic aims and objectives",
-                    "Evaluate and Control.",
-                    "Implement Your Strategy.",
-                    "Formulate a Strategy.",
-                    "Gather and Analyze Information.",
-                    "Clarify Your Vision"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "Creative work",
+                    "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                },
+                {
+                    "title": "Best Solution",
+                    "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                }
+            ],
+            "steps": [
+                "organisation's vision, mission and values",
+                "The agreed strategic aims and objectives",
+                "Evaluate and Control.",
+                "Implement Your Strategy.",
+                "Formulate a Strategy.",
+                "Gather and Analyze Information.",
+                "Clarify Your Vision"
+            ],
             "features": [
                 "Leadership Development",
                 "Sales & Customer Service Training",
@@ -1370,6 +1236,10 @@
         "id": 10,
         "slug": "logo-design",
         "img": "/assets/images/services/service-image-6.jpg",
+        "images": [
+            "/assets/images/services/service-image-1.jpg",
+            "/assets/images/services/service-image-2.jpg"
+        ],
         "ar": {
             "name": "تصميم شعارات",
             "description": "تصميم شعارات احترافية.",
@@ -1380,42 +1250,32 @@
             "benefits": [
                 {
                     "title": "التحقق من الخلفية",
-                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا."
                 },
                 {
                     "title": "وصف الوظيفة",
-                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل إبداعي",
-                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل حل",
-                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "رؤية المنظمة ورسالتها وقيمها",
-                    "الأهداف الاستراتيجية المتفق عليها",
-                    "التقييم والتحكم.",
-                    "تنفيذ استراتيجيتك.",
-                    "صياغة استراتيجية.",
-                    "جمع وتحليل المعلومات.",
-                    "توضيح رؤيتك"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "عمل إبداعي",
+                    "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                },
+                {
+                    "title": "أفضل حل",
+                    "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                }
+            ],
+            "steps": [
+                "رؤية المنظمة ورسالتها وقيمها",
+                "الأهداف الاستراتيجية المتفق عليها",
+                "التقييم والتحكم.",
+                "تنفيذ استراتيجيتك.",
+                "صياغة استراتيجية.",
+                "جمع وتحليل المعلومات.",
+                "توضيح رؤيتك"
+            ],
             "features": [
                 "تنمية المهارات القيادية",
                 "تدريب المبيعات وخدمة العملاء",
@@ -1454,42 +1314,32 @@
             "benefits": [
                 {
                     "title": "Background Checks",
-                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power."
                 },
                 {
                     "title": "Position Description",
-                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Creative work",
-                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Best Solution",
-                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "organisation's vision, mission and values",
-                    "The agreed strategic aims and objectives",
-                    "Evaluate and Control.",
-                    "Implement Your Strategy.",
-                    "Formulate a Strategy.",
-                    "Gather and Analyze Information.",
-                    "Clarify Your Vision"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "Creative work",
+                    "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                },
+                {
+                    "title": "Best Solution",
+                    "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                }
+            ],
+            "steps": [
+                "organisation's vision, mission and values",
+                "The agreed strategic aims and objectives",
+                "Evaluate and Control.",
+                "Implement Your Strategy.",
+                "Formulate a Strategy.",
+                "Gather and Analyze Information.",
+                "Clarify Your Vision"
+            ],
             "features": [
                 "Leadership Development",
                 "Sales & Customer Service Training",
@@ -1523,6 +1373,10 @@
         "id": 11,
         "slug": "graphic-design",
         "img": "/assets/images/services/service-image-6.jpg",
+        "images": [
+            "/assets/images/services/service-image-1.jpg",
+            "/assets/images/services/service-image-2.jpg"
+        ],
         "ar": {
             "name": "جرافيك ديزاين",
             "description": "إنشاء تصميمات سوشيال ميديا احترافية.",
@@ -1533,42 +1387,32 @@
             "benefits": [
                 {
                     "title": "التحقق من الخلفية",
-                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا."
                 },
                 {
                     "title": "وصف الوظيفة",
-                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل إبداعي",
-                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل حل",
-                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "رؤية المنظمة ورسالتها وقيمها",
-                    "الأهداف الاستراتيجية المتفق عليها",
-                    "التقييم والتحكم.",
-                    "تنفيذ استراتيجيتك.",
-                    "صياغة استراتيجية.",
-                    "جمع وتحليل المعلومات.",
-                    "توضيح رؤيتك"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "عمل إبداعي",
+                    "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                },
+                {
+                    "title": "أفضل حل",
+                    "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                }
+            ],
+            "steps": [
+                "رؤية المنظمة ورسالتها وقيمها",
+                "الأهداف الاستراتيجية المتفق عليها",
+                "التقييم والتحكم.",
+                "تنفيذ استراتيجيتك.",
+                "صياغة استراتيجية.",
+                "جمع وتحليل المعلومات.",
+                "توضيح رؤيتك"
+            ],
             "features": [
                 "تنمية المهارات القيادية",
                 "تدريب المبيعات وخدمة العملاء",
@@ -1607,42 +1451,32 @@
             "benefits": [
                 {
                     "title": "Background Checks",
-                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power."
                 },
                 {
                     "title": "Position Description",
-                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Creative work",
-                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Best Solution",
-                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "organisation's vision, mission and values",
-                    "The agreed strategic aims and objectives",
-                    "Evaluate and Control.",
-                    "Implement Your Strategy.",
-                    "Formulate a Strategy.",
-                    "Gather and Analyze Information.",
-                    "Clarify Your Vision"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "Creative work",
+                    "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                },
+                {
+                    "title": "Best Solution",
+                    "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                }
+            ],
+            "steps": [
+                "organisation's vision, mission and values",
+                "The agreed strategic aims and objectives",
+                "Evaluate and Control.",
+                "Implement Your Strategy.",
+                "Formulate a Strategy.",
+                "Gather and Analyze Information.",
+                "Clarify Your Vision"
+            ],
             "features": [
                 "Leadership Development",
                 "Sales & Customer Service Training",
@@ -1676,6 +1510,10 @@
         "id": 12,
         "slug": "seo-improvement",
         "img": "/assets/images/services/service-image-6.jpg",
+        "images": [
+            "/assets/images/services/service-image-1.jpg",
+            "/assets/images/services/service-image-2.jpg"
+        ],
         "ar": {
             "name": "تحسين SEO",
             "description": "نقوم بتحسين SEO موقعك واكتشاف الأخطاء على محركات البحث.",
@@ -1686,42 +1524,32 @@
             "benefits": [
                 {
                     "title": "التحقق من الخلفية",
-                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "هذه الحالات بسيطة تمامًا وسهلة التمييز. في ساعة فراغ عندما تكون قوتنا."
                 },
                 {
                     "title": "وصف الوظيفة",
-                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "المشاكل التي من المؤكد أن تحدث والمساواة في اللوم تنتمي إلى أولئك الذين يفشلون في واجبهم."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "عمل إبداعي",
-                        "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "أفضل حل",
-                        "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "رؤية المنظمة ورسالتها وقيمها",
-                    "الأهداف الاستراتيجية المتفق عليها",
-                    "التقييم والتحكم.",
-                    "تنفيذ استراتيجيتك.",
-                    "صياغة استراتيجية.",
-                    "جمع وتحليل المعلومات.",
-                    "توضيح رؤيتك"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "عمل إبداعي",
+                    "description": "العمل الإبداعي هو مظهر من مظاهر الجهد الإبداعي بما في ذلك الأعمال الفنية الدقيقة. الحالات هي عينة مثالية سهلة التمييز."
+                },
+                {
+                    "title": "أفضل حل",
+                    "description": "حل الاستشارة هو حل ديناميكي متعدد الأغراض وأنيق وحديث للشركات والأعمال."
+                }
+            ],
+            "steps": [
+                "رؤية المنظمة ورسالتها وقيمها",
+                "الأهداف الاستراتيجية المتفق عليها",
+                "التقييم والتحكم.",
+                "تنفيذ استراتيجيتك.",
+                "صياغة استراتيجية.",
+                "جمع وتحليل المعلومات.",
+                "توضيح رؤيتك"
+            ],
             "features": [
                 "تنمية المهارات القيادية",
                 "تدريب المبيعات وخدمة العملاء",
@@ -1760,42 +1588,32 @@
             "benefits": [
                 {
                     "title": "Background Checks",
-                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "These cases are perfectly simple and easy to distinguish. In a free hour when our power."
                 },
                 {
                     "title": "Position Description",
-                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty.",
-                    "icon": "/assets/images/icons/true.png"
+                    "description": "Trouble that are bound to ensue and equal blame belongs those who fail in their duty."
                 }
             ],
-            "highlights": {
-                "img": "/assets/images/services/service-image-6.jpg",
-                "items": [
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Creative work",
-                        "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
-                    },
-                    {
-                        "icon": "/assets/images/icons/innovation.png",
-                        "title": "Best Solution",
-                        "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
-                    }
-                ]
-            },
-            "steps": {
-                "img": "/assets/images/services/service-image-5.jpg",
-                "items": [
-                    "organisation's vision, mission and values",
-                    "The agreed strategic aims and objectives",
-                    "Evaluate and Control.",
-                    "Implement Your Strategy.",
-                    "Formulate a Strategy.",
-                    "Gather and Analyze Information.",
-                    "Clarify Your Vision"
-                ]
-            },
+            "highlights": [
+                {
+                    "title": "Creative work",
+                    "description": "A creative work is a manifestation of creative effort including fine artworkCases are perfect sample easy to distinguish."
+                },
+                {
+                    "title": "Best Solution",
+                    "description": "Consult Solution is a dynamic, multipurpose, elegant and modern corporate and business."
+                }
+            ],
+            "steps": [
+                "organisation's vision, mission and values",
+                "The agreed strategic aims and objectives",
+                "Evaluate and Control.",
+                "Implement Your Strategy.",
+                "Formulate a Strategy.",
+                "Gather and Analyze Information.",
+                "Clarify Your Vision"
+            ],
             "features": [
                 "Leadership Development",
                 "Sales & Customer Service Training",

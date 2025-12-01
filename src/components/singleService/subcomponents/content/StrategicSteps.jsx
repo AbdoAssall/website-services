@@ -3,7 +3,7 @@ import { useLanguage } from '@store/LanguageContext';
 import { FeatureItem } from './FeatureItem';
 import PropTypes from 'prop-types';
 
-export const StrategicSteps = ({ steps }) => {
+export const StrategicSteps = ({ service }) => {
     const { t } = useLanguage();
 
     return (
@@ -13,13 +13,13 @@ export const StrategicSteps = ({ steps }) => {
             </h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 <img
-                    src={steps?.img}
+                    src={service?.images[0]}
                     alt="Service illustration"
                     className="rounded-[0.625rem] !w-full !h-73 bg-fixed"
                     loading="lazy"
                 />
                 <div className="md:mt-2">
-                    {steps?.items.map((step, index) => (
+                    {service.steps?.map((step, index) => (
                         <FeatureItem
                             key={index}
                             feature={step}
@@ -32,8 +32,8 @@ export const StrategicSteps = ({ steps }) => {
 };
 
 StrategicSteps.propTypes = {
-    steps: PropTypes.shape({
-        img: PropTypes.string,
-        items: PropTypes.arrayOf(PropTypes.string)
+    service: PropTypes.shape({
+        images: PropTypes.arrayOf(PropTypes.string),
+        steps: PropTypes.arrayOf(PropTypes.any)
     })
 };

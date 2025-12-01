@@ -29,7 +29,7 @@ const ServicesCard = ({
     const { t, direction } = useLanguage();
 
     return (
-        <div className={`card service-box w92.5 px-3 bg-[#020101]/24 ${className}`}>
+        <div className={`card service-box !w92.5 px-3 bg-[#020101]/24 ${className}`}>
             <div className="card-body pb-1 px-2.5 items-center text-center">
                 <Link
                     to={`/services/${service.slug}`}
@@ -48,7 +48,7 @@ const ServicesCard = ({
                     <img
                         src={service.img}
                         alt={service.name}
-                        className="relative rounded-[0.625rem] w-83.5 !h-83.5 object-cover"
+                        className="relative rounded-[0.625rem] w-full !h50 !h-83.5 object-cover"
                         loading="lazy"
                         width="500"
                         height="500"

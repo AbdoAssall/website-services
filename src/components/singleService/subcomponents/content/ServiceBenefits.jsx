@@ -52,7 +52,7 @@ export const ServiceBenefits = ({ service }) => {
 
             {/* Strategic Planning Steps */}
             {service.steps && (
-                < StrategicSteps steps={service.steps || []} />
+                < StrategicSteps service={service || []} />
             )}
         </div>
     );
@@ -66,24 +66,16 @@ ServiceBenefits.propTypes = {
         }).isRequired,
         benefits: PropTypes.arrayOf(
             PropTypes.shape({
-                icon: PropTypes.string.isRequired,
                 title: PropTypes.string.isRequired,
                 description: PropTypes.string.isRequired
             })
         ),
-        highlights: PropTypes.shape({
-            img: PropTypes.string,
-            items: PropTypes.arrayOf(
-                PropTypes.shape({
-                    icon: PropTypes.string.isRequired,
-                    title: PropTypes.string.isRequired,
-                    description: PropTypes.string.isRequired
-                })
-            )
-        }),
-        steps: PropTypes.shape({
-            img: PropTypes.string,
-            items: PropTypes.arrayOf(PropTypes.string)
-        })
+        highlights: PropTypes.arrayOf(
+            PropTypes.shape({
+                title: PropTypes.string.isRequired,
+                description: PropTypes.string.isRequired,
+            })
+        ),
+        steps: PropTypes.arrayOf(PropTypes.any)
     }).isRequired
 };
