@@ -137,7 +137,7 @@
     {
         "id": 2,
         "slug": "research",
-        "img": "/assets/images/services/Academic-3.webp",
+        "img": "/assets/images/services/service-2.webp",
         "images": [
             "/assets/images/services/service-image-1.jpg",
             "/assets/images/services/service-image-2.jpg"
@@ -270,7 +270,7 @@
     {
         "id": 3,
         "slug": "graduation-projects",
-        "img": "/assets/images/services/Academic-1.webp",
+        "img": "/assets/images/services/service-3.webp",
         "images": [
             "/assets/images/services/service-image-1.jpg",
             "/assets/images/services/service-image-2.jpg"
@@ -687,7 +687,7 @@
     {
         "id": 6,
         "slug": "website-building-and-programming",
-        "img": "/assets/images/services/service-image-6.jpg",
+        "img": "/assets/images/services/service-6.jpg",
         "images": [
             "/assets/images/services/service-image-1.jpg",
             "/assets/images/services/service-image-2.jpg"
@@ -824,7 +824,7 @@
     {
         "id": 7,
         "slug": "motion-graphics",
-        "img": "/assets/images/services/Academic-8.webp",
+        "img": "/assets/images/services/service-7.jpg",
         "images": [
             "/assets/images/services/service-image-1.jpg",
             "/assets/images/services/service-image-2.jpg"
@@ -961,7 +961,7 @@
     {
         "id": 8,
         "slug": "cgi-videos",
-        "img": "/assets/images/services/service-image-6.jpg",
+        "img": "/assets/images/services/service-8.jpg",
         "images": [
             "/assets/images/services/service-image-1.jpg",
             "/assets/images/services/service-image-2.jpg"
@@ -1098,7 +1098,7 @@
     {
         "id": 9,
         "slug": "visual-identity-design",
-        "img": "/assets/images/services/service-image-6.jpg",
+        "img": "/assets/images/services/service-9.jpg",
         "images": [
             "/assets/images/services/service-image-1.jpg",
             "/assets/images/services/service-image-2.jpg"
@@ -1235,7 +1235,7 @@
     {
         "id": 10,
         "slug": "logo-design",
-        "img": "/assets/images/services/service-image-6.jpg",
+        "img": "/assets/images/services/service-10.jpg",
         "images": [
             "/assets/images/services/service-image-1.jpg",
             "/assets/images/services/service-image-2.jpg"
@@ -1372,7 +1372,7 @@
     {
         "id": 11,
         "slug": "graphic-design",
-        "img": "/assets/images/services/service-image-6.jpg",
+        "img": "/assets/images/services/service-11.jpg",
         "images": [
             "/assets/images/services/service-image-1.jpg",
             "/assets/images/services/service-image-2.jpg"
@@ -1509,7 +1509,7 @@
     {
         "id": 12,
         "slug": "seo-improvement",
-        "img": "/assets/images/services/service-image-6.jpg",
+        "img": "/assets/images/services/service-12.jpg",
         "images": [
             "/assets/images/services/service-image-1.jpg",
             "/assets/images/services/service-image-2.jpg"

@@ -21,11 +21,11 @@ const Contact = () => {
                         <img
                             src="assets/images/cosnsult-bg.png"
                             alt={t('contactUs.alt')}
-                            className="align-middle object-contain inline-block"
+                            className="md:!h-143 align-middle object- inline-block"
                             loading="lazy"
                             width="382"
                             height="570"
-                            srcSet="assets/images/cosnsult-bg.png 382w, assets/images/cosnsult-bg-201x300.png 201w"
+                            srcSet="assets/images/cosnsult-bg.png 382w, assets/images/cosnsult-bg.png 201w"
                             sizes="(max-width: 382px) 100vw, 382px"
                             data-label="img.attachment-large"
                         />

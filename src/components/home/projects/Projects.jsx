@@ -72,7 +72,7 @@ const Projects = () => {
             buttonLink="/projects"
         >
             <motion.div
-                className="mt-9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7"
+                className="mt-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7"
                 variants={itemVariants}
                 initial="hidden"
                 whileInView="visible"

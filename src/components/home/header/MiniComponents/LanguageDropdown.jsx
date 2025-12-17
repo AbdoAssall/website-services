@@ -17,7 +17,7 @@ export const LanguageDropdown = () => {
           className="w-5 h-5 rounded-full object-cover"
         />
         {/* Language code */}
-        <span>{direction === "rtl" ? "AR" : "EN"}</span>
+        <span className="!text-white">{direction === "rtl" ? "AR" : "EN"}</span>
         <svg
           width="12px"
           height="12px"

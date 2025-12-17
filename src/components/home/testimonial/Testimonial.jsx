@@ -71,14 +71,14 @@ const Testimonial = () => {
                 {testimonials?.length > 0 ? (
                     <Slider {...settings} role="region" aria-label={t('testimonials.sectionTitle')} aria-hidden="false">
                         {testimonials.map((client) => (
-                            <div dir={direction} key={client.id} className="testimonial-inner w-140 p-7.5 bg-gray-50/35 rounded-md mb-2.5 border border-gray-50">
+                            <div dir={direction} key={client.id} className="testimonial-inner w-140 h-72 md:h-60 lg:h-56 p-7.5 bg-gray-50/35 rounded-md mb-2.5 border border-gray-50">
                                 <blockquote className={`description leading-6 ${direction === 'rtl' ? 'text-right' : 'text-left'}`} cite="">
                                     {client.description}
                                 </blockquote>
-                                <div className={`lower-content flex items-center justify-between`}>
+                                <div className={`lower-content pt-2 flex items-center justify-between`}>
                                     <div className={`w-full flex items-center relative`}>
                                         <div className="relative">
-                                            <img
+                                            {/* <img
                                                 className="object-cover object-center rounded-full w-18 h-18 sm:w-20 sm:h-20 shadow-sm"
                                                 src={client.image}
                                                 alt={`${client.name} - ${client.position}`}
@@ -88,7 +88,7 @@ const Testimonial = () => {
                                                 onError={(e) => {
                                                     e.target.src = 'assets/images/clients/testi-2.png'; // Fallback image
                                                 }}
-                                            />
+                                            /> */}
                                         </div>
                                         <div className={`auhour-name mx-6 relative flex flex-col ${direction === 'rtl' ? 'text-right' : 'text-left'}`}>
                                             <h3 className="text-lg sm:text-xl">{client.name}</h3>
