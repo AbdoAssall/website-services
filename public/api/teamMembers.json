@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+        "image": "/assets/images/team/shrief.jpg",
         "en": {
             "name": "Shrief Assal",
             "position": "Founder of Scope",
@@ -15,7 +15,7 @@
     },
     {
         "id": 2,
-        "image": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=400&fit=crop&crop=face",
+        "image": "/assets/images/team/mohamed.jpg",
         "en": {
             "name": "Mohamed Elkafass",
             "position": "Researcher and Economic Expert",
@@ -39,6 +39,20 @@
             "name": "خالد القفاص",
             "position": "مدير فريق التصميم",
             "description": "مصمم جرافيك، ماجستير إدارة أعمال."
+        }
+    },
+    {
+        "id": 3,
+        "image": "/assets/images/team/abdo.jpeg",
+        "en": {
+            "name": "Abdelrahman Assal",
+            "position": "Full Stack Developer",
+            "description": "Expert in MERN stack and server management."
+        },
+        "ar": {
+            "name": "عبدالرحمن عسل",
+            "position": "مطور Full Stack",
+            "description": "خبير في تصميم وتطوير المواقع وادارة السيرفرات."
         }
     }
 ]

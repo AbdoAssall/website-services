@@ -21,7 +21,7 @@ export const LanguageDropdown = () => {
         <svg
           width="12px"
           height="12px"
-          className="inline-block h-2 w-2 fill-current opacity-60"
+          className="inline-block h-2 w-2 fill-current opacity-60 !text-white"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 2048 2048"
         >

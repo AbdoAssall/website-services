@@ -6,7 +6,7 @@ import { useLanguage } from '../../store/LanguageContext';
 const PageHeader = ({
     title = "Projects",
     breadcrumbs = [{ label: "Home", href: "/" }, { label: "Projects" }],
-    backgroundImage = "/assets/images/page-header-default.jpg"
+    backgroundImage = "/assets/images/page-header-default.jpeg"
 }) => {
     const { isRTL } = useLanguage();
 
@@ -19,7 +19,7 @@ const PageHeader = ({
             }}
         >
             {/* Dark overlay */}
-            <div className="absolute inset-0 bg-primary-two/80 z-1"></div>
+            <div className="absolute inset-0 bg-primary-two/60 z-1"></div>
 
             {/* Content */}
             <div className="relative z-10 container !max-w-220 mx-auto px-4">

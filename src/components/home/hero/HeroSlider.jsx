@@ -15,9 +15,9 @@ const HeroSlider = () => {
 
     const slides = useMemo(() => {
         const slidesData = [
-            { id: 1, bgImage: "assets/images/slider/slider-1.jpg" },
-            { id: 2, bgImage: "assets/images/slider/slider-2.jpg" },
-            { id: 3, bgImage: "assets/images/slider/slider-3.jpg" }
+            { id: 1, bgImage: "assets/images/slider/slider-1.jpeg" },
+            { id: 2, bgImage: "assets/images/slider/slider-2.jpeg" },
+            { id: 3, bgImage: "assets/images/slider/slider-3.jpeg" }
         ];
         return slidesData.map((slide, index) => ({
             ...slide,
