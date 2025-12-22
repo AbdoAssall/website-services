@@ -48,7 +48,7 @@ export const Brands = () => {
     return (
         <Section
             className="mt-12 relative bg-cover bg-center bg-no-repeat w-full h-43.5"
-            style={{ backgroundImage: 'url("assets/images/slider/slider-2.jpg")' }}
+            style={{ backgroundImage: 'url("assets/images/slider/slider-2.jpeg")' }}
         >
             {/* <div className="flex items-center justify-center gap-9 sm:gap-20 w-full h-full">
             </div> */}
