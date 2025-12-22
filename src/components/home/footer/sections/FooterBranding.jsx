@@ -13,7 +13,7 @@ export const FooterBranding = () => {
                     <Link to="/" className="pb-[15px] text-start m-0" aria-label={t('navbar.logoAlt')}>
                         <img
                             alt={t('navbar.logoAlt')}
-                            className="w-42.5 h-auto border-0"
+                            className="w-66.5 md:w-53.5 h-auto border-0"
                             src="/assets/images/logo-white.png"
                             loading='lazy'
                         />

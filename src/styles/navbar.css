@@ -72,14 +72,14 @@
 }
 @media (min-width: 768px) {
     .header-lower .logo {
-        width: 9.375rem;
+        width: 13.375rem;
         /* width: 10.625rem; */
         height: auto;
     }
 }
 @media (max-width: 767px) {
     .header-lower .logo {
-        width: 7.375rem;
+        width: 10.375rem;
         height: auto;
         /* width: 9.375rem;
         height: 3.125rem; */

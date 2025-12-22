@@ -1,4 +1,5 @@
 // @ts-nocheck
+import { useMemo, useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import SecondaryLink from '../../UI/SecondaryLink';
 import { motion, AnimatePresence } from 'framer-motion'
@@ -7,19 +8,40 @@ import useSwipeNavigation from '../../../hooks/slider/useSwipeNavigation';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../../../store/LanguageContext';
 import { textVariants, textVariantsLeft, textVariantsRight } from '@utils/variants/animationVariants';
-import { useMemo } from 'react';
 
 const HeroSlider = () => {
     const { t } = useTranslation();
     const { direction } = useLanguage();
+    const [isMobile, setIsMobile] = useState(() => window.matchMedia("(max-width: 768px)").matches);
 
-    const slides = useMemo(() => {
-        const slidesData = [
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+        const handleMediaChange = (e) => {
+            setIsMobile(e.matches); 
+        };
+
+        mediaQuery.addEventListener("change", handleMediaChange);
+
+        return () => mediaQuery.removeEventListener("change", handleMediaChange);
+    }, []);
+
+   const slides = useMemo(() => {
+        const slidesDataDesktop = [
             { id: 1, bgImage: "assets/images/slider/slider-1.jpeg" },
             { id: 2, bgImage: "assets/images/slider/slider-2.jpeg" },
             { id: 3, bgImage: "assets/images/slider/slider-3.jpeg" }
         ];
-        return slidesData.map((slide, index) => ({
+
+        const slidesDataMobile = [
+            { id: 1, bgImage: "assets/images/slider/slider-1-m.jpeg" },
+            { id: 2, bgImage: "assets/images/slider/slider-2-m.jpeg" },
+            { id: 3, bgImage: "assets/images/slider/slider-3-m.jpeg" }
+        ];
+
+        const currentSlidesData = isMobile ? slidesDataMobile : slidesDataDesktop;
+
+        return currentSlidesData.map((slide, index) => ({
             ...slide,
             subTitle: t(`hero.slides.${index}.subTitle`),
             title: t(`hero.slides.${index}.title`),
@@ -27,7 +49,7 @@ const HeroSlider = () => {
             buttonServ: t(`hero.slides.${index}.buttonServ`),
             buttonPro: t(`hero.slides.${index}.buttonPro`),
         }));
-    }, [t]);
+    }, [t, isMobile]);
 
     const {
         currentIndex: currentSlide,

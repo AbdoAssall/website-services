@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "price": 22,
+        "price": 199,
         "check": 2,
         "recommended": false,
         "en": {
@@ -31,7 +31,7 @@
     },
     {
         "id": 2,
-        "price": 59,
+        "price": 149,
         "check": 4,
         "recommended": true,
         "en": {
@@ -61,7 +61,7 @@
     },
     {
         "id": 3,
-        "price": 99,
+        "price": 399,
         "check": 8,
         "recommended": false,
         "en": {

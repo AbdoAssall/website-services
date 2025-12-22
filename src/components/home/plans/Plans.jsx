@@ -97,15 +97,15 @@ const Plans = () => {
                                             `}>
                                             ${plan.price}
                                         </span>
-                                        <span className={`text-base ${plan.recommended ? 'text-gray-300' : 'text-primary-two'}`}>
+                                        {/* <span className={`text-base ${plan.recommended ? 'text-gray-300' : 'text-primary-two'}`}>
                                             /{t('plans.period')}
-                                        </span>
+                                        </span> */}
                                     </div>
 
                                     <p
                                         id={`plan-${planIndex}-description`}
                                         className={`
-                                            !text-sm !h-12 flex items-center justify-center
+                                            !text-sm !h-12 flex items-center justify-center !font-medium
                                             ${plan.recommended ? 'text-gray-100' : 'text-dark-one'}
                                         `}
                                     >
@@ -134,7 +134,7 @@ const Plans = () => {
                                                 <li
                                                     key={index}
                                                     className={`
-                                                        flex items-start gap-3
+                                                        flex items-start gap-3 !font-medium
                                                     `}
                                                     role="listitem"
                                                 >
