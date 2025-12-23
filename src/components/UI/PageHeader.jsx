@@ -37,6 +37,7 @@ const PageHeader = ({
                                     <Link
                                         to={crumb.href}
                                         className="!text-white/75 !text-sm !font-spartan hover:!text-primary-one/100 transition-colors duration-200"
+                                        aria-label={crumb.label}
                                     >
                                         {crumb.label}
                                     </Link>

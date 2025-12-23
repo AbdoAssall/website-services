@@ -63,6 +63,7 @@ export function MobileAccordion({
                             key={service.id}
                             to={`/services/${service.slug}`}
                             className={`!text-dark-one hover:!text-primary-one ${direction === 'rtl' ? '!font-normal' : '!font-normal'}`}
+                            aria-label={`View service: ${service.name}`}
                         >
                             <ListItem>{service.name}</ListItem>
                         </Link>

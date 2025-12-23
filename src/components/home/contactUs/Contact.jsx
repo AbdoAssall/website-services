@@ -23,8 +23,8 @@ const Contact = () => {
                             alt={t('contactUs.alt')}
                             className="md:!h-143 align-middle object- inline-block"
                             loading="lazy"
-                            width="382"
-                            height="570"
+                            width="1024"
+                            height="1024"
                             srcSet="assets/images/cosnsult-bg.png 382w, assets/images/cosnsult-bg.png 201w"
                             sizes="(max-width: 382px) 100vw, 382px"
                             data-label="img.attachment-large"

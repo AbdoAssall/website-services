@@ -72,7 +72,7 @@ export function LowerNavbar() {
         >
           <div className="flex items-center justify-between text-dark-one h-full px-2 md:px8 lg:px-0 mx-auto max-w-[72.125rem]">
             {/* Logo */}
-            <Link to="/" className="py-1 md:py-1.5">
+            <Link to="/" className="py-1 md:py-1.5" aria-label="Scopehub Logo">
               <img
                 src="/assets/images/logo.png"
                 className="logo w-39.5 sm:w-41.5 md:w-53.5 !h-auto"

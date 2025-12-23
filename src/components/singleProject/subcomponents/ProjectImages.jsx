@@ -44,7 +44,7 @@ const ProjectImages = ({ project }) => {
                 {images.length === 1 ? (
                     // Single image display
                     <div className="single-image">
-                        <figure className="relative group cursor-pointer" onClick={() => openLightbox(0)}>
+                        <figure className="relative group cursor-pointer" onClick={() => openLightbox(0)} role="button" tabIndex="0" aria-label={`View full size image: ${images[0].caption || project.name || 'Project image'}`}>
                             <div className="overflow-hidden rounded-lg shadow-lg">
                                 <img
                                     src={images[0].url}
@@ -88,6 +88,9 @@ const ProjectImages = ({ project }) => {
                             <div
                                 className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg"
                                 onClick={() => openLightbox(selectedImage)}
+                                role="button"
+                                tabIndex="0"
+                                aria-label={`View full size image: ${images[selectedImage].caption || `${project.name} - Image ${selectedImage + 1}`}`}
                             >
                                 <img
                                     src={images[selectedImage].url}

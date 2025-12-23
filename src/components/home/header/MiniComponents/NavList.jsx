@@ -53,6 +53,7 @@ export function NavList({ navItems, menuServices }) {
                                     key={service.id}
                                     to={`/services/${service.slug}`}
                                     className={`block px-4 py-3 !text-sm !text-gray-600 hover:!bg-gray-100 hover:!text-primary-one ${isRTL ? '!font-medium' : ''}`}
+                                    aria-label={`View service: ${service.name}`}
                                 >
                                     {service.name}
                                 </Link>

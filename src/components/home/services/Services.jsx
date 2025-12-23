@@ -21,6 +21,7 @@ const Services = () => {
         slidesToShow: 3,
         dots: true,
     }), [direction]);
+    // const getSlide = document.querySelectorAll('.slick-slide.slick-cloned');
 
     return (
         <Section

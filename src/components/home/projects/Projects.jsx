@@ -106,8 +106,9 @@ const Projects = () => {
                                                         data-fancybox={`gallery-${project.id}`}
                                                         data-download-src={project.images[0].url}
                                                         className="zm-btn hover:!text-white/75"
+                                                        aria-label={`View project gallery for ${project.name}`}
                                                     >
-                                                        <CircleFadingPlus strokeWidth={1.75} size={30} />
+                                                        <CircleFadingPlus strokeWidth={1.75} size={30} aria-hidden="true" />
                                                     </a>
                                                     {/* Hidden images for gallery */}
                                                     {project.images.slice(1).map((image, index) => (
@@ -128,8 +129,9 @@ const Projects = () => {
                                                     data-fancybox={`gallery-${project.id}`}
                                                     data-download-src={project.img}
                                                     className="zm-btn hover:!text-white/75"
+                                                    aria-label={`View project gallery for ${project.name}`}
                                                 >
-                                                    <CircleFadingPlus strokeWidth={1.75} size={30} />
+                                                    <CircleFadingPlus strokeWidth={1.75} size={30} aria-hidden="true" />
                                                 </a>
                                             )}
                                         </div>
@@ -140,7 +142,8 @@ const Projects = () => {
                                                         to={`/projects/${project.slug}`}
                                                         className={`block ${direction === 'rtl' ? 'text-lg' : 'text-xl'} font-bold leading-7.5 mb-3 hover:!text-primary-one`}
                                                         title={project.name}
-                                                    >
+                                                        aria-label={`View project: ${project.name}`}
+                                                   >
                                                         {project.name}
                                                     </Link>
                                                 </h2>
@@ -157,9 +160,11 @@ const Projects = () => {
                                                     to={`/projects/${project.slug}`}
                                                     className="read-more-link w-12.5 h-12.5 leading-12.5 rounded-full hover:!text-white"
                                                     title={t("projects.viewProject")}
+                                                    aria-label={t("projects.viewProject")}
                                                 >
                                                     <ArrowRight
                                                         className={`w-6 h-6 mx-auto ${direction === 'rtl' ? 'rotate-180' : ''}`}
+                                                        aria-hidden="true"
                                                     />
                                                 </Link>
                                             </div>

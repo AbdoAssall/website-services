@@ -31,6 +31,7 @@ export const ServiceMenuItem = ({
             ${isRTL ? 'border-l-4 !border-r-0' : 'border-r-4'}
         `}
         aria-current={isActive ? 'page' : undefined}
+        aria-label={serviceName}
     >
         <div className={`flex items-center justify-between`}>
             <div className={`flex items-center gap-3`}>

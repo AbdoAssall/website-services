@@ -54,7 +54,7 @@ export const EssentialsSection = ({ t, isRTL, Link }) => {
                             <Link
                                 to={link.path}
                                 onClick={link.path.startsWith('#') ? (e) => handleSectionClick(link.path, e) : undefined}
-                                arial-label={link.title}
+                                aria-label={link.title}
                                 className="!text-white hover:!text-white/80 transition-colors"
                             >
                                 {link.title}

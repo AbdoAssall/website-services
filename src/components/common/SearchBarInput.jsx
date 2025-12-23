@@ -131,6 +131,7 @@ export const SearchBarInput = function ({ openSearchBar, styleSearchBtn }) {
                                         <Link
                                             to={item.path}
                                             onClick={handleLinkClick}
+                                            aria-label={`View project: ${item.name}`}
                                         >
                                             <span className="!text-dark-one !text-sm !font-medium">{item.name}</span>
                                         </Link>
@@ -138,6 +139,7 @@ export const SearchBarInput = function ({ openSearchBar, styleSearchBtn }) {
                                             to={item.categoryPath}
                                             onClick={(e) => { e.stopPropagation(); handleLinkClick(); }}
                                             className="!text-xs !bg-primary-one/10 !text-primary-one !font-bold py-1 px-2 rounded-full hover:!bg-primary-one/20"
+                                            aria-label={`View project category: ${item.category}`}
                                         >
                                             {item.category}
                                         </Link>
@@ -155,6 +157,7 @@ export const SearchBarInput = function ({ openSearchBar, styleSearchBtn }) {
                                         to={item.path}
                                         onClick={handleLinkClick}
                                         className="block p-4 !text-dark-one !text-sm font-medium hover:!bg-primary-one/10 transition-colors duration-150"
+                                        aria-label={`View service: ${item.name}`}
                                     >
                                         {item.name}
                                     </Link>
