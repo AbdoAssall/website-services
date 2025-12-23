@@ -27,7 +27,7 @@ const SingleService = () => {
         <PageLayout>
             <MetaTags
                 titleKey={`${serviceName} | ${t('head.siteName')}`}
-                descriptionKey="head.services.meta.description"
+                descriptionKey={service ? service[language]?.description : ''}
             />
 
             {/* Page Header Section */}

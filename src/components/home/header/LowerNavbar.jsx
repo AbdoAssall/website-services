@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "@material-tailwind/react";
 import { MobileSidebar } from "./MobileSidebar";
@@ -21,8 +21,28 @@ export function LowerNavbar() {
 
   const [openNav, setOpenNav] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useBreakpointEffect(960, () => setOpenNav(false));
+
+  // Check screen size using matchMedia
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 418px)");
+    
+    // Set initial state
+    setIsSmallScreen(mediaQuery.matches);
+    
+    // Listen for changes
+    const handleChange = (e) => {
+      setIsSmallScreen(e.matches);
+    };
+    
+    mediaQuery.addEventListener("change", handleChange);
+    
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
 
   // Get navigation data from our config file
   const navItems = getNavItems(t);
@@ -55,7 +75,7 @@ export function LowerNavbar() {
             <Link to="/" className="py-1 md:py-1.5">
               <img
                 src="/assets/images/logo.png"
-                className="logo"
+                className="logo w-39.5 sm:w-41.5 md:w-53.5 !h-auto"
                 alt={t('navbar.logoAlt')}
                 width="150"
                 height="50"
@@ -83,7 +103,7 @@ export function LowerNavbar() {
                 </button>
               </div>
               {/* Select Language */}
-              <LanguageDropdown />
+              {!isSmallScreen && <LanguageDropdown />}
               {/* Contact btn */}
               <div>
                 <button

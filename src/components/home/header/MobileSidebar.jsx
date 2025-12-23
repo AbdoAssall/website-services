@@ -8,10 +8,12 @@ import { useLanguage } from "../../../store/LanguageContext";
 import { useNavigation } from "../../../hooks/scrollToSection/useNavigation";
 import { MobileAccordion } from "./MiniComponents/MobileAccordion";
 import { SearchBarInput } from "@components/common/SearchBarInput";
+import { LanguageAccordion } from "./MiniComponents/languageAccordion";
 
 export function MobileSidebar({ openNav, setOpenNav, openSearchBar, menuServices, navItems }) {
   const { t } = useLanguage();
   const [open, setOpen] = useState(0);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   const {
     isNavItemActive,
@@ -20,6 +22,25 @@ export function MobileSidebar({ openNav, setOpenNav, openSearchBar, menuServices
     isHomePage,
     location
   } = useNavigation();
+
+  // Check screen size using matchMedia
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 418px)");
+
+    // Set initial state
+    setIsSmallScreen(mediaQuery.matches);
+
+    // Listen for changes
+    const handleChange = (e) => {
+      setIsSmallScreen(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
 
   // Handle scroll on page load if state contains scrollTo
   useEffect(() => {
@@ -114,6 +135,17 @@ export function MobileSidebar({ openNav, setOpenNav, openSearchBar, menuServices
                 )}
               </div>
             ))}
+            <hr className="mb-2 border-gray-200" />
+
+            {isSmallScreen && (
+              <LanguageAccordion
+                accordionId={99}
+                isOpen={open === 99}
+                onToggle={handleOpen}
+                title={t('language.title')}
+                onCloseDrawer={closeDrawer}
+              />
+            )}
           </List>
         </Card>
       </Drawer>

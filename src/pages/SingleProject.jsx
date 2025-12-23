@@ -10,7 +10,7 @@ import Project from "@components/singleProject/Project";
 
 const SingleProject = () => {
     const { slug } = useParams();
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const {
         getProjectBySlug,
         loading,
@@ -29,7 +29,7 @@ const SingleProject = () => {
         <PageLayout>
             <MetaTags
                 titleKey={`${project?.name || ''} | ${t('head.siteName')}`}
-                descriptionKey="head.projects.meta.description"
+                descriptionKey={project ? project[language]?.description : ''}
             />
 
             {/* Page Header Section */}

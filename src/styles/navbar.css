@@ -70,10 +70,9 @@
 .header-lower ul li .dropdown button svg {
     transition: all 0.3s;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .header-lower .logo {
         width: 13.375rem;
-        /* width: 10.625rem; */
         height: auto;
     }
 }
@@ -81,10 +80,8 @@
     .header-lower .logo {
         width: 10.375rem;
         height: auto;
-        /* width: 9.375rem;
-        height: 3.125rem; */
     }
-}
+} */
 @media (max-width: 960px) {
     .mobile a {
         line-height: 1.625rem;

@@ -29,7 +29,7 @@
     },
     {
         "id": 3,
-        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+        "image": "/assets/images/team/khaled.jpeg",
         "en": {
             "name": "Khaled Elkafass",
             "position": "Design Team Manager",
@@ -42,7 +42,7 @@
         }
     },
     {
-        "id": 3,
+        "id": 4,
         "image": "/assets/images/team/abdo.jpeg",
         "en": {
             "name": "Abdelrahman Assal",
