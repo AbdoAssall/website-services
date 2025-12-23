@@ -477,56 +477,89 @@
         },
         {
             "id": 6,
-            "slug": "company-values-and-relations",
-            "img": "/assets/images/projects/project-6.jpg",
-            "date": "December 08, 2020",
-            "website": "https://example.com",
-            "location": "Seattle, USA",
-            "files": [
+            "slug": "learning-platform",
+            "img": "public/assets/images/projects/project-6.jpg",
+            "date": "December 05, 2024",
+            "website": "https://visiontheme.site",
+            "files": [],
+             "images": [
                 {
-                    "name": "Company Values Study",
-                    "url": "/assets/files/project-6-values.pdf",
-                    "type": "pdf"
+                    "url": "/assets/images/projects/project-1.1.png",
+                    "caption": ""
+                },
+                {
+                    "url": "/assets/images/projects/project-1.2.png",
+                    "caption": ""
+                },
+                {
+                    "url": "/assets/images/projects/project-1.3.png",
+                    "caption": ""
                 }
             ],
             "ar": {
-                "name": "قيم الشركة والعلاقة",
-                "category": "القيادة",
-                "description": "دراسة شاملة حول كيفية بناء قيم الشركة وتعزيز العلاقات الداخلية والخارجية.",
-                "client": "استوديو جيمس",
-                "challenge": "ضعف في ثقافة الشركة وعدم وضوح القيم الأساسية للموظفين.",
-                "result": "تحسن رضا الموظفين بنسبة 75% وزيادة الولاء للشركة.",
+                "name": "منصة تعليمية (LMS)",
+                "category": "تطوير الويب",
+                "location": "مصر",
+                "client": "علي محمد",
+                "description": "منصة احترافية لإدارة التعلم عبر الإنترنت (LMS)، تربط المعلمين والطلاب والإداريين في نظام متكامل. تتيح للمدربين رفع دوراتهم، مع نظام تتبع دقيق للتقييم، وتصميم متجاوب يدعم الوضع الداكن.",
+                "challenges": [
+                    "لوحة تحكم المسؤول (إدارة شاملة للمستخدمين والأرباح)",
+                    "لوحة تحكم المدرب (إدارة الدورات والامتحانات)",
+                    "لوحة تحكم الطالب (متابعة الدروس والشهادات)",
+                    "نظام امتحانات متقدم (أنواع أسئلة متعددة)",
+                    "تكامل بوابات الدفع (PayPal، تحويل بنكي، محافظ)",
+                    "حماية المحتوى (منع لقطات الشاشة وتحميل الفيديو و نسخ المحتوى",
+                    "نظام الإشعارات الآلي (البريد الإلكتروني)",
+                    "استضافة فيديوهات عالية الجودة (Bunny.net)"
+                ],
                 "solution": {
-                    "description": "تطوير استراتيجية شاملة لبناء ثقافة الشركة وتعزيز القيم الأساسية.",
-                    "efficiency": "عمليات مبسطة لأداء أفضل",
-                    "innovation": "أحدث التقنيات والمنهجيات"
+                    "description": "توفير بيئة تعليمية متكاملة تضمن حقوق المدرب من خلال نظام إيرادات تلقائي وحماية مشددة للمحتوى، مع تجربة مستخدم سلسة للطلاب.",
+                    "efficiency": "تشغيل فيديوهات سلس وعالي الجودة عبر Bunny.net مع تصميم متجاوب لجميع الأجهزة.",
+                    "innovation": "نظام حماية متقدم ضد القرصنة (حظر أدوات المطورين ولقطات الشاشة) ودعم الوضع الليلي."
+                },
+                "results": {
+                    "head": "النتيجة",
+                    "description": "منصة تعليمية متكاملة وجاهزة للإطلاق، تدعم الدورات المجانية والمدفوعة بكفاءة وأمان عالي."
                 },
                 "technologies": [
-                    "التخطيط الاستراتيجي",
-                    "تحسين العمليات",
-                    "تحليل البيانات",
-                    "إدارة الفريق",
-                    "ضمان الجودة"
+                    "نظام إدارة التعلم (LMS)",
+                    "تكامل PayPal & بوابات الدفع",
+                    "استضافة Bunny.net",
+                    "حماية المحتوى (DRM)",
+                    "تصميم متجاوب (Dark Mode)"
                 ]
             },
             "en": {
-                "name": "Company Values and Relations",
-                "category": "Leadership",
-                "description": "A comprehensive study on how to build company values and strengthen internal and external relationships.",
-                "client": "James Studio",
-                "challenge": "Weak company culture and unclear core values for employees.",
-                "result": "Improved employee satisfaction by 75% and increased company loyalty.",
+                "name": "Learning Platform (LMS)",
+                "category": "Web Development",
+                "location": "Egypt",
+                "client": "Ali mohamed",
+                "description": "A professional online Learning Management System (LMS) connecting instructors, students, and admins. It enables course uploads, tracking and grading, featuring a responsive design with Dark Mode support.",
+                "challenges": [
+                    "Admin Dashboard (Users, earnings, analytics)",
+                    "Instructor Dashboard (Courses, exams, withdrawals)",
+                    "Student Dashboard (Enrollment, attendance, exams)",
+                    "Advanced Exam System (Multiple choice, drag & drop)",
+                    "Payment Integration (PayPal, Bank Transfer, Wallet)",
+                    "Content Security (Screen capture prevention and copying the content)",
+                    "Automated Email Notifications",
+                    "High-Quality Video Hosting (Bunny.net)"
+                ],
                 "solution": {
-                    "description": "Developed a comprehensive strategy for building company culture and strengthening core values.",
-                    "efficiency": "Streamlined processes for better performance",
-                    "innovation": "Latest technologies and methodologies"
+                    "description": "Providing a comprehensive educational ecosystem that secures instructor rights via automated revenue systems and content protection, while offering a seamless student experience.",
+                    "efficiency": "Smooth, high-quality video streaming via Bunny.net with a fully responsive design.",
+                    "innovation": "Advanced anti-piracy security (DevTools blocker, screen recording prevention) and Dark Mode support."
+                },
+                "results": {
+                    "head": "Result",
+                    "description": "A fully functional, secure educational platform supporting both free and paid courses ready for launch."
                 },
                 "technologies": [
-                    "Strategic Planning",
-                    "Process Optimization",
-                    "Data Analysis",
-                    "Team Management",
-                    "Quality Assurance"
+                    "LMS Architecture",
+                    "PayPal & Payment Gateways",
+                    "Bunny.net Integration",
+                    "Content Protection (DRM)",
+                    "Responsive Design (Dark Mode)"
                 ]
             }
         }

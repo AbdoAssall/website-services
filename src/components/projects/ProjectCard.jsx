@@ -17,7 +17,7 @@ const ProjectCard = ({
 
     return (
         <article className={`group bg-white ${isRTL ? ' pl-7.5 pr-7.5 lg:pr-0' : 'pr-7.5 pl-7.5 lg:pl-0'} py-7.5 rounded-[0.625rem] shadow-lg border border-gray-100 overflow-hidden mb-8 hover:shadow-xl transition-shadow duration-300`}>
-            <div className="flex flex-col lg:flex-row lg:!h-95">
+            <div className="flex flex-col lg:flex-row lg:!h-110">
                 <div className="flex flex-col lg:px-[2.188rem] lg:py-[0.313rem] lg:w-7/20">
                     {/* Category Tag */}
                     <div className="pb-4">
@@ -65,7 +65,7 @@ const ProjectCard = ({
                     <img
                         src={image}
                         alt={title}
-                        className="w-full h-87.5 lg:!h-95 object- rounded-t-[0.625rem] md:rounded-[0.625rem]"
+                        className="w-full h-87.5 lg:!h-110 object- rounded-t-[0.625rem] md:rounded-[0.625rem]"
                     />
 
                     {/* Hover Overlay - Animates from bottom */}
