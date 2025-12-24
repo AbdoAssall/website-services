@@ -38,7 +38,7 @@ export const EssentialsSection = ({ t, isRTL, Link }) => {
     }, [t]);
 
     return (
-        <div className="md:w-[17.06%] flex">
+        <div className="w-auto lg:w-[17.06%] flex">
             <div className="md:mb-7.5 md:pt-7 md:px-[0.938rem] flex flex-wrap flex-col content-start w-full relative">
                 <div className="pb-4.5 mb-6">
                     <div className="relative before:absolute before:w-14 before:h-0.5 before:bg-primary-one before:inset-x-0 before:-bottom-3">

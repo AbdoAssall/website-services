@@ -7,7 +7,7 @@ import { useLanguage } from '../../../../store/LanguageContext';
 export const FooterBranding = () => {
     const { t } = useLanguage();
     return (
-        <div className="md:w-[28.244%] flex">
+        <div className="w-auto lg:w-[28.244%] flex">
             <div className="md:mb-7.5 md:p-2.5 flex flex-wrap flex-col content-start w-full relative">
                 <div className="mb-5 w-full">
                     <Link to="/" className="pb-[15px] text-start m-0" aria-label={t('navbar.logoAlt')}>

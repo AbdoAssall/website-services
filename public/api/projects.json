@@ -478,22 +478,58 @@
         {
             "id": 6,
             "slug": "learning-platform",
-            "img": "public/assets/images/projects/project-6.jpg",
+            "img": "public/assets/images/projects/project-6.jpeg",
             "date": "December 05, 2024",
             "website": "https://visiontheme.site",
             "files": [],
              "images": [
                 {
-                    "url": "/assets/images/projects/project-1.1.png",
-                    "caption": ""
+                    "url": "/assets/images/projects/project-6.1.png",
+                    "caption": "Course details page - Review section"
                 },
                 {
-                    "url": "/assets/images/projects/project-1.2.png",
-                    "caption": ""
+                    "url": "/assets/images/projects/project-6.2.png",
+                    "caption": "Course details page - Overview section"
                 },
                 {
-                    "url": "/assets/images/projects/project-1.3.png",
-                    "caption": ""
+                    "url": "/assets/images/projects/project-6.3.png",
+                    "caption": "Home page"
+                },
+                {
+                    "url": "/assets/images/projects/project-6.4.png",
+                    "caption": "Dashboard - Student panel"
+                },
+                {
+                    "url": "/assets/images/projects/project-6.5.png",
+                    "caption": "Rate course"
+                },
+                {
+                    "url": "/assets/images/projects/project-6.6.png",
+                    "caption": "Question & Answers"
+                },
+                {
+                    "url": "/assets/images/projects/project-6.7.png",
+                    "caption": "Student profile"
+                },
+                {
+                    "url": "/assets/images/projects/project-6.8.png",
+                    "caption": "Exam page"
+                },
+                {
+                    "url": "/assets/images/projects/project-6.9.png",
+                    "caption": "Exam page"
+                },
+                {
+                    "url": "/assets/images/projects/project-6.10.png",
+                    "caption": "Exam page"
+                },
+                {
+                    "url": "/assets/images/projects/project-6.11.png",
+                    "caption": "Admin dashboard - Courses management"
+                },
+                {
+                    "url": "/assets/images/projects/project-6.12.png",
+                    "caption": "Admin dashboard - Users management"
                 }
             ],
             "ar": {

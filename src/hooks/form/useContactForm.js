@@ -54,7 +54,7 @@ export const useContactForm = () => {
                 const data = await response.json();
                 setCsrfToken(data.csrfToken);
             } catch (error) {
-                console.error('Failed to fetch CSRF token:', error);
+                // console.error('Failed to fetch CSRF token:', error);
                 // toast.error('A security error occurred. Please refresh the page.');
             }
         };

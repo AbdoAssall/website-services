@@ -21,7 +21,10 @@ const Services = () => {
         slidesToShow: 3,
         dots: true,
     }), [direction]);
-    // const getSlide = document.querySelectorAll('.slick-slide.slick-cloned');
+    const getSlide = document.querySelectorAll('.slick-slide.slick-cloned');
+    const getSlide1 = document.querySelectorAll('.slick-slide');
+    getSlide.forEach(slide => slide.ariaHidden = false);
+    getSlide1.forEach(slide => slide.ariaHidden = false);
 
     return (
         <Section
