@@ -40,11 +40,11 @@ export function LanguageAccordion({
                 </div>
             }
         >
-            <ListItem className="px-0 !pt-0 pb-1" selected={isOpen}>
+            <ListItem className="px-4 py-3" selected={isOpen}>
                 <AccordionHeader
                     onClick={handleAccordionToggle}
                     className={`items-center border-b-0 cursor-pointer ${direction === 'rtl' ? 'pr-3 justify-normal' : ' pl-3 justify-start'
-                        } content-center py-0`}
+                        } content-center py-2`}
                 >
                     <span
                         className={`${direction === 'rtl' ? 'ml-auto' : 'mr-auto'} font-medium !text-dark-one hover:!text-primary-one`}

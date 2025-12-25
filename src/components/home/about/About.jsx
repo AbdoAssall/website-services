@@ -65,7 +65,7 @@ const About = ({ btn = true, isSubTitle = false }) => {
                         ) : (
                             <Briefcase className="text-primary-one w-5 h-5" />
                         )}
-                    <h5 className="section-title">{t('about.title')}</h5>
+                    <h3 className="section-title">{t('about.title')}</h3>
                 </motion.div>
 
                 <motion.div dir={direction} variants={itemVariants} className={`${isSubTitle ? 'mt-4.5' : 'mt-1 md:mt-4.5'}`}>

@@ -26,10 +26,10 @@ export const ContactFormBox = () => {
                 <div className="card lg:card-side flex-col-reverse bg-primary-three shadow-sm">
                     <div className={`card-body p-10 ${isRTL ? 'text-right' : 'text-left'}`}>
                         <div className={`w-full flex ${isRTL ? 'justify-start' : 'justify-end'}`}>
-                            <figure className="logo w-36 h-auto">
+                            <figure className="logo w-48.5 h-auto">
                                 <img
-                                    src="/assets/images/logo-default.png"
-                                    className="w-full h-full object-cover"
+                                    src="/assets/images/logo.png"
+                                    className="w-full !h-full object-cover"
                                     alt={t('navbar.logoAlt')}
                                     loading="lazy"
                                 />

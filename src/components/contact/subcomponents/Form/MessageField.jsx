@@ -19,6 +19,7 @@ export const MessageField = ({ register, errors, isPlaceholder, icon }) => {
             <div className="relative">
                 <Textarea
                     id="message"
+                    name="message"
                     placeholder={isPlaceholder ? t('contact.form.placeholder.message') : ''}
                     rows="5"
                     className={`block w-full !mt-2 ${isRTL ? 'text-right' : 'text-left'} ${errors.message ? '!border-red-500 focus:!border-red-500 focus:!ring-red-500' : ''
@@ -26,8 +27,8 @@ export const MessageField = ({ register, errors, isPlaceholder, icon }) => {
                     {...register('message', {
                         required: t('contact.form.validation.message.required') || 'Message is required',
                         minLength: {
-                            value: 15,
-                            message: t('contact.form.validation.message.minLength') || 'Message must be at least 15 characters'
+                            value: 8,
+                            message: t('contact.form.validation.message.minLength') || 'Message must be at least 8 characters'
                         },
                         // maxLength: {
                         //     value: 1000,

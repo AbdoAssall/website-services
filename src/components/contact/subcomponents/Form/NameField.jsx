@@ -16,6 +16,7 @@ export const NameField = ({ register, errors, isPlaceholder, icon }) => {
                 <TextInput
                     id="name"
                     placeholder={isPlaceholder ? t('contact.form.placeholder.name') : ''}
+                    name="name"
                     className={`block w-full !mt-1 ${isRTL ? 'text-right' : 'text-left'} ${errors.name ? '!border-red-500 focus:!border-red-500 focus:!ring-red-500' : ''
                         }`}
                     {...register('name', {
@@ -29,7 +30,7 @@ export const NameField = ({ register, errors, isPlaceholder, icon }) => {
                             message: t('contact.form.validation.name.maxLength') || 'Name must not exceed 50 characters'
                         },
                         pattern: {
-                            value: /^[a-zA-Z\s]+$/,
+                            value: /^[a-zA-Z\u0600-\u06FF\s]+$/,
                             message: t('contact.form.validation.name.pattern') || 'Name can only contain letters and spaces'
                         }
                     })}

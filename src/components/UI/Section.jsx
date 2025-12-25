@@ -54,7 +54,7 @@ export default function Section({
                                     ) : (
                                         <Briefcase className="text-primary-one w-5 h-5" />
                                     )}
-                                <h5 className={`section-title`}>{subTitle}</h5>
+                                <h3 className={`section-title`}>{subTitle}</h3>
                             </motion.div>
                         )}
                         {/* ✨ 2. ANIMATE THE MAIN HEADER BLOCK */}

@@ -45,8 +45,8 @@ const ScrollProgressCircle = () => {
   const strokeDashoffset = circumference * (1 - scrollProgress);
 
   return (
-    <div 
-      className={`fixed bottom-18 sm:bottom-14 right-6 z-50 cursor-pointer transition-opacity duration-300 ${
+    <button 
+      className={`fixed bottom-18 sm:bottom-14 right-6 z-50 cursor-pointer transition-opacity duration-300 bg-transparent border-none p-0 ${
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
       onClick={scrollToTop}
@@ -88,7 +88,7 @@ const ScrollProgressCircle = () => {
         /> */}
       </svg>
       <ChevronUp strokeWidth="3" className="w-5 h-5 text-primary-one absolute left-1/2 top-1/2 -translate-1/2" />
-    </div>
+    </button>
   );
 };
 

@@ -21,10 +21,10 @@ const Contact = () => {
                         <img
                             src="assets/images/cosnsult-bg.png"
                             alt={t('contactUs.alt')}
-                            className="md:!h-143 align-middle object- inline-block"
+                            className="md:!h-143 align-middle object-contain inline-block"
                             loading="lazy"
-                            width="1024"
-                            height="1024"
+                            width="550"
+                            height="572"
                             srcSet="assets/images/cosnsult-bg.png 382w, assets/images/cosnsult-bg.png 201w"
                             sizes="(max-width: 382px) 100vw, 382px"
                             data-label="img.attachment-large"
@@ -42,7 +42,7 @@ const Contact = () => {
                 >
                     <div className={`flex gap-3 items-center ${isRTL ? 'justify-end' : 'justify-start'}`}>
                         <Briefcase className="text-primary-one w-5 h-5" />
-                        <h5 className="section-title">{t('contactUs.title')}</h5>
+                        <h3 className="section-title">{t('contactUs.title')}</h3>
                     </div>
                     <div className="mt-1 md:mt-3">
                         <h2 className={`text-3xl md:text-[2.75rem] font-bold text-primary-two capitalize ${isRTL ? '!leading-13' : '!leading-10'}`}>
@@ -59,7 +59,7 @@ const Contact = () => {
                                 <Phone className="w-6 h-6 mx-auto" />
                             </div>
                             <div className="">
-                                <h6 className="text-lg !font-semibold text-primary-two">{t('contactUs.phone')}</h6>
+                                <h4 className="text-lg !font-semibold text-primary-two">{t('contactUs.phone')}</h4>
                                 <Link to={`tel:${t('contact.phone')}`} aria-label={t('contactUs.label')} className="!text-light-gray">
                                     {t('contact.phone')}
                                 </Link>

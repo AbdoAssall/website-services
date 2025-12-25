@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState, useMemo } from 'react';
 import { ArrowRight, ArrowUp, ArrowLeft, Briefcase } from 'lucide-react';
 import SectionShape2 from "../../UI/SectionShape2";
@@ -40,7 +41,7 @@ const Questions = () => {
                         <div className="mb-5 w-full">
                             <div className="flex gap-3 items-center justify-start">
                                 <Briefcase className="text-primary-one w-5 h-5" />
-                                <h5 className="section-title">{t('faq.title')}</h5>
+                                <h3 className="section-title">{t('faq.title')}</h3>
                             </div>
                             <div className="mt-1 md:mt-4">
                                 <h2 className={`text-3xl md:text-[2.75rem] font-bold ${isRTL ? '!leading-12.5' : '!leading-10 capitalize'} !text-white`}>

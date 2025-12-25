@@ -19,14 +19,15 @@ export const AddressField = ({ register, errors, isPlaceholder, icon }) => {
             <div className="relative">
                 <TextInput
                     id="address"
+                    name="title"
                     placeholder={isPlaceholder ? t('contact.form.placeholder.address') : ''}
                     className={`block w-full !mt-1 ${isRTL ? 'text-right' : 'text-left'} ${errors.address ? '!border-red-500 focus:!border-red-500 focus:!ring-red-500' : ''
                         }`}
                     {...register('address', {
                         required: t('contact.form.validation.address.required') || 'Address is required',
                         minLength: {
-                            value: 10,
-                            message: t('contact.form.validation.address.minLength') || 'Address must be at least 10 characters'
+                            value: 5,
+                            message: t('contact.form.validation.address.minLength') || 'Address must be at least 5 characters'
                         }
                     })}
                     aria-invalid={errors.address ? 'true' : 'false'}

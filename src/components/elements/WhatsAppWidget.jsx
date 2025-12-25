@@ -41,9 +41,10 @@ const WhatsAppWidget = () => {
     return (
         <>
             {/* WhatsApp Floating Icon */}
-            <div
-                className="fixed left-6 bottom-18 sm:bottom-12 z-50 cursor-pointer transition-transform duration-300 hover:scale-110"
+            <button
+                className="fixed left-6 bottom-18 sm:bottom-12 z-50 cursor-pointer transition-transform duration-300 hover:scale-110 bg-transparent border-none p-0"
                 onClick={() => setIsOpen(true)}
+                aria-label="Open WhatsApp chat"
             >
                 <div className="bg-green-500 rounded-full p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <svg
@@ -61,7 +62,7 @@ const WhatsAppWidget = () => {
                         />
                     </svg>
                 </div>
-            </div>
+            </button>
 
             {/* Popup Modal */}
             {isOpen && (

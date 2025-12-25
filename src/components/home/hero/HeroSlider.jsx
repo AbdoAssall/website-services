@@ -192,12 +192,12 @@ const HeroSlider = () => {
             </button>
 
             {/* Dots Navigation */}
-            <div className="absolute bottom-24 sm:bottom-17 left-0 z-30 flex w-full justify-center gap-2">
+            <div className="absolute bottom-24 sm:bottom-17 left-0 z-30 flex w-full justify-center gap-3">
                 {slides.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => goToSlide(index)}
-                        className={`h-3 w-3 rounded-full transition-all duration-300 ${index === currentSlide
+                        className={`h-4 w-4 rounded-full transition-all duration-300 ${index === currentSlide
                             ? "bg-white w-8"
                             : "bg-white/50 hover:bg-white/70"
                             }`}

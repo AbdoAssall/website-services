@@ -20,6 +20,7 @@ export const EmailField = ({ register, errors, isPlaceholder, icon }) => {
                 <TextInput
                     type="email"
                     id="email"
+                    name="email"
                     placeholder={isPlaceholder ? t('contact.form.placeholder.email') : ''}
                     className={`block w-full !mt-1 ${isRTL ? 'text-right' : 'text-left'} ${errors.email ? '!border-red-500 focus:!border-red-500 focus:!ring-red-500' : ''
                         }`}

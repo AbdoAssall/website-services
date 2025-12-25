@@ -75,6 +75,7 @@ export function MobileSidebar({ openNav, setOpenNav, openSearchBar, menuServices
               type="button"
               className="ml-auto h-10 w-10 py-1 rounded-full border border-border-dark-one text-center"
               onClick={closeDrawer}
+              aria-label={t('navbar.closeMenu')}
             >
               <X className="h-7 w-7 mx-auto text-gray-600" />
             </button>

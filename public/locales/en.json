@@ -48,7 +48,8 @@
     "contactUs": "Contact Us",
     "services": "Services",
     "search": "Search...",
-    "logoAlt": "Scopehub"
+    "logoAlt": "Scopehub",
+    "closeMenu": "Close Menu"
   },
   "contact": {
     "title": "Contact",
@@ -101,11 +102,11 @@
         },
         "address": {
           "required": "Address is required",
-          "minLength": "Address must be at least 10 characters"
+          "minLength": "Address must be at least 5 characters"
         },
         "message": {
           "required": "Message is required",
-          "minLength": "Message must be at least 15 characters",
+          "minLength": "Message must be at least 8 characters",
           "maxLength": "Message must not exceed 1000 characters"
         }
       },
