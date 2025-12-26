@@ -4,37 +4,37 @@
     "arabic": "Arabic",
     "english": "English"
   },
-  "head": {
+ "head": {
     "siteName": "ScopeHub",
     "home": {
       "meta": {
-        "description": "Scope Hub is a professional agency offering academic and marketing services for the Arab and Gulf markets, including research, thesis writing, translation, proofreading, data analysis, feasibility studies, branding, social media design, motion graphics, whiteboard videos, and programming."
+        "description": "ScopeHub is an integrated agency founded by freelancers, offering academic and digital services including research and thesis preparation, translation and proofreading, statistical analysis, feasibility studies, design, logos, motion graphics, and professional programming services."
       },
-      "title": "Scope Hub | Academic & Marketing Services"
+      "title": "ScopeHub | Academic & Marketing Services"
     },
     "projects": {
       "meta": {
-        "description": "Scope Hub is a professional agency offering academic and marketing services for the Arab and Gulf markets, including research, thesis writing, translation, proofreading, data analysis, feasibility studies, branding, social media design, motion graphics, whiteboard videos, and programming."
+        "description": "Explore samples of Scope’s academic and digital projects, from research preparation and statistical analysis to design, motion graphics, and programming by professional freelancers."
       },
-      "title": "Projects | Our Projects"
+      "title": "Projects | Our Work"
     },
     "services": {
       "meta": {
-        "description": "Scope Hub is a professional agency offering academic and marketing services for the Arab and Gulf markets, including research, thesis writing, translation, proofreading, data analysis, feasibility studies, branding, social media design, motion graphics, whiteboard videos, and programming."
+        "description": "Discover Scope’s specialized academic and digital services, from research preparation and statistical analysis to graphic design, motion graphics, and programming services delivered by professionals."
       },
       "title": "Services | Our Services"
     },
     "about": {
       "meta": {
-        "description": "Scope Hub is a professional agency offering academic and marketing services for the Arab and Gulf markets, including research, thesis writing, translation, proofreading, data analysis, feasibility studies, branding, social media design, motion graphics, whiteboard videos, and programming."
+        "description": "ScopeHub is an academic and digital services platform founded by professional freelancers after their success on freelancing platforms, combining practical expertise and high-quality delivery in research, statistical analysis, translation, design, and programming."
       },
       "title": "About Us | ScopeHub"
     },
     "contact": {
       "meta": {
-        "description": "Scope Hub is a professional agency offering academic and marketing services for the Arab and Gulf markets, including research, thesis writing, translation, proofreading, data analysis, feasibility studies, branding, social media design, motion graphics, whiteboard videos, and programming."
+        "description": "Have a question or a project? Contact ScopeHub now and get direct support from professional freelancers in academic and digital services."
       },
-      "title": "Contact | ScopeHub"
+      "title": "Contact Us | ScopeHub"
     },
     "payment": {
       "title": "Payment Page"

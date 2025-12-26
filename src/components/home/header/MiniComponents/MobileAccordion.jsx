@@ -40,10 +40,10 @@ export function MobileAccordion({
                 </div>
             }
         >
-            <ListItem className="px-4 py-3" selected={isOpen}>
+            <ListItem className="px-0 !pt-0 pb-1" selected={isOpen}>
                 <AccordionHeader
                     className={`items-center border-b-0 ${direction === 'rtl' ? 'pr-3 justify-normal' : ' pl-3 justify-start'
-                        } content-center py-2`}
+                        } content-center py-0`}
                 >
                     <NavLink
                         to={item.to}
