@@ -478,7 +478,7 @@
         {
             "id": 6,
             "slug": "learning-platform",
-            "img": "public/assets/images/projects/project-6.jpeg",
+            "img": "/assets/images/projects/project-6.jpeg",
             "date": "December 05, 2024",
             "website": "https://visiontheme.site",
             "files": [],

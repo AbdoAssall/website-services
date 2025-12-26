@@ -15,7 +15,7 @@ const PageHeader = ({
             id="page-header"
             className="relative bg-cover bg-center bg-no-repeat bg-fixed py-24 md:py-25 min-h-80 overflow-hidden"
             style={{
-                backgroundImage: `url(${backgroundImage})`,
+                backgroundImage: `url("${backgroundImage}")`,
             }}
         >
             {/* Dark overlay */}
