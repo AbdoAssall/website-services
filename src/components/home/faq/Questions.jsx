@@ -63,7 +63,7 @@ const Questions = () => {
                                             <span className="faq-number">
                                                 {i + 1}
                                             </span>
-                                            <span className="inline-block">{item.question}</span>
+                                            <span className={`inline-block ${isRTL ? 'text-lg' : ''}`}>{item.question}</span>
 
                                             <span className='faq-icon'>
                                                 {activeQuestion === i ? (

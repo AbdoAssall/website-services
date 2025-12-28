@@ -106,7 +106,7 @@ const HeroSlider = () => {
                                             initial="hidden"
                                             animate="show"
                                             transition={{ duration: 0.8, delay: 0.3 }}
-                                            className="!mb-4 md:!mb-9 text-xl sm:text-2xl md:text-3xl font-bold tracking-wider !text-white"
+                                            className={`!mb-4 text-xl sm:text-2xl font-bold tracking-wider !text-white ${direction === 'rtl' ? 'md:!mb-6 md:text-2xl ' : 'md:!mb-7 md:text-3xl'}`}
                                         >
                                             {slide.subTitle}
                                         </motion.h5>
