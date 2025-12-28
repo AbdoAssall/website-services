@@ -26,7 +26,7 @@ const Questions = () => {
         <section
             id='faq'
             className="relative bg-cover bg-no-repeat bg-center w-full h-full bg-primary-two"
-            style={{ backgroundImage: 'url("assets/images/footer-bg-two.jpg")' }}
+            style={{ backgroundImage: 'url("https://storge.scopehub.net/images/footer-bg-two.jpg")' }}
         >
             <div dir={direction} id="faq" className="flex flex-col md:flex-row mx-auto relative">
                 {/* Right side with content */}

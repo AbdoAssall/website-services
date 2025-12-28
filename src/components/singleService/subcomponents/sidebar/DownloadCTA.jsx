@@ -28,7 +28,7 @@ export const DownloadCTA = () => (
         <div className="mt-4">
             <div className="w-full h-32 bg-white/10 rounded-md flex items-center justify-center">
                 <img
-                    src="/assets/images/guide-thumbnail.jpg"
+                    src="https://storge.scopehub.net/images/guide-thumbnail.jpg"
                     alt="Employee Engagement Guide"
                     className="w-full h-full object-cover rounded-md"
                     loading="lazy"

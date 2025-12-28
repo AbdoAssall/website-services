@@ -28,7 +28,7 @@ export const ContactFormBox = () => {
                         <div className={`w-full flex ${isRTL ? 'justify-start' : 'justify-end'}`}>
                             <figure className="logo w-48.5 h-auto">
                                 <img
-                                    src="/assets/images/logo.png"
+                                    src="https://storge.scopehub.net/images/logo.png"
                                     className="w-full !h-full object-cover"
                                     alt={t('navbar.logoAlt')}
                                     loading="lazy"

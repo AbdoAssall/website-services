@@ -12,7 +12,7 @@ const Footer = () => {
 
     return (
         <footer dir={direction} className="mt-16 pt-16 pb8 relative bg-cover bg-no-repeat bg-center w-full h-full bg-primary-two"
-            style={{ backgroundImage: 'url("assets/images/footer-bg.jpg")' }}>
+            style={{ backgroundImage: 'url("https://storge.scopehub.net/images/footer-bg.jpg")' }}>
             <div className="mx-auto px-4 xl:px-0 max-w-6xl flex flex-col md:flex-row flex-wrap gap-12 md:gap-0">
                 {/* Left/Right Section */}
                 <FooterBranding />

@@ -30,7 +30,7 @@ const Services = () => {
         <Section
             id="services"
             className="pt-20 pb-30 bg-cover bg-center bg-no-repeat w-full h-full"
-            style={{ backgroundImage: 'url("assets/images/service-home-bg.jpg")' }}
+            style={{ backgroundImage: 'url("https://storge.scopehub.net/images/service-home-bg.jpg")' }}
             titleStyle="!text-white"
             descriptionStyle="!text-white"
             innerContentStyle="md:w-2xl"

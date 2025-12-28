@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "/assets/images/team/shrief.jpg",
+        "image": "https://storge.scopehub.net/images/team/shrief.jpg",
         "en": {
             "name": "Shrief Assal",
             "position": "Founder of Scope",
@@ -15,7 +15,7 @@
     },
     {
         "id": 2,
-        "image": "/assets/images/team/mohamed.jpg",
+        "image": "https://storge.scopehub.net/images/team/mohamed.jpg",
         "en": {
             "name": "Mohamed Elkafass",
             "position": "Researcher and Economic Expert",
@@ -29,7 +29,7 @@
     },
     {
         "id": 3,
-        "image": "/assets/images/team/khaled.jpeg",
+        "image": "https://storge.scopehub.net/images/team/khaled.jpeg",
         "en": {
             "name": "Khaled Elkafass",
             "position": "Design Team Manager",
@@ -43,7 +43,7 @@
     },
     {
         "id": 4,
-        "image": "/assets/images/team/abdo.jpeg",
+        "image": "https://storge.scopehub.net/images/team/abdo.jpeg",
         "en": {
             "name": "Abdelrahman Assal",
             "position": "Full Stack Developer",

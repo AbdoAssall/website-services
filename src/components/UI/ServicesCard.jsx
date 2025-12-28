@@ -41,7 +41,7 @@ const ServicesCard = ({
                 <p dir={direction} className={`${textColor}`}>{service.description}</p>
             </div>
             <div className="icon-serv">
-                <img src="assets/images/icons/thumbs-up.png" alt="service icon" className="icon-thumbs" />
+                <img src="https://storge.scopehub.net/images/icons/thumbs-up.png" alt="service icon" className="icon-thumbs" />
             </div>
             <div className="card-overlay-img">
                 <figure>

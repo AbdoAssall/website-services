@@ -11,16 +11,16 @@ const Choices = () => {
     const choices = useMemo(() => {
         const choicesData = [
             {
-                image: "assets/images/choices/solution.png"
+                image: "https://storge.scopehub.net/images/choices/solution.png"
             },
             {
-                image: "assets/images/choices/team-management.png"
+                image: "https://storge.scopehub.net/images/choices/team-management.png"
             },
             {
-                image: "assets/images/choices/email-marketing.png"
+                image: "https://storge.scopehub.net/images/choices/email-marketing.png"
             },
             {
-                image: "assets/images/choices/24-hours-support.png"
+                image: "https://storge.scopehub.net/images/choices/24-hours-support.png"
             },
         ];
         return choicesData.map((choice, index) => ({

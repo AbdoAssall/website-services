@@ -23,7 +23,7 @@ const ProjectsTabsNavigation = ({ categories, activeTab, onTabChange }) => {
                         type="button"
                         className={`tab tabs-md px-5 rounded-md leading-10 transition-all duration-300 ${isRTL ? 'font-medium !text-sm' : '!text-md '
                             } ${activeTab === category
-                                ? 'tab-active bg-primary-one text-white'
+                                ? 'tab-active bg-primary-one !text-white'
                                 : 'bg-primary-three !text-dark-one hover:bg-primary-one hover:!text-white'
                             }`}
                         onClick={() => onTabChange(category)}
