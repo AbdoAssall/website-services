@@ -31,7 +31,7 @@ export const FooterBranding = () => {
                         ariaLabel={t('footer.readMore')}
                         type="button"
                     >
-                        {t('footer.readMore')}
+                        {t('footer.readMore')} <span className="sr-only">{t('about.title')}</span>
                     </PrimaryLink>
                 </div>
                 <div className="w-full">

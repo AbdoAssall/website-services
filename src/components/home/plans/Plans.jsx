@@ -157,10 +157,9 @@ const Plans = () => {
                                                     </span>
                                                     <span className={`
                                                         text-sm leading-relaxed
-                                                        ${!isIncluded ? 'opacity-80' : ''}
                                                         ${plan.recommended
                                                             ? (isIncluded ? 'text-gray-100' : 'text-gray-400')
-                                                            : (isIncluded ? 'text-dark-one' : 'text-gray-500')
+                                                            : (isIncluded ? 'text-dark-one' : 'text-gray-600')
                                                         }
                                                     `}>
                                                         {feature}

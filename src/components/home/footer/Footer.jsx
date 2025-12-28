@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
 
             {/* Bottom bar */}
-            <div className="py-5 mt-8 md:mt-0 bg-primary-one text-white text-center text-sm">
+            <div className="py-5 mt-8 md:mt-0 bg-primary-two text-white text-center text-sm">
                 {language === 'en'
                     ? `Copyright © ${date} ScopHub. All Rights Reserved - Powered By`
                     : `© ${date} ScopHub. جميع الحقوق محفوظة - تطوير ودعم تقني بواسطة`

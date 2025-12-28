@@ -42,7 +42,7 @@ const Contact = () => {
                 >
                     <div className={`flex gap-3 items-center ${isRTL ? 'justify-end' : 'justify-start'}`}>
                         <Briefcase className="text-primary-one w-5 h-5" />
-                        <h3 className="section-title">{t('contactUs.title')}</h3>
+                        <div className="section-title">{t('contactUs.title')}</div>
                     </div>
                     <div className="mt-1 md:mt-3">
                         <h2 className={`text-3xl md:text-[2.75rem] font-bold text-primary-two capitalize ${isRTL ? '!leading-13' : '!leading-10'}`}>
@@ -59,7 +59,7 @@ const Contact = () => {
                                 <Phone className="w-6 h-6 mx-auto" />
                             </div>
                             <div className="">
-                                <h4 className="text-lg !font-semibold text-primary-two">{t('contactUs.phone')}</h4>
+                                <h3 className="text-lg !font-semibold text-primary-two">{t('contactUs.phone')}</h3>
                                 <Link to={`tel:${t('contact.phone')}`} aria-label={t('contactUs.label')} className="!text-light-gray">
                                     {t('contact.phone')}
                                 </Link>

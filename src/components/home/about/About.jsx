@@ -65,7 +65,7 @@ const About = ({ btn = true, isSubTitle = false }) => {
                         ) : (
                             <Briefcase className="text-primary-one w-5 h-5" />
                         )}
-                    <h3 className="section-title">{t('about.title')}</h3>
+                    <div className="section-title">{t('about.title')}</div>
                 </motion.div>
 
                 <motion.div dir={direction} variants={itemVariants} className={`${isSubTitle ? 'mt-4.5' : 'mt-1 md:mt-4.5'}`}>
@@ -113,7 +113,9 @@ const About = ({ btn = true, isSubTitle = false }) => {
                     </div>
                     {btn && (
                         <div>
-                            <PrimaryLink to="/about-us" ariaLabel={t('about.readMore')}>{t('about.readMore')}</PrimaryLink>
+                            <PrimaryLink to="/about-us" ariaLabel={t('about.readMore')}>
+                                {t('about.readMore')} <span className="sr-only">{t('about.title')}</span>
+                            </PrimaryLink>
                         </div>
                     )}
                 </motion.div>

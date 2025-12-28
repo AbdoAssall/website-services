@@ -62,7 +62,7 @@ const ServicesCard = ({
                 aria-label={service.name}
                 className={`pt-7 flex items-center justify-center gap-1 ${direction === 'rtl' ? 'flex-row-reverse font-medium' : 'flex-row-reverse'} capitalize ${linkColor} text-center`}
             >
-                {t('services.readMore')}
+                {t('services.readMore')} <span className="sr-only">about {service.name}</span>
                 {direction === 'rtl' ? (
                     <ArrowLeft size={18} strokeWidth={2} />
                 ) : (

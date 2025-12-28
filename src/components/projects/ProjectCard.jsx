@@ -50,7 +50,7 @@ const ProjectCard = ({
                             className="inline-flex items-center !text-[0.938rem] leading-6 text-primary-one hover:!text-primary-one/85 transition-colors duration-300"
                             aria-label={`View project: ${title}`}
                         >
-                            {t('projects.readMore')}
+                            {t('projects.readMore')} <span className="sr-only">about {title}</span>
                             <MoveRight className={`w-4 h-4 ${isRTL ? 'rotate-180 mr-2' : 'ml-2'}`} />
                         </Link>
 

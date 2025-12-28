@@ -39,7 +39,7 @@ const Dropdown = ({ title, children, to = '#', item, ...props }) => {
                         to={to}
                         aria-label={title}
                         className={({ isActive }) =>
-                            `group-hover:!text-primary-one font-semibold ${isActive && isNavItemActive(item) ? "!text-primary-one" : "!text-dark-one"}`
+                            `group-hover:!text-primary-one ${isActive && isNavItemActive(item) ? "!text-primary-one !font-semibold" : "!text-dark-one"}`
                         }
                     >
                         {title}

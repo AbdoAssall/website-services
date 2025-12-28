@@ -32,7 +32,7 @@ export function NavList({ navItems, menuServices }) {
                 <NavLink
                     to="/"
                     className={({ isActive }) =>
-                        `flex items-center ${isActive ? "!text-primary-one" : ""}`
+                        `flex items-center ${isActive ? "!text-primary-one !font-semibold" : ""}`
                     }
                 >
                     {t("navbar.home")}
@@ -71,7 +71,7 @@ export function NavList({ navItems, menuServices }) {
                         <NavLink
                             to={item.to}
                             className={({ isActive }) =>
-                                `flex items-center ${isActive && isNavItemActive(item) ? "!text-primary-one" : ""}`
+                                `flex items-center ${isActive && isNavItemActive(item) ? "!text-primary-one !font-semibold" : ""}`
                             }
                         >
                             {item.title}

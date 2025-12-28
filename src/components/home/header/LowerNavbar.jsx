@@ -28,17 +28,17 @@ export function LowerNavbar() {
   // Check screen size using matchMedia
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 418px)");
-    
+
     // Set initial state
     setIsSmallScreen(mediaQuery.matches);
-    
+
     // Listen for changes
     const handleChange = (e) => {
       setIsSmallScreen(e.matches);
     };
-    
+
     mediaQuery.addEventListener("change", handleChange);
-    
+
     return () => {
       mediaQuery.removeEventListener("change", handleChange);
     };

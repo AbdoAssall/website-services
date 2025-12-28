@@ -1,10 +1,11 @@
+// @ts-nocheck
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export default function PrimaryLink({
     className = '',
     ariaLabel = '',
-    children = '',
+    children,
     to = "#",
     ...props
 }) {
