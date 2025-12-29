@@ -21,7 +21,7 @@ const Services = () => {
         slidesToShow: 3,
         dots: true,
     }), [direction]);
-    
+
     const getSlide = document.querySelectorAll('.slick-slide.slick-cloned');
     const getSlide1 = document.querySelectorAll('.slick-slide');
     const getSlide2 = document.querySelectorAll('.slick-slide.slick-active.slick-cloned');
@@ -35,7 +35,7 @@ const Services = () => {
         <Section
             id="services"
             className="pt-20 pb-30 bg-cover bg-center bg-no-repeat w-full h-full"
-            style={{ backgroundImage: 'url("https://storge.scopehub.net/images/service-home-bg.jpg")' }}
+            style={{ backgroundImage: 'url("/assets/images/service-home-bg.webp")' }}
             titleStyle="!text-white"
             descriptionStyle="!text-white"
             innerContentStyle="md:w-2xl"

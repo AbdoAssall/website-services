@@ -6,7 +6,7 @@ import { useLanguage } from '../../store/LanguageContext';
 const PageHeader = ({
     title = "Projects",
     breadcrumbs = [{ label: "Home", href: "/" }, { label: "Projects" }],
-    backgroundImage = "https://storge.scopehub.net/images/page-header-default.jpeg"
+    backgroundImage = "/assets/images/page-header-default.webp"
 }) => {
     const { isRTL } = useLanguage();
 

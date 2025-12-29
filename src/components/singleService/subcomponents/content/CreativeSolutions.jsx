@@ -47,8 +47,9 @@ const CreativeSolutions = ({ service }) => {
                         >
                             <div className="flex-shrink-0 w-16 h-16 bg-sky rounded-full flex items-center justify-center">
                                 <img
-                                    src={'https://storge.scopehub.net/images/icons/innovation.png'}
+                                    src={'/assets/images/icons/innovation.png'}
                                     alt={item.title}
+                                    loading="lazy"
                                     className="w-10 h-10"
                                     style={{ color: 'var(--color-primary-one)' }}
                                 />

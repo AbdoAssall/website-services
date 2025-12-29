@@ -12,14 +12,14 @@ export const ServiceBenefits = ({ service }) => {
     //         id: 'background-checks',
     //         title: 'Background Checks',
     //         description: 'These cases are perfectly simple and easy to distinguish. In a free hour when our power.',
-    //         icon: 'https://storge.scopehub.net/images/icons/true.png'
+    //         icon: '/assets/images/icons/true.png'
     //         // icon: CheckCircle
     //     },
     //     {
     //         id: 'position-description',
     //         title: 'Position Description',
     //         description: 'Trouble that are bound to ensue and equal blame belongs those who fail in their duty.',
-    //         icon: 'https://storge.scopehub.net/images/icons/true.png'
+    //         icon: '/assets/images/icons/true.png'
     //         // icon: Target
     //     }
     // ];

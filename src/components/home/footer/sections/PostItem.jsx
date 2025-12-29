@@ -28,6 +28,7 @@ const PostItem = ({ date, title, imagePath, url }) => {
                     src={imagePath}
                     alt={title}
                     className="!w-18 !h-18 object-cover rounded-[0.313rem]"
+                    loading="lazy"
                     height="750"
                     width="420"
                     srcSet={`${imagePath} 750w, ${imagePath} 600w, ${imagePath}} 300w`}

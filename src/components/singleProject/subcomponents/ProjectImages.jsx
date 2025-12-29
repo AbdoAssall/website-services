@@ -187,6 +187,7 @@ const ProjectImages = ({ project }) => {
                         <img
                             src={images[selectedImage].url}
                             alt={images[selectedImage].caption || `${project.name} - Image ${selectedImage + 1}`}
+                            loading="lazy"
                             className="max-w-full max-h-[80vh] object-contain rounded-lg"
                         />
 

@@ -28,15 +28,15 @@ const HeroSlider = () => {
 
     const slides = useMemo(() => {
         const slidesDataDesktop = [
-            { id: 1, bgImage: "https://storge.scopehub.net/images/slider/slider-1.jpeg" },
-            { id: 2, bgImage: "https://storge.scopehub.net/images/slider/slider-2.jpeg" },
-            { id: 3, bgImage: "https://storge.scopehub.net/images/slider/slider-3.jpeg" }
+            { id: 1, bgImage: "/assets/images/slider/slider-1.webp" },
+            { id: 2, bgImage: "/assets/images/slider/slider-2.webp" },
+            { id: 3, bgImage: "/assets/images/slider/slider-3.webp" }
         ];
 
         const slidesDataMobile = [
-            { id: 1, bgImage: "https://storge.scopehub.net/images/slider/slider-1-m.jpeg" },
-            { id: 2, bgImage: "https://storge.scopehub.net/images/slider/slider-2-m.jpeg" },
-            { id: 3, bgImage: "https://storge.scopehub.net/images/slider/slider-3-m.jpeg" }
+            { id: 1, bgImage: "/assets/images/slider/slider-1-m.webp" },
+            { id: 2, bgImage: "/assets/images/slider/slider-2-m.webp" },
+            { id: 3, bgImage: "/assets/images/slider/slider-3-m.webp" }
         ];
 
         const currentSlidesData = isMobile ? slidesDataMobile : slidesDataDesktop;

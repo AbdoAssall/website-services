@@ -63,7 +63,7 @@ const Testimonial = () => {
                                                 width="80"
                                                 height="80"
                                                 onError={(e) => {
-                                                    e.target.src = 'https://storge.scopehub.net/images/clients/testi-2.png'; // Fallback image
+                                                    e.target.src = '/assets/images/clients/testi-2.png'; // Fallback image
                                                 }}
                                             /> */}
                                             </div>

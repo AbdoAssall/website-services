@@ -74,7 +74,7 @@ export function LowerNavbar() {
             {/* Logo */}
             <Link to="/" className="py-1 md:py-1.5" aria-label="Scopehub Logo">
               <img
-                src="https://storge.scopehub.net/images/logo.png"
+                src="/assets/images/logo.png"
                 className="logo w-39.5 sm:w-41.5 md:w-53.5 !h-auto"
                 alt={t('navbar.logoAlt')}
                 width="150"

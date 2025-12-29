@@ -67,6 +67,7 @@ const ProjectCard = ({
                     <img
                         src={image}
                         alt={title}
+                        loading="lazy"
                         className="w-full h-87.5 lg:!h-110 object- rounded-t-[0.625rem] md:rounded-[0.625rem]"
                     />
 

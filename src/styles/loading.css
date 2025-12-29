@@ -1,1 +1,45 @@
-.container-spinner::before{position:absolute;content:'';inset:0;width:100%;height:100%;display:block;text-align:center;background-color:var(--color-gray-100);z-index:10;overflow:hidden}.spinner{width:40px;height:40px;background-color:#fff;background-image:url(https://storge.scopehub.net/images/loader.gif);background-repeat:no-repeat;background-position:center center;box-shadow:0 0 25px 0 rgb(0 0 0 / .15);margin-top:-20px;margin-left:-20px;animation:rotate-plane 1.2s infinite ease-in-out;border-radius:3px}.spinner{top:50%;left:50%;z-index:10000;position:absolute}@keyframes rotate-plane{0%{-webkit-transform:perspective(120px) rotateX(0deg) rotateY(0deg);transform:perspective(120px) rotateX(0deg) rotateY(0deg)}50%{-webkit-transform:perspective(120px) rotateX(-180.1deg) rotateY(0deg);transform:perspective(120px) rotateX(-180.1deg) rotateY(0deg)}100%{-webkit-transform:perspective(120px) rotateX(-180deg) rotateY(-179.9deg);transform:perspective(120px) rotateX(-180deg) rotateY(-179.9deg)}}
+.container-spinner::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    background-color: var(--color-gray-100);
+    z-index: 10;
+    overflow: hidden
+}
+.spinner {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    background-image: url(/assets/images/loader.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0 25px 0 rgb(0 0 0 / .15);
+    margin-top: -20px;
+    margin-left: -20px;
+    animation: rotate-plane 1.2s infinite ease-in-out;
+    border-radius: 3px
+}
+.spinner {
+    top: 50%;
+    left: 50%;
+    z-index: 10000;
+    position: absolute
+}
+@keyframes rotate-plane {
+    0% {
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
+    }
+}

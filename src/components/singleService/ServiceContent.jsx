@@ -49,7 +49,7 @@ const ServiceContent = ({ service }) => {
                     src={service.img}
                     alt={service.name}
                     className="w-full h-auto object-cover"
-                    loading="eager"
+                    loading="lazy"
                 />
             </div>
 

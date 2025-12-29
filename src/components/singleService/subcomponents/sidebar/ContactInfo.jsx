@@ -8,8 +8,9 @@ export const ContactInfo = () => {
     return (
         <div className="relative bg-primary-two text-white text-center rounded-[0.625rem] pt-10 pb-16 px-5">
             <img
-                src="https://storge.scopehub.net/images/service-sidebar-contact-bg.jpg"
-                alt="background image"
+                src="/assets/images/service-sidebar-contact-bg.webp"
+                alt="contact image"
+                loading="lazy"
                 className="absolute top-0 left-0 z-1 w-full !h-full rounded-[0.625rem] md:object-cover"
             />
             {/* Header */}

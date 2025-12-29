@@ -14,7 +14,7 @@ export const FooterBranding = () => {
                         <img
                             alt={t('navbar.logoAlt')}
                             className="w-66.5 md:w-53.5 h-auto border-0"
-                            src="https://storge.scopehub.net/images/logo-white.png"
+                            src="/assets/images/logo-white.png"
                             loading='lazy'
                         />
                     </Link>

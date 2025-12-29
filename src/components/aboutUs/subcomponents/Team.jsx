@@ -35,6 +35,7 @@ const Team = () => {
                                     <img
                                         src={member.image}
                                         alt={member.name}
+                                        loading="lazy"
                                         className="w-full !h-80 object-fill rounded-[0.625rem] transition-transform duration-300 group-hover:scale-105"
                                     />
 

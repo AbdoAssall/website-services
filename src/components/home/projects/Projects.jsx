@@ -88,8 +88,8 @@ const Projects = () => {
                                     <div className="image-box rounded-md shadow w-full">
                                         <img
                                             alt={project.name}
-                                            loading="lazy"
                                             src={project.img}
+                                            loading="lazy"
                                             className="w-full !h-87.5 object-cover object-center block"
                                             width="731"
                                             height="488"

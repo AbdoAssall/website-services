@@ -12,7 +12,7 @@ export const LanguageDropdown = () => {
       >
         {/* Language flag */}
         <img
-          src={`https://storge.scopehub.net/images/flags/${direction === "rtl" ? "ar" : "en"}.png`}
+          src={`/assets/images/flags/${direction === "rtl" ? "ar" : "en"}.png`}
           alt={direction === "rtl" ? "Arabic" : "English"}
           className="w-5 h-5 rounded-full object-cover"
         />
@@ -33,11 +33,11 @@ export const LanguageDropdown = () => {
         className="dropdown-content bg-white rounded-box z-10 w-32 p-2 shadow-2xl absolute left-0 right-0 top-17 lg:top-19"
       >
         <li className="p-2 hover:bg-gray-100 active:bg-gray-100 rounded-md cursor-pointer flex items-center gap-2" onClick={() => changeDirection("rtl")}>
-          <img src="https://storge.scopehub.net/images/flags/ar.png" alt="Arabic" className="w-5 h-5 rounded-full object-cover" />
+          <img src="/assets/images/flags/ar.png" alt="Arabic" loading="lazy" className="w-5 h-5 rounded-full object-cover" />
           <span>{t("language.arabic")}</span>
         </li>
         <li className="p-2 hover:bg-gray-100 active:bg-gray-100 rounded-md cursor-pointer flex items-center gap-2" onClick={() => changeDirection("ltr")}>
-          <img src="https://storge.scopehub.net/images/flags/en.png" alt="English" className="w-5 h-5 rounded-full object-cover" />
+          <img src="/assets/images/flags/en.png" alt="English" loading="lazy" className="w-5 h-5 rounded-full object-cover" />
           <span>{t("language.english")}</span>
         </li>
       </ul>

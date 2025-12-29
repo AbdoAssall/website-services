@@ -22,7 +22,7 @@ const About = ({ btn = true, isSubTitle = false }) => {
             <motion.div variants={itemVariants} className="relative md:-top-5 image-full rounded-md grid md:w-1/2 grow">
                 <figure>
                     <img
-                        src="https://storge.scopehub.net/images/home-about-2-1.jpg"
+                        src="/assets/images/home-about-2-1.webp"
                         alt="Shoes"
                         className="rounded-md min-h-9/10 object-cover"
                         loading="lazy"
@@ -31,7 +31,7 @@ const About = ({ btn = true, isSubTitle = false }) => {
                 <div className="absolute -bottom-20 md:-bottom-8 left-5">
                     <figure>
                         <img
-                            src="https://storge.scopehub.net/images/home-1-about-2.jpg"
+                            src="/assets/images/home-1-about-2.webp"
                             alt="Shoes"
                             className="rounded-md object-cover"
                             loading="lazy"
@@ -82,7 +82,7 @@ const About = ({ btn = true, isSubTitle = false }) => {
                     <div className="mt-3">
                         <div className="mb-3">
                             <span className="inline-block w-20 h-20 rounded-full bg-primary-three">
-                                <img src="https://storge.scopehub.net/images/icons/idea.png" className="w-15 h-15" alt="Idea icon" loading="lazy" />
+                                <img src="/assets/images/icons/idea.png" className="w-15 h-15" alt="Idea icon" loading="lazy" />
                             </span>
                         </div>
                         <h2 className={`text-[1.375rem] !font-bold capitalize truncate ${isRTL ? 'md:!leading-11' : '!leading-8'}`}>
@@ -95,7 +95,7 @@ const About = ({ btn = true, isSubTitle = false }) => {
                     <div className="mt-3">
                         <div className="mb-3">
                             <span className="inline-block w-20 h-20 rounded-full bg-primary-three">
-                                <img src="https://storge.scopehub.net/images/icons/solution.png" className="w-15 h-15" alt="Idea icon" loading="lazy" />
+                                <img src="/assets/images/icons/solution.png" className="w-15 h-15" alt="Idea icon" loading="lazy" />
                             </span>
                         </div>
                         <h2 className={`text-[1.375rem] !font-bold capitalize ${isRTL ? 'md:!leading-11' : '!leading-8'}`}>
@@ -109,7 +109,7 @@ const About = ({ btn = true, isSubTitle = false }) => {
 
                 <motion.div variants={itemVariants} className="mt-6 sm:mt-12 flex gap-10 flex-col-reverse sm:flex-row-reverse sm:rtl:flex-row justify-end">
                     <div className="rtl:self-end">
-                        <img src="https://storge.scopehub.net/images/sign.png" className="w-34 lg:w-auto h-auto object-contain" alt="Sign" loading="lazy" />
+                        <img src="/assets/images/sign.webp" className="w-34 lg:w-auto h-auto object-contain" alt="Sign" loading="lazy" />
                     </div>
                     {btn && (
                         <div>

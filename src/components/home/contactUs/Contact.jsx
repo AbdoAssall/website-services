@@ -12,20 +12,20 @@ const Contact = () => {
     return (
         <Section
             className="pb:6 md:!py-0 bg-cover bg-no-repeat w-full h-full"
-            style={{ backgroundImage: 'url("https://storge.scopehub.net/images/consult-bg.jpg")' }}
+            style={{ backgroundImage: 'url("/assets/images/consult-bg.webp")' }}
         >
             <div dir="ltr" className="flex w-full flex-col md:flex-row items-center">
                 {/* Left side with image */}
                 <div className="md:w-1/2 md:h-120">
                     <div className="-mt-22 flex justify-center md:justify-end">
                         <img
-                            src="https://storge.scopehub.net/images/cosnsult-bg.png"
+                            src="/assets/images/cosnsult-bg.webp"
                             alt={t('contactUs.alt')}
                             className="md:!h-143 align-middle object-contain inline-block"
                             loading="lazy"
                             width="550"
                             height="572"
-                            srcSet="https://storge.scopehub.net/images/cosnsult-bg.png 382w, https://storge.scopehub.net/images/cosnsult-bg.png 201w"
+                            srcSet="/assets/images/cosnsult-bg.webp 382w, /assets/images/cosnsult-bg.webp 201w"
                             sizes="(max-width: 382px) 100vw, 382px"
                             data-label="img.attachment-large"
                         />

@@ -17,7 +17,7 @@ const NotFoundPage = () => {
                 <div dir="ltr" className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     {/* Image Section */}
                     <div className="flex justify-center">
-                        <img src={'../../..https://storge.scopehub.net/images/404.png'} alt="404 Not Found" className="max-w-full h-auto" />
+                        <img src={'../../../assets/images/404.png'} alt="404 Not Found" loading="lazy" className="max-w-full h-auto" />
                     </div>
 
                     {/* Content Section */}
