@@ -18,7 +18,7 @@ const ProjectCard = ({
     return (
         <article className={`group bg-white ${isRTL ? ' pl-7.5 pr-7.5 lg:pr-0' : 'pr-7.5 pl-7.5 lg:pl-0'} py-7.5 rounded-[0.625rem] shadow-lg border border-gray-100 overflow-hidden mb-8 hover:shadow-xl transition-shadow duration-300`}>
             <div className="flex flex-col lg:flex-row lg:!h-110">
-                <div className="flex flex-col lg:px-[2.188rem] lg:py-[0.313rem] lg:w-7/20">
+                <div className="flex flex-col lg:px-[2.188rem] lg:py-[0.313rem] lg:w-1/2">
                     {/* Category Tag */}
                     <div className="pb-4">
                         <span className="inline-block bg-teal-500 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram, faWhatsapp, faTiktok, faSnapchat } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faWhatsapp, faTiktok, faLinkedin,faSnapchat } from '@fortawesome/free-brands-svg-icons';
 
 const SocialIcons = ({
     className = "flex gap-3 mt-4",
@@ -14,8 +14,9 @@ const SocialIcons = ({
         { name: 'Facebook', icon: faFacebookF, href: 'https://www.facebook.com/share/17GCWtEE8H/' },
         { name: 'Instagram', icon: faInstagram, href: 'https://www.instagram.com/scopehub10?igsh=MWJwenFxYWIxY3FhMw==' },
         { name: 'WhatsApp', icon: faWhatsapp, href: 'https://wa.me/201065378259' },
-        { name: 'Tiktok', icon: faTiktok, href: '' },
-        { name: 'Snapchat', icon: faSnapchat, href: '' }
+        { name: 'Linkedin', icon: faLinkedin, href: 'http://linkedin.com/company/scope-hub' },
+        // { name: 'Tiktok', icon: faTiktok, href: '' },
+        // { name: 'Snapchat', icon: faSnapchat, href: '' }
     ];
 
     const socialIcons = customIcons || defaultSocialIcons;
