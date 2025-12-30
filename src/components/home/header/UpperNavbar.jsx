@@ -27,7 +27,7 @@ export function UpperNavbar() {
                     <a
                         href="#plans"
                         onClick={(e) => handleSectionClick('#plans', e)}
-                        className="get_a_quote hover:!text-white"
+                        className="get_a_quote hover:!text-white !bg-[#056c6d] hover:!bg-[#045c5d]"
                     >
                         {t('upper.qoute')}
                     </a>

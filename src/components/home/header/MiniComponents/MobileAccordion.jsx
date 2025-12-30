@@ -49,7 +49,7 @@ export function MobileAccordion({
                         to={item.to}
                         onClick={() => onCloseDrawer()}
                         className={({ isActive }) =>
-                            `${direction === 'rtl' ? 'ml-auto' : 'mr-auto'} font-medium ${isActive && isNavItemActive(item) ? "!text-primary-one" : "!text-dark-one hover:!text-primary-one"}`
+                            `${direction === 'rtl' ? 'ml-auto' : 'mr-auto'} !font-medium block py-2 ${isActive && isNavItemActive(item) ? "!text-primary-one" : "!text-dark-one hover:!text-primary-one"}`
                         }
                     >
                         {title}

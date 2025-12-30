@@ -25,6 +25,7 @@ export default defineConfig({
     }
   },
   build: {
+    sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -34,11 +35,11 @@ export default defineConfig({
         },
       },
     },
-       terserOptions: {
-        compress: {
-            drop_console: true,
-            drop_debugger: true
-        }
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
     }
   },
   // server: {

@@ -128,7 +128,7 @@ export function MobileSidebar({ openNav, setOpenNav, openSearchBar, menuServices
                     to={item.to}
                     onClick={() => closeDrawer()}
                     className={({ isActive }) =>
-                      `!text-dark-one font-medium ${isActive && isNavItemActive(item) ? "!text-primary-one" : "hover:!text-primary-one"}`
+                      `!text-dark-one !font-medium ${isActive && isNavItemActive(item) ? "!text-primary-one" : "hover:!text-primary-one"}`
                     }
                   >
                     <ListItem>{item.title}</ListItem>

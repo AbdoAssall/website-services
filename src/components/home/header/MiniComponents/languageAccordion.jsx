@@ -47,7 +47,7 @@ export function LanguageAccordion({
                         } content-center py-0`}
                 >
                     <span
-                        className={`${direction === 'rtl' ? 'ml-auto' : 'mr-auto'} font-medium !text-dark-one hover:!text-primary-one`}
+                        className={`${direction === 'rtl' ? 'ml-auto' : 'mr-auto'} font-medium !font-spartan text-[17px] !text-dark-one hover:!text-primary-one`}
                     >
                         {title}
                     </span>
